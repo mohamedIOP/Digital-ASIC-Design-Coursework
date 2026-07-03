@@ -1,0 +1,121 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "D:\iverilog\iverilog\lib\ivl\system.vpi";
+:vpi_module "D:\iverilog\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "D:\iverilog\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "D:\iverilog\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "D:\iverilog\iverilog\lib\ivl\va_math.vpi";
+S_0000021cc6192d20 .scope module, "DigCt" "DigCt" 2 1;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "IN1";
+    .port_info 1 /INPUT 1 "IN2";
+    .port_info 2 /INPUT 1 "IN3";
+    .port_info 3 /INPUT 1 "IN4";
+    .port_info 4 /INPUT 1 "IN5";
+    .port_info 5 /INPUT 1 "CLK";
+    .port_info 6 /OUTPUT 1 "OUT1";
+    .port_info 7 /OUTPUT 1 "OUT2";
+    .port_info 8 /OUTPUT 1 "OUT3";
+o0000021cc61c7fd8 .functor BUFZ 1, C4<z>; HiZ drive
+v0000021cc6192eb0_0 .net "CLK", 0 0, o0000021cc61c7fd8;  0 drivers
+o0000021cc61c8008 .functor BUFZ 1, C4<z>; HiZ drive
+v0000021cc6192f50_0 .net "IN1", 0 0, o0000021cc61c8008;  0 drivers
+v0000021cc6192ff0_0 .var "IN1_NOR_IN2_W1", 0 0;
+o0000021cc61c8068 .functor BUFZ 1, C4<z>; HiZ drive
+v0000021cc6193090_0 .net "IN2", 0 0, o0000021cc61c8068;  0 drivers
+v0000021cc620fba0_0 .var "IN2_NAND_IN3", 0 0;
+o0000021cc61c80c8 .functor BUFZ 1, C4<z>; HiZ drive
+v0000021cc620ef20_0 .net "IN3", 0 0, o0000021cc61c80c8;  0 drivers
+v0000021cc620eca0_0 .var "IN3_NAND_W1", 0 0;
+v0000021cc620ed40_0 .var "IN3_OR_IN4_Complement_W2", 0 0;
+o0000021cc61c8158 .functor BUFZ 1, C4<z>; HiZ drive
+v0000021cc620f420_0 .net "IN4", 0 0, o0000021cc61c8158;  0 drivers
+o0000021cc61c8188 .functor BUFZ 1, C4<z>; HiZ drive
+v0000021cc620f240_0 .net "IN5", 0 0, o0000021cc61c8188;  0 drivers
+v0000021cc620f2e0_0 .var "IN5_OR_W2", 0 0;
+v0000021cc620f380_0 .var "OUT1", 0 0;
+v0000021cc620f560_0 .var "OUT2", 0 0;
+v0000021cc620f060_0 .var "OUT3", 0 0;
+E_0000021cc6179fb0 .event posedge, v0000021cc6192eb0_0;
+E_0000021cc6179970 .event anyedge, v0000021cc620ed40_0, v0000021cc620f240_0;
+E_0000021cc6179df0 .event anyedge, v0000021cc620f420_0, v0000021cc620ef20_0;
+E_0000021cc6179870 .event anyedge, v0000021cc620ef20_0, v0000021cc6193090_0;
+E_0000021cc6179cf0 .event anyedge, v0000021cc620ef20_0, v0000021cc6192ff0_0;
+E_0000021cc6179ab0 .event anyedge, v0000021cc6193090_0, v0000021cc6192f50_0;
+    .scope S_0000021cc6192d20;
+T_0 ;
+    %wait E_0000021cc6179ab0;
+    %load/vec4 v0000021cc6192f50_0;
+    %load/vec4 v0000021cc6193090_0;
+    %or;
+    %inv;
+    %store/vec4 v0000021cc6192ff0_0, 0, 1;
+    %jmp T_0;
+    .thread T_0, $push;
+    .scope S_0000021cc6192d20;
+T_1 ;
+    %wait E_0000021cc6179cf0;
+    %load/vec4 v0000021cc6192ff0_0;
+    %load/vec4 v0000021cc620ef20_0;
+    %and;
+    %inv;
+    %store/vec4 v0000021cc620eca0_0, 0, 1;
+    %jmp T_1;
+    .thread T_1, $push;
+    .scope S_0000021cc6192d20;
+T_2 ;
+    %wait E_0000021cc6179870;
+    %load/vec4 v0000021cc6193090_0;
+    %load/vec4 v0000021cc620ef20_0;
+    %and;
+    %inv;
+    %store/vec4 v0000021cc620fba0_0, 0, 1;
+    %jmp T_2;
+    .thread T_2, $push;
+    .scope S_0000021cc6192d20;
+T_3 ;
+    %wait E_0000021cc6179df0;
+    %load/vec4 v0000021cc620ef20_0;
+    %load/vec4 v0000021cc620f420_0;
+    %inv;
+    %or;
+    %store/vec4 v0000021cc620ed40_0, 0, 1;
+    %jmp T_3;
+    .thread T_3, $push;
+    .scope S_0000021cc6192d20;
+T_4 ;
+    %wait E_0000021cc6179970;
+    %load/vec4 v0000021cc620f240_0;
+    %load/vec4 v0000021cc620ed40_0;
+    %or;
+    %store/vec4 v0000021cc620f2e0_0, 0, 1;
+    %jmp T_4;
+    .thread T_4, $push;
+    .scope S_0000021cc6192d20;
+T_5 ;
+    %wait E_0000021cc6179fb0;
+    %load/vec4 v0000021cc620eca0_0;
+    %assign/vec4 v0000021cc620f380_0, 0;
+    %jmp T_5;
+    .thread T_5;
+    .scope S_0000021cc6192d20;
+T_6 ;
+    %wait E_0000021cc6179fb0;
+    %load/vec4 v0000021cc620fba0_0;
+    %assign/vec4 v0000021cc620f560_0, 0;
+    %jmp T_6;
+    .thread T_6;
+    .scope S_0000021cc6192d20;
+T_7 ;
+    %wait E_0000021cc6179fb0;
+    %load/vec4 v0000021cc620f2e0_0;
+    %assign/vec4 v0000021cc620f060_0, 0;
+    %jmp T_7;
+    .thread T_7;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "DigCt.v";
