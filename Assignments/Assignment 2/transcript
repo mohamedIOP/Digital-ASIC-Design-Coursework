@@ -1,0 +1,26 @@
+vsim -gui work.Up_Dn_Counter_TB
+# vsim -gui work.Up_Dn_Counter_TB 
+# Start time: 15:48:08 on Jul 10,2026
+# Loading work.Up_Dn_Counter_TB
+# Loading work.Up_Dn_Counter
+run
+# At Time: 0,Counter: x,High Flag: x,Low Flag: 1
+# At Time: 5,Counter: 10101,High Flag: 0,Low Flag: 1
+# At Time: 20,Counter: 10101,High Flag: 0,Low Flag: 0
+# At Time: 25,Counter: 10100,High Flag: 0,Low Flag: 0
+# At Time: 35,Counter: 10011,High Flag: 0,Low Flag: 0
+# At Time: 45,Counter: 10100,High Flag: 0,Low Flag: 0
+# At Time: 60,Counter: 10100,High Flag: 0,Low Flag: 1
+# At Time: 65,Counter: 1,High Flag: 0,Low Flag: 1
+# At Time: 70,Counter: 1,High Flag: 0,Low Flag: 0
+# At Time: 75,Counter: 0,High Flag: 0,Low Flag: 0
+# At Time: 110,Counter: 0,High Flag: 0,Low Flag: 1
+# At Time: 115,Counter: 11110,High Flag: 0,Low Flag: 1
+# At Time: 130,Counter: 11110,High Flag: 0,Low Flag: 0
+# At Time: 135,Counter: 11111,High Flag: 1,Low Flag: 0
+# ** Note: $finish    : D:/Studying/Digital Track/Digital Design Asic Course Temsah/Digital-ASIC-Design-Coursework/Assignments/Assignment 2/Up_Dn_Counter_TB.v(40)
+#    Time: 200 ps  Iteration: 0  Instance: /Up_Dn_Counter_TB
+# 1
+# Break in Module Up_Dn_Counter_TB at D:/Studying/Digital Track/Digital Design Asic Course Temsah/Digital-ASIC-Design-Coursework/Assignments/Assignment 2/Up_Dn_Counter_TB.v line 40
+# End time: 15:55:23 on Jul 10,2026, Elapsed time: 0:07:15
+# Errors: 0, Warnings: 1
