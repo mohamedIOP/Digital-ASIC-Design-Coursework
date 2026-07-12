@@ -1,0 +1,128 @@
+$date
+	Fri Jul 10 10:41:38 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module counter_TB $end
+$var wire 1 ! zero_TB $end
+$var wire 4 " counter_TB [3:0] $end
+$var reg 4 # IN_TB [3:0] $end
+$var reg 1 $ clk_TB $end
+$var reg 1 % dec_TB $end
+$var reg 1 & latch_TB $end
+$scope module DUT_DN_Counter $end
+$var wire 4 ' IN [3:0] $end
+$var wire 1 $ clk $end
+$var wire 1 % dec $end
+$var wire 1 & latch $end
+$var wire 1 ! zero $end
+$var reg 4 ( counter [3:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+bx (
+b111 '
+1&
+0%
+0$
+b111 #
+bx "
+x!
+$end
+#5
+0!
+b111 "
+b111 (
+1$
+#10
+0$
+#15
+b110 "
+b110 (
+1$
+0&
+1%
+#20
+0$
+#25
+b101 "
+b101 (
+1$
+#30
+0$
+0%
+#35
+1$
+#40
+0$
+#45
+1$
+#50
+0$
+1&
+b11 #
+b11 '
+#55
+b11 "
+b11 (
+1$
+#60
+0$
+0&
+1%
+#65
+b10 "
+b10 (
+1$
+#70
+0$
+#75
+b1 "
+b1 (
+1$
+#80
+0$
+#85
+1!
+b0 "
+b0 (
+1$
+#90
+0$
+#95
+1$
+#100
+0$
+#105
+1$
+#110
+0$
+#115
+1$
+#120
+0$
+#125
+1$
+#130
+0$
+#135
+1$
+#140
+0$
+#145
+1$
+#150
+0$
+#155
+1$
+#160
+0$

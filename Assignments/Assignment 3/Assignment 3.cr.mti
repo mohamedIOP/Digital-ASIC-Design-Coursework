@@ -1,0 +1,15 @@
+{D:/Studying/Digital Track/Digital Design Asic Course Temsah/Digital-ASIC-Design-Coursework/Assignments/Assignment 3/ALU.v} {1 {vlog -work work -stats=none {D:/Studying/Digital Track/Digital Design Asic Course Temsah/Digital-ASIC-Design-Coursework/Assignments/Assignment 3/ALU.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module ALU
+
+Top level modules:
+	ALU
+
+} {} {}} {D:/Studying/Digital Track/Digital Design Asic Course Temsah/Digital-ASIC-Design-Coursework/Assignments/Assignment 3/ALU_TB.v} {1 {vlog -work work -stats=none {D:/Studying/Digital Track/Digital Design Asic Course Temsah/Digital-ASIC-Design-Coursework/Assignments/Assignment 3/ALU_TB.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module ALU_TB
+
+Top level modules:
+	ALU_TB
+
+} {} {}}

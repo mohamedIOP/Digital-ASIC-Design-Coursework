@@ -1,0 +1,49 @@
+vsim -gui work.ALU_TB
+# vsim -gui work.ALU_TB 
+# Start time: 12:55:42 on Jul 12,2026
+# Loading work.ALU_TB
+# Loading work.ALU
+add wave  \
+sim:/ALU_TB/A_TB \
+sim:/ALU_TB/B_TB \
+sim:/ALU_TB/ALU_FUN_TB \
+sim:/ALU_TB/CLK_TB \
+sim:/ALU_TB/ALU_OUT_TB \
+sim:/ALU_TB/Carry_Flag_TB \
+sim:/ALU_TB/Arith_Flag_TB \
+sim:/ALU_TB/Logic_Flag_TB \
+sim:/ALU_TB/CMP_Flag_TB \
+sim:/ALU_TB/Shift_Flag_TB
+run
+# At Time: 0,ALU_OUT: x_x_xxxx_x,C_F: 0,A_F: 1,L_F: 0,CMP_F: 0,S_F: 0
+# At Time: 5000,ALU_OUT: 0_0_0001_1110,C_F: 0,A_F: 1,L_F: 0,CMP_F: 0,S_F: 0
+# At Time: 15000,ALU_OUT: 0_0_0000_0,C_F: 0,A_F: 1,L_F: 0,CMP_F: 0,S_F: 0
+# At Time: 25000,ALU_OUT: 0_0_1110_1,C_F: 0,A_F: 1,L_F: 0,CMP_F: 0,S_F: 0
+# At Time: 35000,ALU_OUT: 0_0_0000_1,C_F: 0,A_F: 1,L_F: 0,CMP_F: 0,S_F: 0
+# At Time: 40000,ALU_OUT: 0_0_0000_1,C_F: 0,A_F: 0,L_F: 1,CMP_F: 0,S_F: 0
+# At Time: 45000,ALU_OUT: 0_0_0000_1111,C_F: 0,A_F: 0,L_F: 1,CMP_F: 0,S_F: 0
+# At Time: 65000,ALU_OUT: 1111_1111_1111_0,C_F: 0,A_F: 0,L_F: 1,CMP_F: 0,S_F: 0
+# At Time: 85000,ALU_OUT: 0_0_0000_0,C_F: 0,A_F: 0,L_F: 1,CMP_F: 0,S_F: 0
+# At Time: 95000,ALU_OUT: 1111_1111_1111_1111,C_F: 0,A_F: 0,L_F: 1,CMP_F: 0,S_F: 0
+# At Time: 100000,ALU_OUT: 1111_1111_1111_1111,C_F: 0,A_F: 0,L_F: 0,CMP_F: 1,S_F: 0
+# At Time: 105000,ALU_OUT: 0_0_0000_1,C_F: 0,A_F: 0,L_F: 0,CMP_F: 1,S_F: 0
+# At Time: 115000,ALU_OUT: 0_0_0000_0,C_F: 0,A_F: 0,L_F: 0,CMP_F: 1,S_F: 0
+# At Time: 130000,ALU_OUT: 0_0_0000_0,C_F: 0,A_F: 0,L_F: 0,CMP_F: 0,S_F: 1
+# At Time: 135000,ALU_OUT: 0_0_0000_111,C_F: 0,A_F: 0,L_F: 0,CMP_F: 0,S_F: 1
+# At Time: 145000,ALU_OUT: 0_0_0001_1110,C_F: 0,A_F: 0,L_F: 0,CMP_F: 0,S_F: 1
+# At Time: 150000,ALU_OUT: 0_0_0001_1110,C_F: 0,A_F: 0,L_F: 0,CMP_F: 0,S_F: 0
+# At Time: 155000,ALU_OUT: 0_0_0000_0,C_F: 0,A_F: 0,L_F: 0,CMP_F: 0,S_F: 0
+# At Time: 170000,ALU_OUT: 0_0_0000_0,C_F: 1,A_F: 1,L_F: 0,CMP_F: 0,S_F: 0
+# At Time: 180000,ALU_OUT: 0_0_0000_0,C_F: 0,A_F: 1,L_F: 0,CMP_F: 0,S_F: 0
+# At Time: 185000,ALU_OUT: 1000_0_0000_0,C_F: 0,A_F: 1,L_F: 0,CMP_F: 0,S_F: 0
+# At Time: 190000,ALU_OUT: 1000_0_0000_0,C_F: 1,A_F: 1,L_F: 0,CMP_F: 0,S_F: 0
+# At Time: 200000,ALU_OUT: 1000_0_0000_0,C_F: 0,A_F: 1,L_F: 0,CMP_F: 0,S_F: 0
+# At Time: 205000,ALU_OUT: 0_1111_0000_0,C_F: 0,A_F: 1,L_F: 0,CMP_F: 0,S_F: 0
+# At Time: 210000,ALU_OUT: 0_1111_0000_0,C_F: 0,A_F: 0,L_F: 0,CMP_F: 1,S_F: 0
+# At Time: 215000,ALU_OUT: 0_0_0000_10,C_F: 0,A_F: 0,L_F: 0,CMP_F: 1,S_F: 0
+# At Time: 220000,ALU_OUT: 0_0_0000_10,C_F: 0,A_F: 0,L_F: 0,CMP_F: 0,S_F: 1
+# At Time: 225000,ALU_OUT: 0_0_0000_0,C_F: 0,A_F: 0,L_F: 0,CMP_F: 0,S_F: 1
+# ** Note: $finish    : D:/Studying/Digital Track/Digital Design Asic Course Temsah/Digital-ASIC-Design-Coursework/Assignments/Assignment 3/ALU_TB.v(57)
+#    Time: 250 us  Iteration: 0  Instance: /ALU_TB
+# 1
+# Break in Module ALU_TB at D:/Studying/Digital Track/Digital Design Asic Course Temsah/Digital-ASIC-Design-Coursework/Assignments/Assignment 3/ALU_TB.v line 57
