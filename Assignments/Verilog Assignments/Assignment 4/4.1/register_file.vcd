@@ -1,0 +1,304 @@
+$date
+	Mon Jul 20 19:26:26 2026
+$end
+$version
+	ModelSim Version 2020.1
+$end
+$timescale
+	1ps
+$end
+
+$scope module Register_File_tb $end
+$var reg 16 ! WrData [15:0] $end
+$var reg 3 " Address [2:0] $end
+$var reg 1 # WrEn $end
+$var reg 1 $ RdEn $end
+$var reg 1 % CLK $end
+$var reg 1 & RST $end
+$var wire 1 ' RdData [15] $end
+$var wire 1 ( RdData [14] $end
+$var wire 1 ) RdData [13] $end
+$var wire 1 * RdData [12] $end
+$var wire 1 + RdData [11] $end
+$var wire 1 , RdData [10] $end
+$var wire 1 - RdData [9] $end
+$var wire 1 . RdData [8] $end
+$var wire 1 / RdData [7] $end
+$var wire 1 0 RdData [6] $end
+$var wire 1 1 RdData [5] $end
+$var wire 1 2 RdData [4] $end
+$var wire 1 3 RdData [3] $end
+$var wire 1 4 RdData [2] $end
+$var wire 1 5 RdData [1] $end
+$var wire 1 6 RdData [0] $end
+
+$scope module uut $end
+$var wire 1 7 WrData [15] $end
+$var wire 1 8 WrData [14] $end
+$var wire 1 9 WrData [13] $end
+$var wire 1 : WrData [12] $end
+$var wire 1 ; WrData [11] $end
+$var wire 1 < WrData [10] $end
+$var wire 1 = WrData [9] $end
+$var wire 1 > WrData [8] $end
+$var wire 1 ? WrData [7] $end
+$var wire 1 @ WrData [6] $end
+$var wire 1 A WrData [5] $end
+$var wire 1 B WrData [4] $end
+$var wire 1 C WrData [3] $end
+$var wire 1 D WrData [2] $end
+$var wire 1 E WrData [1] $end
+$var wire 1 F WrData [0] $end
+$var wire 1 G Address [2] $end
+$var wire 1 H Address [1] $end
+$var wire 1 I Address [0] $end
+$var wire 1 J WrEn $end
+$var wire 1 K RdEn $end
+$var wire 1 L CLK $end
+$var wire 1 M RST $end
+$var reg 16 N RdData [15:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 !
+b0 "
+0#
+0$
+0%
+0&
+bx N
+x6
+x5
+x4
+x3
+x2
+x1
+x0
+x/
+x.
+x-
+x,
+x+
+x*
+x)
+x(
+x'
+0M
+0L
+0K
+0J
+0I
+0H
+0G
+0F
+0E
+0D
+0C
+0B
+0A
+0@
+0?
+0>
+0=
+0<
+0;
+0:
+09
+08
+07
+$end
+#5000
+1%
+1L
+#10000
+0%
+0L
+#15000
+1%
+1L
+#20000
+1&
+0%
+1M
+0L
+#25000
+1%
+1L
+#30000
+0%
+0L
+#35000
+1%
+1L
+b1010101111001101 !
+1#
+1F
+1D
+1C
+1@
+1?
+1>
+1=
+1;
+19
+17
+1J
+#40000
+0%
+0L
+#45000
+1%
+1L
+0#
+0J
+#50000
+0%
+0L
+#55000
+1%
+1L
+b11 "
+b1001000110100 !
+1#
+0F
+0C
+1B
+1A
+0@
+0?
+0>
+0;
+1:
+09
+07
+1I
+1H
+1J
+#60000
+0%
+0L
+#65000
+1%
+1L
+0#
+0J
+#70000
+0%
+0L
+#75000
+1%
+1L
+b0 "
+1$
+0I
+0H
+1K
+#80000
+0%
+0L
+#85000
+1%
+1L
+b1010101111001101 N
+16
+05
+14
+13
+02
+01
+10
+1/
+1.
+1-
+0,
+1+
+0*
+1)
+0(
+1'
+#86000
+0$
+0K
+#90000
+0%
+0L
+#95000
+1%
+1L
+b11 "
+1$
+1I
+1H
+1K
+#100000
+0%
+0L
+#105000
+1%
+1L
+b1001000110100 N
+06
+03
+12
+11
+00
+0/
+0.
+0+
+1*
+0)
+0'
+#106000
+0$
+0&
+0K
+0M
+#110000
+0%
+0L
+#115000
+1%
+1L
+#120000
+0%
+0L
+#121000
+1&
+1M
+#125000
+1%
+1L
+b0 "
+1$
+0I
+0H
+1K
+#130000
+0%
+0L
+#135000
+1%
+1L
+b0 N
+04
+02
+01
+0-
+0*
+#136000
+0$
+0K
+#140000
+0%
+0L
+#145000
+1%
+1L
+#150000
+0%
+0L
+#155000
+1%
+1L
