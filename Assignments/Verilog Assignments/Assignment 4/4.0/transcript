@@ -1,0 +1,205 @@
+# Compile of ALU_TOP.v was successful.
+# Compile of ALU_TOP_TB.v was successful.
+# Compile of Arithmetic_Unit.v failed with 1 errors.
+# Compile of Cmp_Unit.v was successful.
+# Compile of Decoder_Unit.v was successful.
+# Compile of Logic_Unit.v was successful.
+# Compile of Shift_Unit.v was successful.
+# 7 compiles, 1 failed with 1 error.
+# Compile of ALU_TOP.v was successful.
+# Compile of ALU_TOP_TB.v was successful.
+# Compile of Arithmetic_Unit.v was successful.
+# Compile of Cmp_Unit.v was successful.
+# Compile of Decoder_Unit.v was successful.
+# Compile of Logic_Unit.v was successful.
+# Compile of Shift_Unit.v was successful.
+# 7 compiles, 0 failed with no errors.
+vsim -gui work.ALU_TOP_TB
+# vsim -gui work.ALU_TOP_TB 
+# Start time: 16:00:31 on Jul 20,2026
+# Loading work.ALU_TOP_TB
+# Loading work.ALU_TOP
+# Loading work.Decoder_Unit
+# Loading work.Arithmetic_Unit
+# Loading work.Logic_Unit
+# Loading work.Cmp_Unit
+# Loading work.Shift_Unit
+add wave  \
+sim:/ALU_TOP_TB/A_TB \
+sim:/ALU_TOP_TB/B_TB \
+sim:/ALU_TOP_TB/ALU_FUN_TB \
+sim:/ALU_TOP_TB/CLK_TB \
+sim:/ALU_TOP_TB/RST_TB \
+sim:/ALU_TOP_TB/Arith_OUT_TB \
+sim:/ALU_TOP_TB/Logic_OUT_TB \
+sim:/ALU_TOP_TB/Cmp_OUT_TB \
+sim:/ALU_TOP_TB/Shift_OUT_TB \
+sim:/ALU_TOP_TB/Arith_Flag_TB \
+sim:/ALU_TOP_TB/Logic_Flag_TB \
+sim:/ALU_TOP_TB/Cmp_Flag_TB \
+sim:/ALU_TOP_TB/Shift_Flag_TB
+run
+# ========================================
+#      ALU_TOP Testbench Started
+#      Clock: 100KHz (40% low, 60% high)
+# ========================================
+# 
+# --- Signed Arithmetic: Addition (ALU_FUN=0000) ---
+# TEST 1 PASSED: ADD: NEG + NEG | Arith_OUT = 4294967282 (0xfffffff2), Flags = 0001
+# TEST 2 PASSED: ADD: POS + NEG | Arith_OUT = 10 (0x0000000a), Flags = 0001
+# TEST 3 PASSED: ADD: NEG + POS | Arith_OUT = 11 (0x0000000b), Flags = 0001
+# TEST 4 PASSED: ADD: POS + POS | Arith_OUT = 55 (0x00000037), Flags = 0001
+# 
+# --- Signed Arithmetic: Subtraction (ALU_FUN=0001) ---
+# TEST 5 PASSED: SUB: NEG - NEG | Arith_OUT = 6 (0x00000006), Flags = 0001
+# TEST 6 PASSED: SUB: POS - NEG | Arith_OUT = 30 (0x0000001e), Flags = 0001
+# TEST 7 PASSED: SUB: NEG - POS | Arith_OUT = 4294967277 (0xffffffed), Flags = 0001
+# TEST 8 PASSED: SUB: POS - POS | Arith_OUT = 30 (0x0000001e), Flags = 0001
+# 
+# --- Signed Arithmetic: Multiplication (ALU_FUN=0010) ---
+# TEST 9 PASSED: MUL: NEG * NEG | Arith_OUT = 40 (0x00000028), Flags = 0001
+# TEST 10 PASSED: MUL: POS * NEG | Arith_OUT = 4294967286 (0xfffffff6), Flags = 0001
+# TEST 11 PASSED: MUL: NEG * POS | Arith_OUT = 4294967282 (0xfffffff2), Flags = 0001
+# TEST 12 PASSED: MUL: POS * POS | Arith_OUT = 48 (0x00000030), Flags = 0001
+# 
+# --- Signed Arithmetic: Division (ALU_FUN=0011) ---
+# TEST 13 PASSED: DIV: NEG / NEG | Arith_OUT = 2 (0x00000002), Flags = 0001
+# TEST 14 PASSED: DIV: POS / NEG | Arith_OUT = 4294967281 (0xfffffff1), Flags = 0001
+# TEST 15 PASSED: DIV: NEG / POS | Arith_OUT = 4294967292 (0xfffffffc), Flags = 0001
+# TEST 16 PASSED: DIV: POS / POS | Arith_OUT = 25 (0x00000019), Flags = 0001
+# 
+# --- Logic Operations (ALU_FUN=01xx) ---
+run
+# TEST 17 PASSED: LOGIC: AND | Logic_OUT = 0x0f00, Flags = 0010
+# TEST 18 PASSED: LOGIC: OR | Logic_OUT = 0xff0f, Flags = 0010
+# TEST 19 PASSED: LOGIC: NAND | Logic_OUT = 0xf0ff, Flags = 0010
+# TEST 20 PASSED: LOGIC: NOR | Logic_OUT = 0x00f0, Flags = 0010
+# 
+# --- Compare Operations (ALU_FUN=10xx) ---
+# TEST 21 PASSED: CMP: NOP | Cmp_OUT = 0, Flags = 0100
+# TEST 22 PASSED: CMP: A == B (True) | Cmp_OUT = 1, Flags = 0100
+# TEST 23 PASSED: CMP: A == B (False) | Cmp_OUT = 0, Flags = 0100
+# TEST 24 PASSED: CMP: A > B (True) | Cmp_OUT = 2, Flags = 0100
+# TEST 25 PASSED: CMP: A > B (False) | Cmp_OUT = 0, Flags = 0100
+# TEST 26 PASSED: CMP: A < B (True) | Cmp_OUT = 3, Flags = 0100
+# TEST 27 PASSED: CMP: A < B (False) | Cmp_OUT = 0, Flags = 0100
+# 
+# --- Shift Operations (ALU_FUN=11xx) ---
+# TEST 28 PASSED: SHIFT: A >> 1 | Shift_OUT = 0x7f80, Flags = 1000
+# TEST 29 PASSED: SHIFT: A << 1 | Shift_OUT = 0x01fe, Flags = 1000
+# TEST 30 PASSED: SHIFT: B >> 1 | Shift_OUT = 0x007f, Flags = 1000
+# TEST 31 PASSED: SHIFT: B << 1 | Shift_OUT = 0xfe00, Flags = 1000
+# 
+# ========================================
+#      Testbench Complete
+#      Total Tests: 31
+#      Passed: 31
+#      Failed: 0
+# ========================================
+# ALL TESTS PASSED!
+# ** Note: $finish    : D:/Studying/Digital Track/Digital Design Asic Course Temsah/Digital-ASIC-Design-Coursework/Assignments/Verilog Assignments/Assignment 4/4.0/ALU_TOP_TB.v(357)
+#    Time: 646500 ns  Iteration: 0  Instance: /ALU_TOP_TB
+# 1
+# Break in Module ALU_TOP_TB at D:/Studying/Digital Track/Digital Design Asic Course Temsah/Digital-ASIC-Design-Coursework/Assignments/Verilog Assignments/Assignment 4/4.0/ALU_TOP_TB.v line 357
+add wave  \
+sim:/ALU_TOP_TB/A_TB \
+sim:/ALU_TOP_TB/B_TB \
+sim:/ALU_TOP_TB/ALU_FUN_TB \
+sim:/ALU_TOP_TB/CLK_TB \
+sim:/ALU_TOP_TB/RST_TB \
+sim:/ALU_TOP_TB/Arith_OUT_TB \
+sim:/ALU_TOP_TB/Logic_OUT_TB \
+sim:/ALU_TOP_TB/Cmp_OUT_TB \
+sim:/ALU_TOP_TB/Shift_OUT_TB \
+sim:/ALU_TOP_TB/Arith_Flag_TB \
+sim:/ALU_TOP_TB/Logic_Flag_TB \
+sim:/ALU_TOP_TB/Cmp_Flag_TB \
+sim:/ALU_TOP_TB/Shift_Flag_TB
+# A bookmark named "bookmark0" has been added for window "Wave"
+# Bookmark "bookmark0" already exists with that definition in window "Wave", ignoring
+# Compile of ALU_TOP.v was successful.
+# Compile of ALU_TOP_TB.v was successful.
+# Compile of Arithmetic_Unit.v was successful.
+# Compile of Cmp_Unit.v was successful.
+# Compile of Decoder_Unit.v was successful.
+# Compile of Logic_Unit.v was successful.
+# Compile of Shift_Unit.v was successful.
+# 7 compiles, 0 failed with no errors.
+vsim -gui work.ALU_TOP_TB
+# Bookmarks have been exported for window "Wave" to: D:/Studying/Digital Track/Digital Design Asic Course Temsah/Digital-ASIC-Design-Coursework/Assignments/Verilog Assignments/Assignment 4/4.0/bookmarks.do
+# End time: 16:22:57 on Jul 20,2026, Elapsed time: 0:22:26
+# Errors: 0, Warnings: 7
+# vsim -gui work.ALU_TOP_TB 
+# Start time: 16:22:57 on Jul 20,2026
+# Loading work.ALU_TOP_TB
+# Loading work.ALU_TOP
+# Loading work.Decoder_Unit
+# Loading work.Arithmetic_Unit
+# Loading work.Logic_Unit
+# Loading work.Cmp_Unit
+# Loading work.Shift_Unit
+# A bookmarks file was found in the current directory with 1 bookmark
+# Bookmark(s) were restored for window "Wave"
+run
+# ========================================
+#      ALU_TOP Testbench Started
+#      Clock: 100KHz (40% low, 60% high)
+# ========================================
+# 
+# --- Signed Arithmetic: Addition (ALU_FUN=0000) ---
+# TEST 1 PASSED: ADD: NEG + NEG | Arith_OUT = 4294967282 (0xfffffff2), Flags = 0001
+# TEST 2 PASSED: ADD: POS + NEG | Arith_OUT = 10 (0x0000000a), Flags = 0001
+# TEST 3 PASSED: ADD: NEG + POS | Arith_OUT = 11 (0x0000000b), Flags = 0001
+# TEST 4 PASSED: ADD: POS + POS | Arith_OUT = 55 (0x00000037), Flags = 0001
+# 
+# --- Signed Arithmetic: Subtraction (ALU_FUN=0001) ---
+# TEST 5 PASSED: SUB: NEG - NEG | Arith_OUT = 6 (0x00000006), Flags = 0001
+# TEST 6 PASSED: SUB: POS - NEG | Arith_OUT = 30 (0x0000001e), Flags = 0001
+# TEST 7 PASSED: SUB: NEG - POS | Arith_OUT = 4294967277 (0xffffffed), Flags = 0001
+# TEST 8 PASSED: SUB: POS - POS | Arith_OUT = 30 (0x0000001e), Flags = 0001
+# 
+# --- Signed Arithmetic: Multiplication (ALU_FUN=0010) ---
+# TEST 9 PASSED: MUL: NEG * NEG | Arith_OUT = 40 (0x00000028), Flags = 0001
+# TEST 10 PASSED: MUL: POS * NEG | Arith_OUT = 4294967286 (0xfffffff6), Flags = 0001
+# TEST 11 PASSED: MUL: NEG * POS | Arith_OUT = 4294967282 (0xfffffff2), Flags = 0001
+# TEST 12 PASSED: MUL: POS * POS | Arith_OUT = 48 (0x00000030), Flags = 0001
+# 
+# --- Signed Arithmetic: Division (ALU_FUN=0011) ---
+# TEST 13 PASSED: DIV: NEG / NEG | Arith_OUT = 2 (0x00000002), Flags = 0001
+# TEST 14 PASSED: DIV: POS / NEG | Arith_OUT = 4294967281 (0xfffffff1), Flags = 0001
+# TEST 15 PASSED: DIV: NEG / POS | Arith_OUT = 4294967292 (0xfffffffc), Flags = 0001
+# TEST 16 PASSED: DIV: POS / POS | Arith_OUT = 25 (0x00000019), Flags = 0001
+# 
+# --- Logic Operations (ALU_FUN=01xx) ---
+# TEST 17 PASSED: LOGIC: AND | Logic_OUT = 0x0f00, Flags = 0010
+# TEST 18 PASSED: LOGIC: OR | Logic_OUT = 0xff0f, Flags = 0010
+# TEST 19 PASSED: LOGIC: NAND | Logic_OUT = 0xf0ff, Flags = 0010
+# TEST 20 PASSED: LOGIC: NOR | Logic_OUT = 0x00f0, Flags = 0010
+# 
+# --- Compare Operations (ALU_FUN=10xx) ---
+# TEST 21 PASSED: CMP: NOP | Cmp_OUT = 0, Flags = 0100
+# TEST 22 PASSED: CMP: A == B (True) | Cmp_OUT = 1, Flags = 0100
+# TEST 23 PASSED: CMP: A == B (False) | Cmp_OUT = 0, Flags = 0100
+# TEST 24 PASSED: CMP: A > B (True) | Cmp_OUT = 2, Flags = 0100
+# TEST 25 PASSED: CMP: A > B (False) | Cmp_OUT = 0, Flags = 0100
+# TEST 26 PASSED: CMP: A < B (True) | Cmp_OUT = 3, Flags = 0100
+# TEST 27 PASSED: CMP: A < B (False) | Cmp_OUT = 0, Flags = 0100
+# 
+# --- Shift Operations (ALU_FUN=11xx) ---
+# TEST 28 PASSED: SHIFT: A >> 1 | Shift_OUT = 0x7f80, Flags = 1000
+# TEST 29 PASSED: SHIFT: A << 1 | Shift_OUT = 0x01fe, Flags = 1000
+# TEST 30 PASSED: SHIFT: B >> 1 | Shift_OUT = 0x007f, Flags = 1000
+# TEST 31 PASSED: SHIFT: B << 1 | Shift_OUT = 0xfe00, Flags = 1000
+# 
+# ========================================
+#      Testbench Complete
+#      Total Tests: 31
+#      Passed: 31
+#      Failed: 0
+# ========================================
+# ALL TESTS PASSED!
+# ** Note: $finish    : D:/Studying/Digital Track/Digital Design Asic Course Temsah/Digital-ASIC-Design-Coursework/Assignments/Verilog Assignments/Assignment 4/4.0/ALU_TOP_TB.v(357)
+#    Time: 646500 ns  Iteration: 0  Instance: /ALU_TOP_TB
+# 1
+# Break in Module ALU_TOP_TB at D:/Studying/Digital Track/Digital Design Asic Course Temsah/Digital-ASIC-Design-Coursework/Assignments/Verilog Assignments/Assignment 4/4.0/ALU_TOP_TB.v line 357
+# Printing not supported.
