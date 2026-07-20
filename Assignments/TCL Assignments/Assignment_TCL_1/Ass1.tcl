@@ -1,0 +1,10 @@
+puts "****Bitwise Operations****";
+set a 20;
+set b 5;
+set c 9;
+set var0 [expr $a & $c];
+set var1 [expr $a | $b];
+set var2 [expr $a ^ $a];
+puts "The Content Of Var0 is $var0";
+puts "The Content Of Var1 is $var1";
+puts "The Content Of Var2 is $var2";

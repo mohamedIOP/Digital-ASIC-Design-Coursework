@@ -1,0 +1,50 @@
+{D:/Studying/Digital Track/Digital Design Asic Course Temsah/Digital-ASIC-Design-Coursework/Assignments/Verilog Assignments/Assignment 4/4.0/ALU_TOP.v} {1 {vlog -work work -stats=none {D:/Studying/Digital Track/Digital Design Asic Course Temsah/Digital-ASIC-Design-Coursework/Assignments/Verilog Assignments/Assignment 4/4.0/ALU_TOP.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module ALU_TOP
+
+Top level modules:
+	ALU_TOP
+
+} {} {}} {D:/Studying/Digital Track/Digital Design Asic Course Temsah/Digital-ASIC-Design-Coursework/Assignments/Verilog Assignments/Assignment 4/4.0/Shift_Unit.v} {1 {vlog -work work -stats=none {D:/Studying/Digital Track/Digital Design Asic Course Temsah/Digital-ASIC-Design-Coursework/Assignments/Verilog Assignments/Assignment 4/4.0/Shift_Unit.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Shift_Unit
+
+Top level modules:
+	Shift_Unit
+
+} {} {}} {D:/Studying/Digital Track/Digital Design Asic Course Temsah/Digital-ASIC-Design-Coursework/Assignments/Verilog Assignments/Assignment 4/4.0/Logic_Unit.v} {1 {vlog -work work -stats=none {D:/Studying/Digital Track/Digital Design Asic Course Temsah/Digital-ASIC-Design-Coursework/Assignments/Verilog Assignments/Assignment 4/4.0/Logic_Unit.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Logic_Unit
+
+Top level modules:
+	Logic_Unit
+
+} {} {}} {D:/Studying/Digital Track/Digital Design Asic Course Temsah/Digital-ASIC-Design-Coursework/Assignments/Verilog Assignments/Assignment 4/4.0/Decoder_Unit.v} {1 {vlog -work work -stats=none {D:/Studying/Digital Track/Digital Design Asic Course Temsah/Digital-ASIC-Design-Coursework/Assignments/Verilog Assignments/Assignment 4/4.0/Decoder_Unit.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Decoder_Unit
+
+Top level modules:
+	Decoder_Unit
+
+} {} {}} {D:/Studying/Digital Track/Digital Design Asic Course Temsah/Digital-ASIC-Design-Coursework/Assignments/Verilog Assignments/Assignment 4/4.0/Arithmetic_Unit.v} {1 {vlog -work work -stats=none {D:/Studying/Digital Track/Digital Design Asic Course Temsah/Digital-ASIC-Design-Coursework/Assignments/Verilog Assignments/Assignment 4/4.0/Arithmetic_Unit.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Arithmetic_Unit
+
+Top level modules:
+	Arithmetic_Unit
+
+} {} {}} {D:/Studying/Digital Track/Digital Design Asic Course Temsah/Digital-ASIC-Design-Coursework/Assignments/Verilog Assignments/Assignment 4/4.0/ALU_TOP_TB.v} {1 {vlog -work work -stats=none {D:/Studying/Digital Track/Digital Design Asic Course Temsah/Digital-ASIC-Design-Coursework/Assignments/Verilog Assignments/Assignment 4/4.0/ALU_TOP_TB.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module ALU_TOP_TB
+
+Top level modules:
+	ALU_TOP_TB
+
+} {} {}} {D:/Studying/Digital Track/Digital Design Asic Course Temsah/Digital-ASIC-Design-Coursework/Assignments/Verilog Assignments/Assignment 4/4.0/Cmp_Unit.v} {1 {vlog -work work -stats=none {D:/Studying/Digital Track/Digital Design Asic Course Temsah/Digital-ASIC-Design-Coursework/Assignments/Verilog Assignments/Assignment 4/4.0/Cmp_Unit.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Cmp_Unit
+
+Top level modules:
+	Cmp_Unit
+
+} {} {}}

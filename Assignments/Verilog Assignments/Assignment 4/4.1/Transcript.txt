@@ -1,0 +1,43 @@
+# ========================================
+#      Register File Testbench Started
+# ========================================
+# 
+# --- Scenario 1: Asynchronous Reset ---
+# Time=0 | RST=0 | WrEn=0 | RdEn=0 | Addr=0 | WrData=0x0000 | RdData=0xxxxx
+# Time=20000 | RST=1 | WrEn=0 | RdEn=0 | Addr=0 | WrData=0x0000 | RdData=0xxxxx
+# Reset completed. All registers cleared.
+# 
+# --- Scenario 2: Write to Register 0 ---
+# Time=35000 | RST=1 | WrEn=1 | RdEn=0 | Addr=0 | WrData=0xabcd | RdData=0xxxxx
+# Time=45000 | RST=1 | WrEn=0 | RdEn=0 | Addr=0 | WrData=0xabcd | RdData=0xxxxx
+# Wrote 0xabcd to Register 0
+# 
+# --- Scenario 3: Write to Register 3 ---
+# Time=55000 | RST=1 | WrEn=1 | RdEn=0 | Addr=3 | WrData=0x1234 | RdData=0xxxxx
+# Time=65000 | RST=1 | WrEn=0 | RdEn=0 | Addr=3 | WrData=0x1234 | RdData=0xxxxx
+# Wrote 0x1234 to Register 3
+# 
+# --- Scenario 4: Read from Register 0 ---
+# Time=75000 | RST=1 | WrEn=0 | RdEn=1 | Addr=0 | WrData=0x1234 | RdData=0xxxxx
+# Time=85000 | RST=1 | WrEn=0 | RdEn=1 | Addr=0 | WrData=0x1234 | RdData=0xabcd
+# Read from Register 0: 0xabcd (Expected: 0xABCD)
+# 
+# --- Scenario 5: Read from Register 3 ---
+# Time=86000 | RST=1 | WrEn=0 | RdEn=0 | Addr=0 | WrData=0x1234 | RdData=0xabcd
+# Time=95000 | RST=1 | WrEn=0 | RdEn=1 | Addr=3 | WrData=0x1234 | RdData=0xabcd
+# Time=105000 | RST=1 | WrEn=0 | RdEn=1 | Addr=3 | WrData=0x1234 | RdData=0x1234
+# Read from Register 3: 0x1234 (Expected: 0x1234)
+# 
+# --- Scenario 6: Verify Reset Clears All ---
+# Time=106000 | RST=0 | WrEn=0 | RdEn=0 | Addr=3 | WrData=0x1234 | RdData=0x1234
+# Time=121000 | RST=1 | WrEn=0 | RdEn=0 | Addr=3 | WrData=0x1234 | RdData=0x1234
+# Time=125000 | RST=1 | WrEn=0 | RdEn=1 | Addr=0 | WrData=0x1234 | RdData=0x1234
+# Time=135000 | RST=1 | WrEn=0 | RdEn=1 | Addr=0 | WrData=0x1234 | RdData=0x0000
+# Read Register 0 after reset: 0x0000 (Expected: 0x0000)
+# Time=136000 | RST=1 | WrEn=0 | RdEn=0 | Addr=0 | WrData=0x1234 | RdData=0x0000
+# 
+# ========================================
+#      Register File Testbench Finished
+# ========================================
+# ** Note: $finish    : Assignment 4/4.1/Register_File_tb.v(134)
+#    Time: 156 ns  Iteration: 0  Instance: /Register_File_tb
