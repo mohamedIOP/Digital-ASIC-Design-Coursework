@@ -1,0 +1,15 @@
+{D:/Studying/Digital Track/Digital Design Asic Course Temsah/Digital-ASIC-Design-Coursework/Assignments/Verilog Assignments/Assignment 5/5.1/Automatic_Garage_Door_Controller.v} {1 {vlog -work work -stats=none {D:/Studying/Digital Track/Digital Design Asic Course Temsah/Digital-ASIC-Design-Coursework/Assignments/Verilog Assignments/Assignment 5/5.1/Automatic_Garage_Door_Controller.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Automatic_Garage_Door_Controller
+
+Top level modules:
+	Automatic_Garage_Door_Controller
+
+} {} {}} {D:/Studying/Digital Track/Digital Design Asic Course Temsah/Digital-ASIC-Design-Coursework/Assignments/Verilog Assignments/Assignment 5/5.1/Automatic_Garage_Door_Controller_TB.v} {1 {vlog -work work -stats=none {D:/Studying/Digital Track/Digital Design Asic Course Temsah/Digital-ASIC-Design-Coursework/Assignments/Verilog Assignments/Assignment 5/5.1/Automatic_Garage_Door_Controller_TB.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Automatic_Garage_Door_Controller_TB
+
+Top level modules:
+	Automatic_Garage_Door_Controller_TB
+
+} {} {}}

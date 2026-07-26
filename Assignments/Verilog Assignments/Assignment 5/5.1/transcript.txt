@@ -1,0 +1,37 @@
+# ================================================================================
+#           Automatic Garage Door Controller - Self-Checking Testbench
+# ================================================================================
+# [INFO] Clock Period = 20 ns (50 MHz)
+# 
+# [INFO] Applying asynchronous reset...
+# TEST 1 PASSED: Async Reset -> IDLE                           @ 60000
+# TEST 2 PASSED: IDLE hold (Activate=0)                        @ 100000
+# TEST 3 PASSED: IDLE -> Mv_Up (open door)                     @ 140000
+# TEST 4 PASSED: Mv_Up hold (UP_Max=0)                         @ 180000
+# TEST 5 PASSED: Mv_Up -> IDLE (UP_Max=1)                      @ 220000
+# TEST 6 PASSED: IDLE -> Mv_Dn (close door)                    @ 260000
+# TEST 7 PASSED: Mv_Dn hold (DN_Max=0)                         @ 300000
+# TEST 8 PASSED: Mv_Dn -> IDLE (DN_Max=1)                      @ 340000
+# TEST 9 PASSED: IDLE hold (both sensors low)                  @ 380000
+# TEST 10 PASSED: IDLE hold (both sensors high)                 @ 420000
+# TEST 11 PASSED: Enter Mv_Up for ignore test                   @ 460000
+# TEST 12 PASSED: Mv_Up ignores Activate                        @ 500000
+# TEST 13 PASSED: Return to IDLE                                @ 540000
+# TEST 14 PASSED: Enter Mv_Dn for ignore test                   @ 580000
+# TEST 15 PASSED: Mv_Dn ignores Activate                        @ 620000
+# TEST 16 PASSED: Async Reset from Mv_Dn                        @ 666000
+# TEST 17 PASSED: IDLE cleanup after async reset                @ 700000
+# TEST 18 PASSED: Enter Mv_Up for reset test                    @ 740000
+# TEST 19 PASSED: Async Reset from Mv_Up                        @ 766000
+# 
+# ================================================================================
+#                               TEST SUMMARY
+# ================================================================================
+#  Total Tests Run : 19
+#  Passed          : 19
+#  Failed          : 0
+# --------------------------------------------------------------------------------
+#  RESULT          : ALL TESTS PASSED
+# ================================================================================
+# ** Note: $finish    : Automatic_Garage_Door_Controller_TB.v(287)
+#    Time: 766 ns  Iteration: 0  Instance: /Automatic_Garage_Door_Controller_TB
