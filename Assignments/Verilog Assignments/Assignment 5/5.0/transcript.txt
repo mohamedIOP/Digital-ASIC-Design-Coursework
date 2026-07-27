@@ -1,0 +1,15 @@
+# Test 0 PASSED  (expected=78, got=78)
+# Test 1 PASSED  (expected=44, got=44)
+# Test 2 PASSED  (expected=11, got=11)
+# Test 3 PASSED  (expected=d2, got=d2)
+# Test 4 PASSED  (expected=09, got=09)
+# Test 5 PASSED  (expected=b2, got=b2)
+# Test 6 PASSED  (expected=36, got=36)
+# Test 7 PASSED  (expected=80, got=80)
+# Test 8 PASSED  (expected=2c, got=2c)
+# Test 9 PASSED  (expected=63, got=63)
+# ---------------------------------------
+# TOTAL: 10 passed, 0 failed out of 10
+# ---------------------------------------
+# ** Note: $finish    : CRC_TB.v(119)
+#    Time: 19100 ns  Iteration: 0  Instance: /CRC_TB

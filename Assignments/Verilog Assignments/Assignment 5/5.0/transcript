@@ -1,0 +1,52 @@
+# Compile of CRC.v was successful.
+# Compile of CRC_TB.v was successful.
+# 2 compiles, 0 failed with no errors.
+vsim -gui work.CRC_TB
+# vsim -gui work.CRC_TB 
+# Start time: 17:33:07 on Jul 27,2026
+# Loading work.CRC_TB
+# Loading work.CRC
+add wave -position insertpoint  \
+sim:/CRC_TB/CLK_PERIOD \
+sim:/CRC_TB/No_Registers \
+sim:/CRC_TB/No_Tests \
+sim:/CRC_TB/DATA_input \
+sim:/CRC_TB/Expected_Out_CRC \
+sim:/CRC_TB/test_num \
+sim:/CRC_TB/passed \
+sim:/CRC_TB/failed
+add wave  \
+sim:/CRC_TB/DUT_CRC/No_Registers \
+sim:/CRC_TB/DUT_CRC/SEED \
+sim:/CRC_TB/DUT_CRC/XOR_Bits \
+sim:/CRC_TB/DUT_CRC/DATA \
+sim:/CRC_TB/DUT_CRC/ACTIVE \
+sim:/CRC_TB/DUT_CRC/CLK \
+sim:/CRC_TB/DUT_CRC/RST \
+sim:/CRC_TB/DUT_CRC/CRC \
+sim:/CRC_TB/DUT_CRC/Valid \
+sim:/CRC_TB/DUT_CRC/LFSR \
+sim:/CRC_TB/DUT_CRC/Counter \
+sim:/CRC_TB/DUT_CRC/i \
+sim:/CRC_TB/DUT_CRC/DATA_XOR_R0_W1 \
+sim:/CRC_TB/DUT_CRC/Counter_Max
+run
+# Test 0 PASSED  (expected=78, got=78)
+# Test 1 PASSED  (expected=44, got=44)
+# Test 2 PASSED  (expected=11, got=11)
+# Test 3 PASSED  (expected=d2, got=d2)
+# Test 4 PASSED  (expected=09, got=09)
+# Test 5 PASSED  (expected=b2, got=b2)
+# Test 6 PASSED  (expected=36, got=36)
+# Test 7 PASSED  (expected=80, got=80)
+# Test 8 PASSED  (expected=2c, got=2c)
+# Test 9 PASSED  (expected=63, got=63)
+# ---------------------------------------
+# TOTAL: 10 passed, 0 failed out of 10
+# ---------------------------------------
+# ** Note: $finish    : D:/Studying/Digital Track/Digital Design Asic Course Temsah/Digital-ASIC-Design-Coursework/Assignments/Verilog Assignments/Assignment 5/5.0/CRC_TB.v(119)
+#    Time: 19100 ns  Iteration: 0  Instance: /CRC_TB
+# 1
+# Break in Module CRC_TB at D:/Studying/Digital Track/Digital Design Asic Course Temsah/Digital-ASIC-Design-Coursework/Assignments/Verilog Assignments/Assignment 5/5.0/CRC_TB.v line 119
+# End time: 18:17:35 on Jul 27,2026, Elapsed time: 0:44:28
+# Errors: 0, Warnings: 2
