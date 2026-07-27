@@ -1,0 +1,59 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/intelFPGA/20.1
+vAutomatic_Garage_Door_Controller
+!s110 1785046694
+!i10b 1
+!s100 MFMz2?3A@KU=d@Y@[e?f]1
+Z0 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I[2I@kKAn71PI2HTVEDonQ3
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dD:/Studying/Digital Track/Digital Design Asic Course Temsah/Digital-ASIC-Design-Coursework/Assignments/Verilog Assignments/Assignment 5/5.1
+w1785036946
+8D:/Studying/Digital Track/Digital Design Asic Course Temsah/Digital-ASIC-Design-Coursework/Assignments/Verilog Assignments/Assignment 5/5.1/Automatic_Garage_Door_Controller.v
+FD:/Studying/Digital Track/Digital Design Asic Course Temsah/Digital-ASIC-Design-Coursework/Assignments/Verilog Assignments/Assignment 5/5.1/Automatic_Garage_Door_Controller.v
+!i122 0
+L0 1 49
+Z3 OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1785046694.000000
+!s107 D:/Studying/Digital Track/Digital Design Asic Course Temsah/Digital-ASIC-Design-Coursework/Assignments/Verilog Assignments/Assignment 5/5.1/Automatic_Garage_Door_Controller.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Studying/Digital Track/Digital Design Asic Course Temsah/Digital-ASIC-Design-Coursework/Assignments/Verilog Assignments/Assignment 5/5.1/Automatic_Garage_Door_Controller.v|
+!i113 1
+Z4 o-work work
+Z5 tCvgOpt 0
+n@automatic_@garage_@door_@controller
+vAutomatic_Garage_Door_Controller_TB
+!s110 1785048010
+!i10b 1
+!s100 10O82D`dil@MdgKnCzE4f1
+R0
+IPh2GbW]0ic9b3o7gmek4d0
+R1
+R2
+w1785047448
+8D:/Studying/Digital Track/Digital Design Asic Course Temsah/Digital-ASIC-Design-Coursework/Assignments/Verilog Assignments/Assignment 5/5.1/Automatic_Garage_Door_Controller_TB.v
+FD:/Studying/Digital Track/Digital Design Asic Course Temsah/Digital-ASIC-Design-Coursework/Assignments/Verilog Assignments/Assignment 5/5.1/Automatic_Garage_Door_Controller_TB.v
+!i122 3
+L0 3 296
+R3
+r1
+!s85 0
+31
+!s108 1785048010.000000
+!s107 D:/Studying/Digital Track/Digital Design Asic Course Temsah/Digital-ASIC-Design-Coursework/Assignments/Verilog Assignments/Assignment 5/5.1/Automatic_Garage_Door_Controller_TB.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Studying/Digital Track/Digital Design Asic Course Temsah/Digital-ASIC-Design-Coursework/Assignments/Verilog Assignments/Assignment 5/5.1/Automatic_Garage_Door_Controller_TB.v|
+!i113 1
+R4
+R5
+n@automatic_@garage_@door_@controller_@t@b
