@@ -1,7 +1,7 @@
 module UART_TX_FSM (
     input parEn,serDone,dataValid, // inputs needed for FSM Transitions
     input CLK,RST,
-    output reg serEn,busy, // control signals of serializer and control unit
+    output reg serEn,busy,regData // control signals of serializer and control unit
     output reg [1:0] muxSel // choose which bit for the TX_OUT
 );
     // Define the states 
@@ -17,6 +17,7 @@ module UART_TX_FSM (
     always @(*) begin
         serEn = (currentState == data); // to start from first bit and not to be shifted
         busy = (currentState != idle); // if it's not idle so it's working
+        regData = dataValid;
         muxSel = 'b0; // default mux selection
         // Set Mux Selection lines for TX_OUT
         case (currentState)

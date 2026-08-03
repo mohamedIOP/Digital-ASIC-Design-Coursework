@@ -1,4 +1,4 @@
-module parity_Calc(
+module Parity_Calc(
     input [7:0] pData,
     input dataValid,parTyp,
     input CLK,RST,
