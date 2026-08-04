@@ -22,12 +22,12 @@ module UART_TX_TOP (
     );
     Parity_Calc Parity_Calc_Block (
         .pData(pData),
-        .dataValid(dataValid),.parTyp(parTyp),
+        .parTyp(parTyp),.regData(regDataInternal),
         .CLK(CLK),.RST(RST),
         .parBit(parBitInternal)
     );
     Mux_4X1 Mux_4X1_BLock (
-        .A({1'b0,1'b1,serDataInternal,parBitInternal}),
+        .A({parBitInternal,serDataInternal,1'b1,1'b0}),
         .S(muxSelInternal),
         .Y(txOut)
     );

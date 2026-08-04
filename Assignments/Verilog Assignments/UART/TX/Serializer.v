@@ -1,27 +1,21 @@
 module Serializer (
     input [7:0] pData,
-    input serEn,regData
+    input serEn,regData,
     input CLK,RST,
     output reg serData,serDone
 );
-    wire [8:0] pDataReg;
+    reg [7:0] pDataReg;
     reg [3:0] counter;
-    wire counterMax;
-    assign counterMax = counter == 9;
+    wire counterMax = (counter == 7);
+    always @(posedge CLK or negedge RST) begin
+        if (!RST)        pDataReg <= 0;
+        else if (regData) pDataReg <= pData;
+    end
     always @(*) begin
         serDone = counterMax;
         serData = pDataReg[counter];
     end
-    always @(*) begin
-        pDataReg = 0;
-        if (regData) begin
-            pDataReg = {pData,1'b0};
-        end
-        else begin
-            pDataReg = 0;
-        end
-    end
-    always @(posedge CLK) begin
+    always @(posedge CLK or negedge RST) begin
         if (!RST) begin
             counter <= 0;
         end
