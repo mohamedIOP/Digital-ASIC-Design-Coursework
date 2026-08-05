@@ -10,7 +10,7 @@ z2
 cModel Technology
 dC:/intelFPGA/20.1
 vMux_4X1
-Z0 !s110 1785968274
+Z0 !s110 1785970837
 !i10b 1
 !s100 BAGFgPYJ]QYSAS7YB8z>;1
 Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
@@ -20,13 +20,13 @@ Z3 dD:/Studying/Digital Track/Digital Design Asic Course Temsah/Digital-ASIC-Des
 w1785779286
 8Mux_4X1.v
 FMux_4X1.v
-!i122 32
+!i122 33
 L0 1 14
 Z4 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z5 !s108 1785968274.000000
+Z5 !s108 1785970837.000000
 !s107 UART_TX_TOP_tb.sv|UART_TX_TOP.v|UART_TX_FSM.sv|Serializer.v|Parity_Calc.v|Mux_4X1.v|
 Z6 !s90 -reportprogress|300|Mux_4X1.v|Parity_Calc.v|Serializer.v|UART_TX_FSM.sv|UART_TX_TOP.v|UART_TX_TOP_tb.sv|
 !i113 1
@@ -35,16 +35,16 @@ n@mux_4@x1
 vParity_Calc
 R0
 !i10b 1
-!s100 hDUBSH9QQ<GfeIKzANlK:3
+!s100 Vj9=2HzPkIR9ZFgfKFmoL0
 R1
-I<K@4CTFYHUCJCIA]f=aCV2
+I[>WZ_dl:RK9]=Qk04lL?c1
 R2
 R3
-w1785807464
+w1785969503
 8Parity_Calc.v
 FParity_Calc.v
-!i122 32
-L0 1 16
+!i122 33
+L0 1 13
 R4
 r1
 !s85 0
@@ -66,7 +66,7 @@ R3
 w1785806453
 8Serializer.v
 FSerializer.v
-!i122 32
+!i122 33
 L0 1 29
 R4
 r1
@@ -91,7 +91,7 @@ R3
 w1785806824
 8UART_TX_FSM.sv
 FUART_TX_FSM.sv
-!i122 32
+!i122 33
 L0 1 52
 R4
 r1
@@ -114,7 +114,7 @@ R3
 w1785807498
 8UART_TX_TOP.v
 FUART_TX_TOP.v
-!i122 32
+!i122 33
 L0 1 34
 R4
 r1
@@ -139,7 +139,7 @@ R3
 w1785965122
 8UART_TX_TOP_tb.sv
 FUART_TX_TOP_tb.sv
-!i122 32
+!i122 33
 L0 29 485
 R4
 r1
