@@ -1,0 +1,25 @@
+/*
+    Constrains :
+    - Clock Frequency 200Mhz
+    - Display the time before and after each test case
+    - display the Busy Signal and TX_Out
+    - Check FSM is working Fine
+    - also check serializer ser_en and ser_done signals follow what we intend
+    - don't change the configurations of the ParEn,Par_TYP during the frame transition
+    - check registered pData doesn't change however dataValid signal is being changed during frame transition
+    - make the testcases autochecked in the transcript (Passed or Fail)
+    - Count the number of test cases 
+
+*/
+
+
+
+// Scenario 1 : RST Try
+// Scenario 2 : put a frame without parity
+// scenario 3 : put a frame even parity type 
+// scenario 4 : put a frame odd parity type 
+// scenario 5 : Rst during a frame transition without parity
+// scenario 6 : try to change pData during frame transition
+// scenario 7 : try data valid during the transission of data frame
+// scenario 8 : check the idle state Tx_Output is high
+// scenario 9 : test if stop fsm state has moved to start without going to idle state by applying dataValid Signal

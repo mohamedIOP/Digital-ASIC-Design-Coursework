@@ -1,0 +1,153 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/intelFPGA/20.1
+vMux_4X1
+Z0 !s110 1785970837
+!i10b 1
+!s100 BAGFgPYJ]QYSAS7YB8z>;1
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I2e5mczE>LOgUci^27A46D1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z3 dD:/Studying/Digital Track/Digital Design Asic Course Temsah/Digital-ASIC-Design-Coursework/Assignments/Verilog Assignments/UART/TX
+w1785779286
+8Mux_4X1.v
+FMux_4X1.v
+!i122 33
+L0 1 14
+Z4 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z5 !s108 1785970837.000000
+!s107 UART_TX_TOP_tb.sv|UART_TX_TOP.v|UART_TX_FSM.sv|Serializer.v|Parity_Calc.v|Mux_4X1.v|
+Z6 !s90 -reportprogress|300|Mux_4X1.v|Parity_Calc.v|Serializer.v|UART_TX_FSM.sv|UART_TX_TOP.v|UART_TX_TOP_tb.sv|
+!i113 1
+Z7 tCvgOpt 0
+n@mux_4@x1
+vParity_Calc
+R0
+!i10b 1
+!s100 Vj9=2HzPkIR9ZFgfKFmoL0
+R1
+I[>WZ_dl:RK9]=Qk04lL?c1
+R2
+R3
+w1785969503
+8Parity_Calc.v
+FParity_Calc.v
+!i122 33
+L0 1 13
+R4
+r1
+!s85 0
+31
+R5
+Z8 !s107 UART_TX_TOP_tb.sv|UART_TX_TOP.v|UART_TX_FSM.sv|Serializer.v|Parity_Calc.v|Mux_4X1.v|
+R6
+!i113 1
+R7
+n@parity_@calc
+vSerializer
+R0
+!i10b 1
+!s100 `i=4oOOBb5aK=Kd3;N8Ci2
+R1
+I2IQL=1BKD1g=LHoVEfUBM0
+R2
+R3
+w1785806453
+8Serializer.v
+FSerializer.v
+!i122 33
+L0 1 29
+R4
+r1
+!s85 0
+31
+R5
+R8
+R6
+!i113 1
+R7
+n@serializer
+vUART_TX_FSM
+Z9 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+R0
+!i10b 1
+!s100 <Z7MXf3_FS[W;kmRfaj2B0
+R1
+IP_45k<@J[^?5]GEo7_?PA3
+R2
+S1
+R3
+w1785806824
+8UART_TX_FSM.sv
+FUART_TX_FSM.sv
+!i122 33
+L0 1 52
+R4
+r1
+!s85 0
+31
+R5
+R8
+R6
+!i113 1
+R7
+n@u@a@r@t_@t@x_@f@s@m
+vUART_TX_TOP
+R0
+!i10b 1
+!s100 lGD53mK_fAzWG<:NUnBA[2
+R1
+IB1W[0Nga3RF<_[jBF?ViA1
+R2
+R3
+w1785807498
+8UART_TX_TOP.v
+FUART_TX_TOP.v
+!i122 33
+L0 1 34
+R4
+r1
+!s85 0
+31
+R5
+R8
+R6
+!i113 1
+R7
+n@u@a@r@t_@t@x_@t@o@p
+vUART_TX_TOP_tb
+R9
+R0
+!i10b 1
+!s100 H;3EXfDSTR5N4S2:5dK>h0
+R1
+I6L68KDKoLN;aUh_N=FI]N3
+R2
+S1
+R3
+w1785965122
+8UART_TX_TOP_tb.sv
+FUART_TX_TOP_tb.sv
+!i122 33
+L0 29 485
+R4
+r1
+!s85 0
+31
+R5
+R8
+R6
+!i113 1
+R7
+n@u@a@r@t_@t@x_@t@o@p_tb
