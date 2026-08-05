@@ -1,0 +1,441 @@
+run run.do
+# No Design Loaded!
+# Load canceled
+# Compile of Mux_4X1.v was successful.
+# Compile of Parity_Calc.v was successful.
+# Compile of Serializer.v was successful.
+# Compile of UART_TX_FSM.sv was successful.
+# Compile of UART_TX_TOP.v was successful.
+# Compile of UART_TX_TOP_tb.sv was successful.
+# 6 compiles, 0 failed with no errors.
+run run.do
+# No Design Loaded!
+vsim -gui work.UART_TX_TOP_tb
+# vsim -gui work.UART_TX_TOP_tb 
+# Start time: 01:07:49 on Aug 06,2026
+# Loading sv_std.std
+# Loading work.UART_TX_TOP_tb
+# Loading work.UART_TX_TOP
+# Loading work.UART_TX_FSM
+# Loading work.Serializer
+# Loading work.Parity_Calc
+# Loading work.Mux_4X1
+run run.do
+# Invalid time value: run.do
+run.do
+# couldn't execute ".\run.do": no such file or directory
+run.do
+# couldn't execute ".\run.do": no such file or directory
+# Compile of Mux_4X1.v was successful.
+# Compile of Parity_Calc.v was successful.
+# Compile of Serializer.v was successful.
+# Compile of UART_TX_FSM.sv was successful.
+# Compile of UART_TX_TOP.v was successful.
+# Compile of UART_TX_TOP_tb.sv was successful.
+# 6 compiles, 0 failed with no errors.
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:08:59 on Aug 06,2026
+# vlog -reportprogress 300 Mux_4X1.v Parity_Calc.v Serializer.v UART_TX_FSM.sv UART_TX_TOP.v UART_TX_TOP_tb.sv 
+# -- Compiling module Mux_4X1
+# -- Compiling module Parity_Calc
+# -- Compiling module Serializer
+# -- Compiling module UART_TX_FSM
+# -- Compiling module UART_TX_TOP
+# -- Compiling module UART_TX_TOP_tb
+# 
+# Top level modules:
+# 	UART_TX_TOP_tb
+# End time: 01:08:59 on Aug 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 01:09:00 on Aug 06,2026, Elapsed time: 0:01:11
+# Errors: 0, Warnings: 4
+# vsim -gui work.UART_TX_TOP_tb 
+# Start time: 01:09:00 on Aug 06,2026
+# Loading sv_std.std
+# Loading work.UART_TX_TOP_tb
+# Loading work.UART_TX_TOP
+# Loading work.UART_TX_FSM
+# Loading work.Serializer
+# Loading work.Parity_Calc
+# Loading work.Mux_4X1
+# ========================================================
+#  UART_TX_TOP Self-Checking Testbench
+#  Clock: 200MHz  (Period = 5 ns)
+# ========================================================
+# [0] --- Scenario1_Reset START ---
+# [0] MONITOR: busy=x  txOut=1
+# [0] MONITOR: busy=0  txOut=1
+# [16000] --- Scenario1_Reset END ---
+# [16000] TEST 1 - Scenario1_Reset : PASSED
+# [16000] --- Scenario2_NoParity START (pData=8'ha5 parEn=0 parTyp=0) ---
+# [22000] MONITOR: busy=1  txOut=1
+# [22000] MONITOR: busy=1  txOut=0
+# [26000] MONITOR: busy=1  txOut=1
+# [30000] MONITOR: busy=1  txOut=0
+# [34000] MONITOR: busy=1  txOut=1
+# [38000] MONITOR: busy=1  txOut=0
+# [46000] MONITOR: busy=1  txOut=1
+# [50000] MONITOR: busy=1  txOut=0
+# [54000] MONITOR: busy=1  txOut=1
+# [62000] MONITOR: busy=0  txOut=1
+# [64000] --- Scenario2_NoParity END ---
+# [64000] TEST 2 - Scenario2_NoParity : PASSED
+# [64000] --- Scenario3_EvenParity START (pData=8'hf3 parEn=1 parTyp=0) ---
+# [70000] MONITOR: busy=1  txOut=1
+# [70000] MONITOR: busy=1  txOut=0
+# [74000] MONITOR: busy=1  txOut=1
+# [82000] MONITOR: busy=1  txOut=0
+# [90000] MONITOR: busy=1  txOut=1
+# [106000] MONITOR: busy=1  txOut=0
+# [110000] MONITOR: busy=1  txOut=1
+# [114000] MONITOR: busy=0  txOut=1
+# [116000] --- Scenario3_EvenParity END ---
+# [116000] TEST 3 - Scenario3_EvenParity : PASSED
+# [116000] --- Scenario4_OddParity START (pData=8'h5a parEn=1 parTyp=1) ---
+# [122000] MONITOR: busy=1  txOut=1
+# [122000] MONITOR: busy=1  txOut=0
+# [130000] MONITOR: busy=1  txOut=1
+# [134000] MONITOR: busy=1  txOut=0
+# [138000] MONITOR: busy=1  txOut=1
+# [146000] MONITOR: busy=1  txOut=0
+# [150000] MONITOR: busy=1  txOut=1
+# [154000] MONITOR: busy=1  txOut=0
+# [158000] MONITOR: busy=1  txOut=1
+# [166000] MONITOR: busy=0  txOut=1
+# [168000] --- Scenario4_OddParity END ---
+# [168000] TEST 4 - Scenario4_OddParity : PASSED
+# [168000] --- Scenario5_ResetDuringFrame START ---
+# [174000] MONITOR: busy=1  txOut=1
+# [174000] MONITOR: busy=1  txOut=0
+# [178000] MONITOR: busy=1  txOut=1
+# [186000] MONITOR: busy=1  txOut=0
+# [188000] MONITOR: busy=0  txOut=0
+# [188000] MONITOR: busy=0  txOut=1
+# [196000] --- Scenario5_ResetDuringFrame END ---
+# [196000] TEST 5 - Scenario5_ResetDuringFrame : PASSED
+# [196000] --- Scenario6_PDataGlitch START ---
+# [202000] MONITOR: busy=1  txOut=1
+# [202000] MONITOR: busy=1  txOut=0
+# [206000] MONITOR: busy=1  txOut=1
+# [210000] MONITOR: busy=1  txOut=0
+# [214000] MONITOR: busy=1  txOut=1
+# [218000] MONITOR: busy=1  txOut=0
+# [222000] MONITOR: busy=1  txOut=1
+# [226000] MONITOR: busy=1  txOut=0
+# [230000] MONITOR: busy=1  txOut=1
+# [234000] MONITOR: busy=1  txOut=0
+# [238000] MONITOR: busy=1  txOut=1
+# [242000] MONITOR: busy=0  txOut=1
+# [244000] --- Scenario6_PDataGlitch END ---
+# [244000] TEST 6 - Scenario6_PDataGlitch : PASSED
+# [244000] --- Scenario7_DataValidGlitchDuringFrame START ---
+# [250000] MONITOR: busy=1  txOut=1
+# [250000] MONITOR: busy=1  txOut=0
+# [262000] MONITOR: busy=1  txOut=1
+# [278000] MONITOR: busy=1  txOut=0
+# [290000] MONITOR: busy=1  txOut=1
+# [294000] MONITOR: busy=0  txOut=1
+# [296000] --- Scenario7_DataValidGlitchDuringFrame END ---
+# [296000] TEST 7 - Scenario7_DataValidGlitchDuringFrame : PASSED
+# [296000] --- Scenario8_IdleTxOutHigh START ---
+# [316000] --- Scenario8_IdleTxOutHigh END ---
+# [316000] TEST 8 - Scenario8_IdleTxOutHigh : PASSED
+# [316000] --- Scenario9_BackToBackNoIdle START ---
+# [322000] MONITOR: busy=1  txOut=1
+# [322000] MONITOR: busy=1  txOut=0
+# [326000] MONITOR: busy=1  txOut=1
+# [330000] MONITOR: busy=1  txOut=0
+# [342000] MONITOR: busy=1  txOut=1
+# [346000] MONITOR: busy=1  txOut=0
+# [358000] MONITOR: busy=1  txOut=1
+# [362000] MONITOR: busy=1  txOut=0
+# [370000] MONITOR: busy=1  txOut=1
+# [374000] MONITOR: busy=1  txOut=0
+# [386000] MONITOR: busy=1  txOut=1
+# [390000] MONITOR: busy=1  txOut=0
+# [398000] MONITOR: busy=1  txOut=1
+# [402000] MONITOR: busy=0  txOut=1
+# [404000] --- Scenario9_BackToBackNoIdle END ---
+# [404000] TEST 9 - Scenario9_BackToBackNoIdle : PASSED
+# ========================================================
+#  TEST SUMMARY: 9 run, 9 PASSED, 0 FAILED
+# ========================================================
+# ** Note: $finish    : UART_TX_TOP_tb.sv(510)
+#    Time: 404 ns  Iteration: 1  Instance: /UART_TX_TOP_tb
+# 1
+# Break in Module UART_TX_TOP_tb at UART_TX_TOP_tb.sv line 510
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:14:33 on Aug 06,2026
+# vlog -reportprogress 300 Mux_4X1.v Parity_Calc.v Serializer.v UART_TX_FSM.sv UART_TX_TOP.v UART_TX_TOP_tb.sv 
+# -- Compiling module Mux_4X1
+# -- Compiling module Parity_Calc
+# -- Compiling module Serializer
+# -- Compiling module UART_TX_FSM
+# -- Compiling module UART_TX_TOP
+# -- Compiling module UART_TX_TOP_tb
+# 
+# Top level modules:
+# 	UART_TX_TOP_tb
+# End time: 01:14:33 on Aug 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 01:14:35 on Aug 06,2026, Elapsed time: 0:05:35
+# Errors: 0, Warnings: 1
+# vsim -gui work.UART_TX_TOP_tb 
+# Start time: 01:14:35 on Aug 06,2026
+# Loading sv_std.std
+# Loading work.UART_TX_TOP_tb
+# Loading work.UART_TX_TOP
+# Loading work.UART_TX_FSM
+# Loading work.Serializer
+# Loading work.Parity_Calc
+# Loading work.Mux_4X1
+# ========================================================
+#  UART_TX_TOP Self-Checking Testbench
+#  Clock: 200MHz  (Period = 5 ns)
+# ========================================================
+# [0] --- Scenario1_Reset START ---
+# [0] MONITOR: busy=x  txOut=1
+# [0] MONITOR: busy=0  txOut=1
+# [16000] --- Scenario1_Reset END ---
+# [16000] TEST 1 - Scenario1_Reset : PASSED
+# [16000] --- Scenario2_NoParity START (pData=8'ha5 parEn=0 parTyp=0) ---
+# [22000] MONITOR: busy=1  txOut=1
+# [22000] MONITOR: busy=1  txOut=0
+# [26000] MONITOR: busy=1  txOut=1
+# [30000] MONITOR: busy=1  txOut=0
+# [34000] MONITOR: busy=1  txOut=1
+# [38000] MONITOR: busy=1  txOut=0
+# [46000] MONITOR: busy=1  txOut=1
+# [50000] MONITOR: busy=1  txOut=0
+# [54000] MONITOR: busy=1  txOut=1
+# [62000] MONITOR: busy=0  txOut=1
+# [64000] --- Scenario2_NoParity END ---
+# [64000] TEST 2 - Scenario2_NoParity : PASSED
+# [64000] --- Scenario3_EvenParity START (pData=8'hf3 parEn=1 parTyp=0) ---
+# [70000] MONITOR: busy=1  txOut=1
+# [70000] MONITOR: busy=1  txOut=0
+# [74000] MONITOR: busy=1  txOut=1
+# [82000] MONITOR: busy=1  txOut=0
+# [90000] MONITOR: busy=1  txOut=1
+# [106000] MONITOR: busy=1  txOut=0
+# [110000] MONITOR: busy=1  txOut=1
+# [114000] MONITOR: busy=0  txOut=1
+# [116000] --- Scenario3_EvenParity END ---
+# [116000] TEST 3 - Scenario3_EvenParity : PASSED
+# [116000] --- Scenario4_OddParity START (pData=8'h5a parEn=1 parTyp=1) ---
+# [122000] MONITOR: busy=1  txOut=1
+# [122000] MONITOR: busy=1  txOut=0
+# [130000] MONITOR: busy=1  txOut=1
+# [134000] MONITOR: busy=1  txOut=0
+# [138000] MONITOR: busy=1  txOut=1
+# [146000] MONITOR: busy=1  txOut=0
+# [150000] MONITOR: busy=1  txOut=1
+# [154000] MONITOR: busy=1  txOut=0
+# [158000] MONITOR: busy=1  txOut=1
+# [166000] MONITOR: busy=0  txOut=1
+# [168000] --- Scenario4_OddParity END ---
+# [168000] TEST 4 - Scenario4_OddParity : PASSED
+# [168000] --- Scenario5_ResetDuringFrame START ---
+# [174000] MONITOR: busy=1  txOut=1
+# [174000] MONITOR: busy=1  txOut=0
+# [178000] MONITOR: busy=1  txOut=1
+# [186000] MONITOR: busy=1  txOut=0
+# [188000] MONITOR: busy=0  txOut=0
+# [188000] MONITOR: busy=0  txOut=1
+# [196000] --- Scenario5_ResetDuringFrame END ---
+# [196000] TEST 5 - Scenario5_ResetDuringFrame : PASSED
+# [196000] --- Scenario6_PDataGlitch START ---
+# [202000] MONITOR: busy=1  txOut=1
+# [202000] MONITOR: busy=1  txOut=0
+# [206000] MONITOR: busy=1  txOut=1
+# [210000] MONITOR: busy=1  txOut=0
+# [214000] MONITOR: busy=1  txOut=1
+# [218000] MONITOR: busy=1  txOut=0
+# [222000] MONITOR: busy=1  txOut=1
+# [226000] MONITOR: busy=1  txOut=0
+# [230000] MONITOR: busy=1  txOut=1
+# [234000] MONITOR: busy=1  txOut=0
+# [238000] MONITOR: busy=1  txOut=1
+# [242000] MONITOR: busy=0  txOut=1
+# [244000] --- Scenario6_PDataGlitch END ---
+# [244000] TEST 6 - Scenario6_PDataGlitch : PASSED
+# [244000] --- Scenario7_DataValidGlitchDuringFrame START ---
+# [250000] MONITOR: busy=1  txOut=1
+# [250000] MONITOR: busy=1  txOut=0
+# [262000] MONITOR: busy=1  txOut=1
+# [278000] MONITOR: busy=1  txOut=0
+# [290000] MONITOR: busy=1  txOut=1
+# [294000] MONITOR: busy=0  txOut=1
+# [296000] --- Scenario7_DataValidGlitchDuringFrame END ---
+# [296000] TEST 7 - Scenario7_DataValidGlitchDuringFrame : PASSED
+# [296000] --- Scenario8_IdleTxOutHigh START ---
+# [316000] --- Scenario8_IdleTxOutHigh END ---
+# [316000] TEST 8 - Scenario8_IdleTxOutHigh : PASSED
+# [316000] --- Scenario9_BackToBackNoIdle START ---
+# [322000] MONITOR: busy=1  txOut=1
+# [322000] MONITOR: busy=1  txOut=0
+# [326000] MONITOR: busy=1  txOut=1
+# [330000] MONITOR: busy=1  txOut=0
+# [342000] MONITOR: busy=1  txOut=1
+# [346000] MONITOR: busy=1  txOut=0
+# [358000] MONITOR: busy=1  txOut=1
+# [362000] MONITOR: busy=1  txOut=0
+# [370000] MONITOR: busy=1  txOut=1
+# [374000] MONITOR: busy=1  txOut=0
+# [386000] MONITOR: busy=1  txOut=1
+# [390000] MONITOR: busy=1  txOut=0
+# [398000] MONITOR: busy=1  txOut=1
+# [402000] MONITOR: busy=0  txOut=1
+# [404000] --- Scenario9_BackToBackNoIdle END ---
+# [404000] TEST 9 - Scenario9_BackToBackNoIdle : PASSED
+# ========================================================
+#  TEST SUMMARY: 9 run, 9 PASSED, 0 FAILED
+# ========================================================
+# ** Note: $finish    : UART_TX_TOP_tb.sv(510)
+#    Time: 404 ns  Iteration: 1  Instance: /UART_TX_TOP_tb
+# 1
+# Break in Module UART_TX_TOP_tb at UART_TX_TOP_tb.sv line 510
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf {D:/Studying/Digital Track/Digital Design Asic Course Temsah/Digital-ASIC-Design-Coursework/Assignments/Verilog Assignments/UART/TX/wave.do}
+# Compile of Mux_4X1.v was successful.
+# Compile of Parity_Calc.v was successful.
+# Compile of Serializer.v was successful.
+# Compile of UART_TX_FSM.sv was successful.
+# Compile of UART_TX_TOP.v was successful.
+# Compile of UART_TX_TOP_tb.sv was successful.
+# 6 compiles, 0 failed with no errors.
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:17:54 on Aug 06,2026
+# vlog -reportprogress 300 Mux_4X1.v Parity_Calc.v Serializer.v UART_TX_FSM.sv UART_TX_TOP.v UART_TX_TOP_tb.sv 
+# -- Compiling module Mux_4X1
+# -- Compiling module Parity_Calc
+# -- Compiling module Serializer
+# -- Compiling module UART_TX_FSM
+# -- Compiling module UART_TX_TOP
+# -- Compiling module UART_TX_TOP_tb
+# 
+# Top level modules:
+# 	UART_TX_TOP_tb
+# End time: 01:17:54 on Aug 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 01:17:56 on Aug 06,2026, Elapsed time: 0:03:21
+# Errors: 0, Warnings: 2
+# vsim -gui work.UART_TX_TOP_tb 
+# Start time: 01:17:56 on Aug 06,2026
+# Loading sv_std.std
+# Loading work.UART_TX_TOP_tb
+# Loading work.UART_TX_TOP
+# Loading work.UART_TX_FSM
+# Loading work.Serializer
+# Loading work.Parity_Calc
+# Loading work.Mux_4X1
+# ========================================================
+#  UART_TX_TOP Self-Checking Testbench
+#  Clock: 200MHz  (Period = 5 ns)
+# ========================================================
+# [0] --- Scenario1_Reset START ---
+# [0] MONITOR: busy=x  txOut=1
+# [0] MONITOR: busy=0  txOut=1
+# [16000] --- Scenario1_Reset END ---
+# [16000] TEST 1 - Scenario1_Reset : PASSED
+# [16000] --- Scenario2_NoParity START (pData=8'ha5 parEn=0 parTyp=0) ---
+# [22000] MONITOR: busy=1  txOut=1
+# [22000] MONITOR: busy=1  txOut=0
+# [26000] MONITOR: busy=1  txOut=1
+# [30000] MONITOR: busy=1  txOut=0
+# [34000] MONITOR: busy=1  txOut=1
+# [38000] MONITOR: busy=1  txOut=0
+# [46000] MONITOR: busy=1  txOut=1
+# [50000] MONITOR: busy=1  txOut=0
+# [54000] MONITOR: busy=1  txOut=1
+# [62000] MONITOR: busy=0  txOut=1
+# [64000] --- Scenario2_NoParity END ---
+# [64000] TEST 2 - Scenario2_NoParity : PASSED
+# [64000] --- Scenario3_EvenParity START (pData=8'hf3 parEn=1 parTyp=0) ---
+# [70000] MONITOR: busy=1  txOut=1
+# [70000] MONITOR: busy=1  txOut=0
+# [74000] MONITOR: busy=1  txOut=1
+# [82000] MONITOR: busy=1  txOut=0
+# [90000] MONITOR: busy=1  txOut=1
+# [106000] MONITOR: busy=1  txOut=0
+# [110000] MONITOR: busy=1  txOut=1
+# [114000] MONITOR: busy=0  txOut=1
+# [116000] --- Scenario3_EvenParity END ---
+# [116000] TEST 3 - Scenario3_EvenParity : PASSED
+# [116000] --- Scenario4_OddParity START (pData=8'h5a parEn=1 parTyp=1) ---
+# [122000] MONITOR: busy=1  txOut=1
+# [122000] MONITOR: busy=1  txOut=0
+# [130000] MONITOR: busy=1  txOut=1
+# [134000] MONITOR: busy=1  txOut=0
+# [138000] MONITOR: busy=1  txOut=1
+# [146000] MONITOR: busy=1  txOut=0
+# [150000] MONITOR: busy=1  txOut=1
+# [154000] MONITOR: busy=1  txOut=0
+# [158000] MONITOR: busy=1  txOut=1
+# [166000] MONITOR: busy=0  txOut=1
+# [168000] --- Scenario4_OddParity END ---
+# [168000] TEST 4 - Scenario4_OddParity : PASSED
+# [168000] --- Scenario5_ResetDuringFrame START ---
+# [174000] MONITOR: busy=1  txOut=1
+# [174000] MONITOR: busy=1  txOut=0
+# [178000] MONITOR: busy=1  txOut=1
+# [186000] MONITOR: busy=1  txOut=0
+# [188000] MONITOR: busy=0  txOut=0
+# [188000] MONITOR: busy=0  txOut=1
+# [196000] --- Scenario5_ResetDuringFrame END ---
+# [196000] TEST 5 - Scenario5_ResetDuringFrame : PASSED
+# [196000] --- Scenario6_PDataGlitch START ---
+# [202000] MONITOR: busy=1  txOut=1
+# [202000] MONITOR: busy=1  txOut=0
+# [206000] MONITOR: busy=1  txOut=1
+# [210000] MONITOR: busy=1  txOut=0
+# [214000] MONITOR: busy=1  txOut=1
+# [218000] MONITOR: busy=1  txOut=0
+# [222000] MONITOR: busy=1  txOut=1
+# [226000] MONITOR: busy=1  txOut=0
+# [230000] MONITOR: busy=1  txOut=1
+# [234000] MONITOR: busy=1  txOut=0
+# [238000] MONITOR: busy=1  txOut=1
+# [242000] MONITOR: busy=0  txOut=1
+# [244000] --- Scenario6_PDataGlitch END ---
+# [244000] TEST 6 - Scenario6_PDataGlitch : PASSED
+# [244000] --- Scenario7_DataValidGlitchDuringFrame START ---
+# [250000] MONITOR: busy=1  txOut=1
+# [250000] MONITOR: busy=1  txOut=0
+# [262000] MONITOR: busy=1  txOut=1
+# [278000] MONITOR: busy=1  txOut=0
+# [290000] MONITOR: busy=1  txOut=1
+# [294000] MONITOR: busy=0  txOut=1
+# [296000] --- Scenario7_DataValidGlitchDuringFrame END ---
+# [296000] TEST 7 - Scenario7_DataValidGlitchDuringFrame : PASSED
+# [296000] --- Scenario8_IdleTxOutHigh START ---
+# [316000] --- Scenario8_IdleTxOutHigh END ---
+# [316000] TEST 8 - Scenario8_IdleTxOutHigh : PASSED
+# [316000] --- Scenario9_BackToBackNoIdle START ---
+# [322000] MONITOR: busy=1  txOut=1
+# [322000] MONITOR: busy=1  txOut=0
+# [326000] MONITOR: busy=1  txOut=1
+# [330000] MONITOR: busy=1  txOut=0
+# [342000] MONITOR: busy=1  txOut=1
+# [346000] MONITOR: busy=1  txOut=0
+# [358000] MONITOR: busy=1  txOut=1
+# [362000] MONITOR: busy=1  txOut=0
+# [370000] MONITOR: busy=1  txOut=1
+# [374000] MONITOR: busy=1  txOut=0
+# [386000] MONITOR: busy=1  txOut=1
+# [390000] MONITOR: busy=1  txOut=0
+# [398000] MONITOR: busy=1  txOut=1
+# [402000] MONITOR: busy=0  txOut=1
+# [404000] --- Scenario9_BackToBackNoIdle END ---
+# [404000] TEST 9 - Scenario9_BackToBackNoIdle : PASSED
+# ========================================================
+#  TEST SUMMARY: 9 run, 9 PASSED, 0 FAILED
+# ========================================================
+# ** Note: $finish    : UART_TX_TOP_tb.sv(510)
+#    Time: 404 ns  Iteration: 1  Instance: /UART_TX_TOP_tb
+# 1
+# Break in Module UART_TX_TOP_tb at UART_TX_TOP_tb.sv line 510
+# End time: 01:22:26 on Aug 06,2026, Elapsed time: 0:04:30
+# Errors: 0, Warnings: 1
