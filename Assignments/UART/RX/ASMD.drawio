@@ -1,0 +1,159 @@
+<mxfile host="Electron">
+  <diagram name="Page-1" id="q8oLSFWqjJoKuNfA4dz5">
+    <mxGraphModel dx="2263" dy="849" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="-d6zpw_4DLzb0DD0GzZH-2" edge="1" parent="1" source="-d6zpw_4DLzb0DD0GzZH-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="-d6zpw_4DLzb0DD0GzZH-3">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="426" y="460" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-d6zpw_4DLzb0DD0GzZH-4" connectable="0" parent="-d6zpw_4DLzb0DD0GzZH-2" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=20;spacing=5;spacingTop=0;spacingBottom=0;" value="!RX_IN" vertex="1">
+          <mxGeometry relative="1" x="-0.2" y="1" as="geometry">
+            <mxPoint x="-6" y="14" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-d6zpw_4DLzb0DD0GzZH-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;" value="&lt;h1 style=&quot;&quot;&gt;Idle_State&lt;br&gt;&lt;/h1&gt;" vertex="1">
+          <mxGeometry height="170" width="165" x="343" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="-d6zpw_4DLzb0DD0GzZH-5" edge="1" parent="1" source="-d6zpw_4DLzb0DD0GzZH-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="-d6zpw_4DLzb0DD0GzZH-7">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="426" y="880" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-d6zpw_4DLzb0DD0GzZH-8" connectable="0" parent="-d6zpw_4DLzb0DD0GzZH-5" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=20;" value="(edge_cnt == prescale - 1) &amp;amp;&amp;amp; !strt_glitch" vertex="1">
+          <mxGeometry relative="1" x="0.0805" y="-4" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-d6zpw_4DLzb0DD0GzZH-37" edge="1" parent="1" source="-d6zpw_4DLzb0DD0GzZH-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="-d6zpw_4DLzb0DD0GzZH-1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="720" y="615" />
+              <mxPoint x="720" y="285" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-d6zpw_4DLzb0DD0GzZH-38" connectable="0" parent="-d6zpw_4DLzb0DD0GzZH-37" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="&lt;span style=&quot;font-size: 20px;&quot;&gt;RX_IN &amp;amp;&amp;amp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;font-size: 20px;&quot;&gt;strt_glitch &amp;amp;&amp;amp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;font-size: 20px;&quot;&gt;(edge_cnt == prescale - 1)&lt;/span&gt;" vertex="1">
+          <mxGeometry relative="1" x="-0.1048" y="5" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-d6zpw_4DLzb0DD0GzZH-3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;" value="&lt;h1 style=&quot;&quot;&gt;Start_State&lt;br&gt;&lt;/h1&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;edge_bit_counter_enable&lt;/span&gt;&lt;/div&gt;&lt;/span&gt;&lt;div style=&quot;&quot;&gt;dat_samp_en (&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;prescale / 2 - 1&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&amp;nbsp;&amp;lt;= edge_cnt &amp;lt;= prescale / 2 + 1)&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;strt_chk_en&amp;nbsp; (edge_cnt == prescale/2 + 2)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="270" width="347" x="252" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="-d6zpw_4DLzb0DD0GzZH-25" edge="1" parent="1" source="-d6zpw_4DLzb0DD0GzZH-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="-d6zpw_4DLzb0DD0GzZH-18">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="50" y="1015" />
+              <mxPoint x="50" y="1815" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-d6zpw_4DLzb0DD0GzZH-7" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;" value="&lt;h1 style=&quot;&quot;&gt;Data_State&lt;br&gt;&lt;/h1&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;div style=&quot;&quot;&gt;dat_samp_en (&lt;span style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); background-color: transparent;&quot;&gt;prescale / 2 - 1&lt;/span&gt;&lt;span style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); background-color: transparent;&quot;&gt; &amp;lt;= edge_cnt &amp;lt;= prescale / 2 + 1)&lt;br&gt;deser_en (prescale / 2 + 2)&lt;/span&gt;&lt;/div&gt;&lt;/span&gt;" vertex="1">
+          <mxGeometry height="270" width="347" x="252" y="880" as="geometry" />
+        </mxCell>
+        <mxCell id="-d6zpw_4DLzb0DD0GzZH-13" edge="1" parent="1" source="-d6zpw_4DLzb0DD0GzZH-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="-d6zpw_4DLzb0DD0GzZH-15">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="426" y="1150" as="sourcePoint" />
+            <mxPoint x="426" y="1280" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-d6zpw_4DLzb0DD0GzZH-14" connectable="0" parent="-d6zpw_4DLzb0DD0GzZH-13" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=20;" value="PAR_EN &amp;amp;&amp;amp; bit_cnt == 8" vertex="1">
+          <mxGeometry relative="1" x="0.0805" y="-4" as="geometry">
+            <mxPoint x="4" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-d6zpw_4DLzb0DD0GzZH-15" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;" value="&lt;h1 style=&quot;&quot;&gt;Parity_State&lt;br&gt;&lt;/h1&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;div style=&quot;&quot;&gt;dat_samp_en (&lt;span style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); background-color: transparent;&quot;&gt;prescale / 2 - 1&lt;/span&gt;&lt;span style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); background-color: transparent;&quot;&gt; &amp;lt;= edge_cnt &amp;lt;= prescale / 2 + 1)&lt;br&gt;par_chk_en (&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;prescale / 2 + 2&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;)&lt;/span&gt;&lt;/div&gt;&lt;/span&gt;" vertex="1">
+          <mxGeometry height="270" width="347" x="252" y="1280" as="geometry" />
+        </mxCell>
+        <mxCell id="-d6zpw_4DLzb0DD0GzZH-16" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="-d6zpw_4DLzb0DD0GzZH-18">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="426" y="1550" as="sourcePoint" />
+            <mxPoint x="426" y="1680" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-d6zpw_4DLzb0DD0GzZH-17" connectable="0" parent="-d6zpw_4DLzb0DD0GzZH-16" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=20;" value="edge_cnt == prescale-1" vertex="1">
+          <mxGeometry relative="1" x="0.0805" y="-4" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-d6zpw_4DLzb0DD0GzZH-18" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;" value="&lt;h1 style=&quot;&quot;&gt;Stop_State&lt;br&gt;&lt;/h1&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;div style=&quot;&quot;&gt;dat_samp_en (&lt;span style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); background-color: transparent;&quot;&gt;prescale / 2 - 1&lt;/span&gt;&lt;span style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); background-color: transparent;&quot;&gt; &amp;lt;= edge_cnt &amp;lt;= prescale / 2 + 1)&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); background-color: transparent;&quot;&gt;stp_chkk_en (&lt;/span&gt;&lt;span style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); background-color: transparent;&quot;&gt;prescale / 2 + 2&lt;/span&gt;&lt;span style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); background-color: transparent;&quot;&gt;)&lt;/span&gt;&lt;span style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); background-color: transparent;&quot;&gt;&lt;/span&gt;&lt;/div&gt;&lt;/span&gt;" vertex="1">
+          <mxGeometry height="270" width="347" x="252" y="1680" as="geometry" />
+        </mxCell>
+        <mxCell id="-d6zpw_4DLzb0DD0GzZH-19" edge="1" parent="1" source="-d6zpw_4DLzb0DD0GzZH-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="-d6zpw_4DLzb0DD0GzZH-24">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="425" y="1950" as="sourcePoint" />
+            <mxPoint x="424.5" y="2080" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-d6zpw_4DLzb0DD0GzZH-28" connectable="0" parent="-d6zpw_4DLzb0DD0GzZH-19" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;edge_cnt == prescale-1&lt;/font&gt;" vertex="1">
+          <mxGeometry relative="1" x="-0.0053" y="-1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-d6zpw_4DLzb0DD0GzZH-29" edge="1" parent="1" source="-d6zpw_4DLzb0DD0GzZH-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="-d6zpw_4DLzb0DD0GzZH-1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="426" y="2630" />
+              <mxPoint x="1020" y="2630" />
+              <mxPoint x="1020" y="285" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-d6zpw_4DLzb0DD0GzZH-30" connectable="0" parent="-d6zpw_4DLzb0DD0GzZH-29" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="&lt;span style=&quot;font-size: 20px;&quot;&gt;&amp;nbsp;RX_IN&lt;/span&gt;" vertex="1">
+          <mxGeometry relative="1" x="0.0891" y="5" as="geometry">
+            <mxPoint y="-1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-d6zpw_4DLzb0DD0GzZH-31" edge="1" parent="1" source="-d6zpw_4DLzb0DD0GzZH-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="-d6zpw_4DLzb0DD0GzZH-3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="426" y="2630" />
+              <mxPoint x="-240" y="2630" />
+              <mxPoint x="-240" y="615" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-d6zpw_4DLzb0DD0GzZH-24" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;" value="&lt;h1 style=&quot;&quot;&gt;Valid_State&lt;br&gt;&lt;/h1&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;div style=&quot;&quot;&gt;data_valid (!parr_err &amp;amp;&amp;amp; !stp_err)&lt;/div&gt;&lt;/span&gt;" vertex="1">
+          <mxGeometry height="270" width="347" x="252" y="2200" as="geometry" />
+        </mxCell>
+        <mxCell id="-d6zpw_4DLzb0DD0GzZH-26" connectable="0" parent="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=20;" value="!PAR_EN &amp;amp;&amp;amp; bit_cnt == 8" vertex="1">
+          <mxGeometry x="60" y="1415" as="geometry" />
+        </mxCell>
+        <mxCell id="-d6zpw_4DLzb0DD0GzZH-32" parent="1" style="text;whiteSpace=wrap;html=1;align=center;" value="&lt;span style=&quot;font-family: Helvetica; font-size: 20px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: nowrap; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; background-color: light-dark(#ffffff, var(--ge-dark-color, #121212)); color: light-dark(rgb(255, 255, 255), rgb(255, 255, 255)); display: inline !important;&quot;&gt;!RX_IN&lt;/span&gt;" vertex="1">
+          <mxGeometry height="35" width="170" x="-320" y="1632" as="geometry" />
+        </mxCell>
+        <mxCell id="-d6zpw_4DLzb0DD0GzZH-35" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="-d6zpw_4DLzb0DD0GzZH-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="425" y="90" as="sourcePoint" />
+            <mxPoint x="425" y="200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-d6zpw_4DLzb0DD0GzZH-36" connectable="0" parent="-d6zpw_4DLzb0DD0GzZH-35" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=20;spacing=5;spacingTop=0;spacingBottom=0;" value="!RST" vertex="1">
+          <mxGeometry relative="1" x="-0.2" y="1" as="geometry">
+            <mxPoint x="-1" y="14" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-d6zpw_4DLzb0DD0GzZH-39" edge="1" parent="1" source="-d6zpw_4DLzb0DD0GzZH-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;innerLoopWaypoints=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="-d6zpw_4DLzb0DD0GzZH-3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="425.5" y="790" />
+              <mxPoint x="40" y="790" />
+              <mxPoint x="40" y="450" />
+              <mxPoint x="425.5" y="450" />
+            </Array>
+            <mxPoint x="250" y="640" as="sourcePoint" />
+            <mxPoint x="395.5" y="530" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-d6zpw_4DLzb0DD0GzZH-40" connectable="0" parent="-d6zpw_4DLzb0DD0GzZH-39" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="&lt;span style=&quot;font-size: 20px;&quot;&gt;!RX_IN &amp;amp;&amp;amp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;font-size: 20px;&quot;&gt;strt_glitch &amp;amp;&amp;amp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;font-size: 20px;&quot;&gt;(edge_cnt == prescale - 1)&lt;/span&gt;" vertex="1">
+          <mxGeometry relative="1" x="-0.1048" y="5" as="geometry">
+            <mxPoint x="-25" y="-157" as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
