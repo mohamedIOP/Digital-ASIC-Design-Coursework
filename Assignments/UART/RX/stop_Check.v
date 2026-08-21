@@ -1,6 +1,6 @@
 module stop_Check (
     input stp_chk_en,sampled_bit,
-    input CLK,RST,soft_rst
+    input CLK,RST,soft_rst,
     output reg stp_err
 );
     always @(posedge CLK or negedge RST) begin
