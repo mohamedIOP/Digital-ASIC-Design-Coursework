@@ -10,7 +10,8 @@ module UART_RX_FSM (
     output reg deser_en,
     output reg edge_bit_cnt_enable,
     output reg dat_samp_en,
-    output reg data_valid
+    output reg data_valid,
+    output reg soft_rst
 );
     // flags needed for the operation
     wire bit_transition = edge_cnt == prescale - 1; //RX_IN will send another bit
@@ -102,5 +103,8 @@ module UART_RX_FSM (
         par_chk_en = (currentState == parity) && (data_sampled_flag);
         stp_chk_en = (currentState == stop) && (data_sampled_flag);
         data_valid = (currentState == valid) && (!PAR_EN || !par_err) && (!stp_err);
+    end
+    always @(*) begin
+        soft_rst = currentState == start;
     end
 endmodule //UART_RX_FSM
