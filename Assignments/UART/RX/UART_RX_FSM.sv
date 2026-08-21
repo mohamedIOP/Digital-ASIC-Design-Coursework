@@ -1,4 +1,4 @@
-module UART_Rx_FSM (
+module UART_RX_FSM (
     input RX_IN,
     input PAR_EN,par_err,
     input [5:0] prescale,
@@ -103,4 +103,4 @@ module UART_Rx_FSM (
         stp_chk_en = (currentState == stop) && (data_sampled_flag);
         data_valid = (currentState == valid) && (!PAR_EN || !par_err) && (!stp_err);
     end
-endmodule //UART_Rx_FSM
+endmodule //UART_RX_FSM
