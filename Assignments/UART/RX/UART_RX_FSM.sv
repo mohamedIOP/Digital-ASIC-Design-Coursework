@@ -101,6 +101,6 @@ module UART_Rx_FSM (
         deser_en = (currentState == data) && (data_sampled_flag);
         par_chk_en = (currentState == parity) && (data_sampled_flag);
         stp_chk_en = (currentState == stop) && (data_sampled_flag);
-        data_valid = (currentState == valid) && (!par_err) && (!stp_err);
+        data_valid = (currentState == valid) && (!PAR_EN || !par_err) && (!stp_err);
     end
 endmodule //UART_Rx_FSM
