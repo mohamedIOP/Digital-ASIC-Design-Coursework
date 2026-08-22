@@ -1,6 +1,6 @@
 module data_sampling (
     input RX_IN,
-    input data_samp_en,
+    input dat_samp_en,
     input CLK,RST,
     output sampled_bit
 );
@@ -12,7 +12,7 @@ module data_sampling (
             majority_reg  <= 0;
             inner_counter <= 0;
         end
-        else if (!data_samp_en) begin
+        else if (!dat_samp_en) begin
             majority_reg  <= 0;
             inner_counter <= 0;
         end
@@ -20,7 +20,7 @@ module data_sampling (
             majority_reg[inner_counter] <= RX_IN;
             inner_counter <= inner_counter + 1;
         end
-        // else: data_samp_en still high but we already have 3 samples — hold, do nothing
+        // else: dat_samp_en still high but we already have 3 samples — hold, do nothing
     end
     // Calualate the majority bit
     assign sampled_bit = (majority_reg[0] && majority_reg[1]) || (majority_reg[0] && majority_reg[2]) || (majority_reg[1] && majority_reg[2]);
