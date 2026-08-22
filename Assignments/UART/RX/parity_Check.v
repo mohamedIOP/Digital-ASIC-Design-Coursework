@@ -1,5 +1,5 @@
 module parity_Check (
-    input par_chk_en,PAR_TYP,sampled_bit,PAR_EN
+    input par_chk_en,PAR_TYP,sampled_bit,PAR_EN,
     input CLK,RST,
     input [7:0] P_DATA,
     output reg par_err
