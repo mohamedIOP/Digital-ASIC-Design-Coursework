@@ -9,7 +9,7 @@ module deserializer (
             P_DATA <= 0;
         end
         else if (deser_en) begin
-            P_DATA[bit_cnt - 1] <= sampled_bit;
+            P_DATA <= {sampled_bit,P_DATA[7:1]};
         end
     end
 endmodule //deserializer

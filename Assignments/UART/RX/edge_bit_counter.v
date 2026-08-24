@@ -1,5 +1,5 @@
 module edge_bit_counter (
-    input edge_bit_cnt_enable,
+    input edge_bit_cnt_enable,soft_rst,
     input [5:0] prescale,
     input CLK,RST,
     output reg [4:0] edge_cnt,
@@ -10,11 +10,11 @@ module edge_bit_counter (
             edge_cnt <= 0;
             bit_cnt <= 0;
         end
-        else if (!edge_bit_cnt_enable) begin
+        else if (soft_rst) begin
             edge_cnt <= 0;
             bit_cnt <= 0;
         end
-        else begin
+        else if(edge_bit_cnt_enable) begin
             if (edge_cnt == prescale - 1) begin
                 edge_cnt <= 0;
                 bit_cnt <= bit_cnt + 1;

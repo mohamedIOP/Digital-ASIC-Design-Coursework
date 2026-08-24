@@ -59,10 +59,10 @@ module UART_RX_FSM (
                     nextState = start; // stay here until the bit is sampled and have got all edges
                 end
             data:
-                if (PAR_EN && (bit_cnt == 8)) begin // Collected the data and there is parity bit so go to parity state
+                if (PAR_EN && (bit_cnt == 7) && bit_transition) begin // Collected the data and there is parity bit so go to parity state
                     nextState = parity; 
                 end
-                else if (!PAR_EN && (bit_cnt == 8)) begin // Collected the data and there isn't parity bit so go to stop state
+                else if (!PAR_EN && (bit_cnt == 7) && bit_transition) begin // Collected the data and there isn't parity bit so go to stop state
                     nextState = stop;
                 end
                 else begin
@@ -83,14 +83,14 @@ module UART_RX_FSM (
                     nextState = stop; // Checking stop state
                 end
             valid:
-                if (RX_IN) begin // return to idle  
+                if (RX_IN && bit_transition) begin // return to idle  
                     nextState = idle; 
                 end
-                else if (!RX_IN) begin // return to start
+                else if (!RX_IN && bit_transition) begin // return to start
                     nextState = start;
                 end
                 else begin
-                    nextState = idle;
+                    nextState = valid;
                 end
             default: nextState = idle; 
         endcase
@@ -102,7 +102,7 @@ module UART_RX_FSM (
         deser_en = (currentState == data) && (data_sampled_flag);
         par_chk_en = (currentState == parity) && (data_sampled_flag);
         stp_chk_en = (currentState == stop) && (data_sampled_flag);
-        data_valid = (currentState == valid) && (!PAR_EN || !par_err) && (!stp_err);
+        data_valid = (currentState == valid || currentState == idle) && (!PAR_EN || !par_err) && (!stp_err);
     end
     always @(*) begin
         soft_rst = currentState == start;

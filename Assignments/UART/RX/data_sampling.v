@@ -1,6 +1,6 @@
 module data_sampling (
     input RX_IN,
-    input dat_samp_en,
+    input dat_samp_en,soft_rst,
     input CLK,RST,
     output sampled_bit
 );
@@ -12,11 +12,11 @@ module data_sampling (
             majority_reg  <= 0;
             inner_counter <= 0;
         end
-        else if (!dat_samp_en) begin
+        else if (soft_rst) begin
             majority_reg  <= 0;
             inner_counter <= 0;
         end
-        else if (inner_counter < 3) begin
+        else if (inner_counter < 3 && dat_samp_en) begin
             majority_reg[inner_counter] <= RX_IN;
             inner_counter <= inner_counter + 1;
         end

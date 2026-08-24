@@ -35,6 +35,7 @@ module UART_RX_TOP (
         .edge_bit_cnt_enable(edge_bit_cnt_enable_inner),
         .prescale(Prescale),
         .CLK(CLK),.RST(RST),
+        .soft_rst(soft_rst_inner),
         .edge_cnt(edge_cnt_inner),
         .bit_cnt(bit_cnt_inner)
     );
@@ -45,7 +46,7 @@ module UART_RX_TOP (
         .sampled_bit(sampled_bit_inner)
     );
     parity_Check parity_Check_Block (
-        .par_chk_en(par_chk_en_inner),.PAR_TYP(PAR_TYP),.sampled_bit(sampled_bit_inner),.PAR_EN(PAR_EN),
+        .par_chk_en(par_chk_en_inner),.PAR_TYP(PAR_TYP),.sampled_bit(sampled_bit_inner),.soft_rst(soft_rst_inner),
         .CLK(CLK),.RST(RST),
         .P_DATA(P_DATA),
         .par_err(par_err_inner)
