@@ -1,0 +1,1518 @@
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:26:10 on Aug 24,2026
+# vlog -reportprogress 300 UART_RX_FSM.sv UART_RX_TOP.v UART_RX_tb.v data_sampling.v deserializer.v edge_bit_counter.v parity_Check.v stop_Check.v strt_Check.v 
+# -- Compiling module UART_RX_FSM
+# -- Compiling module UART_RX_TOP
+# -- Compiling module UART_RX_tb
+# -- Compiling module data_sampling
+# -- Compiling module deserializer
+# -- Compiling module edge_bit_counter
+# -- Compiling module parity_Check
+# -- Compiling module stop_Check
+# -- Compiling module strt_Check
+# 
+# Top level modules:
+# 	UART_RX_tb
+# End time: 17:26:10 on Aug 24,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -gui work.UART_RX_tb 
+# Start time: 17:26:10 on Aug 24,2026
+# Loading work.UART_RX_tb
+# Loading work.UART_RX_TOP
+# Loading sv_std.std
+# Loading work.UART_RX_FSM
+# Loading work.edge_bit_counter
+# Loading work.data_sampling
+# Loading work.parity_Check
+# Loading work.strt_Check
+# Loading work.stop_Check
+# Loading work.deserializer
+# 
+# ==========================================================================
+#             RUNNING SCENARIOS FOR PRESCALE = 8                          
+# ==========================================================================
+# 
+# --------------------------------------------------------------------------------
+# TESTCASE #1 : S1: Reset in IDLE Mode
+# Start Time    : 320000 ns | End Time : 11171000 ns
+# Expected      : P_DATA=0x00, Parity_Err=0, Stop_Err=0, Valid=0
+# Observed      : P_DATA=0x00, Parity_Err=0, Stop_Err=0, Valid=0
+# STATUS        : [PASSED]
+# --------------------------------------------------------------------------------
+# 
+# [TX DRIVE] Frame: Data=0xa5, PAR_EN=0, PAR_TYP=0, ParBit=0, CorruptStop=0
+#   [DATA BIT 0] TX=1 | P_DATA=0x00 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 1] TX=0 | P_DATA=0x80 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 2] TX=1 | P_DATA=0x40 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 3] TX=0 | P_DATA=0xa0 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 4] TX=0 | P_DATA=0x50 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 5] TX=1 | P_DATA=0x28 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 6] TX=0 | P_DATA=0x94 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 7] TX=1 | P_DATA=0x4a | Valid=0 Err(P/S)=0/0
+#   [STOP BIT] TX=1 | Valid=0 Err(P/S)=0/0
+# --------------------------------------------------------------------------------
+# TESTCASE #2 : S2: No Parity Frame (0xA5)
+# Start Time    : 11171000 ns | End Time : 99284000 ns
+# Expected      : P_DATA=0xa5, Parity_Err=0, Stop_Err=0, Valid=1
+# Observed      : P_DATA=0xa5, Parity_Err=0, Stop_Err=0, Valid=1
+# STATUS        : [PASSED]
+# --------------------------------------------------------------------------------
+# 
+# [TX DRIVE] Frame: Data=0x3b, PAR_EN=1, PAR_TYP=0, ParBit=1, CorruptStop=0
+#   [DATA BIT 0] TX=1 | P_DATA=0xa5 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 1] TX=1 | P_DATA=0xd2 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 2] TX=0 | P_DATA=0xe9 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 3] TX=1 | P_DATA=0x74 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 4] TX=1 | P_DATA=0xba | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 5] TX=1 | P_DATA=0xdd | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 6] TX=0 | P_DATA=0xee | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 7] TX=0 | P_DATA=0x77 | Valid=0 Err(P/S)=0/0
+#   [PARITY BIT] TX=1 | Valid=0 Err(P/S)=0/0
+#   [STOP BIT] TX=1 | Valid=0 Err(P/S)=0/0
+# --------------------------------------------------------------------------------
+# TESTCASE #3 : S3: Even Parity Frame (0x3B)
+# Start Time    : 107964000 ns | End Time : 204536000 ns
+# Expected      : P_DATA=0x3b, Parity_Err=0, Stop_Err=0, Valid=1
+# Observed      : P_DATA=0x3b, Parity_Err=0, Stop_Err=0, Valid=1
+# STATUS        : [PASSED]
+# --------------------------------------------------------------------------------
+# 
+# [TX DRIVE] Frame: Data=0xc4, PAR_EN=1, PAR_TYP=1, ParBit=0, CorruptStop=0
+#   [DATA BIT 0] TX=0 | P_DATA=0x3b | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 1] TX=0 | P_DATA=0x1d | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 2] TX=1 | P_DATA=0x0e | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 3] TX=0 | P_DATA=0x87 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 4] TX=0 | P_DATA=0x43 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 5] TX=0 | P_DATA=0x21 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 6] TX=1 | P_DATA=0x10 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 7] TX=1 | P_DATA=0x88 | Valid=0 Err(P/S)=0/0
+#   [PARITY BIT] TX=0 | Valid=0 Err(P/S)=0/0
+#   [STOP BIT] TX=1 | Valid=0 Err(P/S)=0/0
+# --------------------------------------------------------------------------------
+# TESTCASE #4 : S4: Odd Parity Frame (0xC4)
+# Start Time    : 213216000 ns | End Time : 309787000 ns
+# Expected      : P_DATA=0xc4, Parity_Err=0, Stop_Err=0, Valid=1
+# Observed      : P_DATA=0xc4, Parity_Err=0, Stop_Err=0, Valid=1
+# STATUS        : [PASSED]
+# --------------------------------------------------------------------------------
+# 
+# [TX DRIVE] Frame: Data=0x12, PAR_EN=1, PAR_TYP=0, ParBit=0, CorruptStop=0
+#   [DATA BIT 0] TX=0 | P_DATA=0xc4 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 1] TX=1 | P_DATA=0x62 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 2] TX=0 | P_DATA=0xb1 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 3] TX=0 | P_DATA=0x58 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 4] TX=1 | P_DATA=0x2c | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 5] TX=0 | P_DATA=0x96 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 6] TX=0 | P_DATA=0x4b | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 7] TX=0 | P_DATA=0x25 | Valid=0 Err(P/S)=0/0
+#   [PARITY BIT] TX=0 | Valid=0 Err(P/S)=0/0
+#   [STOP BIT] TX=1 | Valid=0 Err(P/S)=0/0
+# --------------------------------------------------------------------------------
+# TESTCASE #5 : S5a: Back-To-Back Frame 1 (0x12)
+# Start Time    : 318468000 ns | End Time : 415039000 ns
+# Expected      : P_DATA=0x12, Parity_Err=0, Stop_Err=0, Valid=1
+# Observed      : P_DATA=0x12, Parity_Err=0, Stop_Err=0, Valid=1
+# STATUS        : [PASSED]
+# --------------------------------------------------------------------------------
+# 
+# [TX DRIVE] Frame: Data=0x89, PAR_EN=1, PAR_TYP=0, ParBit=1, CorruptStop=0
+#   [DATA BIT 0] TX=1 | P_DATA=0x89 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 1] TX=0 | P_DATA=0x44 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 2] TX=0 | P_DATA=0x22 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 3] TX=1 | P_DATA=0x91 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 4] TX=0 | P_DATA=0x48 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 5] TX=0 | P_DATA=0x24 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 6] TX=0 | P_DATA=0x12 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 7] TX=1 | P_DATA=0x89 | Valid=0 Err(P/S)=0/0
+#   [PARITY BIT] TX=1 | Valid=0 Err(P/S)=0/0
+#   [STOP BIT] TX=1 | Valid=1 Err(P/S)=0/0
+# --------------------------------------------------------------------------------
+# TESTCASE #6 : S5b: Back-To-Back Frame 2 (0x89)
+# Start Time    : 415039000 ns | End Time : 511611000 ns
+# Expected      : P_DATA=0x89, Parity_Err=0, Stop_Err=0, Valid=1
+# Observed      : P_DATA=0x89, Parity_Err=0, Stop_Err=0, Valid=1
+# STATUS        : [PASSED]
+# --------------------------------------------------------------------------------
+# 
+# [TX DRIVE] Frame: Data=0x55, PAR_EN=0, PAR_TYP=0, ParBit=0, CorruptStop=0
+#   [DATA BIT 0] TX=1 | P_DATA=0x89 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 1] TX=0 | P_DATA=0xc4 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 2] TX=1 | P_DATA=0x62 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 3] TX=0 | P_DATA=0xb1 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 4] TX=1 | P_DATA=0x58 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 5] TX=0 | P_DATA=0xac | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 6] TX=1 | P_DATA=0x56 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 7] TX=0 | P_DATA=0xab | Valid=0 Err(P/S)=0/0
+#   [STOP BIT] TX=1 | Valid=0 Err(P/S)=0/0
+# --------------------------------------------------------------------------------
+# TESTCASE #7 : S6a: Non-Consecutive Frame 1 (0x55)
+# Start Time    : 520291000 ns | End Time : 608182000 ns
+# Expected      : P_DATA=0x55, Parity_Err=0, Stop_Err=0, Valid=1
+# Observed      : P_DATA=0x55, Parity_Err=0, Stop_Err=0, Valid=1
+# STATUS        : [PASSED]
+# --------------------------------------------------------------------------------
+# 
+# [TX DRIVE] Frame: Data=0xaa, PAR_EN=0, PAR_TYP=0, ParBit=0, CorruptStop=0
+#   [DATA BIT 0] TX=0 | P_DATA=0x55 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 1] TX=1 | P_DATA=0x2a | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 2] TX=0 | P_DATA=0x95 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 3] TX=1 | P_DATA=0x4a | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 4] TX=0 | P_DATA=0xa5 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 5] TX=1 | P_DATA=0x52 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 6] TX=0 | P_DATA=0xa9 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 7] TX=1 | P_DATA=0x54 | Valid=0 Err(P/S)=0/0
+#   [STOP BIT] TX=1 | Valid=0 Err(P/S)=0/0
+# --------------------------------------------------------------------------------
+# TESTCASE #8 : S6b: Non-Consecutive Frame 2 (0xAA)
+# Start Time    : 694987000 ns | End Time : 782878000 ns
+# Expected      : P_DATA=0xaa, Parity_Err=0, Stop_Err=0, Valid=1
+# Observed      : P_DATA=0xaa, Parity_Err=0, Stop_Err=0, Valid=1
+# STATUS        : [PASSED]
+# --------------------------------------------------------------------------------
+# 
+# --------------------------------------------------------------------------------
+# TESTCASE #9 : S7: Asynchronous Reset Mid-Frame
+# Start Time    : 791559000 ns | End Time : 846897000 ns
+# Expected      : P_DATA=0x00, Parity_Err=0, Stop_Err=0, Valid=0
+# Observed      : P_DATA=0x00, Parity_Err=0, Stop_Err=0, Valid=0
+# STATUS        : [PASSED]
+# --------------------------------------------------------------------------------
+# 
+# --------------------------------------------------------------------------------
+# TESTCASE #10 : S8: Start Bit Glitch -> Abort to IDLE
+# Start Time    : 846897000 ns | End Time : 865343000 ns
+# Expected      : P_DATA=0x00, Parity_Err=0, Stop_Err=0, Valid=0
+# Observed      : P_DATA=0x00, Parity_Err=0, Stop_Err=0, Valid=0
+# STATUS        : [PASSED]
+# --------------------------------------------------------------------------------
+# 
+# [TX DRIVE] Frame: Data=0x7e, PAR_EN=1, PAR_TYP=0, ParBit=0, CorruptStop=0
+#   [DATA BIT 0] TX=0 | P_DATA=0x00 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 1] TX=1 | P_DATA=0x00 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 2] TX=1 | P_DATA=0x80 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 3] TX=1 | P_DATA=0xc0 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 4] TX=1 | P_DATA=0xe0 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 5] TX=1 | P_DATA=0xf0 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 6] TX=1 | P_DATA=0xf8 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 7] TX=0 | P_DATA=0xfc | Valid=0 Err(P/S)=0/0
+#   [PARITY BIT] TX=0 | Valid=0 Err(P/S)=0/0
+#   [STOP BIT] TX=1 | Valid=0 Err(P/S)=0/0
+# --------------------------------------------------------------------------------
+# TESTCASE #11 : S9: Start Glitch Followed by New Start (0x7E)
+# Start Time    : 865343000 ns | End Time : 971680000 ns
+# Expected      : P_DATA=0x7e, Parity_Err=0, Stop_Err=0, Valid=1
+# Observed      : P_DATA=0x7e, Parity_Err=0, Stop_Err=0, Valid=1
+# STATUS        : [PASSED]
+# --------------------------------------------------------------------------------
+# 
+# [TX DRIVE] Frame: Data=0xf0, PAR_EN=0, PAR_TYP=0, ParBit=0, CorruptStop=1
+#   [DATA BIT 0] TX=0 | P_DATA=0x7e | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 1] TX=0 | P_DATA=0x3f | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 2] TX=0 | P_DATA=0x1f | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 3] TX=0 | P_DATA=0x0f | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 4] TX=1 | P_DATA=0x07 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 5] TX=1 | P_DATA=0x83 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 6] TX=1 | P_DATA=0xc1 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 7] TX=1 | P_DATA=0xe0 | Valid=0 Err(P/S)=0/0
+#   [STOP BIT] TX=0 | Valid=0 Err(P/S)=0/0
+# --------------------------------------------------------------------------------
+# TESTCASE #12 : S10: Stop Bit Glitch Error
+# Start Time    : 980361000 ns | End Time : 1068251000 ns
+# Expected      : P_DATA=0xf0, Parity_Err=0, Stop_Err=1, Valid=0
+# Observed      : P_DATA=0xf0, Parity_Err=0, Stop_Err=1, Valid=0
+# STATUS        : [PASSED]
+# --------------------------------------------------------------------------------
+# 
+# [TX DRIVE] Frame: Data=0x0f, PAR_EN=1, PAR_TYP=0, ParBit=1, CorruptStop=0
+#   [DATA BIT 0] TX=1 | P_DATA=0xf0 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 1] TX=1 | P_DATA=0xf8 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 2] TX=1 | P_DATA=0xfc | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 3] TX=1 | P_DATA=0xfe | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 4] TX=0 | P_DATA=0xff | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 5] TX=0 | P_DATA=0x7f | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 6] TX=0 | P_DATA=0x3f | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 7] TX=0 | P_DATA=0x1f | Valid=0 Err(P/S)=0/0
+#   [PARITY BIT] TX=1 | Valid=0 Err(P/S)=0/0
+#   [STOP BIT] TX=1 | Valid=0 Err(P/S)=1/0
+# --------------------------------------------------------------------------------
+# TESTCASE #13 : S11: Parity Error Mismatch
+# Start Time    : 1076932000 ns | End Time : 1173503000 ns
+# Expected      : P_DATA=0x0f, Parity_Err=1, Stop_Err=0, Valid=0
+# Observed      : P_DATA=0x0f, Parity_Err=1, Stop_Err=0, Valid=0
+# STATUS        : [PASSED]
+# --------------------------------------------------------------------------------
+# 
+# [TX DRIVE] Frame: Data=0x33, PAR_EN=1, PAR_TYP=1, ParBit=1, CorruptStop=1
+#   [DATA BIT 0] TX=1 | P_DATA=0x0f | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 1] TX=1 | P_DATA=0x87 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 2] TX=0 | P_DATA=0xc3 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 3] TX=0 | P_DATA=0x61 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 4] TX=1 | P_DATA=0x30 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 5] TX=1 | P_DATA=0x98 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 6] TX=0 | P_DATA=0xcc | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 7] TX=0 | P_DATA=0x66 | Valid=0 Err(P/S)=0/0
+#   [PARITY BIT] TX=1 | Valid=0 Err(P/S)=0/0
+#   [STOP BIT] TX=0 | Valid=0 Err(P/S)=0/0
+# --------------------------------------------------------------------------------
+# TESTCASE #14 : S12: Stop Error with Valid Data/Parity
+# Start Time    : 1182184000 ns | End Time : 1278755000 ns
+# Expected      : P_DATA=0x33, Parity_Err=0, Stop_Err=1, Valid=0
+# Observed      : P_DATA=0x33, Parity_Err=0, Stop_Err=1, Valid=0
+# STATUS        : [PASSED]
+# --------------------------------------------------------------------------------
+# 
+# 
+# ==========================================================================
+#             RUNNING SCENARIOS FOR PRESCALE = 16                          
+# ==========================================================================
+# 
+# --------------------------------------------------------------------------------
+# TESTCASE #15 : S1: Reset in IDLE Mode
+# Start Time    : 1287536000 ns | End Time : 1292961000 ns
+# Expected      : P_DATA=0x00, Parity_Err=0, Stop_Err=0, Valid=0
+# Observed      : P_DATA=0x00, Parity_Err=0, Stop_Err=0, Valid=0
+# STATUS        : [PASSED]
+# --------------------------------------------------------------------------------
+# 
+# [TX DRIVE] Frame: Data=0xa5, PAR_EN=0, PAR_TYP=0, ParBit=0, CorruptStop=0
+#   [DATA BIT 0] TX=1 | P_DATA=0x80 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 1] TX=0 | P_DATA=0x40 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 2] TX=1 | P_DATA=0xa0 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 3] TX=0 | P_DATA=0x50 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 4] TX=0 | P_DATA=0x28 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 5] TX=1 | P_DATA=0x94 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 6] TX=0 | P_DATA=0x4a | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 7] TX=1 | P_DATA=0xa5 | Valid=0 Err(P/S)=0/0
+#   [STOP BIT] TX=1 | Valid=0 Err(P/S)=0/0
+# --------------------------------------------------------------------------------
+# TESTCASE #16 : S2: No Parity Frame (0xA5)
+# Start Time    : 1292961000 ns | End Time : 1380752000 ns
+# Expected      : P_DATA=0xa5, Parity_Err=0, Stop_Err=0, Valid=1
+# Observed      : P_DATA=0xa5, Parity_Err=0, Stop_Err=0, Valid=1
+# STATUS        : [PASSED]
+# --------------------------------------------------------------------------------
+# 
+# [TX DRIVE] Frame: Data=0x3b, PAR_EN=1, PAR_TYP=0, ParBit=1, CorruptStop=0
+#   [DATA BIT 0] TX=1 | P_DATA=0xd2 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 1] TX=1 | P_DATA=0xe9 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 2] TX=0 | P_DATA=0x74 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 3] TX=1 | P_DATA=0xba | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 4] TX=1 | P_DATA=0xdd | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 5] TX=1 | P_DATA=0xee | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 6] TX=0 | P_DATA=0x77 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 7] TX=0 | P_DATA=0x3b | Valid=0 Err(P/S)=0/0
+#   [PARITY BIT] TX=1 | Valid=0 Err(P/S)=0/0
+#   [STOP BIT] TX=1 | Valid=0 Err(P/S)=0/0
+# --------------------------------------------------------------------------------
+# TESTCASE #17 : S3: Even Parity Frame (0x3B)
+# Start Time    : 1389432000 ns | End Time : 1485461000 ns
+# Expected      : P_DATA=0x3b, Parity_Err=0, Stop_Err=0, Valid=1
+# Observed      : P_DATA=0x3b, Parity_Err=0, Stop_Err=0, Valid=1
+# STATUS        : [PASSED]
+# --------------------------------------------------------------------------------
+# 
+# [TX DRIVE] Frame: Data=0xc4, PAR_EN=1, PAR_TYP=1, ParBit=0, CorruptStop=0
+#   [DATA BIT 0] TX=0 | P_DATA=0x1d | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 1] TX=0 | P_DATA=0x0e | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 2] TX=1 | P_DATA=0x87 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 3] TX=0 | P_DATA=0x43 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 4] TX=0 | P_DATA=0x21 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 5] TX=0 | P_DATA=0x10 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 6] TX=1 | P_DATA=0x88 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 7] TX=1 | P_DATA=0xc4 | Valid=0 Err(P/S)=0/0
+#   [PARITY BIT] TX=0 | Valid=0 Err(P/S)=0/0
+#   [STOP BIT] TX=1 | Valid=0 Err(P/S)=0/0
+# --------------------------------------------------------------------------------
+# TESTCASE #18 : S4: Odd Parity Frame (0xC4)
+# Start Time    : 1494142000 ns | End Time : 1590171000 ns
+# Expected      : P_DATA=0xc4, Parity_Err=0, Stop_Err=0, Valid=1
+# Observed      : P_DATA=0xc4, Parity_Err=0, Stop_Err=0, Valid=1
+# STATUS        : [PASSED]
+# --------------------------------------------------------------------------------
+# 
+# [TX DRIVE] Frame: Data=0x12, PAR_EN=1, PAR_TYP=0, ParBit=0, CorruptStop=0
+#   [DATA BIT 0] TX=0 | P_DATA=0x62 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 1] TX=1 | P_DATA=0xb1 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 2] TX=0 | P_DATA=0x58 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 3] TX=0 | P_DATA=0x2c | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 4] TX=1 | P_DATA=0x96 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 5] TX=0 | P_DATA=0x4b | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 6] TX=0 | P_DATA=0x25 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 7] TX=0 | P_DATA=0x12 | Valid=0 Err(P/S)=0/0
+#   [PARITY BIT] TX=0 | Valid=0 Err(P/S)=0/0
+#   [STOP BIT] TX=1 | Valid=0 Err(P/S)=0/0
+# --------------------------------------------------------------------------------
+# TESTCASE #19 : S5a: Back-To-Back Frame 1 (0x12)
+# Start Time    : 1598851000 ns | End Time : 1694880000 ns
+# Expected      : P_DATA=0x12, Parity_Err=0, Stop_Err=0, Valid=1
+# Observed      : P_DATA=0x12, Parity_Err=0, Stop_Err=0, Valid=1
+# STATUS        : [PASSED]
+# --------------------------------------------------------------------------------
+# 
+# [TX DRIVE] Frame: Data=0x89, PAR_EN=1, PAR_TYP=0, ParBit=1, CorruptStop=0
+#   [DATA BIT 0] TX=1 | P_DATA=0x89 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 1] TX=0 | P_DATA=0x44 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 2] TX=0 | P_DATA=0x22 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 3] TX=1 | P_DATA=0x91 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 4] TX=0 | P_DATA=0x48 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 5] TX=0 | P_DATA=0x24 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 6] TX=0 | P_DATA=0x12 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 7] TX=1 | P_DATA=0x89 | Valid=0 Err(P/S)=0/0
+#   [PARITY BIT] TX=1 | Valid=0 Err(P/S)=0/0
+#   [STOP BIT] TX=1 | Valid=1 Err(P/S)=0/0
+# --------------------------------------------------------------------------------
+# TESTCASE #20 : S5b: Back-To-Back Frame 2 (0x89)
+# Start Time    : 1694880000 ns | End Time : 1790909000 ns
+# Expected      : P_DATA=0x89, Parity_Err=0, Stop_Err=0, Valid=1
+# Observed      : P_DATA=0x89, Parity_Err=0, Stop_Err=0, Valid=1
+# STATUS        : [PASSED]
+# --------------------------------------------------------------------------------
+# 
+# [TX DRIVE] Frame: Data=0x55, PAR_EN=0, PAR_TYP=0, ParBit=0, CorruptStop=0
+#   [DATA BIT 0] TX=1 | P_DATA=0xc4 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 1] TX=0 | P_DATA=0x62 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 2] TX=1 | P_DATA=0xb1 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 3] TX=0 | P_DATA=0x58 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 4] TX=1 | P_DATA=0xac | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 5] TX=0 | P_DATA=0x56 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 6] TX=1 | P_DATA=0xab | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 7] TX=0 | P_DATA=0x55 | Valid=0 Err(P/S)=0/0
+#   [STOP BIT] TX=1 | Valid=0 Err(P/S)=0/0
+# --------------------------------------------------------------------------------
+# TESTCASE #21 : S6a: Non-Consecutive Frame 1 (0x55)
+# Start Time    : 1799590000 ns | End Time : 1886938000 ns
+# Expected      : P_DATA=0x55, Parity_Err=0, Stop_Err=0, Valid=1
+# Observed      : P_DATA=0x55, Parity_Err=0, Stop_Err=0, Valid=1
+# STATUS        : [PASSED]
+# --------------------------------------------------------------------------------
+# 
+# [TX DRIVE] Frame: Data=0xaa, PAR_EN=0, PAR_TYP=0, ParBit=0, CorruptStop=0
+#   [DATA BIT 0] TX=0 | P_DATA=0x2a | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 1] TX=1 | P_DATA=0x95 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 2] TX=0 | P_DATA=0x4a | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 3] TX=1 | P_DATA=0xa5 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 4] TX=0 | P_DATA=0x52 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 5] TX=1 | P_DATA=0xa9 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 6] TX=0 | P_DATA=0x54 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 7] TX=1 | P_DATA=0xaa | Valid=0 Err(P/S)=0/0
+#   [STOP BIT] TX=1 | Valid=0 Err(P/S)=0/0
+# --------------------------------------------------------------------------------
+# TESTCASE #22 : S6b: Non-Consecutive Frame 2 (0xAA)
+# Start Time    : 1973743000 ns | End Time : 2061092000 ns
+# Expected      : P_DATA=0xaa, Parity_Err=0, Stop_Err=0, Valid=1
+# Observed      : P_DATA=0xaa, Parity_Err=0, Stop_Err=0, Valid=1
+# STATUS        : [PASSED]
+# --------------------------------------------------------------------------------
+# 
+# --------------------------------------------------------------------------------
+# TESTCASE #23 : S7: Asynchronous Reset Mid-Frame
+# Start Time    : 2069772000 ns | End Time : 2123483000 ns
+# Expected      : P_DATA=0x00, Parity_Err=0, Stop_Err=0, Valid=0
+# Observed      : P_DATA=0x00, Parity_Err=0, Stop_Err=0, Valid=0
+# STATUS        : [PASSED]
+# --------------------------------------------------------------------------------
+# 
+# --------------------------------------------------------------------------------
+# TESTCASE #24 : S8: Start Bit Glitch -> Abort to IDLE
+# Start Time    : 2123483000 ns | End Time : 2141387000 ns
+# Expected      : P_DATA=0x00, Parity_Err=0, Stop_Err=0, Valid=0
+# Observed      : P_DATA=0x00, Parity_Err=0, Stop_Err=0, Valid=0
+# STATUS        : [PASSED]
+# --------------------------------------------------------------------------------
+# 
+# [TX DRIVE] Frame: Data=0x7e, PAR_EN=1, PAR_TYP=0, ParBit=0, CorruptStop=0
+#   [DATA BIT 0] TX=0 | P_DATA=0x00 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 1] TX=1 | P_DATA=0x80 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 2] TX=1 | P_DATA=0xc0 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 3] TX=1 | P_DATA=0xe0 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 4] TX=1 | P_DATA=0xf0 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 5] TX=1 | P_DATA=0xf8 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 6] TX=1 | P_DATA=0xfc | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 7] TX=0 | P_DATA=0x7e | Valid=0 Err(P/S)=0/0
+#   [PARITY BIT] TX=0 | Valid=0 Err(P/S)=0/0
+#   [STOP BIT] TX=1 | Valid=0 Err(P/S)=0/0
+# --------------------------------------------------------------------------------
+# TESTCASE #25 : S9: Start Glitch Followed by New Start (0x7E)
+# Start Time    : 2141387000 ns | End Time : 2246639000 ns
+# Expected      : P_DATA=0x7e, Parity_Err=0, Stop_Err=0, Valid=1
+# Observed      : P_DATA=0x7e, Parity_Err=0, Stop_Err=0, Valid=1
+# STATUS        : [PASSED]
+# --------------------------------------------------------------------------------
+# 
+# [TX DRIVE] Frame: Data=0xf0, PAR_EN=0, PAR_TYP=0, ParBit=0, CorruptStop=1
+#   [DATA BIT 0] TX=0 | P_DATA=0x3f | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 1] TX=0 | P_DATA=0x1f | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 2] TX=0 | P_DATA=0x0f | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 3] TX=0 | P_DATA=0x07 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 4] TX=1 | P_DATA=0x83 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 5] TX=1 | P_DATA=0xc1 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 6] TX=1 | P_DATA=0xe0 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 7] TX=1 | P_DATA=0xf0 | Valid=0 Err(P/S)=0/0
+#   [STOP BIT] TX=0 | Valid=0 Err(P/S)=0/1
+# --------------------------------------------------------------------------------
+# TESTCASE #26 : S10: Stop Bit Glitch Error
+# Start Time    : 2255320000 ns | End Time : 2342668000 ns
+# Expected      : P_DATA=0xf0, Parity_Err=0, Stop_Err=1, Valid=0
+# Observed      : P_DATA=0xf0, Parity_Err=0, Stop_Err=1, Valid=0
+# STATUS        : [PASSED]
+# --------------------------------------------------------------------------------
+# 
+# [TX DRIVE] Frame: Data=0x0f, PAR_EN=1, PAR_TYP=0, ParBit=1, CorruptStop=0
+#   [DATA BIT 0] TX=1 | P_DATA=0xf8 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 1] TX=1 | P_DATA=0xfc | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 2] TX=1 | P_DATA=0xfe | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 3] TX=1 | P_DATA=0xff | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 4] TX=0 | P_DATA=0x7f | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 5] TX=0 | P_DATA=0x3f | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 6] TX=0 | P_DATA=0x1f | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 7] TX=0 | P_DATA=0x0f | Valid=0 Err(P/S)=0/0
+#   [PARITY BIT] TX=1 | Valid=0 Err(P/S)=1/0
+#   [STOP BIT] TX=1 | Valid=0 Err(P/S)=1/0
+# --------------------------------------------------------------------------------
+# TESTCASE #27 : S11: Parity Error Mismatch
+# Start Time    : 2351349000 ns | End Time : 2447378000 ns
+# Expected      : P_DATA=0x0f, Parity_Err=1, Stop_Err=0, Valid=0
+# Observed      : P_DATA=0x0f, Parity_Err=1, Stop_Err=0, Valid=0
+# STATUS        : [PASSED]
+# --------------------------------------------------------------------------------
+# 
+# [TX DRIVE] Frame: Data=0x33, PAR_EN=1, PAR_TYP=1, ParBit=1, CorruptStop=1
+#   [DATA BIT 0] TX=1 | P_DATA=0x87 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 1] TX=1 | P_DATA=0xc3 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 2] TX=0 | P_DATA=0x61 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 3] TX=0 | P_DATA=0x30 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 4] TX=1 | P_DATA=0x98 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 5] TX=1 | P_DATA=0xcc | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 6] TX=0 | P_DATA=0x66 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 7] TX=0 | P_DATA=0x33 | Valid=0 Err(P/S)=0/0
+#   [PARITY BIT] TX=1 | Valid=0 Err(P/S)=0/0
+#   [STOP BIT] TX=0 | Valid=0 Err(P/S)=0/1
+# --------------------------------------------------------------------------------
+# TESTCASE #28 : S12: Stop Error with Valid Data/Parity
+# Start Time    : 2456058000 ns | End Time : 2552087000 ns
+# Expected      : P_DATA=0x33, Parity_Err=0, Stop_Err=1, Valid=0
+# Observed      : P_DATA=0x33, Parity_Err=0, Stop_Err=1, Valid=0
+# STATUS        : [PASSED]
+# --------------------------------------------------------------------------------
+# 
+# 
+# ==========================================================================
+#             RUNNING SCENARIOS FOR PRESCALE = 32                          
+# ==========================================================================
+# 
+# --------------------------------------------------------------------------------
+# TESTCASE #29 : S1: Reset in IDLE Mode
+# Start Time    : 2560868000 ns | End Time : 2563580000 ns
+# Expected      : P_DATA=0x00, Parity_Err=0, Stop_Err=0, Valid=0
+# Observed      : P_DATA=0x00, Parity_Err=0, Stop_Err=0, Valid=0
+# STATUS        : [PASSED]
+# --------------------------------------------------------------------------------
+# 
+# [TX DRIVE] Frame: Data=0xa5, PAR_EN=0, PAR_TYP=0, ParBit=0, CorruptStop=0
+#   [DATA BIT 0] TX=1 | P_DATA=0x80 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 1] TX=0 | P_DATA=0x40 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 2] TX=1 | P_DATA=0xa0 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 3] TX=0 | P_DATA=0x50 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 4] TX=0 | P_DATA=0x28 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 5] TX=1 | P_DATA=0x94 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 6] TX=0 | P_DATA=0x4a | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 7] TX=1 | P_DATA=0xa5 | Valid=0 Err(P/S)=0/0
+#   [STOP BIT] TX=1 | Valid=0 Err(P/S)=0/0
+# --------------------------------------------------------------------------------
+# TESTCASE #30 : S2: No Parity Frame (0xA5)
+# Start Time    : 2563580000 ns | End Time : 2650829000 ns
+# Expected      : P_DATA=0xa5, Parity_Err=0, Stop_Err=0, Valid=1
+# Observed      : P_DATA=0xa5, Parity_Err=0, Stop_Err=0, Valid=1
+# STATUS        : [PASSED]
+# --------------------------------------------------------------------------------
+# 
+# [TX DRIVE] Frame: Data=0x3b, PAR_EN=1, PAR_TYP=0, ParBit=1, CorruptStop=0
+#   [DATA BIT 0] TX=1 | P_DATA=0xd2 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 1] TX=1 | P_DATA=0xe9 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 2] TX=0 | P_DATA=0x74 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 3] TX=1 | P_DATA=0xba | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 4] TX=1 | P_DATA=0xdd | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 5] TX=1 | P_DATA=0xee | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 6] TX=0 | P_DATA=0x77 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 7] TX=0 | P_DATA=0x3b | Valid=0 Err(P/S)=0/0
+#   [PARITY BIT] TX=1 | Valid=0 Err(P/S)=0/0
+#   [STOP BIT] TX=1 | Valid=0 Err(P/S)=0/0
+# --------------------------------------------------------------------------------
+# TESTCASE #31 : S3: Even Parity Frame (0x3B)
+# Start Time    : 2659509000 ns | End Time : 2755267000 ns
+# Expected      : P_DATA=0x3b, Parity_Err=0, Stop_Err=0, Valid=1
+# Observed      : P_DATA=0x3b, Parity_Err=0, Stop_Err=0, Valid=1
+# STATUS        : [PASSED]
+# --------------------------------------------------------------------------------
+# 
+# [TX DRIVE] Frame: Data=0xc4, PAR_EN=1, PAR_TYP=1, ParBit=0, CorruptStop=0
+#   [DATA BIT 0] TX=0 | P_DATA=0x1d | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 1] TX=0 | P_DATA=0x0e | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 2] TX=1 | P_DATA=0x87 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 3] TX=0 | P_DATA=0x43 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 4] TX=0 | P_DATA=0x21 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 5] TX=0 | P_DATA=0x10 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 6] TX=1 | P_DATA=0x88 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 7] TX=1 | P_DATA=0xc4 | Valid=0 Err(P/S)=0/0
+#   [PARITY BIT] TX=0 | Valid=0 Err(P/S)=0/0
+#   [STOP BIT] TX=1 | Valid=0 Err(P/S)=0/0
+# --------------------------------------------------------------------------------
+# TESTCASE #32 : S4: Odd Parity Frame (0xC4)
+# Start Time    : 2763947000 ns | End Time : 2859705000 ns
+# Expected      : P_DATA=0xc4, Parity_Err=0, Stop_Err=0, Valid=1
+# Observed      : P_DATA=0xc4, Parity_Err=0, Stop_Err=0, Valid=1
+# STATUS        : [PASSED]
+# --------------------------------------------------------------------------------
+# 
+# [TX DRIVE] Frame: Data=0x12, PAR_EN=1, PAR_TYP=0, ParBit=0, CorruptStop=0
+#   [DATA BIT 0] TX=0 | P_DATA=0x62 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 1] TX=1 | P_DATA=0xb1 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 2] TX=0 | P_DATA=0x58 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 3] TX=0 | P_DATA=0x2c | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 4] TX=1 | P_DATA=0x96 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 5] TX=0 | P_DATA=0x4b | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 6] TX=0 | P_DATA=0x25 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 7] TX=0 | P_DATA=0x12 | Valid=0 Err(P/S)=0/0
+#   [PARITY BIT] TX=0 | Valid=0 Err(P/S)=0/0
+#   [STOP BIT] TX=1 | Valid=0 Err(P/S)=0/0
+# --------------------------------------------------------------------------------
+# TESTCASE #33 : S5a: Back-To-Back Frame 1 (0x12)
+# Start Time    : 2868385000 ns | End Time : 2964143000 ns
+# Expected      : P_DATA=0x12, Parity_Err=0, Stop_Err=0, Valid=1
+# Observed      : P_DATA=0x12, Parity_Err=0, Stop_Err=0, Valid=1
+# STATUS        : [PASSED]
+# --------------------------------------------------------------------------------
+# 
+# [TX DRIVE] Frame: Data=0x89, PAR_EN=1, PAR_TYP=0, ParBit=1, CorruptStop=0
+#   [DATA BIT 0] TX=1 | P_DATA=0x89 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 1] TX=0 | P_DATA=0x44 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 2] TX=0 | P_DATA=0x22 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 3] TX=1 | P_DATA=0x91 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 4] TX=0 | P_DATA=0x48 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 5] TX=0 | P_DATA=0x24 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 6] TX=0 | P_DATA=0x12 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 7] TX=1 | P_DATA=0x89 | Valid=0 Err(P/S)=0/0
+#   [PARITY BIT] TX=1 | Valid=0 Err(P/S)=0/0
+#   [STOP BIT] TX=1 | Valid=1 Err(P/S)=0/0
+# --------------------------------------------------------------------------------
+# TESTCASE #34 : S5b: Back-To-Back Frame 2 (0x89)
+# Start Time    : 2964143000 ns | End Time : 3059901000 ns
+# Expected      : P_DATA=0x89, Parity_Err=0, Stop_Err=0, Valid=1
+# Observed      : P_DATA=0x89, Parity_Err=0, Stop_Err=0, Valid=1
+# STATUS        : [PASSED]
+# --------------------------------------------------------------------------------
+# 
+# [TX DRIVE] Frame: Data=0x55, PAR_EN=0, PAR_TYP=0, ParBit=0, CorruptStop=0
+#   [DATA BIT 0] TX=1 | P_DATA=0xc4 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 1] TX=0 | P_DATA=0x62 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 2] TX=1 | P_DATA=0xb1 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 3] TX=0 | P_DATA=0x58 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 4] TX=1 | P_DATA=0xac | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 5] TX=0 | P_DATA=0x56 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 6] TX=1 | P_DATA=0xab | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 7] TX=0 | P_DATA=0x55 | Valid=0 Err(P/S)=0/0
+#   [STOP BIT] TX=1 | Valid=0 Err(P/S)=0/0
+# --------------------------------------------------------------------------------
+# TESTCASE #35 : S6a: Non-Consecutive Frame 1 (0x55)
+# Start Time    : 3068581000 ns | End Time : 3155658000 ns
+# Expected      : P_DATA=0x55, Parity_Err=0, Stop_Err=0, Valid=1
+# Observed      : P_DATA=0x55, Parity_Err=0, Stop_Err=0, Valid=1
+# STATUS        : [PASSED]
+# --------------------------------------------------------------------------------
+# 
+# [TX DRIVE] Frame: Data=0xaa, PAR_EN=0, PAR_TYP=0, ParBit=0, CorruptStop=0
+#   [DATA BIT 0] TX=0 | P_DATA=0x2a | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 1] TX=1 | P_DATA=0x95 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 2] TX=0 | P_DATA=0x4a | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 3] TX=1 | P_DATA=0xa5 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 4] TX=0 | P_DATA=0x52 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 5] TX=1 | P_DATA=0xa9 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 6] TX=0 | P_DATA=0x54 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 7] TX=1 | P_DATA=0xaa | Valid=0 Err(P/S)=0/0
+#   [STOP BIT] TX=1 | Valid=0 Err(P/S)=0/0
+# --------------------------------------------------------------------------------
+# TESTCASE #36 : S6b: Non-Consecutive Frame 2 (0xAA)
+# Start Time    : 3242464000 ns | End Time : 3329541000 ns
+# Expected      : P_DATA=0xaa, Parity_Err=0, Stop_Err=0, Valid=1
+# Observed      : P_DATA=0xaa, Parity_Err=0, Stop_Err=0, Valid=1
+# STATUS        : [PASSED]
+# --------------------------------------------------------------------------------
+# 
+# --------------------------------------------------------------------------------
+# TESTCASE #37 : S7: Asynchronous Reset Mid-Frame
+# Start Time    : 3338222000 ns | End Time : 3391119000 ns
+# Expected      : P_DATA=0x00, Parity_Err=0, Stop_Err=0, Valid=0
+# Observed      : P_DATA=0x00, Parity_Err=0, Stop_Err=0, Valid=0
+# STATUS        : [PASSED]
+# --------------------------------------------------------------------------------
+# 
+# --------------------------------------------------------------------------------
+# TESTCASE #38 : S8: Start Bit Glitch -> Abort to IDLE
+# Start Time    : 3391119000 ns | End Time : 3408751000 ns
+# Expected      : P_DATA=0x00, Parity_Err=0, Stop_Err=0, Valid=0
+# Observed      : P_DATA=0x00, Parity_Err=0, Stop_Err=0, Valid=0
+# STATUS        : [PASSED]
+# --------------------------------------------------------------------------------
+# 
+# [TX DRIVE] Frame: Data=0x7e, PAR_EN=1, PAR_TYP=0, ParBit=0, CorruptStop=0
+#   [DATA BIT 0] TX=0 | P_DATA=0x00 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 1] TX=1 | P_DATA=0x80 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 2] TX=1 | P_DATA=0xc0 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 3] TX=1 | P_DATA=0xe0 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 4] TX=1 | P_DATA=0xf0 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 5] TX=1 | P_DATA=0xf8 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 6] TX=1 | P_DATA=0xfc | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 7] TX=0 | P_DATA=0x7e | Valid=0 Err(P/S)=0/0
+#   [PARITY BIT] TX=0 | Valid=0 Err(P/S)=0/0
+#   [STOP BIT] TX=1 | Valid=0 Err(P/S)=0/0
+# --------------------------------------------------------------------------------
+# TESTCASE #39 : S9: Start Glitch Followed by New Start (0x7E)
+# Start Time    : 3408751000 ns | End Time : 3513461000 ns
+# Expected      : P_DATA=0x7e, Parity_Err=0, Stop_Err=0, Valid=1
+# Observed      : P_DATA=0x7e, Parity_Err=0, Stop_Err=0, Valid=1
+# STATUS        : [PASSED]
+# --------------------------------------------------------------------------------
+# 
+# [TX DRIVE] Frame: Data=0xf0, PAR_EN=0, PAR_TYP=0, ParBit=0, CorruptStop=1
+#   [DATA BIT 0] TX=0 | P_DATA=0x3f | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 1] TX=0 | P_DATA=0x1f | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 2] TX=0 | P_DATA=0x0f | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 3] TX=0 | P_DATA=0x07 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 4] TX=1 | P_DATA=0x83 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 5] TX=1 | P_DATA=0xc1 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 6] TX=1 | P_DATA=0xe0 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 7] TX=1 | P_DATA=0xf0 | Valid=0 Err(P/S)=0/0
+#   [STOP BIT] TX=0 | Valid=0 Err(P/S)=0/1
+# --------------------------------------------------------------------------------
+# TESTCASE #40 : S10: Stop Bit Glitch Error
+# Start Time    : 3522141000 ns | End Time : 3609218000 ns
+# Expected      : P_DATA=0xf0, Parity_Err=0, Stop_Err=1, Valid=0
+# Observed      : P_DATA=0xf0, Parity_Err=0, Stop_Err=1, Valid=0
+# STATUS        : [PASSED]
+# --------------------------------------------------------------------------------
+# 
+# [TX DRIVE] Frame: Data=0x0f, PAR_EN=1, PAR_TYP=0, ParBit=1, CorruptStop=0
+#   [DATA BIT 0] TX=1 | P_DATA=0xf8 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 1] TX=1 | P_DATA=0xfc | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 2] TX=1 | P_DATA=0xfe | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 3] TX=1 | P_DATA=0xff | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 4] TX=0 | P_DATA=0x7f | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 5] TX=0 | P_DATA=0x3f | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 6] TX=0 | P_DATA=0x1f | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 7] TX=0 | P_DATA=0x0f | Valid=0 Err(P/S)=0/0
+#   [PARITY BIT] TX=1 | Valid=0 Err(P/S)=1/0
+#   [STOP BIT] TX=1 | Valid=0 Err(P/S)=1/0
+# --------------------------------------------------------------------------------
+# TESTCASE #41 : S11: Parity Error Mismatch
+# Start Time    : 3617899000 ns | End Time : 3713657000 ns
+# Expected      : P_DATA=0x0f, Parity_Err=1, Stop_Err=0, Valid=0
+# Observed      : P_DATA=0x0f, Parity_Err=1, Stop_Err=0, Valid=0
+# STATUS        : [PASSED]
+# --------------------------------------------------------------------------------
+# 
+# [TX DRIVE] Frame: Data=0x33, PAR_EN=1, PAR_TYP=1, ParBit=1, CorruptStop=1
+#   [DATA BIT 0] TX=1 | P_DATA=0x87 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 1] TX=1 | P_DATA=0xc3 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 2] TX=0 | P_DATA=0x61 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 3] TX=0 | P_DATA=0x30 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 4] TX=1 | P_DATA=0x98 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 5] TX=1 | P_DATA=0xcc | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 6] TX=0 | P_DATA=0x66 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 7] TX=0 | P_DATA=0x33 | Valid=0 Err(P/S)=0/0
+#   [PARITY BIT] TX=1 | Valid=0 Err(P/S)=0/0
+#   [STOP BIT] TX=0 | Valid=0 Err(P/S)=0/1
+# --------------------------------------------------------------------------------
+# TESTCASE #42 : S12: Stop Error with Valid Data/Parity
+# Start Time    : 3722337000 ns | End Time : 3818095000 ns
+# Expected      : P_DATA=0x33, Parity_Err=0, Stop_Err=1, Valid=0
+# Observed      : P_DATA=0x33, Parity_Err=0, Stop_Err=1, Valid=0
+# STATUS        : [PASSED]
+# --------------------------------------------------------------------------------
+# 
+# 
+# ================================================================================
+#                             TEST SUITE SUMMARY                                  
+# ================================================================================
+#  Total Test Cases Run : 42
+#  Passed Test Cases    : 42
+#  Failed Test Cases    : 0
+# 
+#  RESULT: *** ALL TEST CASES PASSED SUCCESSFULLY! ***
+# ================================================================================
+# ** Note: $finish    : UART_RX_tb.v(407)
+#    Time: 3826775269 ps  Iteration: 0  Instance: /UART_RX_tb
+# 1
+# Break in Module UART_RX_tb at UART_RX_tb.v line 407
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+add wave -position insertpoint  \
+sim:/UART_RX_tb/RX_IN \
+sim:/UART_RX_tb/Prescale \
+sim:/UART_RX_tb/PAR_EN \
+sim:/UART_RX_tb/PAR_TYP \
+sim:/UART_RX_tb/P_DATA \
+sim:/UART_RX_tb/parity_Error \
+sim:/UART_RX_tb/Stop_Error \
+sim:/UART_RX_tb/data_valid \
+sim:/UART_RX_tb/CLK_PERIOD \
+sim:/UART_RX_tb/captured_valid \
+sim:/UART_RX_tb/captured_parity_err \
+sim:/UART_RX_tb/captured_stop_err \
+sim:/UART_RX_tb/captured_p_data \
+sim:/UART_RX_tb/total_cases \
+sim:/UART_RX_tb/passed_cases \
+sim:/UART_RX_tb/failed_cases \
+sim:/UART_RX_tb/failed_case_ids \
+sim:/UART_RX_tb/test_start_time \
+sim:/UART_RX_tb/test_end_time \
+sim:/UART_RX_tb/prescales \
+sim:/UART_RX_tb/p_idx
+add wave  \
+sim:/UART_RX_tb/DUT/UART_RX_FSM_Block/currentState \
+sim:/UART_RX_tb/DUT/UART_RX_FSM_Block/nextState
+add wave  \
+sim:/UART_RX_tb/RX_IN \
+sim:/UART_RX_tb/Prescale \
+sim:/UART_RX_tb/PAR_EN \
+sim:/UART_RX_tb/PAR_TYP \
+sim:/UART_RX_tb/P_DATA \
+sim:/UART_RX_tb/parity_Error \
+sim:/UART_RX_tb/Stop_Error \
+sim:/UART_RX_tb/data_valid \
+sim:/UART_RX_tb/CLK_PERIOD \
+sim:/UART_RX_tb/captured_valid \
+sim:/UART_RX_tb/captured_parity_err \
+sim:/UART_RX_tb/captured_stop_err \
+sim:/UART_RX_tb/captured_p_data \
+sim:/UART_RX_tb/total_cases \
+sim:/UART_RX_tb/passed_cases \
+sim:/UART_RX_tb/failed_cases \
+sim:/UART_RX_tb/failed_case_ids \
+sim:/UART_RX_tb/test_start_time \
+sim:/UART_RX_tb/test_end_time \
+sim:/UART_RX_tb/prescales \
+sim:/UART_RX_tb/p_idx
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# 
+# ==========================================================================
+#             RUNNING SCENARIOS FOR PRESCALE = 8                          
+# ==========================================================================
+# 
+# --------------------------------------------------------------------------------
+# TESTCASE #1 : S1: Reset in IDLE Mode
+# Start Time    : 320000 ns | End Time : 11171000 ns
+# Expected      : P_DATA=0x00, Parity_Err=0, Stop_Err=0, Valid=0
+# Observed      : P_DATA=0x00, Parity_Err=0, Stop_Err=0, Valid=0
+# STATUS        : [PASSED]
+# --------------------------------------------------------------------------------
+# 
+# [TX DRIVE] Frame: Data=0xa5, PAR_EN=0, PAR_TYP=0, ParBit=0, CorruptStop=0
+#   [DATA BIT 0] TX=1 | P_DATA=0x00 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 1] TX=0 | P_DATA=0x80 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 2] TX=1 | P_DATA=0x40 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 3] TX=0 | P_DATA=0xa0 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 4] TX=0 | P_DATA=0x50 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 5] TX=1 | P_DATA=0x28 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 6] TX=0 | P_DATA=0x94 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 7] TX=1 | P_DATA=0x4a | Valid=0 Err(P/S)=0/0
+#   [STOP BIT] TX=1 | Valid=0 Err(P/S)=0/0
+# --------------------------------------------------------------------------------
+# TESTCASE #2 : S2: No Parity Frame (0xA5)
+# Start Time    : 11171000 ns | End Time : 99284000 ns
+# Expected      : P_DATA=0xa5, Parity_Err=0, Stop_Err=0, Valid=1
+# Observed      : P_DATA=0xa5, Parity_Err=0, Stop_Err=0, Valid=1
+# STATUS        : [PASSED]
+# --------------------------------------------------------------------------------
+# 
+# [TX DRIVE] Frame: Data=0x3b, PAR_EN=1, PAR_TYP=0, ParBit=1, CorruptStop=0
+#   [DATA BIT 0] TX=1 | P_DATA=0xa5 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 1] TX=1 | P_DATA=0xd2 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 2] TX=0 | P_DATA=0xe9 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 3] TX=1 | P_DATA=0x74 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 4] TX=1 | P_DATA=0xba | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 5] TX=1 | P_DATA=0xdd | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 6] TX=0 | P_DATA=0xee | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 7] TX=0 | P_DATA=0x77 | Valid=0 Err(P/S)=0/0
+#   [PARITY BIT] TX=1 | Valid=0 Err(P/S)=0/0
+#   [STOP BIT] TX=1 | Valid=0 Err(P/S)=0/0
+# --------------------------------------------------------------------------------
+# TESTCASE #3 : S3: Even Parity Frame (0x3B)
+# Start Time    : 107964000 ns | End Time : 204536000 ns
+# Expected      : P_DATA=0x3b, Parity_Err=0, Stop_Err=0, Valid=1
+# Observed      : P_DATA=0x3b, Parity_Err=0, Stop_Err=0, Valid=1
+# STATUS        : [PASSED]
+# --------------------------------------------------------------------------------
+# 
+# [TX DRIVE] Frame: Data=0xc4, PAR_EN=1, PAR_TYP=1, ParBit=0, CorruptStop=0
+#   [DATA BIT 0] TX=0 | P_DATA=0x3b | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 1] TX=0 | P_DATA=0x1d | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 2] TX=1 | P_DATA=0x0e | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 3] TX=0 | P_DATA=0x87 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 4] TX=0 | P_DATA=0x43 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 5] TX=0 | P_DATA=0x21 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 6] TX=1 | P_DATA=0x10 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 7] TX=1 | P_DATA=0x88 | Valid=0 Err(P/S)=0/0
+#   [PARITY BIT] TX=0 | Valid=0 Err(P/S)=0/0
+#   [STOP BIT] TX=1 | Valid=0 Err(P/S)=0/0
+# --------------------------------------------------------------------------------
+# TESTCASE #4 : S4: Odd Parity Frame (0xC4)
+# Start Time    : 213216000 ns | End Time : 309787000 ns
+# Expected      : P_DATA=0xc4, Parity_Err=0, Stop_Err=0, Valid=1
+# Observed      : P_DATA=0xc4, Parity_Err=0, Stop_Err=0, Valid=1
+# STATUS        : [PASSED]
+# --------------------------------------------------------------------------------
+# 
+# [TX DRIVE] Frame: Data=0x12, PAR_EN=1, PAR_TYP=0, ParBit=0, CorruptStop=0
+#   [DATA BIT 0] TX=0 | P_DATA=0xc4 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 1] TX=1 | P_DATA=0x62 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 2] TX=0 | P_DATA=0xb1 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 3] TX=0 | P_DATA=0x58 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 4] TX=1 | P_DATA=0x2c | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 5] TX=0 | P_DATA=0x96 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 6] TX=0 | P_DATA=0x4b | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 7] TX=0 | P_DATA=0x25 | Valid=0 Err(P/S)=0/0
+#   [PARITY BIT] TX=0 | Valid=0 Err(P/S)=0/0
+#   [STOP BIT] TX=1 | Valid=0 Err(P/S)=0/0
+# --------------------------------------------------------------------------------
+# TESTCASE #5 : S5a: Back-To-Back Frame 1 (0x12)
+# Start Time    : 318468000 ns | End Time : 415039000 ns
+# Expected      : P_DATA=0x12, Parity_Err=0, Stop_Err=0, Valid=1
+# Observed      : P_DATA=0x12, Parity_Err=0, Stop_Err=0, Valid=1
+# STATUS        : [PASSED]
+# --------------------------------------------------------------------------------
+# 
+# [TX DRIVE] Frame: Data=0x89, PAR_EN=1, PAR_TYP=0, ParBit=1, CorruptStop=0
+#   [DATA BIT 0] TX=1 | P_DATA=0x89 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 1] TX=0 | P_DATA=0x44 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 2] TX=0 | P_DATA=0x22 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 3] TX=1 | P_DATA=0x91 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 4] TX=0 | P_DATA=0x48 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 5] TX=0 | P_DATA=0x24 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 6] TX=0 | P_DATA=0x12 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 7] TX=1 | P_DATA=0x89 | Valid=0 Err(P/S)=0/0
+#   [PARITY BIT] TX=1 | Valid=0 Err(P/S)=0/0
+#   [STOP BIT] TX=1 | Valid=1 Err(P/S)=0/0
+# --------------------------------------------------------------------------------
+# TESTCASE #6 : S5b: Back-To-Back Frame 2 (0x89)
+# Start Time    : 415039000 ns | End Time : 511611000 ns
+# Expected      : P_DATA=0x89, Parity_Err=0, Stop_Err=0, Valid=1
+# Observed      : P_DATA=0x89, Parity_Err=0, Stop_Err=0, Valid=1
+# STATUS        : [PASSED]
+# --------------------------------------------------------------------------------
+# 
+# [TX DRIVE] Frame: Data=0x55, PAR_EN=0, PAR_TYP=0, ParBit=0, CorruptStop=0
+#   [DATA BIT 0] TX=1 | P_DATA=0x89 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 1] TX=0 | P_DATA=0xc4 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 2] TX=1 | P_DATA=0x62 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 3] TX=0 | P_DATA=0xb1 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 4] TX=1 | P_DATA=0x58 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 5] TX=0 | P_DATA=0xac | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 6] TX=1 | P_DATA=0x56 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 7] TX=0 | P_DATA=0xab | Valid=0 Err(P/S)=0/0
+#   [STOP BIT] TX=1 | Valid=0 Err(P/S)=0/0
+# --------------------------------------------------------------------------------
+# TESTCASE #7 : S6a: Non-Consecutive Frame 1 (0x55)
+# Start Time    : 520291000 ns | End Time : 608182000 ns
+# Expected      : P_DATA=0x55, Parity_Err=0, Stop_Err=0, Valid=1
+# Observed      : P_DATA=0x55, Parity_Err=0, Stop_Err=0, Valid=1
+# STATUS        : [PASSED]
+# --------------------------------------------------------------------------------
+# 
+# [TX DRIVE] Frame: Data=0xaa, PAR_EN=0, PAR_TYP=0, ParBit=0, CorruptStop=0
+#   [DATA BIT 0] TX=0 | P_DATA=0x55 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 1] TX=1 | P_DATA=0x2a | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 2] TX=0 | P_DATA=0x95 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 3] TX=1 | P_DATA=0x4a | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 4] TX=0 | P_DATA=0xa5 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 5] TX=1 | P_DATA=0x52 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 6] TX=0 | P_DATA=0xa9 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 7] TX=1 | P_DATA=0x54 | Valid=0 Err(P/S)=0/0
+#   [STOP BIT] TX=1 | Valid=0 Err(P/S)=0/0
+# --------------------------------------------------------------------------------
+# TESTCASE #8 : S6b: Non-Consecutive Frame 2 (0xAA)
+# Start Time    : 694987000 ns | End Time : 782878000 ns
+# Expected      : P_DATA=0xaa, Parity_Err=0, Stop_Err=0, Valid=1
+# Observed      : P_DATA=0xaa, Parity_Err=0, Stop_Err=0, Valid=1
+# STATUS        : [PASSED]
+# --------------------------------------------------------------------------------
+# 
+# --------------------------------------------------------------------------------
+# TESTCASE #9 : S7: Asynchronous Reset Mid-Frame
+# Start Time    : 791559000 ns | End Time : 846897000 ns
+# Expected      : P_DATA=0x00, Parity_Err=0, Stop_Err=0, Valid=0
+# Observed      : P_DATA=0x00, Parity_Err=0, Stop_Err=0, Valid=0
+# STATUS        : [PASSED]
+# --------------------------------------------------------------------------------
+# 
+# --------------------------------------------------------------------------------
+# TESTCASE #10 : S8: Start Bit Glitch -> Abort to IDLE
+# Start Time    : 846897000 ns | End Time : 865343000 ns
+# Expected      : P_DATA=0x00, Parity_Err=0, Stop_Err=0, Valid=0
+# Observed      : P_DATA=0x00, Parity_Err=0, Stop_Err=0, Valid=0
+# STATUS        : [PASSED]
+# --------------------------------------------------------------------------------
+# 
+# [TX DRIVE] Frame: Data=0x7e, PAR_EN=1, PAR_TYP=0, ParBit=0, CorruptStop=0
+#   [DATA BIT 0] TX=0 | P_DATA=0x00 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 1] TX=1 | P_DATA=0x00 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 2] TX=1 | P_DATA=0x80 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 3] TX=1 | P_DATA=0xc0 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 4] TX=1 | P_DATA=0xe0 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 5] TX=1 | P_DATA=0xf0 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 6] TX=1 | P_DATA=0xf8 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 7] TX=0 | P_DATA=0xfc | Valid=0 Err(P/S)=0/0
+#   [PARITY BIT] TX=0 | Valid=0 Err(P/S)=0/0
+#   [STOP BIT] TX=1 | Valid=0 Err(P/S)=0/0
+# --------------------------------------------------------------------------------
+# TESTCASE #11 : S9: Start Glitch Followed by New Start (0x7E)
+# Start Time    : 865343000 ns | End Time : 971680000 ns
+# Expected      : P_DATA=0x7e, Parity_Err=0, Stop_Err=0, Valid=1
+# Observed      : P_DATA=0x7e, Parity_Err=0, Stop_Err=0, Valid=1
+# STATUS        : [PASSED]
+# --------------------------------------------------------------------------------
+# 
+# [TX DRIVE] Frame: Data=0xf0, PAR_EN=0, PAR_TYP=0, ParBit=0, CorruptStop=1
+#   [DATA BIT 0] TX=0 | P_DATA=0x7e | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 1] TX=0 | P_DATA=0x3f | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 2] TX=0 | P_DATA=0x1f | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 3] TX=0 | P_DATA=0x0f | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 4] TX=1 | P_DATA=0x07 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 5] TX=1 | P_DATA=0x83 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 6] TX=1 | P_DATA=0xc1 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 7] TX=1 | P_DATA=0xe0 | Valid=0 Err(P/S)=0/0
+#   [STOP BIT] TX=0 | Valid=0 Err(P/S)=0/0
+# --------------------------------------------------------------------------------
+# TESTCASE #12 : S10: Stop Bit Glitch Error
+# Start Time    : 980361000 ns | End Time : 1068251000 ns
+# Expected      : P_DATA=0xf0, Parity_Err=0, Stop_Err=1, Valid=0
+# Observed      : P_DATA=0xf0, Parity_Err=0, Stop_Err=1, Valid=0
+# STATUS        : [PASSED]
+# --------------------------------------------------------------------------------
+# 
+# [TX DRIVE] Frame: Data=0x0f, PAR_EN=1, PAR_TYP=0, ParBit=1, CorruptStop=0
+#   [DATA BIT 0] TX=1 | P_DATA=0xf0 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 1] TX=1 | P_DATA=0xf8 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 2] TX=1 | P_DATA=0xfc | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 3] TX=1 | P_DATA=0xfe | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 4] TX=0 | P_DATA=0xff | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 5] TX=0 | P_DATA=0x7f | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 6] TX=0 | P_DATA=0x3f | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 7] TX=0 | P_DATA=0x1f | Valid=0 Err(P/S)=0/0
+#   [PARITY BIT] TX=1 | Valid=0 Err(P/S)=0/0
+#   [STOP BIT] TX=1 | Valid=0 Err(P/S)=1/0
+# --------------------------------------------------------------------------------
+# TESTCASE #13 : S11: Parity Error Mismatch
+# Start Time    : 1076932000 ns | End Time : 1173503000 ns
+# Expected      : P_DATA=0x0f, Parity_Err=1, Stop_Err=0, Valid=0
+# Observed      : P_DATA=0x0f, Parity_Err=1, Stop_Err=0, Valid=0
+# STATUS        : [PASSED]
+# --------------------------------------------------------------------------------
+# 
+# [TX DRIVE] Frame: Data=0x33, PAR_EN=1, PAR_TYP=1, ParBit=1, CorruptStop=1
+#   [DATA BIT 0] TX=1 | P_DATA=0x0f | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 1] TX=1 | P_DATA=0x87 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 2] TX=0 | P_DATA=0xc3 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 3] TX=0 | P_DATA=0x61 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 4] TX=1 | P_DATA=0x30 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 5] TX=1 | P_DATA=0x98 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 6] TX=0 | P_DATA=0xcc | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 7] TX=0 | P_DATA=0x66 | Valid=0 Err(P/S)=0/0
+#   [PARITY BIT] TX=1 | Valid=0 Err(P/S)=0/0
+#   [STOP BIT] TX=0 | Valid=0 Err(P/S)=0/0
+# --------------------------------------------------------------------------------
+# TESTCASE #14 : S12: Stop Error with Valid Data/Parity
+# Start Time    : 1182184000 ns | End Time : 1278755000 ns
+# Expected      : P_DATA=0x33, Parity_Err=0, Stop_Err=1, Valid=0
+# Observed      : P_DATA=0x33, Parity_Err=0, Stop_Err=1, Valid=0
+# STATUS        : [PASSED]
+# --------------------------------------------------------------------------------
+# 
+# 
+# ==========================================================================
+#             RUNNING SCENARIOS FOR PRESCALE = 16                          
+# ==========================================================================
+# 
+# --------------------------------------------------------------------------------
+# TESTCASE #15 : S1: Reset in IDLE Mode
+# Start Time    : 1287536000 ns | End Time : 1292961000 ns
+# Expected      : P_DATA=0x00, Parity_Err=0, Stop_Err=0, Valid=0
+# Observed      : P_DATA=0x00, Parity_Err=0, Stop_Err=0, Valid=0
+# STATUS        : [PASSED]
+# --------------------------------------------------------------------------------
+# 
+# [TX DRIVE] Frame: Data=0xa5, PAR_EN=0, PAR_TYP=0, ParBit=0, CorruptStop=0
+#   [DATA BIT 0] TX=1 | P_DATA=0x80 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 1] TX=0 | P_DATA=0x40 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 2] TX=1 | P_DATA=0xa0 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 3] TX=0 | P_DATA=0x50 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 4] TX=0 | P_DATA=0x28 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 5] TX=1 | P_DATA=0x94 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 6] TX=0 | P_DATA=0x4a | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 7] TX=1 | P_DATA=0xa5 | Valid=0 Err(P/S)=0/0
+#   [STOP BIT] TX=1 | Valid=0 Err(P/S)=0/0
+# --------------------------------------------------------------------------------
+# TESTCASE #16 : S2: No Parity Frame (0xA5)
+# Start Time    : 1292961000 ns | End Time : 1380752000 ns
+# Expected      : P_DATA=0xa5, Parity_Err=0, Stop_Err=0, Valid=1
+# Observed      : P_DATA=0xa5, Parity_Err=0, Stop_Err=0, Valid=1
+# STATUS        : [PASSED]
+# --------------------------------------------------------------------------------
+# 
+# [TX DRIVE] Frame: Data=0x3b, PAR_EN=1, PAR_TYP=0, ParBit=1, CorruptStop=0
+#   [DATA BIT 0] TX=1 | P_DATA=0xd2 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 1] TX=1 | P_DATA=0xe9 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 2] TX=0 | P_DATA=0x74 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 3] TX=1 | P_DATA=0xba | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 4] TX=1 | P_DATA=0xdd | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 5] TX=1 | P_DATA=0xee | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 6] TX=0 | P_DATA=0x77 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 7] TX=0 | P_DATA=0x3b | Valid=0 Err(P/S)=0/0
+#   [PARITY BIT] TX=1 | Valid=0 Err(P/S)=0/0
+#   [STOP BIT] TX=1 | Valid=0 Err(P/S)=0/0
+# --------------------------------------------------------------------------------
+# TESTCASE #17 : S3: Even Parity Frame (0x3B)
+# Start Time    : 1389432000 ns | End Time : 1485461000 ns
+# Expected      : P_DATA=0x3b, Parity_Err=0, Stop_Err=0, Valid=1
+# Observed      : P_DATA=0x3b, Parity_Err=0, Stop_Err=0, Valid=1
+# STATUS        : [PASSED]
+# --------------------------------------------------------------------------------
+# 
+# [TX DRIVE] Frame: Data=0xc4, PAR_EN=1, PAR_TYP=1, ParBit=0, CorruptStop=0
+#   [DATA BIT 0] TX=0 | P_DATA=0x1d | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 1] TX=0 | P_DATA=0x0e | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 2] TX=1 | P_DATA=0x87 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 3] TX=0 | P_DATA=0x43 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 4] TX=0 | P_DATA=0x21 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 5] TX=0 | P_DATA=0x10 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 6] TX=1 | P_DATA=0x88 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 7] TX=1 | P_DATA=0xc4 | Valid=0 Err(P/S)=0/0
+#   [PARITY BIT] TX=0 | Valid=0 Err(P/S)=0/0
+#   [STOP BIT] TX=1 | Valid=0 Err(P/S)=0/0
+# --------------------------------------------------------------------------------
+# TESTCASE #18 : S4: Odd Parity Frame (0xC4)
+# Start Time    : 1494142000 ns | End Time : 1590171000 ns
+# Expected      : P_DATA=0xc4, Parity_Err=0, Stop_Err=0, Valid=1
+# Observed      : P_DATA=0xc4, Parity_Err=0, Stop_Err=0, Valid=1
+# STATUS        : [PASSED]
+# --------------------------------------------------------------------------------
+# 
+# [TX DRIVE] Frame: Data=0x12, PAR_EN=1, PAR_TYP=0, ParBit=0, CorruptStop=0
+#   [DATA BIT 0] TX=0 | P_DATA=0x62 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 1] TX=1 | P_DATA=0xb1 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 2] TX=0 | P_DATA=0x58 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 3] TX=0 | P_DATA=0x2c | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 4] TX=1 | P_DATA=0x96 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 5] TX=0 | P_DATA=0x4b | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 6] TX=0 | P_DATA=0x25 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 7] TX=0 | P_DATA=0x12 | Valid=0 Err(P/S)=0/0
+#   [PARITY BIT] TX=0 | Valid=0 Err(P/S)=0/0
+#   [STOP BIT] TX=1 | Valid=0 Err(P/S)=0/0
+# --------------------------------------------------------------------------------
+# TESTCASE #19 : S5a: Back-To-Back Frame 1 (0x12)
+# Start Time    : 1598851000 ns | End Time : 1694880000 ns
+# Expected      : P_DATA=0x12, Parity_Err=0, Stop_Err=0, Valid=1
+# Observed      : P_DATA=0x12, Parity_Err=0, Stop_Err=0, Valid=1
+# STATUS        : [PASSED]
+# --------------------------------------------------------------------------------
+# 
+# [TX DRIVE] Frame: Data=0x89, PAR_EN=1, PAR_TYP=0, ParBit=1, CorruptStop=0
+#   [DATA BIT 0] TX=1 | P_DATA=0x89 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 1] TX=0 | P_DATA=0x44 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 2] TX=0 | P_DATA=0x22 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 3] TX=1 | P_DATA=0x91 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 4] TX=0 | P_DATA=0x48 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 5] TX=0 | P_DATA=0x24 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 6] TX=0 | P_DATA=0x12 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 7] TX=1 | P_DATA=0x89 | Valid=0 Err(P/S)=0/0
+#   [PARITY BIT] TX=1 | Valid=0 Err(P/S)=0/0
+#   [STOP BIT] TX=1 | Valid=1 Err(P/S)=0/0
+# --------------------------------------------------------------------------------
+# TESTCASE #20 : S5b: Back-To-Back Frame 2 (0x89)
+# Start Time    : 1694880000 ns | End Time : 1790909000 ns
+# Expected      : P_DATA=0x89, Parity_Err=0, Stop_Err=0, Valid=1
+# Observed      : P_DATA=0x89, Parity_Err=0, Stop_Err=0, Valid=1
+# STATUS        : [PASSED]
+# --------------------------------------------------------------------------------
+# 
+# [TX DRIVE] Frame: Data=0x55, PAR_EN=0, PAR_TYP=0, ParBit=0, CorruptStop=0
+#   [DATA BIT 0] TX=1 | P_DATA=0xc4 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 1] TX=0 | P_DATA=0x62 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 2] TX=1 | P_DATA=0xb1 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 3] TX=0 | P_DATA=0x58 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 4] TX=1 | P_DATA=0xac | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 5] TX=0 | P_DATA=0x56 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 6] TX=1 | P_DATA=0xab | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 7] TX=0 | P_DATA=0x55 | Valid=0 Err(P/S)=0/0
+#   [STOP BIT] TX=1 | Valid=0 Err(P/S)=0/0
+# --------------------------------------------------------------------------------
+# TESTCASE #21 : S6a: Non-Consecutive Frame 1 (0x55)
+# Start Time    : 1799590000 ns | End Time : 1886938000 ns
+# Expected      : P_DATA=0x55, Parity_Err=0, Stop_Err=0, Valid=1
+# Observed      : P_DATA=0x55, Parity_Err=0, Stop_Err=0, Valid=1
+# STATUS        : [PASSED]
+# --------------------------------------------------------------------------------
+# 
+# [TX DRIVE] Frame: Data=0xaa, PAR_EN=0, PAR_TYP=0, ParBit=0, CorruptStop=0
+#   [DATA BIT 0] TX=0 | P_DATA=0x2a | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 1] TX=1 | P_DATA=0x95 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 2] TX=0 | P_DATA=0x4a | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 3] TX=1 | P_DATA=0xa5 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 4] TX=0 | P_DATA=0x52 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 5] TX=1 | P_DATA=0xa9 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 6] TX=0 | P_DATA=0x54 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 7] TX=1 | P_DATA=0xaa | Valid=0 Err(P/S)=0/0
+#   [STOP BIT] TX=1 | Valid=0 Err(P/S)=0/0
+# --------------------------------------------------------------------------------
+# TESTCASE #22 : S6b: Non-Consecutive Frame 2 (0xAA)
+# Start Time    : 1973743000 ns | End Time : 2061092000 ns
+# Expected      : P_DATA=0xaa, Parity_Err=0, Stop_Err=0, Valid=1
+# Observed      : P_DATA=0xaa, Parity_Err=0, Stop_Err=0, Valid=1
+# STATUS        : [PASSED]
+# --------------------------------------------------------------------------------
+# 
+# --------------------------------------------------------------------------------
+# TESTCASE #23 : S7: Asynchronous Reset Mid-Frame
+# Start Time    : 2069772000 ns | End Time : 2123483000 ns
+# Expected      : P_DATA=0x00, Parity_Err=0, Stop_Err=0, Valid=0
+# Observed      : P_DATA=0x00, Parity_Err=0, Stop_Err=0, Valid=0
+# STATUS        : [PASSED]
+# --------------------------------------------------------------------------------
+# 
+# --------------------------------------------------------------------------------
+# TESTCASE #24 : S8: Start Bit Glitch -> Abort to IDLE
+# Start Time    : 2123483000 ns | End Time : 2141387000 ns
+# Expected      : P_DATA=0x00, Parity_Err=0, Stop_Err=0, Valid=0
+# Observed      : P_DATA=0x00, Parity_Err=0, Stop_Err=0, Valid=0
+# STATUS        : [PASSED]
+# --------------------------------------------------------------------------------
+# 
+# [TX DRIVE] Frame: Data=0x7e, PAR_EN=1, PAR_TYP=0, ParBit=0, CorruptStop=0
+#   [DATA BIT 0] TX=0 | P_DATA=0x00 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 1] TX=1 | P_DATA=0x80 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 2] TX=1 | P_DATA=0xc0 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 3] TX=1 | P_DATA=0xe0 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 4] TX=1 | P_DATA=0xf0 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 5] TX=1 | P_DATA=0xf8 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 6] TX=1 | P_DATA=0xfc | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 7] TX=0 | P_DATA=0x7e | Valid=0 Err(P/S)=0/0
+#   [PARITY BIT] TX=0 | Valid=0 Err(P/S)=0/0
+#   [STOP BIT] TX=1 | Valid=0 Err(P/S)=0/0
+# --------------------------------------------------------------------------------
+# TESTCASE #25 : S9: Start Glitch Followed by New Start (0x7E)
+# Start Time    : 2141387000 ns | End Time : 2246639000 ns
+# Expected      : P_DATA=0x7e, Parity_Err=0, Stop_Err=0, Valid=1
+# Observed      : P_DATA=0x7e, Parity_Err=0, Stop_Err=0, Valid=1
+# STATUS        : [PASSED]
+# --------------------------------------------------------------------------------
+# 
+# [TX DRIVE] Frame: Data=0xf0, PAR_EN=0, PAR_TYP=0, ParBit=0, CorruptStop=1
+#   [DATA BIT 0] TX=0 | P_DATA=0x3f | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 1] TX=0 | P_DATA=0x1f | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 2] TX=0 | P_DATA=0x0f | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 3] TX=0 | P_DATA=0x07 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 4] TX=1 | P_DATA=0x83 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 5] TX=1 | P_DATA=0xc1 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 6] TX=1 | P_DATA=0xe0 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 7] TX=1 | P_DATA=0xf0 | Valid=0 Err(P/S)=0/0
+#   [STOP BIT] TX=0 | Valid=0 Err(P/S)=0/1
+# --------------------------------------------------------------------------------
+# TESTCASE #26 : S10: Stop Bit Glitch Error
+# Start Time    : 2255320000 ns | End Time : 2342668000 ns
+# Expected      : P_DATA=0xf0, Parity_Err=0, Stop_Err=1, Valid=0
+# Observed      : P_DATA=0xf0, Parity_Err=0, Stop_Err=1, Valid=0
+# STATUS        : [PASSED]
+# --------------------------------------------------------------------------------
+# 
+# [TX DRIVE] Frame: Data=0x0f, PAR_EN=1, PAR_TYP=0, ParBit=1, CorruptStop=0
+#   [DATA BIT 0] TX=1 | P_DATA=0xf8 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 1] TX=1 | P_DATA=0xfc | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 2] TX=1 | P_DATA=0xfe | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 3] TX=1 | P_DATA=0xff | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 4] TX=0 | P_DATA=0x7f | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 5] TX=0 | P_DATA=0x3f | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 6] TX=0 | P_DATA=0x1f | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 7] TX=0 | P_DATA=0x0f | Valid=0 Err(P/S)=0/0
+#   [PARITY BIT] TX=1 | Valid=0 Err(P/S)=1/0
+#   [STOP BIT] TX=1 | Valid=0 Err(P/S)=1/0
+# --------------------------------------------------------------------------------
+# TESTCASE #27 : S11: Parity Error Mismatch
+# Start Time    : 2351349000 ns | End Time : 2447378000 ns
+# Expected      : P_DATA=0x0f, Parity_Err=1, Stop_Err=0, Valid=0
+# Observed      : P_DATA=0x0f, Parity_Err=1, Stop_Err=0, Valid=0
+# STATUS        : [PASSED]
+# --------------------------------------------------------------------------------
+# 
+# [TX DRIVE] Frame: Data=0x33, PAR_EN=1, PAR_TYP=1, ParBit=1, CorruptStop=1
+#   [DATA BIT 0] TX=1 | P_DATA=0x87 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 1] TX=1 | P_DATA=0xc3 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 2] TX=0 | P_DATA=0x61 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 3] TX=0 | P_DATA=0x30 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 4] TX=1 | P_DATA=0x98 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 5] TX=1 | P_DATA=0xcc | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 6] TX=0 | P_DATA=0x66 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 7] TX=0 | P_DATA=0x33 | Valid=0 Err(P/S)=0/0
+#   [PARITY BIT] TX=1 | Valid=0 Err(P/S)=0/0
+#   [STOP BIT] TX=0 | Valid=0 Err(P/S)=0/1
+# --------------------------------------------------------------------------------
+# TESTCASE #28 : S12: Stop Error with Valid Data/Parity
+# Start Time    : 2456058000 ns | End Time : 2552087000 ns
+# Expected      : P_DATA=0x33, Parity_Err=0, Stop_Err=1, Valid=0
+# Observed      : P_DATA=0x33, Parity_Err=0, Stop_Err=1, Valid=0
+# STATUS        : [PASSED]
+# --------------------------------------------------------------------------------
+# 
+# 
+# ==========================================================================
+#             RUNNING SCENARIOS FOR PRESCALE = 32                          
+# ==========================================================================
+# 
+# --------------------------------------------------------------------------------
+# TESTCASE #29 : S1: Reset in IDLE Mode
+# Start Time    : 2560868000 ns | End Time : 2563580000 ns
+# Expected      : P_DATA=0x00, Parity_Err=0, Stop_Err=0, Valid=0
+# Observed      : P_DATA=0x00, Parity_Err=0, Stop_Err=0, Valid=0
+# STATUS        : [PASSED]
+# --------------------------------------------------------------------------------
+# 
+# [TX DRIVE] Frame: Data=0xa5, PAR_EN=0, PAR_TYP=0, ParBit=0, CorruptStop=0
+#   [DATA BIT 0] TX=1 | P_DATA=0x80 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 1] TX=0 | P_DATA=0x40 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 2] TX=1 | P_DATA=0xa0 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 3] TX=0 | P_DATA=0x50 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 4] TX=0 | P_DATA=0x28 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 5] TX=1 | P_DATA=0x94 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 6] TX=0 | P_DATA=0x4a | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 7] TX=1 | P_DATA=0xa5 | Valid=0 Err(P/S)=0/0
+#   [STOP BIT] TX=1 | Valid=0 Err(P/S)=0/0
+# --------------------------------------------------------------------------------
+# TESTCASE #30 : S2: No Parity Frame (0xA5)
+# Start Time    : 2563580000 ns | End Time : 2650829000 ns
+# Expected      : P_DATA=0xa5, Parity_Err=0, Stop_Err=0, Valid=1
+# Observed      : P_DATA=0xa5, Parity_Err=0, Stop_Err=0, Valid=1
+# STATUS        : [PASSED]
+# --------------------------------------------------------------------------------
+# 
+# [TX DRIVE] Frame: Data=0x3b, PAR_EN=1, PAR_TYP=0, ParBit=1, CorruptStop=0
+#   [DATA BIT 0] TX=1 | P_DATA=0xd2 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 1] TX=1 | P_DATA=0xe9 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 2] TX=0 | P_DATA=0x74 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 3] TX=1 | P_DATA=0xba | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 4] TX=1 | P_DATA=0xdd | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 5] TX=1 | P_DATA=0xee | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 6] TX=0 | P_DATA=0x77 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 7] TX=0 | P_DATA=0x3b | Valid=0 Err(P/S)=0/0
+#   [PARITY BIT] TX=1 | Valid=0 Err(P/S)=0/0
+#   [STOP BIT] TX=1 | Valid=0 Err(P/S)=0/0
+# --------------------------------------------------------------------------------
+# TESTCASE #31 : S3: Even Parity Frame (0x3B)
+# Start Time    : 2659509000 ns | End Time : 2755267000 ns
+# Expected      : P_DATA=0x3b, Parity_Err=0, Stop_Err=0, Valid=1
+# Observed      : P_DATA=0x3b, Parity_Err=0, Stop_Err=0, Valid=1
+# STATUS        : [PASSED]
+# --------------------------------------------------------------------------------
+# 
+# [TX DRIVE] Frame: Data=0xc4, PAR_EN=1, PAR_TYP=1, ParBit=0, CorruptStop=0
+#   [DATA BIT 0] TX=0 | P_DATA=0x1d | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 1] TX=0 | P_DATA=0x0e | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 2] TX=1 | P_DATA=0x87 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 3] TX=0 | P_DATA=0x43 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 4] TX=0 | P_DATA=0x21 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 5] TX=0 | P_DATA=0x10 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 6] TX=1 | P_DATA=0x88 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 7] TX=1 | P_DATA=0xc4 | Valid=0 Err(P/S)=0/0
+#   [PARITY BIT] TX=0 | Valid=0 Err(P/S)=0/0
+#   [STOP BIT] TX=1 | Valid=0 Err(P/S)=0/0
+# --------------------------------------------------------------------------------
+# TESTCASE #32 : S4: Odd Parity Frame (0xC4)
+# Start Time    : 2763947000 ns | End Time : 2859705000 ns
+# Expected      : P_DATA=0xc4, Parity_Err=0, Stop_Err=0, Valid=1
+# Observed      : P_DATA=0xc4, Parity_Err=0, Stop_Err=0, Valid=1
+# STATUS        : [PASSED]
+# --------------------------------------------------------------------------------
+# 
+# [TX DRIVE] Frame: Data=0x12, PAR_EN=1, PAR_TYP=0, ParBit=0, CorruptStop=0
+#   [DATA BIT 0] TX=0 | P_DATA=0x62 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 1] TX=1 | P_DATA=0xb1 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 2] TX=0 | P_DATA=0x58 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 3] TX=0 | P_DATA=0x2c | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 4] TX=1 | P_DATA=0x96 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 5] TX=0 | P_DATA=0x4b | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 6] TX=0 | P_DATA=0x25 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 7] TX=0 | P_DATA=0x12 | Valid=0 Err(P/S)=0/0
+#   [PARITY BIT] TX=0 | Valid=0 Err(P/S)=0/0
+#   [STOP BIT] TX=1 | Valid=0 Err(P/S)=0/0
+# --------------------------------------------------------------------------------
+# TESTCASE #33 : S5a: Back-To-Back Frame 1 (0x12)
+# Start Time    : 2868385000 ns | End Time : 2964143000 ns
+# Expected      : P_DATA=0x12, Parity_Err=0, Stop_Err=0, Valid=1
+# Observed      : P_DATA=0x12, Parity_Err=0, Stop_Err=0, Valid=1
+# STATUS        : [PASSED]
+# --------------------------------------------------------------------------------
+# 
+# [TX DRIVE] Frame: Data=0x89, PAR_EN=1, PAR_TYP=0, ParBit=1, CorruptStop=0
+#   [DATA BIT 0] TX=1 | P_DATA=0x89 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 1] TX=0 | P_DATA=0x44 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 2] TX=0 | P_DATA=0x22 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 3] TX=1 | P_DATA=0x91 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 4] TX=0 | P_DATA=0x48 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 5] TX=0 | P_DATA=0x24 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 6] TX=0 | P_DATA=0x12 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 7] TX=1 | P_DATA=0x89 | Valid=0 Err(P/S)=0/0
+#   [PARITY BIT] TX=1 | Valid=0 Err(P/S)=0/0
+#   [STOP BIT] TX=1 | Valid=1 Err(P/S)=0/0
+# --------------------------------------------------------------------------------
+# TESTCASE #34 : S5b: Back-To-Back Frame 2 (0x89)
+# Start Time    : 2964143000 ns | End Time : 3059901000 ns
+# Expected      : P_DATA=0x89, Parity_Err=0, Stop_Err=0, Valid=1
+# Observed      : P_DATA=0x89, Parity_Err=0, Stop_Err=0, Valid=1
+# STATUS        : [PASSED]
+# --------------------------------------------------------------------------------
+# 
+# [TX DRIVE] Frame: Data=0x55, PAR_EN=0, PAR_TYP=0, ParBit=0, CorruptStop=0
+#   [DATA BIT 0] TX=1 | P_DATA=0xc4 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 1] TX=0 | P_DATA=0x62 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 2] TX=1 | P_DATA=0xb1 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 3] TX=0 | P_DATA=0x58 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 4] TX=1 | P_DATA=0xac | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 5] TX=0 | P_DATA=0x56 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 6] TX=1 | P_DATA=0xab | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 7] TX=0 | P_DATA=0x55 | Valid=0 Err(P/S)=0/0
+#   [STOP BIT] TX=1 | Valid=0 Err(P/S)=0/0
+# --------------------------------------------------------------------------------
+# TESTCASE #35 : S6a: Non-Consecutive Frame 1 (0x55)
+# Start Time    : 3068581000 ns | End Time : 3155658000 ns
+# Expected      : P_DATA=0x55, Parity_Err=0, Stop_Err=0, Valid=1
+# Observed      : P_DATA=0x55, Parity_Err=0, Stop_Err=0, Valid=1
+# STATUS        : [PASSED]
+# --------------------------------------------------------------------------------
+# 
+# [TX DRIVE] Frame: Data=0xaa, PAR_EN=0, PAR_TYP=0, ParBit=0, CorruptStop=0
+#   [DATA BIT 0] TX=0 | P_DATA=0x2a | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 1] TX=1 | P_DATA=0x95 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 2] TX=0 | P_DATA=0x4a | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 3] TX=1 | P_DATA=0xa5 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 4] TX=0 | P_DATA=0x52 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 5] TX=1 | P_DATA=0xa9 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 6] TX=0 | P_DATA=0x54 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 7] TX=1 | P_DATA=0xaa | Valid=0 Err(P/S)=0/0
+#   [STOP BIT] TX=1 | Valid=0 Err(P/S)=0/0
+# --------------------------------------------------------------------------------
+# TESTCASE #36 : S6b: Non-Consecutive Frame 2 (0xAA)
+# Start Time    : 3242464000 ns | End Time : 3329541000 ns
+# Expected      : P_DATA=0xaa, Parity_Err=0, Stop_Err=0, Valid=1
+# Observed      : P_DATA=0xaa, Parity_Err=0, Stop_Err=0, Valid=1
+# STATUS        : [PASSED]
+# --------------------------------------------------------------------------------
+# 
+# --------------------------------------------------------------------------------
+# TESTCASE #37 : S7: Asynchronous Reset Mid-Frame
+# Start Time    : 3338222000 ns | End Time : 3391119000 ns
+# Expected      : P_DATA=0x00, Parity_Err=0, Stop_Err=0, Valid=0
+# Observed      : P_DATA=0x00, Parity_Err=0, Stop_Err=0, Valid=0
+# STATUS        : [PASSED]
+# --------------------------------------------------------------------------------
+# 
+# --------------------------------------------------------------------------------
+# TESTCASE #38 : S8: Start Bit Glitch -> Abort to IDLE
+# Start Time    : 3391119000 ns | End Time : 3408751000 ns
+# Expected      : P_DATA=0x00, Parity_Err=0, Stop_Err=0, Valid=0
+# Observed      : P_DATA=0x00, Parity_Err=0, Stop_Err=0, Valid=0
+# STATUS        : [PASSED]
+# --------------------------------------------------------------------------------
+# 
+# [TX DRIVE] Frame: Data=0x7e, PAR_EN=1, PAR_TYP=0, ParBit=0, CorruptStop=0
+#   [DATA BIT 0] TX=0 | P_DATA=0x00 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 1] TX=1 | P_DATA=0x80 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 2] TX=1 | P_DATA=0xc0 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 3] TX=1 | P_DATA=0xe0 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 4] TX=1 | P_DATA=0xf0 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 5] TX=1 | P_DATA=0xf8 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 6] TX=1 | P_DATA=0xfc | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 7] TX=0 | P_DATA=0x7e | Valid=0 Err(P/S)=0/0
+#   [PARITY BIT] TX=0 | Valid=0 Err(P/S)=0/0
+#   [STOP BIT] TX=1 | Valid=0 Err(P/S)=0/0
+# --------------------------------------------------------------------------------
+# TESTCASE #39 : S9: Start Glitch Followed by New Start (0x7E)
+# Start Time    : 3408751000 ns | End Time : 3513461000 ns
+# Expected      : P_DATA=0x7e, Parity_Err=0, Stop_Err=0, Valid=1
+# Observed      : P_DATA=0x7e, Parity_Err=0, Stop_Err=0, Valid=1
+# STATUS        : [PASSED]
+# --------------------------------------------------------------------------------
+# 
+# [TX DRIVE] Frame: Data=0xf0, PAR_EN=0, PAR_TYP=0, ParBit=0, CorruptStop=1
+#   [DATA BIT 0] TX=0 | P_DATA=0x3f | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 1] TX=0 | P_DATA=0x1f | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 2] TX=0 | P_DATA=0x0f | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 3] TX=0 | P_DATA=0x07 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 4] TX=1 | P_DATA=0x83 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 5] TX=1 | P_DATA=0xc1 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 6] TX=1 | P_DATA=0xe0 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 7] TX=1 | P_DATA=0xf0 | Valid=0 Err(P/S)=0/0
+#   [STOP BIT] TX=0 | Valid=0 Err(P/S)=0/1
+# --------------------------------------------------------------------------------
+# TESTCASE #40 : S10: Stop Bit Glitch Error
+# Start Time    : 3522141000 ns | End Time : 3609218000 ns
+# Expected      : P_DATA=0xf0, Parity_Err=0, Stop_Err=1, Valid=0
+# Observed      : P_DATA=0xf0, Parity_Err=0, Stop_Err=1, Valid=0
+# STATUS        : [PASSED]
+# --------------------------------------------------------------------------------
+# 
+# [TX DRIVE] Frame: Data=0x0f, PAR_EN=1, PAR_TYP=0, ParBit=1, CorruptStop=0
+#   [DATA BIT 0] TX=1 | P_DATA=0xf8 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 1] TX=1 | P_DATA=0xfc | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 2] TX=1 | P_DATA=0xfe | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 3] TX=1 | P_DATA=0xff | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 4] TX=0 | P_DATA=0x7f | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 5] TX=0 | P_DATA=0x3f | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 6] TX=0 | P_DATA=0x1f | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 7] TX=0 | P_DATA=0x0f | Valid=0 Err(P/S)=0/0
+#   [PARITY BIT] TX=1 | Valid=0 Err(P/S)=1/0
+#   [STOP BIT] TX=1 | Valid=0 Err(P/S)=1/0
+# --------------------------------------------------------------------------------
+# TESTCASE #41 : S11: Parity Error Mismatch
+# Start Time    : 3617899000 ns | End Time : 3713657000 ns
+# Expected      : P_DATA=0x0f, Parity_Err=1, Stop_Err=0, Valid=0
+# Observed      : P_DATA=0x0f, Parity_Err=1, Stop_Err=0, Valid=0
+# STATUS        : [PASSED]
+# --------------------------------------------------------------------------------
+# 
+# [TX DRIVE] Frame: Data=0x33, PAR_EN=1, PAR_TYP=1, ParBit=1, CorruptStop=1
+#   [DATA BIT 0] TX=1 | P_DATA=0x87 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 1] TX=1 | P_DATA=0xc3 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 2] TX=0 | P_DATA=0x61 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 3] TX=0 | P_DATA=0x30 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 4] TX=1 | P_DATA=0x98 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 5] TX=1 | P_DATA=0xcc | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 6] TX=0 | P_DATA=0x66 | Valid=0 Err(P/S)=0/0
+#   [DATA BIT 7] TX=0 | P_DATA=0x33 | Valid=0 Err(P/S)=0/0
+#   [PARITY BIT] TX=1 | Valid=0 Err(P/S)=0/0
+#   [STOP BIT] TX=0 | Valid=0 Err(P/S)=0/1
+# --------------------------------------------------------------------------------
+# TESTCASE #42 : S12: Stop Error with Valid Data/Parity
+# Start Time    : 3722337000 ns | End Time : 3818095000 ns
+# Expected      : P_DATA=0x33, Parity_Err=0, Stop_Err=1, Valid=0
+# Observed      : P_DATA=0x33, Parity_Err=0, Stop_Err=1, Valid=0
+# STATUS        : [PASSED]
+# --------------------------------------------------------------------------------
+# 
+# 
+# ================================================================================
+#                             TEST SUITE SUMMARY                                  
+# ================================================================================
+#  Total Test Cases Run : 42
+#  Passed Test Cases    : 42
+#  Failed Test Cases    : 0
+# 
+#  RESULT: *** ALL TEST CASES PASSED SUCCESSFULLY! ***
+# ================================================================================
+# ** Note: $finish    : UART_RX_tb.v(407)
+#    Time: 3826775269 ps  Iteration: 0  Instance: /UART_RX_tb
+# 1
+# Break in Module UART_RX_tb at UART_RX_tb.v line 407
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf {D:/Studying/Digital Track/Digital Design Asic Course Temsah/Digital-ASIC-Design-Coursework/Assignments/UART/RX/wave.do}
+# End time: 23:10:18 on Aug 24,2026, Elapsed time: 5:44:08
+# Errors: 0, Warnings: 1

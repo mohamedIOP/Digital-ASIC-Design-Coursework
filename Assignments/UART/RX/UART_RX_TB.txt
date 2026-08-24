@@ -1,0 +1,28 @@
+/*
+    Constrains:
+    - make all scenarios for the three prescale values
+    - make sure to check the start time of the test vector and the end time and display them
+    - self-checking testbench no need to check manually (Passed or Fail)
+    - display all the outputs {P_DATA,Parity_Error,Stop_Error,data_valid}
+    - Check fsm transitions is correct
+    - don't change the configurations durring the frame transition
+    - count the number of testcases and count the passed and failed and in the summary display them and also display the the failed cases numbers 
+    - Make it easy for debugging as in each state show all signals we need to check, like in the data state we need to see in each bit the sampled bit and P_DATA and also the status flags and the counter for the bits and the edges
+    - each testcase has a label defining what we are testing (the scenario and the test vector we are testing)
+*/
+
+/*
+    Scenarios:
+    - Reset the data
+    - No parity bit
+    - parity is enabled and even type 
+    - parity is enabled and odd type
+    - Two Frames consequentaly
+    - Two Frames Not consequentaly
+    - reset during frame transition
+    - case start glitch and return to idle
+    - case start glitch and recieve new start
+    - case stop glitch
+    - case parity doesn't correspond to the code real parity
+    - case stop isn't correct but all frame is correct 
+*/

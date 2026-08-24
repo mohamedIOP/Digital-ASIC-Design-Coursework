@@ -4,7 +4,7 @@
 #  This is a software generated project file. Manual edits to this file could be lost during the next save operation
 #  Copyright Synopsys Inc.
 #  Last Updated By: SpyGlass SpyGlass_vL-2016.06
-#  Last Updated On Sat Aug 22 23:40:58 2026
+#  Last Updated On Mon Aug 24 22:11:44 2026
 #
 #  -------------------------------------------------------------------
 
@@ -32,4 +32,3 @@ set_option active_methodology $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff
 ##Goal Setup Section
 
 current_methodology $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff
-

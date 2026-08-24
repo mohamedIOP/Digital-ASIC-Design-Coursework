@@ -104,9 +104,17 @@ module UART_RX_FSM (
         deser_en = (currentState == data) && (data_sampled_flag);
         par_chk_en = (currentState == parity) && (data_sampled_flag);
         stp_chk_en = (currentState == stop) && (data_sampled_flag);
-        data_valid = (currentState == valid) && (!PAR_EN || !par_err) && (!stp_err);
     end
     always @(*) begin
         soft_rst = (currentState == idle) || (currentState == valid);
     end
+    // Determine target bit count based on parity configuration
+    wire [3:0] stop_bit_cnt = PAR_EN ? 4'd10 : 4'd9;
+
+    // Assert data_valid during the final sample tick of the STOP bit
+    assign data_valid = (currentState == stop) 
+                    && (bit_cnt == stop_bit_cnt) 
+                    && (edge_cnt == prescale - 1) 
+                    && (!PAR_EN || !par_err) 
+                    && (!stp_err);
 endmodule //UART_RX_FSM

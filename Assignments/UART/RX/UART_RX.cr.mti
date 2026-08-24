@@ -1,0 +1,64 @@
+{D:/Studying/Digital Track/Digital Design Asic Course Temsah/Digital-ASIC-Design-Coursework/Assignments/UART/RX/data_sampling.v} {1 {vlog -work work -stats=none {D:/Studying/Digital Track/Digital Design Asic Course Temsah/Digital-ASIC-Design-Coursework/Assignments/UART/RX/data_sampling.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module data_sampling
+
+Top level modules:
+	data_sampling
+
+} {} {}} {D:/Studying/Digital Track/Digital Design Asic Course Temsah/Digital-ASIC-Design-Coursework/Assignments/UART/RX/UART_RX_FSM.sv} {1 {vlog -work work -sv -stats=none {D:/Studying/Digital Track/Digital Design Asic Course Temsah/Digital-ASIC-Design-Coursework/Assignments/UART/RX/UART_RX_FSM.sv}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module UART_RX_FSM
+
+Top level modules:
+	UART_RX_FSM
+
+} {} {}} {D:/Studying/Digital Track/Digital Design Asic Course Temsah/Digital-ASIC-Design-Coursework/Assignments/UART/RX/UART_RX_tb.v} {1 {vlog -work work -stats=none {D:/Studying/Digital Track/Digital Design Asic Course Temsah/Digital-ASIC-Design-Coursework/Assignments/UART/RX/UART_RX_tb.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module UART_RX_tb
+
+Top level modules:
+	UART_RX_tb
+
+} {} {}} {D:/Studying/Digital Track/Digital Design Asic Course Temsah/Digital-ASIC-Design-Coursework/Assignments/UART/RX/strt_Check.v} {1 {vlog -work work -stats=none {D:/Studying/Digital Track/Digital Design Asic Course Temsah/Digital-ASIC-Design-Coursework/Assignments/UART/RX/strt_Check.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module strt_Check
+
+Top level modules:
+	strt_Check
+
+} {} {}} {D:/Studying/Digital Track/Digital Design Asic Course Temsah/Digital-ASIC-Design-Coursework/Assignments/UART/RX/parity_Check.v} {1 {vlog -work work -stats=none {D:/Studying/Digital Track/Digital Design Asic Course Temsah/Digital-ASIC-Design-Coursework/Assignments/UART/RX/parity_Check.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module parity_Check
+
+Top level modules:
+	parity_Check
+
+} {} {}} {D:/Studying/Digital Track/Digital Design Asic Course Temsah/Digital-ASIC-Design-Coursework/Assignments/UART/RX/edge_bit_counter.v} {1 {vlog -work work -stats=none {D:/Studying/Digital Track/Digital Design Asic Course Temsah/Digital-ASIC-Design-Coursework/Assignments/UART/RX/edge_bit_counter.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module edge_bit_counter
+
+Top level modules:
+	edge_bit_counter
+
+} {} {}} {D:/Studying/Digital Track/Digital Design Asic Course Temsah/Digital-ASIC-Design-Coursework/Assignments/UART/RX/UART_RX_TOP.v} {1 {vlog -work work -stats=none {D:/Studying/Digital Track/Digital Design Asic Course Temsah/Digital-ASIC-Design-Coursework/Assignments/UART/RX/UART_RX_TOP.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module UART_RX_TOP
+
+Top level modules:
+	UART_RX_TOP
+
+} {} {}} {D:/Studying/Digital Track/Digital Design Asic Course Temsah/Digital-ASIC-Design-Coursework/Assignments/UART/RX/stop_Check.v} {1 {vlog -work work -stats=none {D:/Studying/Digital Track/Digital Design Asic Course Temsah/Digital-ASIC-Design-Coursework/Assignments/UART/RX/stop_Check.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module stop_Check
+
+Top level modules:
+	stop_Check
+
+} {} {}} {D:/Studying/Digital Track/Digital Design Asic Course Temsah/Digital-ASIC-Design-Coursework/Assignments/UART/RX/deserializer.v} {1 {vlog -work work -stats=none {D:/Studying/Digital Track/Digital Design Asic Course Temsah/Digital-ASIC-Design-Coursework/Assignments/UART/RX/deserializer.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module deserializer
+
+Top level modules:
+	deserializer
+
+} {} {}}
