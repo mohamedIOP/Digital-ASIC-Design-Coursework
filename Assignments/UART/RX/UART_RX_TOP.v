@@ -55,6 +55,7 @@ module UART_RX_TOP (
     strt_Check strt_Check_Block (
         .strt_chk_en(strt_chk_en_inner),.sampled_bit(sampled_bit_inner),
         .CLK(CLK),.RST(RST),
+        .soft_rst(soft_rst_inner),
         .strt_glitch(strt_glitch_inner)
     );
     stop_Check stop_Check_BLock (
