@@ -1,7 +1,6 @@
 module deserializer (
     input deser_en,sampled_bit,
     input CLK,RST,
-    input [3:0] bit_cnt,
     output reg [7:0] P_DATA
 );
     always @(posedge CLK or negedge RST) begin

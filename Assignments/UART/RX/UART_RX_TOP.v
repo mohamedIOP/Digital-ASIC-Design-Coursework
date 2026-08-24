@@ -43,6 +43,7 @@ module UART_RX_TOP (
         .RX_IN(RX_IN),
         .dat_samp_en(dat_samp_en_inner),
         .CLK(CLK),.RST(RST),
+        .soft_rst(soft_rst_inner),
         .sampled_bit(sampled_bit_inner)
     );
     parity_Check parity_Check_Block (
@@ -64,7 +65,6 @@ module UART_RX_TOP (
     deserializer deserializer_Block (
         .deser_en(deser_en_inner),.sampled_bit(sampled_bit_inner),
         .CLK(CLK),.RST(RST),
-        .bit_cnt(bit_cnt_inner),
         .P_DATA(P_DATA)
     );
     assign parity_Error = par_err_inner;
