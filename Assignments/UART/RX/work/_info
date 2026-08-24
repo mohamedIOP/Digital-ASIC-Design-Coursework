@@ -1,0 +1,217 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/intelFPGA/20.1
+vdata_sampling
+Z0 !s110 1787581570
+!i10b 1
+!s100 mX?m7;@`493YDOjE`^Km41
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+II]`l3Go9M9Oc_;02k8>oS3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z3 dD:/Studying/Digital Track/Digital Design Asic Course Temsah/Digital-ASIC-Design-Coursework/Assignments/UART/RX
+w1787573627
+8data_sampling.v
+Fdata_sampling.v
+!i122 96
+L0 1 31
+Z4 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z5 !s108 1787581570.000000
+!s107 strt_Check.v|stop_Check.v|parity_Check.v|edge_bit_counter.v|deserializer.v|data_sampling.v|UART_RX_tb.v|UART_RX_TOP.v|UART_RX_FSM.sv|
+Z6 !s90 -reportprogress|300|UART_RX_FSM.sv|UART_RX_TOP.v|UART_RX_tb.v|data_sampling.v|deserializer.v|edge_bit_counter.v|parity_Check.v|stop_Check.v|strt_Check.v|
+!i113 1
+Z7 tCvgOpt 0
+vdeserializer
+R0
+!i10b 1
+!s100 Z_ciKc:J>Bc5RE0M2VF1h2
+R1
+I_G8l>^5Ye3BfEQN>]4oo62
+R2
+R3
+w1787571155
+8deserializer.v
+Fdeserializer.v
+!i122 96
+L0 1 14
+R4
+r1
+!s85 0
+31
+R5
+Z8 !s107 strt_Check.v|stop_Check.v|parity_Check.v|edge_bit_counter.v|deserializer.v|data_sampling.v|UART_RX_tb.v|UART_RX_TOP.v|UART_RX_FSM.sv|
+R6
+!i113 1
+R7
+vedge_bit_counter
+R0
+!i10b 1
+!s100 `YBzG`0dCYA9o;7PL[^fb0
+R1
+I:[Wj[E<S74TiLk^9<lhOc0
+R2
+R3
+w1787574722
+8edge_bit_counter.v
+Fedge_bit_counter.v
+!i122 96
+L0 1 33
+R4
+r1
+!s85 0
+31
+R5
+R8
+R6
+!i113 1
+R7
+vparity_Check
+R0
+!i10b 1
+!s100 DzLaoM<0N6FC?8^eeCGcH3
+R1
+IIP?IAz=W_RbLcK^4TUjBC3
+R2
+R3
+w1787570261
+8parity_Check.v
+Fparity_Check.v
+!i122 96
+L0 1 19
+R4
+r1
+!s85 0
+31
+R5
+R8
+R6
+!i113 1
+R7
+nparity_@check
+vstop_Check
+R0
+!i10b 1
+!s100 gnYeLgYNahl4NNRYT]LSP2
+R1
+IAIb8RS]4maWcfj[AkA3f83
+R2
+R3
+w1787329557
+8stop_Check.v
+Fstop_Check.v
+!i122 96
+L0 1 17
+R4
+r1
+!s85 0
+31
+R5
+R8
+R6
+!i113 1
+R7
+nstop_@check
+vstrt_Check
+R0
+!i10b 1
+!s100 5B@[5bISi>YhW1Xn:hO>63
+R1
+IkFPGG3cO1fCHif:J37m5;0
+R2
+R3
+w1787576056
+8strt_Check.v
+Fstrt_Check.v
+!i122 96
+L0 1 15
+R4
+r1
+!s85 0
+31
+R5
+R8
+R6
+!i113 1
+R7
+nstrt_@check
+vUART_RX_FSM
+DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+R0
+!i10b 1
+!s100 hmKD:mB^J9[9HT]A^bf_K3
+R1
+I[7<0`NRVhmi>7lWf1dWW60
+R2
+S1
+R3
+w1787579017
+8UART_RX_FSM.sv
+FUART_RX_FSM.sv
+!i122 96
+L0 1 120
+R4
+r1
+!s85 0
+31
+R5
+R8
+R6
+!i113 1
+R7
+n@u@a@r@t_@r@x_@f@s@m
+vUART_RX_tb
+R0
+!i10b 1
+!s100 UJA8KkMYzcaeTGLX5nHH20
+R1
+IUlFlVmmFlJ1XTgQZ14XB13
+R2
+R3
+w1787577088
+8UART_RX_tb.v
+FUART_RX_tb.v
+!i122 96
+L0 11 400
+R4
+r1
+!s85 0
+31
+R5
+R8
+R6
+!i113 1
+R7
+n@u@a@r@t_@r@x_tb
+vUART_RX_TOP
+R0
+!i10b 1
+!s100 OFehK_S3U]a;2cl9XJoEe0
+R1
+I_2<Qg8279^TaF[9m>QbZi2
+R2
+R3
+w1787576020
+8UART_RX_TOP.v
+FUART_RX_TOP.v
+!i122 96
+L0 1 73
+R4
+r1
+!s85 0
+31
+R5
+R8
+R6
+!i113 1
+R7
+n@u@a@r@t_@r@x_@t@o@p

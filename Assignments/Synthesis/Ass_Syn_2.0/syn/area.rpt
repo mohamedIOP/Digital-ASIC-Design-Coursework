@@ -1,0 +1,47 @@
+ 
+****************************************
+Report : area
+Design : UART_TX_TOP
+Version: O-2018.06-SP1
+Date   : Thu Aug 13 21:00:21 2026
+****************************************
+
+Library(s) Used:
+
+    scmetro_tsmc_cl013g_rvt_ss_1p08v_125c (File: /home/ICer/Shared_Folder/Synthesis/Assignments/Ass_Syn_2.0/std_cells/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db)
+
+Number of ports:                           59
+Number of nets:                           136
+Number of cells:                           79
+Number of combinational cells:             57
+Number of sequential cells:                18
+Number of macros/black boxes:               0
+Number of buf/inv:                         11
+Number of references:                       4
+
+Combinational area:                496.567401
+Buf/Inv area:                       52.951501
+Noncombinational area:             430.672197
+Macro/Black Box area:                0.000000
+Net Interconnect area:           30520.154114
+
+Total cell area:                   927.239599
+Total area:                      31447.393713
+
+Hierarchical area distribution
+------------------------------
+
+                                  Global cell area          Local cell area
+                                  ------------------  --------------------------- 
+Hierarchical cell                 Absolute   Percent  Combi-    Noncombi-  Black-
+                                  Total      Total    national  national   boxes   Design
+--------------------------------  ---------  -------  --------  ---------  ------  -----------
+UART_TX_TOP                        927.2396    100.0    0.0000     0.0000  0.0000  UART_TX_TOP
+FSM_Block                          195.3322     21.1  110.6098    84.7224  0.0000  UART_TX_FSM
+Mux_4X1_BLock                       36.4777      3.9   36.4777     0.0000  0.0000  Mux_4X1
+Parity_Calc_Block                  124.7302     13.5   98.8428    25.8874  0.0000  Parity_Calc
+Serializer_Block                   570.6995     61.5  250.6371   320.0624  0.0000  Serializer
+--------------------------------  ---------  -------  --------  ---------  ------  -----------
+Total                                                 496.5674   430.6722  0.0000
+
+1
