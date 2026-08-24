@@ -16,6 +16,10 @@ module data_sampling (
             majority_reg  <= 0;
             inner_counter <= 0;
         end
+        else if (!dat_samp_en) begin
+            // Reset counter between sample windows so it's ready for the next bit
+            inner_counter <= 2'b0;
+        end
         else if (inner_counter < 3 && dat_samp_en) begin
             majority_reg[inner_counter] <= RX_IN;
             inner_counter <= inner_counter + 1;

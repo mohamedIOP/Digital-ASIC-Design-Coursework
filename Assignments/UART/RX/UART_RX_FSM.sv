@@ -46,23 +46,31 @@ module UART_RX_FSM (
                     nextState = idle; // no frame is being recieved
                 end
             start:
-                if(bit_transition && !strt_glitch) begin // the start bit recieved is correct and we will get the data bits 
-                    nextState = data;
+                if (bit_transition) begin
+                    if (!strt_glitch) begin
+                        nextState = data;
+                    end
+                    else begin
+                        // Glitch detected: abort immediately and wait for a clean idle state
+                        nextState = idle;
+                    end
                 end
+                /*
                 else if (!RX_IN && strt_glitch && bit_transition) begin // the start bit recieved is incorrect but there is another frame will start
                     nextState = start;
                 end
                 else if (RX_IN && strt_glitch && bit_transition) begin // the start bit recieved is incorrect and we will be idle again
                     nextState = idle;
                 end
+                */
                 else begin
                     nextState = start; // stay here until the bit is sampled and have got all edges
                 end
             data:
-                if (PAR_EN && (bit_cnt == 7) && bit_transition) begin // Collected the data and there is parity bit so go to parity state
+                if (PAR_EN && (bit_cnt == 8) && bit_transition) begin // Collected the data and there is parity bit so go to parity state
                     nextState = parity; 
                 end
-                else if (!PAR_EN && (bit_cnt == 7) && bit_transition) begin // Collected the data and there isn't parity bit so go to stop state
+                else if (!PAR_EN && (bit_cnt == 8) && bit_transition) begin // Collected the data and there isn't parity bit so go to stop state
                     nextState = stop;
                 end
                 else begin
@@ -83,28 +91,22 @@ module UART_RX_FSM (
                     nextState = stop; // Checking stop state
                 end
             valid:
-                if (RX_IN && bit_transition) begin // return to idle  
-                    nextState = idle; 
-                end
-                else if (!RX_IN && bit_transition) begin // return to start
-                    nextState = start;
-                end
-                else begin
-                    nextState = valid;
-                end
+                // 1-cycle valid state: check if next frame starts immediately or line goes idle
+                if (RX_IN) nextState = idle; 
+                else       nextState = start;
             default: nextState = idle; 
         endcase
     end
     always @(*) begin
-        edge_bit_cnt_enable = (currentState != idle && currentState != valid);
+        edge_bit_cnt_enable = (currentState != idle);
         dat_samp_en = (currentState != idle && currentState != valid) && ((edge_cnt == middleCnt) || (edge_cnt == middleCnt - 1) || (edge_cnt == middleCnt + 1));
         strt_chk_en = (currentState == start) && (data_sampled_flag);
         deser_en = (currentState == data) && (data_sampled_flag);
         par_chk_en = (currentState == parity) && (data_sampled_flag);
         stp_chk_en = (currentState == stop) && (data_sampled_flag);
-        data_valid = (currentState == valid || currentState == idle) && (!PAR_EN || !par_err) && (!stp_err);
+        data_valid = (currentState == valid) && (!PAR_EN || !par_err) && (!stp_err);
     end
     always @(*) begin
-        soft_rst = currentState == start;
+        soft_rst = (currentState == idle) || (currentState == valid);
     end
 endmodule //UART_RX_FSM
