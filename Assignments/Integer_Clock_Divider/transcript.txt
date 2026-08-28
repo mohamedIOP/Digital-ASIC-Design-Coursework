@@ -1,0 +1,22 @@
+# [PASS] div_ratio=0 corner case (ratio=0) -> o_div_clk correctly held low
+# [PASS] div_ratio=1 corner case (ratio=1) -> o_div_clk correctly held low
+# [PASS] i_clk_en=0 -> o_div_clk correctly held low
+# [PASS] ratio=2 (EVEN) -> period=2 cycles as expected
+# [PASS] ratio=4 (EVEN) -> period=4 cycles as expected
+# [PASS] ratio=6 (EVEN) -> period=6 cycles as expected
+# [PASS] ratio=8 (EVEN) -> period=8 cycles as expected
+# [PASS] ratio=16 (EVEN) -> period=16 cycles as expected
+# [PASS] ratio=32 (EVEN) -> period=32 cycles as expected
+# [PASS] ratio=3 (ODD) -> period=3 cycles as expected
+# [PASS] ratio=5 (ODD) -> period=5 cycles as expected
+# [PASS] ratio=7 (ODD) -> period=7 cycles as expected
+# [PASS] ratio=9 (ODD) -> period=9 cycles as expected
+# [PASS] ratio=15 (ODD) -> period=15 cycles as expected
+# [PASS] ratio=31 (ODD) -> period=31 cycles as expected
+# [PASS] ratio=255 (ODD) -> period=255 cycles as expected
+# 
+# ==================== TEST SUMMARY ====================
+# Total test cases : 16
+# Passed           : 16
+# Failed           : 0
+# ========================================================

@@ -1,0 +1,59 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/intelFPGA/20.1
+vClkDiv
+Z0 !s110 1787938774
+!i10b 1
+!s100 8ZUg0j9IBIf1_NJ`YIV>N1
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I6l>Dh7bGKbfh^bUhJ5?P93
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z3 dD:/Studying/Digital Track/Digital Design Asic Course Temsah/Digital-ASIC-Design-Coursework/Assignments/Integer_Clock_Divider
+w1787923105
+8ClkDiv.v
+FClkDiv.v
+!i122 4
+L0 1 32
+Z4 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z5 !s108 1787938773.000000
+!s107 ClkDiv_tb.sv|ClkDiv.v|
+Z6 !s90 -reportprogress|300|ClkDiv.v|ClkDiv_tb.sv|
+!i113 1
+Z7 tCvgOpt 0
+n@clk@div
+vClkDiv_tb
+DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+R0
+!i10b 1
+!s100 [9lKzbTV0?E`KWlaHW@T;1
+R1
+I_]nJWOL90`WaY=GXXnBiY2
+R2
+S1
+R3
+w1787923867
+8ClkDiv_tb.sv
+FClkDiv_tb.sv
+!i122 4
+L0 14 200
+R4
+r1
+!s85 0
+31
+R5
+Z8 !s107 ClkDiv_tb.sv|ClkDiv.v|
+R6
+!i113 1
+R7
+n@clk@div_tb
