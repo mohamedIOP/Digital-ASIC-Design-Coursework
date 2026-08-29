@@ -1,0 +1,9 @@
+/*
+    Constrains:
+    - Counter for the test cases
+    - Counter for the passed test cases
+    - Counter for the failed test cases
+    - in the summary display the test cases and passed and failed also add the number of the failed test cases
+    - self checking testing
+    - make the testcases in numbered list 
+*/

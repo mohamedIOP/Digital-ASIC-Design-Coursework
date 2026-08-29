@@ -1,0 +1,52 @@
+# Compile of DATA_SYNC.v was successful.
+# Compile of DATA_SYNC_tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 02:25:03 on Aug 29,2026
+# vlog -reportprogress 300 DATA_SYNC.v DATA_SYNC_tb.sv 
+# -- Compiling module DATA_SYNC
+# -- Compiling module DATA_SYNC_tb
+# 
+# Top level modules:
+# 	DATA_SYNC_tb
+# End time: 02:25:03 on Aug 29,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -gui work.DATA_SYNC_tb 
+# Start time: 02:25:03 on Aug 29,2026
+# Loading sv_std.std
+# Loading work.DATA_SYNC_tb
+# Loading work.DATA_SYNC
+# ==================================================
+#          Starting DATA_SYNC Verification          
+# ==================================================
+# 
+# 1. Test Case 1: Active-Low Reset Check
+#   [PASS] Test Case 1: sync_bus = 0x0, enable_pulse = 0
+# 
+# 2. Test Case 2: Synchronize Data Vector 0xA5
+#   [PASS] Test Case 2: sync_bus = 0xa5, enable_pulse = 1
+# 
+# 3. Test Case 3: Pulse Deassertion Verification
+#   [PASS] Test Case 3: sync_bus = 0xa5, enable_pulse = 0
+# 
+# 4. Test Case 4: Single-Cycle Enable with Data 0x3C
+#   [PASS] Test Case 4: sync_bus = 0x3c, enable_pulse = 1
+# 
+# 5. Test Case 5: Bus Value Hold Check without Enable
+#   [PASS] Test Case 5: sync_bus = 0x3c, enable_pulse = 0
+# 
+# ==================================================
+#                 TESTBENCH SUMMARY                 
+# ==================================================
+# Total Executed Test Cases : 5
+# Passed Test Cases         : 5
+# Failed Test Cases         : 0
+# Status                    : ALL TESTS PASSED
+# ==================================================
+# ** Note: $finish    : DATA_SYNC_tb.sv(127)
+#    Time: 132 ns  Iteration: 0  Instance: /DATA_SYNC_tb
+# 1
+# Break in Module DATA_SYNC_tb at DATA_SYNC_tb.sv line 127
+# End time: 15:25:35 on Aug 29,2026, Elapsed time: 13:00:32
+# Errors: 0, Warnings: 4

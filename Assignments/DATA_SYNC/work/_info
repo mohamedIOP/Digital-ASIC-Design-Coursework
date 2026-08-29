@@ -1,0 +1,85 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/intelFPGA/20.1
+vDATA_SYNC
+Z0 !s110 1787959503
+!i10b 1
+!s100 B?<CFhe;CMI2TBk]ac8U03
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IO;LK[l=Y4cHGMFTJ7>]lW3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z3 dD:/Studying/Digital Track/Digital Design Asic Course Temsah/Digital-ASIC-Design-Coursework/Assignments/DATA_SYNC
+w1787955718
+8DATA_SYNC.v
+FDATA_SYNC.v
+!i122 8
+L0 1 33
+Z4 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z5 !s108 1787959503.000000
+!s107 DATA_SYNC_tb.sv|DATA_SYNC.v|
+Z6 !s90 -reportprogress|300|DATA_SYNC.v|DATA_SYNC_tb.sv|
+!i113 1
+Z7 tCvgOpt 0
+n@d@a@t@a_@s@y@n@c
+vDATA_SYNC_tb
+Z8 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+R0
+!i10b 1
+!s100 Jjen=`=G0N1Knj<`B4acz2
+R1
+I:_7:InMzV4TzRWIA:[C7=2
+R2
+S1
+R3
+w1787957938
+8DATA_SYNC_tb.sv
+FDATA_SYNC_tb.sv
+!i122 8
+L0 3 128
+R4
+r1
+!s85 0
+31
+R5
+Z9 !s107 DATA_SYNC_tb.sv|DATA_SYNC.v|
+R6
+!i113 1
+R7
+n@d@a@t@a_@s@y@n@c_tb
+vtb_DATA_SYNC
+R8
+!s110 1787956894
+!i10b 1
+!s100 ;H5a[_TH9FW:V`1HcBH?G1
+R1
+I5bNeZQ]ADlH[zMJ[`IY]41
+R2
+S1
+R3
+w1787956795
+8D:/Studying/Digital Track/Digital Design Asic Course Temsah/Digital-ASIC-Design-Coursework/Assignments/DATA_SYNC/DATA_SYNC_tb.sv
+FD:/Studying/Digital Track/Digital Design Asic Course Temsah/Digital-ASIC-Design-Coursework/Assignments/DATA_SYNC/DATA_SYNC_tb.sv
+!i122 1
+L0 16 148
+R4
+r1
+!s85 0
+31
+!s108 1787956894.000000
+!s107 D:/Studying/Digital Track/Digital Design Asic Course Temsah/Digital-ASIC-Design-Coursework/Assignments/DATA_SYNC/DATA_SYNC_tb.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|D:/Studying/Digital Track/Digital Design Asic Course Temsah/Digital-ASIC-Design-Coursework/Assignments/DATA_SYNC/DATA_SYNC_tb.sv|
+!i113 1
+o-work work -sv
+R7
+ntb_@d@a@t@a_@s@y@n@c
