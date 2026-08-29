@@ -1,0 +1,109 @@
+# Compile of ClkDiv.v was successful.
+# Compile of ClkDiv_tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+vsim -gui work.ClkDiv_tb
+# vsim -gui work.ClkDiv_tb 
+# Start time: 20:15:57 on Aug 28,2026
+# Loading sv_std.std
+# Loading work.ClkDiv_tb
+# Loading work.ClkDiv
+add wave -position insertpoint  \
+sim:/ClkDiv_tb/CLK_PERIOD \
+sim:/ClkDiv_tb/i_ref_clk \
+sim:/ClkDiv_tb/i_rst_n \
+sim:/ClkDiv_tb/i_clk_en \
+sim:/ClkDiv_tb/i_div_ratio \
+sim:/ClkDiv_tb/o_div_clk \
+sim:/ClkDiv_tb/test_count \
+sim:/ClkDiv_tb/pass_count \
+sim:/ClkDiv_tb/fail_count \
+sim:/ClkDiv_tb/failed_list \
+sim:/ClkDiv_tb/failed_idx \
+sim:/ClkDiv_tb/k \
+sim:/ClkDiv_tb/cycle_count \
+sim:/ClkDiv_tb/edge1 \
+sim:/ClkDiv_tb/edge2
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: User  Hostname: DESKTOP-8TOVMGL  ProcessID: 45636
+#           Attempting to use alternate WLF file "./wlftxjf4h4".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftxjf4h4
+run -all
+# [PASS] div_ratio=0 corner case (ratio=0) -> o_div_clk correctly held low
+# [PASS] div_ratio=1 corner case (ratio=1) -> o_div_clk correctly held low
+# [PASS] i_clk_en=0 -> o_div_clk correctly held low
+# [PASS] ratio=2 (EVEN) -> period=2 cycles as expected
+# [PASS] ratio=4 (EVEN) -> period=4 cycles as expected
+# [PASS] ratio=6 (EVEN) -> period=6 cycles as expected
+# [PASS] ratio=8 (EVEN) -> period=8 cycles as expected
+# [PASS] ratio=16 (EVEN) -> period=16 cycles as expected
+# [PASS] ratio=32 (EVEN) -> period=32 cycles as expected
+# [PASS] ratio=3 (ODD) -> period=3 cycles as expected
+# [PASS] ratio=5 (ODD) -> period=5 cycles as expected
+# [PASS] ratio=7 (ODD) -> period=7 cycles as expected
+# [PASS] ratio=9 (ODD) -> period=9 cycles as expected
+# [PASS] ratio=15 (ODD) -> period=15 cycles as expected
+# [PASS] ratio=31 (ODD) -> period=31 cycles as expected
+# [PASS] ratio=255 (ODD) -> period=255 cycles as expected
+# 
+# ==================== TEST SUMMARY ====================
+# Total test cases : 16
+# Passed           : 16
+# Failed           : 0
+# ========================================================
+# 
+# ** Note: $finish    : D:/Studying/Digital Track/Digital Design Asic Course Temsah/Digital-ASIC-Design-Coursework/Assignments/Integer_Clock_Divider/ClkDiv_tb.sv(210)
+#    Time: 12770 ns  Iteration: 1  Instance: /ClkDiv_tb
+# 1
+# Break in Module ClkDiv_tb at D:/Studying/Digital Track/Digital Design Asic Course Temsah/Digital-ASIC-Design-Coursework/Assignments/Integer_Clock_Divider/ClkDiv_tb.sv line 210
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf {D:/Studying/Digital Track/Digital Design Asic Course Temsah/Digital-ASIC-Design-Coursework/Assignments/Integer_Clock_Divider/wave.do}
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 20:39:33 on Aug 28,2026
+# vlog -reportprogress 300 ClkDiv.v ClkDiv_tb.sv 
+# -- Compiling module ClkDiv
+# -- Compiling module ClkDiv_tb
+# 
+# Top level modules:
+# 	ClkDiv_tb
+# End time: 20:39:34 on Aug 28,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# End time: 20:39:36 on Aug 28,2026, Elapsed time: 0:23:39
+# Errors: 0, Warnings: 5
+# vsim -gui work.ClkDiv_tb 
+# Start time: 20:39:36 on Aug 28,2026
+# Loading sv_std.std
+# Loading work.ClkDiv_tb
+# Loading work.ClkDiv
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: User  Hostname: DESKTOP-8TOVMGL  ProcessID: 45636
+#           Attempting to use alternate WLF file "./wlft1cjdt8".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft1cjdt8
+# [PASS] div_ratio=0 corner case (ratio=0) -> o_div_clk correctly held low
+# [PASS] div_ratio=1 corner case (ratio=1) -> o_div_clk correctly held low
+# [PASS] i_clk_en=0 -> o_div_clk correctly held low
+# [PASS] ratio=2 (EVEN) -> period=2 cycles as expected
+# [PASS] ratio=4 (EVEN) -> period=4 cycles as expected
+# [PASS] ratio=6 (EVEN) -> period=6 cycles as expected
+# [PASS] ratio=8 (EVEN) -> period=8 cycles as expected
+# [PASS] ratio=16 (EVEN) -> period=16 cycles as expected
+# [PASS] ratio=32 (EVEN) -> period=32 cycles as expected
+# [PASS] ratio=3 (ODD) -> period=3 cycles as expected
+# [PASS] ratio=5 (ODD) -> period=5 cycles as expected
+# [PASS] ratio=7 (ODD) -> period=7 cycles as expected
+# [PASS] ratio=9 (ODD) -> period=9 cycles as expected
+# [PASS] ratio=15 (ODD) -> period=15 cycles as expected
+# [PASS] ratio=31 (ODD) -> period=31 cycles as expected
+# [PASS] ratio=255 (ODD) -> period=255 cycles as expected
+# 
+# ==================== TEST SUMMARY ====================
+# Total test cases : 16
+# Passed           : 16
+# Failed           : 0
+# ========================================================
+# 
+# ** Note: $finish    : ClkDiv_tb.sv(210)
+#    Time: 12770 ns  Iteration: 1  Instance: /ClkDiv_tb
+# 1
+# Break in Module ClkDiv_tb at ClkDiv_tb.sv line 210
