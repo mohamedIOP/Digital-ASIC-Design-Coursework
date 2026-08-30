@@ -1,0 +1,90 @@
+**************************************************
+Report         : passing_points
+
+Reference      : Ref:/WORK/UART_TX_TOP
+Implementation : Imp:/WORK/UART_TX_TOP
+Version        : L-2016.03-SP1
+Date           : Sun Aug 30 05:57:25 2026
+**************************************************
+
+18 Passing compare points:
+
+  Ref  DFF        Ref:/WORK/UART_TX_TOP/FSM_Block/currentState_reg[0]
+  Impl DFF        Imp:/WORK/UART_TX_TOP/FSM_Block/currentState_reg[0]
+
+  Ref  DFF        Ref:/WORK/UART_TX_TOP/FSM_Block/currentState_reg[1]
+  Impl DFF        Imp:/WORK/UART_TX_TOP/FSM_Block/currentState_reg[1]
+
+  Ref  DFF        Ref:/WORK/UART_TX_TOP/FSM_Block/currentState_reg[2]
+  Impl DFF        Imp:/WORK/UART_TX_TOP/FSM_Block/currentState_reg[2]
+
+  Ref  DFF        Ref:/WORK/UART_TX_TOP/Parity_Calc_Block/parBit_reg
+  Impl DFF        Imp:/WORK/UART_TX_TOP/Parity_Calc_Block/parBit_reg
+
+  Ref  DFF        Ref:/WORK/UART_TX_TOP/Serializer_Block/counter_reg[0]
+  Impl DFF        Imp:/WORK/UART_TX_TOP/Serializer_Block/counter_reg[0]
+
+  Ref  DFF        Ref:/WORK/UART_TX_TOP/Serializer_Block/counter_reg[1]
+  Impl DFF        Imp:/WORK/UART_TX_TOP/Serializer_Block/counter_reg[1]
+
+  Ref  DFF        Ref:/WORK/UART_TX_TOP/Serializer_Block/counter_reg[2]
+  Impl DFF        Imp:/WORK/UART_TX_TOP/Serializer_Block/counter_reg[2]
+
+  Ref  DFF        Ref:/WORK/UART_TX_TOP/Serializer_Block/counter_reg[3]
+  Impl DFF        Imp:/WORK/UART_TX_TOP/Serializer_Block/counter_reg[3]
+
+  Ref  DFF        Ref:/WORK/UART_TX_TOP/Serializer_Block/pDataReg_reg[0]
+  Impl DFF        Imp:/WORK/UART_TX_TOP/Serializer_Block/pDataReg_reg[0]
+
+  Ref  DFF        Ref:/WORK/UART_TX_TOP/Serializer_Block/pDataReg_reg[1]
+  Impl DFF        Imp:/WORK/UART_TX_TOP/Serializer_Block/pDataReg_reg[1]
+
+  Ref  DFF        Ref:/WORK/UART_TX_TOP/Serializer_Block/pDataReg_reg[2]
+  Impl DFF        Imp:/WORK/UART_TX_TOP/Serializer_Block/pDataReg_reg[2]
+
+  Ref  DFF        Ref:/WORK/UART_TX_TOP/Serializer_Block/pDataReg_reg[3]
+  Impl DFF        Imp:/WORK/UART_TX_TOP/Serializer_Block/pDataReg_reg[3]
+
+  Ref  DFF        Ref:/WORK/UART_TX_TOP/Serializer_Block/pDataReg_reg[4]
+  Impl DFF        Imp:/WORK/UART_TX_TOP/Serializer_Block/pDataReg_reg[4]
+
+  Ref  DFF        Ref:/WORK/UART_TX_TOP/Serializer_Block/pDataReg_reg[5]
+  Impl DFF        Imp:/WORK/UART_TX_TOP/Serializer_Block/pDataReg_reg[5]
+
+  Ref  DFF        Ref:/WORK/UART_TX_TOP/Serializer_Block/pDataReg_reg[6]
+  Impl DFF        Imp:/WORK/UART_TX_TOP/Serializer_Block/pDataReg_reg[6]
+
+  Ref  DFF        Ref:/WORK/UART_TX_TOP/Serializer_Block/pDataReg_reg[7]
+  Impl DFF        Imp:/WORK/UART_TX_TOP/Serializer_Block/pDataReg_reg[7]
+
+  Ref  Port       Ref:/WORK/UART_TX_TOP/busy
+  Impl Port       Imp:/WORK/UART_TX_TOP/busy
+
+  Ref  Port       Ref:/WORK/UART_TX_TOP/txOut
+  Impl Port       Imp:/WORK/UART_TX_TOP/txOut
+
+ [BBNet: multiply-driven net
+  BBPin: black-box pin
+  Cut:   cut-point
+  DFF:   non-constant DFF register
+  DFF0:  constant 0 DFF register
+  DFF1:  constant 1 DFF register
+  DFFX:  constant X DFF register
+  DFF0X: constrained 0X DFF register
+  DFF1X: constrained 1X DFF register
+  LAT:   non-constant latch register
+  LAT0:  constant 0 latch register
+  LAT1:  constant 1 latch register
+  LATX:  constant X latch register
+  LAT0X: constrained 0X latch register
+  LAT1X: constrained 1X latch register
+  LATCG: clock-gating latch register
+  TLA:   transparent latch register
+  TLA0X: transparent constrained 0X latch register
+  TLA1X: transparent constrained 1X latch register
+  Loop:  cycle break point
+  Port:  primary (top-level) port
+  Und:   undriven signal cut-point
+  Unk:   unknown signal cut-point]
+
+1

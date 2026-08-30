@@ -6,7 +6,7 @@ Report : timing
         -max_paths 100
 Design : UART_TX_TOP
 Version: O-2018.06-SP1
-Date   : Thu Aug 13 21:00:21 2026
+Date   : Sun Aug 30 05:24:15 2026
 ****************************************
 
 Operating Conditions: scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c   Library: scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c

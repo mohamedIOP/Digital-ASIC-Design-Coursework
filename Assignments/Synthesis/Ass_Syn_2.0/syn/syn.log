@@ -26,6 +26,9 @@ UART_TX_TOP
 ##################### Define Working Library Directory ######################
 define_design_lib work -path ./work
 1
+########################### Formality Setup file ############################
+set_svf UART_TX.svf
+1
 ################## Design Compiler Library Files #setup ######################
 lappend search_path /home/ICer/Shared_Folder/Synthesis/Assignments/Ass_Syn_2.0/std_cells
 . /home/synopsys/syn/O-2018.06-SP1/libraries/syn /home/synopsys/syn/O-2018.06-SP1/minpower/syn /home/synopsys/syn/O-2018.06-SP1/dw/syn_ver /home/synopsys/syn/O-2018.06-SP1/dw/sim_ver /home/ICer/Shared_Folder/Synthesis/Assignments/Ass_Syn_2.0/std_cells
@@ -220,7 +223,7 @@ check_design
 ****************************************
 check_design summary:
 Version:     O-2018.06-SP1
-Date:        Thu Aug 13 21:00:15 2026
+Date:        Sun Aug 30 05:24:10 2026
 ****************************************
 
                    Name                                            Total
@@ -418,11 +421,11 @@ Loading db file '/home/ICer/Shared_Folder/Synthesis/Assignments/Ass_Syn_2.0/std_
    ELAPSED            WORST NEG   SETUP    DESIGN                            
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
   --------- --------- --------- --------- --------- -------------------------
-    0:00:04    1645.0      0.00       0.0       1.6                          
-    0:00:04    1645.0      0.00       0.0       1.6                          
-    0:00:04    1645.0      0.00       0.0       1.6                          
-    0:00:04    1645.0      0.00       0.0       1.6                          
-    0:00:04    1645.0      0.00       0.0       1.6                          
+    0:00:03    1645.0      0.00       0.0       1.6                          
+    0:00:03    1645.0      0.00       0.0       1.6                          
+    0:00:03    1645.0      0.00       0.0       1.6                          
+    0:00:03    1645.0      0.00       0.0       1.6                          
+    0:00:03    1645.0      0.00       0.0       1.6                          
     0:00:04     956.7      0.00       0.0       1.6                          
     0:00:04     948.4      0.00       0.0       1.6                          
     0:00:04     948.4      0.00       0.0       1.6                          
@@ -489,11 +492,14 @@ Note: Symbol # after min delay cost means estimated hold TNS across all active s
   Optimization Complete
   ---------------------
 1
+##################### Close Formality Setup file ###########################
+set_svf -off
+1
 #############################################################################
 # Write out Design after initial compile
 #############################################################################
 write_file -format verilog -hierarchy -output UART_TX_TOP_Netlist.v
-Writing verilog file '/mnt/hgfs/Shared_Folder/Synthesis/Assignments/Ass_Syn_2.0/syn/UART_TX_TOP_Netlist.v'.
+Writing verilog file '/mnt/hgfs/Digital-ASIC-Design-Coursework/Assignments/Synthesis/Ass_Syn_2.0/syn/UART_TX_TOP_Netlist.v'.
 Warning: Verilog 'assign' or 'tran' statements are written out. (VO-4)
 1
 write_file -format ddc     -hierarchy -output UART_TX_TOP_Netlist.ddc
@@ -503,7 +509,7 @@ write_sdc  -nosplit UART_TX_TOP.sdc
 1
 write_sdf           UART_TX_TOP.sdf
 Information: Annotated 'cell' delays are assumed to include load delay. (UID-282)
-Information: Writing timing information to file '/mnt/hgfs/Shared_Folder/Synthesis/Assignments/Ass_Syn_2.0/syn/UART_TX_TOP.sdf'. (WT-3)
+Information: Writing timing information to file '/mnt/hgfs/Digital-ASIC-Design-Coursework/Assignments/Synthesis/Ass_Syn_2.0/syn/UART_TX_TOP.sdf'. (WT-3)
 Information: Updating design information... (UID-85)
 1
 ################# reporting #######################
@@ -515,9 +521,10 @@ report_clock -attributes > clocks.rpt
 report_constraint -all_violators > constraints.rpt
 ################# starting graphical user interface #######################
 #gui_start
-dc_shell> gui_start
-dc_shell> Current design is 'UART_TX_TOP'.
-4.1
-Current design is 'UART_TX_TOP'.
-dc_shell> Loading db file '/home/synopsys/syn/O-2018.06-SP1/libraries/syn/generic.sdb'
-dc_shell> 
+dc_shell> exit
+
+Memory usage for main task 269 Mbytes.
+Memory usage for this session 269 Mbytes.
+CPU usage for this session 5 seconds ( 0.00 hours ).
+
+Thank you...
