@@ -1,0 +1,105 @@
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:19:44 on Aug 31,2026
+# vlog -reportprogress 300 RST_SYNC.v tb_RST_SYNC.v 
+# -- Compiling module RST_SYNC
+# -- Compiling module tb_RST_SYNC
+# 
+# Top level modules:
+# 	tb_RST_SYNC
+# End time: 01:19:44 on Aug 31,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -gui work.tb_RST_SYNC 
+# Start time: 01:19:44 on Aug 31,2026
+# Loading work.tb_RST_SYNC
+# Loading work.RST_SYNC
+# ========================================================
+#  RST_SYNC Testbench Start (NUM_STAGES = 2)
+# ========================================================
+# [7000] RST asserted (async)
+# [7000] PASS: SYNC_RST asserted immediately/asynchronously with RST
+# [30000] RST de-asserted (async, mid-cycle)
+# [45000] PASS: SYNC_RST de-asserted synchronously with CLK posedge
+# [46000] Measured de-assertion latency = 2 clock edge(s) (expected 2)
+# [46000] PASS: Latency matches NUM_STAGES
+# [93000] RST asserted (async)
+# [93000] PASS: SYNC_RST asserted immediately/asynchronously with RST
+# [96000] RST de-asserted (async, mid-cycle)
+# [115000] PASS: SYNC_RST de-asserted synchronously with CLK posedge
+# [116000] Measured de-assertion latency = 2 clock edge(s) (expected 2)
+# [116000] PASS: Latency matches NUM_STAGES
+# [158000] RST asserted (async)
+# [158000] PASS: SYNC_RST asserted immediately/asynchronously with RST
+# [221000] RST de-asserted (async, mid-cycle)
+# [235000] PASS: SYNC_RST de-asserted synchronously with CLK posedge
+# [236000] Measured de-assertion latency = 2 clock edge(s) (expected 2)
+# [236000] PASS: Latency matches NUM_STAGES
+# [285000] RST asserted (async)
+# [285000] PASS: SYNC_RST asserted immediately/asynchronously with RST
+# [313000] RST de-asserted (async, mid-cycle)
+# [325000] PASS: SYNC_RST de-asserted synchronously with CLK posedge
+# [326000] Measured de-assertion latency = 2 clock edge(s) (expected 2)
+# [326000] PASS: Latency matches NUM_STAGES
+# [374000] RST asserted (async)
+# [374000] PASS: SYNC_RST asserted immediately/asynchronously with RST
+# [392000] RST de-asserted (async, mid-cycle)
+# [405000] PASS: SYNC_RST de-asserted synchronously with CLK posedge
+# [406000] Measured de-assertion latency = 2 clock edge(s) (expected 2)
+# [406000] PASS: Latency matches NUM_STAGES
+# [454000] RST asserted (async)
+# [454000] PASS: SYNC_RST asserted immediately/asynchronously with RST
+# [472000] RST de-asserted (async, mid-cycle)
+# [485000] PASS: SYNC_RST de-asserted synchronously with CLK posedge
+# [486000] Measured de-assertion latency = 2 clock edge(s) (expected 2)
+# [486000] PASS: Latency matches NUM_STAGES
+# [522000] RST asserted (async)
+# [522000] PASS: SYNC_RST asserted immediately/asynchronously with RST
+# [545000] RST de-asserted (async, mid-cycle)
+# [555000] PASS: SYNC_RST de-asserted synchronously with CLK posedge
+# [556000] Measured de-assertion latency = 2 clock edge(s) (expected 2)
+# [556000] PASS: Latency matches NUM_STAGES
+# [588000] RST asserted (async)
+# [588000] PASS: SYNC_RST asserted immediately/asynchronously with RST
+# [608000] RST de-asserted (async, mid-cycle)
+# [625000] PASS: SYNC_RST de-asserted synchronously with CLK posedge
+# [626000] Measured de-assertion latency = 2 clock edge(s) (expected 2)
+# [626000] PASS: Latency matches NUM_STAGES
+# [675000] RST asserted (async)
+# [675000] PASS: SYNC_RST asserted immediately/asynchronously with RST
+# [693000] RST de-asserted (async, mid-cycle)
+# [705000] PASS: SYNC_RST de-asserted synchronously with CLK posedge
+# [706000] Measured de-assertion latency = 2 clock edge(s) (expected 2)
+# [706000] PASS: Latency matches NUM_STAGES
+# [746000] RST asserted (async)
+# [746000] PASS: SYNC_RST asserted immediately/asynchronously with RST
+# [769000] RST de-asserted (async, mid-cycle)
+# [785000] PASS: SYNC_RST de-asserted synchronously with CLK posedge
+# [786000] Measured de-assertion latency = 2 clock edge(s) (expected 2)
+# [786000] PASS: Latency matches NUM_STAGES
+# [826000] RST asserted (async)
+# [826000] PASS: SYNC_RST asserted immediately/asynchronously with RST
+# [833000] RST de-asserted (async, mid-cycle)
+# [845000] PASS: SYNC_RST de-asserted synchronously with CLK posedge
+# [846000] Measured de-assertion latency = 2 clock edge(s) (expected 2)
+# [846000] PASS: Latency matches NUM_STAGES
+# [894000] RST asserted (async)
+# [894000] PASS: SYNC_RST asserted immediately/asynchronously with RST
+# [907000] RST de-asserted (async, mid-cycle)
+# [925000] PASS: SYNC_RST de-asserted synchronously with CLK posedge
+# [926000] Measured de-assertion latency = 2 clock edge(s) (expected 2)
+# [926000] PASS: Latency matches NUM_STAGES
+# [962000] RST asserted (async)
+# [962000] PASS: SYNC_RST asserted immediately/asynchronously with RST
+# [978000] RST de-asserted (async, mid-cycle)
+# [995000] PASS: SYNC_RST de-asserted synchronously with CLK posedge
+# [996000] Measured de-assertion latency = 2 clock edge(s) (expected 2)
+# [996000] PASS: Latency matches NUM_STAGES
+# ========================================================
+# *** ALL TESTS PASSED ***
+# ========================================================
+# ** Note: $finish    : tb_RST_SYNC.v(158)
+#    Time: 1026 ns  Iteration: 0  Instance: /tb_RST_SYNC
+# 1
+# Break in Module tb_RST_SYNC at tb_RST_SYNC.v line 158
+# End time: 01:20:12 on Aug 31,2026, Elapsed time: 0:00:28
+# Errors: 0, Warnings: 4
