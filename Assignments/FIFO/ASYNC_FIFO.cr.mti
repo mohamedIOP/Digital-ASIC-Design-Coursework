@@ -1,0 +1,43 @@
+{D:/Studying/Digital Track/Digital Design Asic Course Temsah/Digital-ASIC-Design-Coursework/Assignments/FIFO/FIFO_RD.v} {1 {vlog -work work -stats=none {D:/Studying/Digital Track/Digital Design Asic Course Temsah/Digital-ASIC-Design-Coursework/Assignments/FIFO/FIFO_RD.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module FIFO_RD
+
+Top level modules:
+	FIFO_RD
+
+} {} {}} {D:/Studying/Digital Track/Digital Design Asic Course Temsah/Digital-ASIC-Design-Coursework/Assignments/FIFO/ASYNC_FIFO.v} {1 {vlog -work work -stats=none {D:/Studying/Digital Track/Digital Design Asic Course Temsah/Digital-ASIC-Design-Coursework/Assignments/FIFO/ASYNC_FIFO.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module ASYNC_FIFO
+
+Top level modules:
+	ASYNC_FIFO
+
+} {} {}} {D:/Studying/Digital Track/Digital Design Asic Course Temsah/Digital-ASIC-Design-Coursework/Assignments/FIFO/DF_SYNC.v} {1 {vlog -work work -stats=none {D:/Studying/Digital Track/Digital Design Asic Course Temsah/Digital-ASIC-Design-Coursework/Assignments/FIFO/DF_SYNC.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module DF_SYNC
+
+Top level modules:
+	DF_SYNC
+
+} {} {}} {D:/Studying/Digital Track/Digital Design Asic Course Temsah/Digital-ASIC-Design-Coursework/Assignments/FIFO/FIFO_WR.v} {1 {vlog -work work -stats=none {D:/Studying/Digital Track/Digital Design Asic Course Temsah/Digital-ASIC-Design-Coursework/Assignments/FIFO/FIFO_WR.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module FIFO_WR
+
+Top level modules:
+	FIFO_WR
+
+} {} {}} {D:/Studying/Digital Track/Digital Design Asic Course Temsah/Digital-ASIC-Design-Coursework/Assignments/FIFO/FIFO_TB.sv} {1 {vlog -work work -sv -stats=none {D:/Studying/Digital Track/Digital Design Asic Course Temsah/Digital-ASIC-Design-Coursework/Assignments/FIFO/FIFO_TB.sv}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module tb_ASYNC_FIFO
+
+Top level modules:
+	tb_ASYNC_FIFO
+
+} {} {}} {D:/Studying/Digital Track/Digital Design Asic Course Temsah/Digital-ASIC-Design-Coursework/Assignments/FIFO/FIFO_MEM_CNTRL.v} {1 {vlog -work work -stats=none {D:/Studying/Digital Track/Digital Design Asic Course Temsah/Digital-ASIC-Design-Coursework/Assignments/FIFO/FIFO_MEM_CNTRL.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module FIFO_MEM_CNTRL
+
+Top level modules:
+	FIFO_MEM_CNTRL
+
+} {} {}}

@@ -1,0 +1,57 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/intelFPGA/20.1
+vRST_SYNC
+Z0 !s110 1788128384
+!i10b 1
+!s100 TZaXRn?Yd2U9aFj[f3Sk33
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I7:TOHNDYkk[6DH4H0^ie_1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z3 dD:/Studying/Digital Track/Digital Design Asic Course Temsah/Digital-ASIC-Design-Coursework/Assignments/RST_SYNC
+w1788126925
+8RST_SYNC.v
+FRST_SYNC.v
+!i122 3
+L0 1 17
+Z4 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z5 !s108 1788128384.000000
+!s107 tb_RST_SYNC.v|RST_SYNC.v|
+Z6 !s90 -reportprogress|300|RST_SYNC.v|tb_RST_SYNC.v|
+!i113 1
+Z7 tCvgOpt 0
+n@r@s@t_@s@y@n@c
+vtb_RST_SYNC
+R0
+!i10b 1
+!s100 gOlSjIBalMWETBJ@S`nNk0
+R1
+IRn;1l4C=omVeYRUL54:XP2
+R2
+R3
+w1788127374
+8tb_RST_SYNC.v
+Ftb_RST_SYNC.v
+!i122 3
+L0 3 168
+R4
+r1
+!s85 0
+31
+R5
+Z8 !s107 tb_RST_SYNC.v|RST_SYNC.v|
+R6
+!i113 1
+R7
+ntb_@r@s@t_@s@y@n@c

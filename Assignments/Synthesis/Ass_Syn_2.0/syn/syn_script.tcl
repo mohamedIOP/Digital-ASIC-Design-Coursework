@@ -7,6 +7,10 @@ set top_module UART_TX_TOP
                                                    
 define_design_lib work -path ./work
 
+########################### Formality Setup file ############################
+
+set_svf UART_TX.svf
+
 ################## Design Compiler Library Files #setup ######################
 
 lappend search_path /home/ICer/Shared_Folder/Synthesis/Assignments/Ass_Syn_2.0/std_cells
@@ -78,6 +82,10 @@ puts "########## Mapping & Optimization #############"
 puts "###############################################"
 
 compile -map_effort high
+
+##################### Close Formality Setup file ###########################
+
+set_svf -off
 
 #############################################################################
 # Write out Design after initial compile

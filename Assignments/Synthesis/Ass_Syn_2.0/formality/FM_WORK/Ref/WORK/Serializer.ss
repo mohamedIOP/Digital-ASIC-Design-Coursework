@@ -1,0 +1,1 @@
+-1 12 92 11 8 75 5147 16 2 FMR_ELAB-147/home/ICer/Digital-ASIC-Design-Coursework/Assignments/Synthesis/Ass_Syn_2.0/rtl/Serializer.v/SerializerpDataRegIndex may take values outside array bound, may cause simulation mismatch ..
