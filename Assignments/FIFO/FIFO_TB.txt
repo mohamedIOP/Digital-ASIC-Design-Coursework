@@ -1,0 +1,24 @@
+/*
+    Constrains:
+    - make sure to check the start time of the test vector and the end time and display them
+    - self-checking testbench no need to check manually (Passed or Fail)
+    - display all the outputs {RD_DATA,FULL,EMPTY}
+    - count the number of testcases and count the passed and failed and in the summary display them and also display the numbers of the failed casess
+    - each testcase has a label defining what we are testing (the scenario and the test vector we are testing)
+    - make two initail blocks one for writing and one for reading
+    - display the important inner signals 
+*/
+/*
+    Scenarios:
+    - Reset in Beginning
+    - Reset during writing
+    - reset during reading
+    - reset during reading and writing simulatiously
+    - Reset when full 
+    - Reset when empty
+    - Write only till full
+    - Read only till empty
+    - Write and read and if full wait till reading another item
+    - writing while full flag is high
+    - read while empty flag is high
+*/

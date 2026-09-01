@@ -1,0 +1,151 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/intelFPGA/20.1
+vASYNC_FIFO
+Z0 !s110 1788225722
+!i10b 1
+!s100 _J=nKf@^kHmH027c1b7dl2
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IA:8=YnWO__e9aMg<<=[3G0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z3 dD:/Studying/Digital Track/Digital Design Asic Course Temsah/Digital-ASIC-Design-Coursework/Assignments/FIFO
+w1788223619
+8ASYNC_FIFO.v
+FASYNC_FIFO.v
+!i122 6
+L0 1 47
+Z4 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z5 !s108 1788225722.000000
+!s107 FIFO_WR.v|FIFO_TB.sv|FIFO_RD.v|FIFO_MEM_CNTRL.v|DF_SYNC.v|ASYNC_FIFO.v|
+Z6 !s90 -reportprogress|300|ASYNC_FIFO.v|DF_SYNC.v|FIFO_MEM_CNTRL.v|FIFO_RD.v|FIFO_TB.sv|FIFO_WR.v|
+!i113 1
+Z7 tCvgOpt 0
+n@a@s@y@n@c_@f@i@f@o
+vDF_SYNC
+R0
+!i10b 1
+!s100 8KnOP=iGToU8_eD?lGE>O1
+R1
+IFfR;;[G@1zAlzGbc3jfTE2
+R2
+R3
+w1788222229
+8DF_SYNC.v
+FDF_SYNC.v
+!i122 6
+L0 1 25
+R4
+r1
+!s85 0
+31
+R5
+Z8 !s107 FIFO_WR.v|FIFO_TB.sv|FIFO_RD.v|FIFO_MEM_CNTRL.v|DF_SYNC.v|ASYNC_FIFO.v|
+R6
+!i113 1
+R7
+n@d@f_@s@y@n@c
+vFIFO_MEM_CNTRL
+R0
+!i10b 1
+!s100 m0S0ZGI:AJ8WSRO<bCHle1
+R1
+Ijd4dC@09b4zSWRkioY5PV2
+R2
+R3
+w1788219703
+8FIFO_MEM_CNTRL.v
+FFIFO_MEM_CNTRL.v
+!i122 6
+L0 1 16
+R4
+r1
+!s85 0
+31
+R5
+R8
+R6
+!i113 1
+R7
+n@f@i@f@o_@m@e@m_@c@n@t@r@l
+vFIFO_RD
+R0
+!i10b 1
+!s100 e6ePMWB7WkTQ_;fR8_3=_0
+R1
+Il@55`lcR@UVA17I`UEZBc1
+R2
+R3
+w1788221187
+8FIFO_RD.v
+FFIFO_RD.v
+!i122 6
+Z9 L0 1 21
+R4
+r1
+!s85 0
+31
+R5
+R8
+R6
+!i113 1
+R7
+n@f@i@f@o_@r@d
+vFIFO_WR
+R0
+!i10b 1
+!s100 ^4`PE353EOC]^TWM214;O1
+R1
+Ic7^X9;ji?_iInzd6g_>CO3
+R2
+R3
+w1788220352
+8FIFO_WR.v
+FFIFO_WR.v
+!i122 6
+R9
+R4
+r1
+!s85 0
+31
+R5
+R8
+R6
+!i113 1
+R7
+n@f@i@f@o_@w@r
+vtb_ASYNC_FIFO
+DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+R0
+!i10b 1
+!s100 M=GR3SaWLH;`GdkA:JZKa3
+R1
+IbMVzP[D2@6:T]QgABI:`@3
+R2
+S1
+R3
+w1788225315
+8FIFO_TB.sv
+FFIFO_TB.sv
+!i122 6
+L0 3 446
+R4
+r1
+!s85 0
+31
+R5
+R8
+R6
+!i113 1
+R7
+ntb_@a@s@y@n@c_@f@i@f@o
