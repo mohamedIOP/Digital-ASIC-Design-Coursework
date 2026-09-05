@@ -31,7 +31,7 @@ wire 	                 REG_CLK ;
 
 wire                     CLK_M,
                          RST_M ;
-
+wire                     CLK_M_REG;
 // Muxing primary clock
 mux2X1 U0_mux2X1 (
 .IN_0(CLK),
@@ -40,7 +40,12 @@ mux2X1 U0_mux2X1 (
 .OUT(CLK_M)
 ); 
 
-
+mux2X1 U1_mux2X1 (
+.IN_0(REG_CLK),
+.IN_1(scan_clk),
+.SEL(test_mode),
+.OUT(CLK_M_REG)
+); 
 // Muxing resets
 mux2X1 U2_mux2X1 (
 .IN_0(RST),
@@ -62,7 +67,7 @@ ALU U0_ALU (
 );						 
 
 RegFile U0_RegFile (
-.CLK(REG_CLK),
+.CLK(CLK_M_REG),
 .RST(RST_M),
 .WrEn(WrEn),
 .RdEn(RdEn),

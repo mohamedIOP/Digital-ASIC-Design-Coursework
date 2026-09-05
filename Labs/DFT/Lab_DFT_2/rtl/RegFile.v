@@ -19,6 +19,7 @@ integer I ;
 // register file of 8 registers each of 16 bits width
 reg [WIDTH-1:0] regArr [DEPTH-1:0] ;    
 
+
 always @(posedge CLK or negedge RST)
  begin
    if(!RST)  // Asynchronous active low reset 
