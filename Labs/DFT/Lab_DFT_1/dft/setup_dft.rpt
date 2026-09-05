@@ -6,7 +6,7 @@ Report : timing
         -max_paths 100
 Design : ALU_TOP
 Version: O-2018.06-SP1
-Date   : Sun Sep  6 05:37:12 2026
+Date   : Sun Sep  6 06:23:48 2026
 ****************************************
 
 Operating Conditions: scmetro_tsmc_cl013g_rvt_ss_1p08v_125c   Library: scmetro_tsmc_cl013g_rvt_ss_1p08v_125c

@@ -1,4 +1,4 @@
-Loading db file '/home/ICer/Labs/Lab_DFT_1/std_cells/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db'
+Loading db file '/home/ICer/Digital-ASIC-Design-Coursework/Labs/DFT/Lab_DFT_1/std_cells/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db'
 Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
 Warning: Design has unannotated primary inputs. (PWR-414)
 Warning: Design has unannotated sequential cell outputs. (PWR-415)
@@ -9,13 +9,13 @@ Report : power
         -analysis_effort low
 Design : ALU_TOP
 Version: O-2018.06-SP1
-Date   : Sun Sep  6 05:37:11 2026
+Date   : Sun Sep  6 06:23:47 2026
 ****************************************
 
 
 Library(s) Used:
 
-    scmetro_tsmc_cl013g_rvt_ss_1p08v_125c (File: /home/ICer/Labs/Lab_DFT_1/std_cells/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db)
+    scmetro_tsmc_cl013g_rvt_ss_1p08v_125c (File: /home/ICer/Digital-ASIC-Design-Coursework/Labs/DFT/Lab_DFT_1/std_cells/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db)
 
 
 Operating Conditions: scmetro_tsmc_cl013g_rvt_ss_1p08v_125c   Library: scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
@@ -55,6 +55,6 @@ ALU_TOP                                   0.147 5.89e-02 2.22e+07    0.228 100.0
     div_63 (ARITHMETIC_UNIT_DW_div_uns_0)
                                        2.30e-02 1.51e-02 8.54e+06 4.66e-02  20.4
   U0 (Decoder)                         4.21e-04 4.28e-05 3.53e+04 4.99e-04   0.2
-  U0_MUX_RST_M (mux2X1_0)              1.91e-05 9.51e-06 1.37e+04 4.23e-05   0.0
-  U0_MUX_CLK (mux2X1_1)                2.64e-02 6.19e-04 2.11e+04 2.71e-02  11.9
+  mux2X1_RST_SCAN (mux2X1_0)           1.91e-05 9.51e-06 1.37e+04 4.23e-05   0.0
+  mux2X1_CLK_SCAN (mux2X1_1)           2.64e-02 6.19e-04 2.11e+04 2.71e-02  11.9
 1

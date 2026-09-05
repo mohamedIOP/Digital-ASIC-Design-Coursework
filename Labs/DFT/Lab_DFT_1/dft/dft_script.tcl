@@ -14,8 +14,8 @@ puts "#      #setting Design Libraries           #"
 puts "###########################################"
 
 #Add the path of the libraries to the search_path variable
-lappend search_path /home/ICer/Labs/Lab_DFT_1/std_cells
-lappend search_path /home/ICer/Labs/Lab_DFT_1/rtl
+lappend search_path /home/ICer/Digital-ASIC-Design-Coursework/Labs/DFT/Lab_DFT_1/std_cells
+lappend search_path /home/ICer/Digital-ASIC-Design-Coursework/Labs/DFT/Lab_DFT_1/rtl
 
 set SSLIB "scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db"
 set TTLIB "scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db"

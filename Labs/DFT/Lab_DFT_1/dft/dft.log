@@ -34,10 +34,10 @@ puts "#      #setting Design Libraries           #"
 puts "###########################################"
 ###########################################
 #Add the path of the libraries to the search_path variable
-lappend search_path /home/ICer/Labs/Lab_DFT_1/std_cells
-. /home/synopsys/syn/O-2018.06-SP1/libraries/syn /home/synopsys/syn/O-2018.06-SP1/minpower/syn /home/synopsys/syn/O-2018.06-SP1/dw/syn_ver /home/synopsys/syn/O-2018.06-SP1/dw/sim_ver /home/ICer/Labs/Lab_DFT_1/std_cells
-lappend search_path /home/ICer/Labs/Lab_DFT_1/rtl
-. /home/synopsys/syn/O-2018.06-SP1/libraries/syn /home/synopsys/syn/O-2018.06-SP1/minpower/syn /home/synopsys/syn/O-2018.06-SP1/dw/syn_ver /home/synopsys/syn/O-2018.06-SP1/dw/sim_ver /home/ICer/Labs/Lab_DFT_1/std_cells /home/ICer/Labs/Lab_DFT_1/rtl
+lappend search_path /home/ICer/Digital-ASIC-Design-Coursework/Labs/DFT/Lab_DFT_1/std_cells
+. /home/synopsys/syn/O-2018.06-SP1/libraries/syn /home/synopsys/syn/O-2018.06-SP1/minpower/syn /home/synopsys/syn/O-2018.06-SP1/dw/syn_ver /home/synopsys/syn/O-2018.06-SP1/dw/sim_ver /home/ICer/Digital-ASIC-Design-Coursework/Labs/DFT/Lab_DFT_1/std_cells
+lappend search_path /home/ICer/Digital-ASIC-Design-Coursework/Labs/DFT/Lab_DFT_1/rtl
+. /home/synopsys/syn/O-2018.06-SP1/libraries/syn /home/synopsys/syn/O-2018.06-SP1/minpower/syn /home/synopsys/syn/O-2018.06-SP1/dw/syn_ver /home/synopsys/syn/O-2018.06-SP1/dw/sim_ver /home/ICer/Digital-ASIC-Design-Coursework/Labs/DFT/Lab_DFT_1/std_cells /home/ICer/Digital-ASIC-Design-Coursework/Labs/DFT/Lab_DFT_1/rtl
 set SSLIB "scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db"
 scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db
 set TTLIB "scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db"
@@ -60,23 +60,23 @@ puts "###########################################"
 set file_format verilog
 verilog
 read_file -format $file_format ARITHMETIC_UNIT.v
-Loading db file '/home/ICer/Labs/Lab_DFT_1/std_cells/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db'
-Loading db file '/home/ICer/Labs/Lab_DFT_1/std_cells/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db'
-Loading db file '/home/ICer/Labs/Lab_DFT_1/std_cells/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db'
+Loading db file '/home/ICer/Digital-ASIC-Design-Coursework/Labs/DFT/Lab_DFT_1/std_cells/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db'
+Loading db file '/home/ICer/Digital-ASIC-Design-Coursework/Labs/DFT/Lab_DFT_1/std_cells/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db'
+Loading db file '/home/ICer/Digital-ASIC-Design-Coursework/Labs/DFT/Lab_DFT_1/std_cells/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db'
 Loading db file '/home/synopsys/syn/O-2018.06-SP1/libraries/syn/gtech.db'
 Loading db file '/home/synopsys/syn/O-2018.06-SP1/libraries/syn/standard.sldb'
   Loading link library 'scmetro_tsmc_cl013g_rvt_ss_1p08v_125c'
   Loading link library 'scmetro_tsmc_cl013g_rvt_tt_1p2v_25c'
   Loading link library 'scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c'
   Loading link library 'gtech'
-Loading verilog file '/home/ICer/Labs/Lab_DFT_1/rtl/ARITHMETIC_UNIT.v'
+Loading verilog file '/home/ICer/Digital-ASIC-Design-Coursework/Labs/DFT/Lab_DFT_1/rtl/ARITHMETIC_UNIT.v'
 Detecting input file type automatically (-rtl or -netlist).
 Reading with Presto HDL Compiler (equivalent to -rtl option).
 Running PRESTO HDLC
-Compiling source file /home/ICer/Labs/Lab_DFT_1/rtl/ARITHMETIC_UNIT.v
+Compiling source file /home/ICer/Digital-ASIC-Design-Coursework/Labs/DFT/Lab_DFT_1/rtl/ARITHMETIC_UNIT.v
 
 Statistics for case statements in always block at line 44 in file
-	'/home/ICer/Labs/Lab_DFT_1/rtl/ARITHMETIC_UNIT.v'
+	'/home/ICer/Digital-ASIC-Design-Coursework/Labs/DFT/Lab_DFT_1/rtl/ARITHMETIC_UNIT.v'
 ===============================================
 |           Line           |  full/ parallel  |
 ===============================================
@@ -85,7 +85,7 @@ Statistics for case statements in always block at line 44 in file
 
 Inferred memory devices in process
 	in routine ARITHMETIC_UNIT line 26 in file
-		'/home/ICer/Labs/Lab_DFT_1/rtl/ARITHMETIC_UNIT.v'.
+		'/home/ICer/Digital-ASIC-Design-Coursework/Labs/DFT/Lab_DFT_1/rtl/ARITHMETIC_UNIT.v'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
 ===============================================================================
@@ -94,19 +94,19 @@ Inferred memory devices in process
 |    Arith_OUT_reg    | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
 ===============================================================================
 Presto compilation completed successfully.
-Current design is now '/home/ICer/Labs/Lab_DFT_1/rtl/ARITHMETIC_UNIT.db:ARITHMETIC_UNIT'
+Current design is now '/home/ICer/Digital-ASIC-Design-Coursework/Labs/DFT/Lab_DFT_1/rtl/ARITHMETIC_UNIT.db:ARITHMETIC_UNIT'
 Loaded 1 design.
 Current design is 'ARITHMETIC_UNIT'.
 ARITHMETIC_UNIT
 read_file -format $file_format CMP_UNIT.v
-Loading verilog file '/home/ICer/Labs/Lab_DFT_1/rtl/CMP_UNIT.v'
+Loading verilog file '/home/ICer/Digital-ASIC-Design-Coursework/Labs/DFT/Lab_DFT_1/rtl/CMP_UNIT.v'
 Detecting input file type automatically (-rtl or -netlist).
 Reading with Presto HDL Compiler (equivalent to -rtl option).
 Running PRESTO HDLC
-Compiling source file /home/ICer/Labs/Lab_DFT_1/rtl/CMP_UNIT.v
+Compiling source file /home/ICer/Digital-ASIC-Design-Coursework/Labs/DFT/Lab_DFT_1/rtl/CMP_UNIT.v
 
 Statistics for case statements in always block at line 36 in file
-	'/home/ICer/Labs/Lab_DFT_1/rtl/CMP_UNIT.v'
+	'/home/ICer/Digital-ASIC-Design-Coursework/Labs/DFT/Lab_DFT_1/rtl/CMP_UNIT.v'
 ===============================================
 |           Line           |  full/ parallel  |
 ===============================================
@@ -115,7 +115,7 @@ Statistics for case statements in always block at line 36 in file
 
 Inferred memory devices in process
 	in routine CMP_UNIT line 20 in file
-		'/home/ICer/Labs/Lab_DFT_1/rtl/CMP_UNIT.v'.
+		'/home/ICer/Digital-ASIC-Design-Coursework/Labs/DFT/Lab_DFT_1/rtl/CMP_UNIT.v'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
 ===============================================================================
@@ -123,49 +123,49 @@ Inferred memory devices in process
 |    CMP_Flag_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
 ===============================================================================
 Presto compilation completed successfully.
-Current design is now '/home/ICer/Labs/Lab_DFT_1/rtl/CMP_UNIT.db:CMP_UNIT'
+Current design is now '/home/ICer/Digital-ASIC-Design-Coursework/Labs/DFT/Lab_DFT_1/rtl/CMP_UNIT.db:CMP_UNIT'
 Loaded 1 design.
 Current design is 'CMP_UNIT'.
 CMP_UNIT
 read_file -format $file_format Decoder.v
-Loading verilog file '/home/ICer/Labs/Lab_DFT_1/rtl/Decoder.v'
+Loading verilog file '/home/ICer/Digital-ASIC-Design-Coursework/Labs/DFT/Lab_DFT_1/rtl/Decoder.v'
 Detecting input file type automatically (-rtl or -netlist).
 Reading with Presto HDL Compiler (equivalent to -rtl option).
 Running PRESTO HDLC
-Compiling source file /home/ICer/Labs/Lab_DFT_1/rtl/Decoder.v
+Compiling source file /home/ICer/Digital-ASIC-Design-Coursework/Labs/DFT/Lab_DFT_1/rtl/Decoder.v
 
 Statistics for case statements in always block at line 8 in file
-	'/home/ICer/Labs/Lab_DFT_1/rtl/Decoder.v'
+	'/home/ICer/Digital-ASIC-Design-Coursework/Labs/DFT/Lab_DFT_1/rtl/Decoder.v'
 ===============================================
 |           Line           |  full/ parallel  |
 ===============================================
 |            11            |    auto/auto     |
 ===============================================
 Presto compilation completed successfully.
-Current design is now '/home/ICer/Labs/Lab_DFT_1/rtl/Decoder.db:Decoder'
+Current design is now '/home/ICer/Digital-ASIC-Design-Coursework/Labs/DFT/Lab_DFT_1/rtl/Decoder.db:Decoder'
 Loaded 1 design.
 Current design is 'Decoder'.
 Decoder
 read_file -format $file_format mux2X1.v
-Loading verilog file '/home/ICer/Labs/Lab_DFT_1/rtl/mux2X1.v'
+Loading verilog file '/home/ICer/Digital-ASIC-Design-Coursework/Labs/DFT/Lab_DFT_1/rtl/mux2X1.v'
 Detecting input file type automatically (-rtl or -netlist).
 Reading with Presto HDL Compiler (equivalent to -rtl option).
 Running PRESTO HDLC
-Compiling source file /home/ICer/Labs/Lab_DFT_1/rtl/mux2X1.v
+Compiling source file /home/ICer/Digital-ASIC-Design-Coursework/Labs/DFT/Lab_DFT_1/rtl/mux2X1.v
 Presto compilation completed successfully.
-Current design is now '/home/ICer/Labs/Lab_DFT_1/rtl/mux2X1.db:mux2X1'
+Current design is now '/home/ICer/Digital-ASIC-Design-Coursework/Labs/DFT/Lab_DFT_1/rtl/mux2X1.db:mux2X1'
 Loaded 1 design.
 Current design is 'mux2X1'.
 mux2X1
 read_file -format $file_format LOGIC_UNIT.v
-Loading verilog file '/home/ICer/Labs/Lab_DFT_1/rtl/LOGIC_UNIT.v'
+Loading verilog file '/home/ICer/Digital-ASIC-Design-Coursework/Labs/DFT/Lab_DFT_1/rtl/LOGIC_UNIT.v'
 Detecting input file type automatically (-rtl or -netlist).
 Reading with Presto HDL Compiler (equivalent to -rtl option).
 Running PRESTO HDLC
-Compiling source file /home/ICer/Labs/Lab_DFT_1/rtl/LOGIC_UNIT.v
+Compiling source file /home/ICer/Digital-ASIC-Design-Coursework/Labs/DFT/Lab_DFT_1/rtl/LOGIC_UNIT.v
 
 Statistics for case statements in always block at line 39 in file
-	'/home/ICer/Labs/Lab_DFT_1/rtl/LOGIC_UNIT.v'
+	'/home/ICer/Digital-ASIC-Design-Coursework/Labs/DFT/Lab_DFT_1/rtl/LOGIC_UNIT.v'
 ===============================================
 |           Line           |  full/ parallel  |
 ===============================================
@@ -174,7 +174,7 @@ Statistics for case statements in always block at line 39 in file
 
 Inferred memory devices in process
 	in routine LOGIC_UNIT line 23 in file
-		'/home/ICer/Labs/Lab_DFT_1/rtl/LOGIC_UNIT.v'.
+		'/home/ICer/Digital-ASIC-Design-Coursework/Labs/DFT/Lab_DFT_1/rtl/LOGIC_UNIT.v'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
 ===============================================================================
@@ -182,19 +182,19 @@ Inferred memory devices in process
 |   Logic_Flag_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
 ===============================================================================
 Presto compilation completed successfully.
-Current design is now '/home/ICer/Labs/Lab_DFT_1/rtl/LOGIC_UNIT.db:LOGIC_UNIT'
+Current design is now '/home/ICer/Digital-ASIC-Design-Coursework/Labs/DFT/Lab_DFT_1/rtl/LOGIC_UNIT.db:LOGIC_UNIT'
 Loaded 1 design.
 Current design is 'LOGIC_UNIT'.
 LOGIC_UNIT
 read_file -format $file_format SHIFT_UNIT.v
-Loading verilog file '/home/ICer/Labs/Lab_DFT_1/rtl/SHIFT_UNIT.v'
+Loading verilog file '/home/ICer/Digital-ASIC-Design-Coursework/Labs/DFT/Lab_DFT_1/rtl/SHIFT_UNIT.v'
 Detecting input file type automatically (-rtl or -netlist).
 Reading with Presto HDL Compiler (equivalent to -rtl option).
 Running PRESTO HDLC
-Compiling source file /home/ICer/Labs/Lab_DFT_1/rtl/SHIFT_UNIT.v
+Compiling source file /home/ICer/Digital-ASIC-Design-Coursework/Labs/DFT/Lab_DFT_1/rtl/SHIFT_UNIT.v
 
 Statistics for case statements in always block at line 40 in file
-	'/home/ICer/Labs/Lab_DFT_1/rtl/SHIFT_UNIT.v'
+	'/home/ICer/Digital-ASIC-Design-Coursework/Labs/DFT/Lab_DFT_1/rtl/SHIFT_UNIT.v'
 ===============================================
 |           Line           |  full/ parallel  |
 ===============================================
@@ -203,7 +203,7 @@ Statistics for case statements in always block at line 40 in file
 
 Inferred memory devices in process
 	in routine SHIFT_UNIT line 24 in file
-		'/home/ICer/Labs/Lab_DFT_1/rtl/SHIFT_UNIT.v'.
+		'/home/ICer/Digital-ASIC-Design-Coursework/Labs/DFT/Lab_DFT_1/rtl/SHIFT_UNIT.v'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
 ===============================================================================
@@ -211,18 +211,18 @@ Inferred memory devices in process
 |   Shift_Flag_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
 ===============================================================================
 Presto compilation completed successfully.
-Current design is now '/home/ICer/Labs/Lab_DFT_1/rtl/SHIFT_UNIT.db:SHIFT_UNIT'
+Current design is now '/home/ICer/Digital-ASIC-Design-Coursework/Labs/DFT/Lab_DFT_1/rtl/SHIFT_UNIT.db:SHIFT_UNIT'
 Loaded 1 design.
 Current design is 'SHIFT_UNIT'.
 SHIFT_UNIT
 read_file -format $file_format ALU_TOP.v
-Loading verilog file '/home/ICer/Labs/Lab_DFT_1/rtl/ALU_TOP.v'
+Loading verilog file '/home/ICer/Digital-ASIC-Design-Coursework/Labs/DFT/Lab_DFT_1/rtl/ALU_TOP.v'
 Detecting input file type automatically (-rtl or -netlist).
 Reading with Presto HDL Compiler (equivalent to -rtl option).
 Running PRESTO HDLC
-Compiling source file /home/ICer/Labs/Lab_DFT_1/rtl/ALU_TOP.v
+Compiling source file /home/ICer/Digital-ASIC-Design-Coursework/Labs/DFT/Lab_DFT_1/rtl/ALU_TOP.v
 Presto compilation completed successfully.
-Current design is now '/home/ICer/Labs/Lab_DFT_1/rtl/ALU_TOP.db:ALU_TOP'
+Current design is now '/home/ICer/Digital-ASIC-Design-Coursework/Labs/DFT/Lab_DFT_1/rtl/ALU_TOP.db:ALU_TOP'
 Loaded 1 design.
 Current design is 'ALU_TOP'.
 ALU_TOP
@@ -242,10 +242,10 @@ link
   Linking design 'ALU_TOP'
   Using the following designs and libraries:
   --------------------------------------------------------------------------
-  * (7 designs)               /home/ICer/Labs/Lab_DFT_1/rtl/ALU_TOP.db, etc
-  scmetro_tsmc_cl013g_rvt_ss_1p08v_125c (library) /home/ICer/Labs/Lab_DFT_1/std_cells/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db
-  scmetro_tsmc_cl013g_rvt_tt_1p2v_25c (library) /home/ICer/Labs/Lab_DFT_1/std_cells/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db
-  scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c (library) /home/ICer/Labs/Lab_DFT_1/std_cells/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db
+  * (7 designs)               /home/ICer/Digital-ASIC-Design-Coursework/Labs/DFT/Lab_DFT_1/rtl/ALU_TOP.db, etc
+  scmetro_tsmc_cl013g_rvt_ss_1p08v_125c (library) /home/ICer/Digital-ASIC-Design-Coursework/Labs/DFT/Lab_DFT_1/std_cells/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db
+  scmetro_tsmc_cl013g_rvt_tt_1p2v_25c (library) /home/ICer/Digital-ASIC-Design-Coursework/Labs/DFT/Lab_DFT_1/std_cells/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db
+  scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c (library) /home/ICer/Digital-ASIC-Design-Coursework/Labs/DFT/Lab_DFT_1/std_cells/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db
 
 1
 #################### Liniking All The Design Parts #########################
@@ -260,7 +260,7 @@ check_design
 ****************************************
 check_design summary:
 Version:     O-2018.06-SP1
-Date:        Sun Sep  6 05:36:54 2026
+Date:        Sun Sep  6 06:23:31 2026
 ****************************************
 
                    Name                                            Total
@@ -584,38 +584,38 @@ Information: Updating design information... (UID-85)
 
   Beginning Mapping Optimizations  (Medium effort)
   -------------------------------
-Loading db file '/home/ICer/Labs/Lab_DFT_1/std_cells/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db'
-Loading db file '/home/ICer/Labs/Lab_DFT_1/std_cells/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db'
+Loading db file '/home/ICer/Digital-ASIC-Design-Coursework/Labs/DFT/Lab_DFT_1/std_cells/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db'
+Loading db file '/home/ICer/Digital-ASIC-Design-Coursework/Labs/DFT/Lab_DFT_1/std_cells/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db'
 
                                   TOTAL                                      
    ELAPSED            WORST NEG   SETUP    DESIGN                            
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
   --------- --------- --------- --------- --------- -------------------------
-    0:00:04   46450.2      0.00       0.0      81.4                          
-    0:00:04   46450.2      0.00       0.0      81.4                          
-    0:00:04   46450.2      0.00       0.0      81.4                          
-    0:00:04   46450.2      0.00       0.0      81.4                          
-    0:00:04   46450.2      0.00       0.0      81.4                          
-    0:00:04   21473.6     24.06      46.9      37.9                          
-    0:00:05   22886.8      6.65       7.7      25.4                          
-    0:00:05   23311.6      4.70       4.7       4.8                          
-    0:00:05   23648.1      2.64       2.6       4.8                          
-    0:00:05   23814.1      1.31       1.3       4.8                          
-    0:00:05   23744.6      1.23       1.2       4.8                          
-    0:00:05   23762.3      1.14       1.1       4.8                          
-    0:00:05   23758.7      1.26       1.3       4.8                          
-    0:00:05   23744.6      1.23       1.2       4.8                          
-    0:00:05   23762.3      1.14       1.1       4.8                          
-    0:00:05   23762.3      1.14       1.1       4.8                          
-    0:00:05   23762.3      1.14       1.1       4.8                          
-    0:00:05   23762.3      1.14       1.1       4.8                          
-    0:00:05   23795.2      0.65       0.6       1.6                          
-    0:00:05   23801.1      0.65       0.6       0.1                          
-    0:00:05   23801.1      0.65       0.6       0.0                          
-    0:00:05   23801.1      0.65       0.6       0.0                          
-    0:00:05   23801.1      0.65       0.6       0.0                          
-    0:00:05   23801.1      0.65       0.6       0.0                          
-    0:00:05   23837.6      0.00       0.0       0.0                          
+    0:00:05   46450.2      0.00       0.0      81.4                          
+    0:00:05   46450.2      0.00       0.0      81.4                          
+    0:00:05   46450.2      0.00       0.0      81.4                          
+    0:00:05   46450.2      0.00       0.0      81.4                          
+    0:00:05   46450.2      0.00       0.0      81.4                          
+    0:00:05   21473.6     24.06      46.9      37.9                          
+    0:00:06   22886.8      6.65       7.7      25.4                          
+    0:00:06   23311.6      4.70       4.7       4.8                          
+    0:00:06   23648.1      2.64       2.6       4.8                          
+    0:00:06   23814.1      1.31       1.3       4.8                          
+    0:00:06   23744.6      1.23       1.2       4.8                          
+    0:00:06   23762.3      1.14       1.1       4.8                          
+    0:00:06   23758.7      1.26       1.3       4.8                          
+    0:00:06   23744.6      1.23       1.2       4.8                          
+    0:00:06   23762.3      1.14       1.1       4.8                          
+    0:00:06   23762.3      1.14       1.1       4.8                          
+    0:00:06   23762.3      1.14       1.1       4.8                          
+    0:00:06   23762.3      1.14       1.1       4.8                          
+    0:00:06   23795.2      0.65       0.6       1.6                          
+    0:00:06   23801.1      0.65       0.6       0.1                          
+    0:00:06   23801.1      0.65       0.6       0.0                          
+    0:00:06   23801.1      0.65       0.6       0.0                          
+    0:00:06   23801.1      0.65       0.6       0.0                          
+    0:00:06   23801.1      0.65       0.6       0.0                          
+    0:00:06   23837.6      0.00       0.0       0.0                          
 
 
 
@@ -626,8 +626,8 @@ Loading db file '/home/ICer/Labs/Lab_DFT_1/std_cells/scmetro_tsmc_cl013g_rvt_ff_
    ELAPSED            WORST NEG   SETUP    DESIGN                            
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
   --------- --------- --------- --------- --------- -------------------------
-    0:00:05   23837.6      0.00       0.0       0.0                          
-    0:00:05   23837.6      0.00       0.0       0.0                          
+    0:00:06   23837.6      0.00       0.0       0.0                          
+    0:00:06   23837.6      0.00       0.0       0.0                          
     0:00:06   23225.7      0.00       0.0     250.1                          
 
 
@@ -639,8 +639,8 @@ Loading db file '/home/ICer/Labs/Lab_DFT_1/std_cells/scmetro_tsmc_cl013g_rvt_ff_
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
   --------- --------- --------- --------- --------- -------------------------
     0:00:06   23225.7      0.00       0.0     250.1                          
-    0:00:06   23892.9      0.00       0.0       7.8 U0_ARITHMETIC_UNIT/Arith_OUT[31]
-    0:00:06   23915.3      0.00       0.0       0.0                          
+    0:00:07   23892.9      0.00       0.0       7.8 U0_ARITHMETIC_UNIT/Arith_OUT[31]
+    0:00:07   23915.3      0.00       0.0       0.0                          
 
 
   Beginning Area-Recovery Phase  (cleanup)
@@ -650,23 +650,23 @@ Loading db file '/home/ICer/Labs/Lab_DFT_1/std_cells/scmetro_tsmc_cl013g_rvt_ff_
    ELAPSED            WORST NEG   SETUP    DESIGN                            
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
   --------- --------- --------- --------- --------- -------------------------
-    0:00:06   23915.3      0.00       0.0       0.0                          
-    0:00:06   23915.3      0.00       0.0       0.0                          
-    0:00:06   23777.6      0.00       0.0       0.0                          
-    0:00:06   23758.7      0.00       0.0       0.0                          
-    0:00:06   23758.7      0.00       0.0       0.0                          
-    0:00:06   23758.7      0.00       0.0       0.0                          
-    0:00:06   23758.7      0.00       0.0       0.0                          
-    0:00:06   23758.7      0.00       0.0       0.0                          
-    0:00:06   22138.4      9.79      12.3       0.0                          
-    0:00:06   22136.1      9.79      12.3       0.0                          
-    0:00:06   22136.1      9.79      12.3       0.0                          
-    0:00:06   22136.1      9.79      12.3       0.0                          
-    0:00:06   22136.1      9.79      12.3       0.0                          
-    0:00:06   22136.1      9.79      12.3       0.0                          
-    0:00:06   22136.1      9.79      12.3       0.0                          
-    0:00:06   23402.2      0.00       0.0       0.0                          
-Loading db file '/home/ICer/Labs/Lab_DFT_1/std_cells/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db'
+    0:00:07   23915.3      0.00       0.0       0.0                          
+    0:00:07   23915.3      0.00       0.0       0.0                          
+    0:00:07   23777.6      0.00       0.0       0.0                          
+    0:00:07   23758.7      0.00       0.0       0.0                          
+    0:00:07   23758.7      0.00       0.0       0.0                          
+    0:00:07   23758.7      0.00       0.0       0.0                          
+    0:00:07   23758.7      0.00       0.0       0.0                          
+    0:00:07   23758.7      0.00       0.0       0.0                          
+    0:00:07   22138.4      9.79      12.3       0.0                          
+    0:00:07   22136.1      9.79      12.3       0.0                          
+    0:00:07   22136.1      9.79      12.3       0.0                          
+    0:00:07   22136.1      9.79      12.3       0.0                          
+    0:00:07   22136.1      9.79      12.3       0.0                          
+    0:00:07   22136.1      9.79      12.3       0.0                          
+    0:00:07   22136.1      9.79      12.3       0.0                          
+    0:00:07   23402.2      0.00       0.0       0.0                          
+Loading db file '/home/ICer/Digital-ASIC-Design-Coursework/Labs/DFT/Lab_DFT_1/std_cells/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db'
 
 
 Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
@@ -837,7 +837,7 @@ Preview_dft report
 For    : 'Insert_dft' command
 Design : ALU_TOP
 Version: O-2018.06-SP1
-Date   : Sun Sep  6 05:37:04 2026
+Date   : Sun Sep  6 06:23:40 2026
 ****************************************
 
 Number of chains: 1
@@ -1024,9 +1024,9 @@ Information: Updating design information... (UID-85)
   --------- --------- --------- --------- --------- -------------------------
     0:00:01   24050.6      0.00       0.0       0.0                          
     0:00:01   24064.7      0.00       0.0       0.0                          
-Loading db file '/home/ICer/Labs/Lab_DFT_1/std_cells/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db'
-Loading db file '/home/ICer/Labs/Lab_DFT_1/std_cells/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db'
-Loading db file '/home/ICer/Labs/Lab_DFT_1/std_cells/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db'
+Loading db file '/home/ICer/Digital-ASIC-Design-Coursework/Labs/DFT/Lab_DFT_1/std_cells/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db'
+Loading db file '/home/ICer/Digital-ASIC-Design-Coursework/Labs/DFT/Lab_DFT_1/std_cells/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db'
+Loading db file '/home/ICer/Digital-ASIC-Design-Coursework/Labs/DFT/Lab_DFT_1/std_cells/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db'
 
 
 Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
@@ -1149,16 +1149,17 @@ SEQUENTIAL CELLS WITHOUT VIOLATIONS
 Information: Test design rule checking completed. (TEST-123)
   Running test coverage estimation...
  12334 faults were added to fault list.
- 0            8506   3058         0/0/0    75.09%      0.01
- 0            1397   1661         0/0/0    86.42%      0.02
- 0             821    840         0/0/1    93.08%      0.02
- 0             299    540         1/0/1    95.51%      0.03
- 0             156    382         2/0/3    96.80%      0.03
- 0             117    265         2/0/5    97.74%      0.03
- 0             100    165         2/0/8    98.56%      0.04
- 0              79     85        3/0/12    99.20%      0.04
- 0              38     42        6/0/12    99.55%      0.05
- 0              18     24        6/0/12    99.70%      0.05
+ 0            8548   3016         0/0/0    75.43%      0.01
+ 0            1164   1851         1/0/0    84.88%      0.01
+ 0             908    943         1/0/2    92.25%      0.02
+ 0             334    609         1/0/2    94.95%      0.02
+ 0             172    437         1/0/3    96.35%      0.03
+ 0             125    311         2/0/5    97.37%      0.03
+ 0             107    200         4/0/7    98.27%      0.04
+ 0              72    128        4/0/10    98.86%      0.04
+ 0              57     68        6/0/12    99.34%      0.05
+ 0              38     30        6/0/12    99.65%      0.05
+ 0               6     24        6/0/12    99.70%      0.05
  
             Pattern Summary Report
  -----------------------------------------------
@@ -1203,15 +1204,10 @@ report_constraint -all_violators > constraints_dft.rpt
 ################# starting graphical user interface #######################
 #gui_start
 #exit
-dc_shell> gui_start
-dc_shell> Current design is 'ALU_TOP'.
-4.1
-Current design is 'ALU_TOP'.
-dc_shell> Loading db file '/home/synopsys/syn/O-2018.06-SP1/libraries/syn/generic.sdb'
 dc_shell> exit
 
-Memory usage for main task 350 Mbytes.
-Memory usage for this session 350 Mbytes.
-CPU usage for this session 29 seconds ( 0.01 hours ).
+Memory usage for main task 299 Mbytes.
+Memory usage for this session 299 Mbytes.
+CPU usage for this session 12 seconds ( 0.00 hours ).
 
 Thank you...

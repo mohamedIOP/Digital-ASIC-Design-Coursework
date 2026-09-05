@@ -1,7 +1,7 @@
 /////////////////////////////////////////////////////////////
 // Created by: Synopsys DC Expert(TM) in wire load mode
 // Version   : O-2018.06-SP1
-// Date      : Sun Sep  6 05:37:11 2026
+// Date      : Sun Sep  6 06:23:46 2026
 /////////////////////////////////////////////////////////////
 
 
@@ -2833,7 +2833,7 @@ module CMP_UNIT_test_1 ( A, B, ALU_FUNC, CLK, RST, CMP_enable, CMP_OUT,
 endmodule
 
 
-module ALU_TOP ( scan_clk, scan_rst, test_mode, SI, SE, SO, A, B, ALU_FUNC, 
+module ALU_TOP ( SI, SE, test_mode, scan_clk, scan_rst, SO, A, B, ALU_FUNC, 
         CLK, RST, Arith_OUT, Carry_OUT, Arith_Flag, Logic_OUT, Logic_Flag, 
         Shift_OUT, Shift_Flag, CMP_OUT, CMP_Flag );
   input [15:0] A;
@@ -2843,7 +2843,7 @@ module ALU_TOP ( scan_clk, scan_rst, test_mode, SI, SE, SO, A, B, ALU_FUNC,
   output [15:0] Logic_OUT;
   output [15:0] Shift_OUT;
   output [2:0] CMP_OUT;
-  input scan_clk, scan_rst, test_mode, SI, SE, CLK, RST;
+  input SI, SE, test_mode, scan_clk, scan_rst, CLK, RST;
   output SO, Carry_OUT, Arith_Flag, Logic_Flag, Shift_Flag, CMP_Flag;
   wire   CLK_M, RST_M, Shift_enable, CMP_enable, Logic_enable, Arith_enable,
          n3, n4, n5, n6, n7, n8, n9, n10, n11, n12, n13, n14, n15, n16, n17,
@@ -2892,9 +2892,10 @@ module ALU_TOP ( scan_clk, scan_rst, test_mode, SI, SE, SO, A, B, ALU_FUNC,
   INVX2M U41 ( .A(RST_M), .Y(n42) );
   BUFX2M U42 ( .A(test_mode), .Y(n40) );
   CLKBUFX40M U43 ( .A(Arith_OUT[5]), .Y(SO) );
-  mux2X1_1 U0_MUX_CLK ( .IN_0(CLK), .IN_1(scan_clk), .SEL(n40), .OUT(CLK_M) );
-  mux2X1_0 U0_MUX_RST_M ( .IN_0(RST), .IN_1(scan_rst), .SEL(n40), .OUT(RST_M)
-         );
+  mux2X1_1 mux2X1_CLK_SCAN ( .IN_0(CLK), .IN_1(scan_clk), .SEL(n40), .OUT(
+        CLK_M) );
+  mux2X1_0 mux2X1_RST_SCAN ( .IN_0(RST), .IN_1(scan_rst), .SEL(n40), .OUT(
+        RST_M) );
   Decoder U0 ( .IN({n7, n6}), .OUT({Shift_enable, CMP_enable, Logic_enable, 
         Arith_enable}) );
   ARITHMETIC_UNIT_test_1 U0_ARITHMETIC_UNIT ( .A({n39, n38, n37, n36, n35, n34, 
