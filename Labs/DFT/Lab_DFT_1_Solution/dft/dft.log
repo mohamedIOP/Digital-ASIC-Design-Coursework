@@ -1,0 +1,1220 @@
+
+                           Design Compiler Graphical 
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+
+               Version O-2018.06-SP1 for linux64 - Jul 19, 2018 
+
+                    Copyright (c) 1988 - 2018 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+Initializing...
+Initializing gui preferences from file  /home/ICer/.synopsys_dv_prefs.tcl
+########################### Define Top Module ############################
+set top_module ALU_TOP
+ALU_TOP
+##################### Define Working Library Directory ######################
+define_design_lib work -path ./work
+1
+################## Design Compiler Library Files #setup ######################
+puts "###########################################"
+###########################################
+puts "#      #setting Design Libraries           #"
+#      #setting Design Libraries           #
+puts "###########################################"
+###########################################
+#Add the path of the libraries to the search_path variable
+lappend search_path /home/ICer/Labs/Lab_DFT_1/std_cells
+. /home/synopsys/syn/O-2018.06-SP1/libraries/syn /home/synopsys/syn/O-2018.06-SP1/minpower/syn /home/synopsys/syn/O-2018.06-SP1/dw/syn_ver /home/synopsys/syn/O-2018.06-SP1/dw/sim_ver /home/ICer/Labs/Lab_DFT_1/std_cells
+lappend search_path /home/ICer/Labs/Lab_DFT_1/rtl
+. /home/synopsys/syn/O-2018.06-SP1/libraries/syn /home/synopsys/syn/O-2018.06-SP1/minpower/syn /home/synopsys/syn/O-2018.06-SP1/dw/syn_ver /home/synopsys/syn/O-2018.06-SP1/dw/sim_ver /home/ICer/Labs/Lab_DFT_1/std_cells /home/ICer/Labs/Lab_DFT_1/rtl
+set SSLIB "scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db"
+scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db
+set TTLIB "scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db"
+scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db
+set FFLIB "scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db"
+scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db
+## Standard Cell libraries 
+set target_library [list $SSLIB $TTLIB $FFLIB]
+scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db
+## Standard Cell & Hard Macros libraries 
+set link_library [list * $SSLIB $TTLIB $FFLIB]  
+* scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db
+######################## Reading RTL Files #################################
+puts "###########################################"
+###########################################
+puts "#             Reading RTL Files           #"
+#             Reading RTL Files           #
+puts "###########################################"
+###########################################
+set file_format verilog
+verilog
+read_file -format $file_format ARITHMETIC_UNIT.v
+Loading db file '/home/ICer/Labs/Lab_DFT_1/std_cells/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db'
+Loading db file '/home/ICer/Labs/Lab_DFT_1/std_cells/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db'
+Loading db file '/home/ICer/Labs/Lab_DFT_1/std_cells/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db'
+Loading db file '/home/synopsys/syn/O-2018.06-SP1/libraries/syn/gtech.db'
+Loading db file '/home/synopsys/syn/O-2018.06-SP1/libraries/syn/standard.sldb'
+  Loading link library 'scmetro_tsmc_cl013g_rvt_ss_1p08v_125c'
+  Loading link library 'scmetro_tsmc_cl013g_rvt_tt_1p2v_25c'
+  Loading link library 'scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c'
+  Loading link library 'gtech'
+Loading verilog file '/home/ICer/Labs/Lab_DFT_1/rtl/ARITHMETIC_UNIT.v'
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /home/ICer/Labs/Lab_DFT_1/rtl/ARITHMETIC_UNIT.v
+
+Statistics for case statements in always block at line 44 in file
+	'/home/ICer/Labs/Lab_DFT_1/rtl/ARITHMETIC_UNIT.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            49            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine ARITHMETIC_UNIT line 26 in file
+		'/home/ICer/Labs/Lab_DFT_1/rtl/ARITHMETIC_UNIT.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    Carry_OUT_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|   Arith_Flag_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|    Arith_OUT_reg    | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Current design is now '/home/ICer/Labs/Lab_DFT_1/rtl/ARITHMETIC_UNIT.db:ARITHMETIC_UNIT'
+Loaded 1 design.
+Current design is 'ARITHMETIC_UNIT'.
+ARITHMETIC_UNIT
+read_file -format $file_format CMP_UNIT.v
+Loading verilog file '/home/ICer/Labs/Lab_DFT_1/rtl/CMP_UNIT.v'
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /home/ICer/Labs/Lab_DFT_1/rtl/CMP_UNIT.v
+
+Statistics for case statements in always block at line 36 in file
+	'/home/ICer/Labs/Lab_DFT_1/rtl/CMP_UNIT.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            41            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine CMP_UNIT line 20 in file
+		'/home/ICer/Labs/Lab_DFT_1/rtl/CMP_UNIT.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     CMP_OUT_reg     | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    CMP_Flag_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Current design is now '/home/ICer/Labs/Lab_DFT_1/rtl/CMP_UNIT.db:CMP_UNIT'
+Loaded 1 design.
+Current design is 'CMP_UNIT'.
+CMP_UNIT
+read_file -format $file_format Decoder.v
+Loading verilog file '/home/ICer/Labs/Lab_DFT_1/rtl/Decoder.v'
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /home/ICer/Labs/Lab_DFT_1/rtl/Decoder.v
+
+Statistics for case statements in always block at line 8 in file
+	'/home/ICer/Labs/Lab_DFT_1/rtl/Decoder.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            11            |    auto/auto     |
+===============================================
+Presto compilation completed successfully.
+Current design is now '/home/ICer/Labs/Lab_DFT_1/rtl/Decoder.db:Decoder'
+Loaded 1 design.
+Current design is 'Decoder'.
+Decoder
+read_file -format $file_format mux2X1.v
+Loading verilog file '/home/ICer/Labs/Lab_DFT_1/rtl/mux2X1.v'
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /home/ICer/Labs/Lab_DFT_1/rtl/mux2X1.v
+Presto compilation completed successfully.
+Current design is now '/home/ICer/Labs/Lab_DFT_1/rtl/mux2X1.db:mux2X1'
+Loaded 1 design.
+Current design is 'mux2X1'.
+mux2X1
+read_file -format $file_format LOGIC_UNIT.v
+Loading verilog file '/home/ICer/Labs/Lab_DFT_1/rtl/LOGIC_UNIT.v'
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /home/ICer/Labs/Lab_DFT_1/rtl/LOGIC_UNIT.v
+
+Statistics for case statements in always block at line 39 in file
+	'/home/ICer/Labs/Lab_DFT_1/rtl/LOGIC_UNIT.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            44            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine LOGIC_UNIT line 23 in file
+		'/home/ICer/Labs/Lab_DFT_1/rtl/LOGIC_UNIT.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    Logic_OUT_reg    | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   Logic_Flag_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Current design is now '/home/ICer/Labs/Lab_DFT_1/rtl/LOGIC_UNIT.db:LOGIC_UNIT'
+Loaded 1 design.
+Current design is 'LOGIC_UNIT'.
+LOGIC_UNIT
+read_file -format $file_format SHIFT_UNIT.v
+Loading verilog file '/home/ICer/Labs/Lab_DFT_1/rtl/SHIFT_UNIT.v'
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /home/ICer/Labs/Lab_DFT_1/rtl/SHIFT_UNIT.v
+
+Statistics for case statements in always block at line 40 in file
+	'/home/ICer/Labs/Lab_DFT_1/rtl/SHIFT_UNIT.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            45            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine SHIFT_UNIT line 24 in file
+		'/home/ICer/Labs/Lab_DFT_1/rtl/SHIFT_UNIT.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    Shift_OUT_reg    | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   Shift_Flag_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Current design is now '/home/ICer/Labs/Lab_DFT_1/rtl/SHIFT_UNIT.db:SHIFT_UNIT'
+Loaded 1 design.
+Current design is 'SHIFT_UNIT'.
+SHIFT_UNIT
+read_file -format $file_format ALU_TOP.v
+Loading verilog file '/home/ICer/Labs/Lab_DFT_1/rtl/ALU_TOP.v'
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /home/ICer/Labs/Lab_DFT_1/rtl/ALU_TOP.v
+Presto compilation completed successfully.
+Current design is now '/home/ICer/Labs/Lab_DFT_1/rtl/ALU_TOP.db:ALU_TOP'
+Loaded 1 design.
+Current design is 'ALU_TOP'.
+ALU_TOP
+###################### Defining toplevel ###################################
+current_design $top_module
+Current design is 'ALU_TOP'.
+{ALU_TOP}
+#################### Liniking All The Design Parts #########################
+puts "###############################################"
+###############################################
+puts "######## Liniking All The Design Parts ########"
+######## Liniking All The Design Parts ########
+puts "###############################################"
+###############################################
+link 
+
+  Linking design 'ALU_TOP'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  * (7 designs)               /home/ICer/Labs/Lab_DFT_1/rtl/ALU_TOP.db, etc
+  scmetro_tsmc_cl013g_rvt_ss_1p08v_125c (library) /home/ICer/Labs/Lab_DFT_1/std_cells/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db
+  scmetro_tsmc_cl013g_rvt_tt_1p2v_25c (library) /home/ICer/Labs/Lab_DFT_1/std_cells/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db
+  scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c (library) /home/ICer/Labs/Lab_DFT_1/std_cells/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db
+
+1
+#################### Liniking All The Design Parts #########################
+puts "###############################################"
+###############################################
+puts "######## checking design consistency ##########"
+######## checking design consistency ##########
+puts "###############################################"
+###############################################
+check_design
+ 
+****************************************
+check_design summary:
+Version:     O-2018.06-SP1
+Date:        Wed Aug 26 23:42:12 2026
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Inputs/Outputs                                                      3
+    Unconnected ports (LINT-28)                                     3
+
+Cells                                                               7
+    Cells do not drive (LINT-1)                                     7
+--------------------------------------------------------------------------------
+
+Warning: In design 'ARITHMETIC_UNIT', cell 'C183' does not drive any nets. (LINT-1)
+Warning: In design 'ARITHMETIC_UNIT', cell 'C184' does not drive any nets. (LINT-1)
+Warning: In design 'ARITHMETIC_UNIT', cell 'C185' does not drive any nets. (LINT-1)
+Warning: In design 'ARITHMETIC_UNIT', cell 'C186' does not drive any nets. (LINT-1)
+Warning: In design 'CMP_UNIT', cell 'C82' does not drive any nets. (LINT-1)
+Warning: In design 'CMP_UNIT', cell 'C84' does not drive any nets. (LINT-1)
+Warning: In design 'CMP_UNIT', cell 'C86' does not drive any nets. (LINT-1)
+Warning: In design 'ALU_TOP', port 'SI' is not connected to any nets. (LINT-28)
+Warning: In design 'ALU_TOP', port 'SE' is not connected to any nets. (LINT-28)
+Warning: In design 'ALU_TOP', port 'SO' is not connected to any nets. (LINT-28)
+1
+#################### Define Design Constraints #########################
+puts "###############################################"
+###############################################
+puts "############ Design Constraints #### ##########"
+############ Design Constraints #### ##########
+puts "###############################################"
+###############################################
+source -echo ./cons.tcl
+####################################################################################
+# Constraints
+# ----------------------------------------------------------------------------
+#
+# 0. Design Compiler variables
+#
+# 1. Master Clock Definitions
+#
+# 2. Generated Clock Definitions
+#
+# 3. Clock Uncertainties
+#
+# 4. Clock Latencies 
+#
+# 5. Clock Relationships
+#
+# 6. #set input/output delay on ports
+#
+# 7. Driving cells
+#
+# 8. Output load
+####################################################################################
+#########################################################
+#### Section 0 : DC Variables ####
+#########################################################
+#################################################################################### 
+# Prevent assign statements in the generated netlist (must be applied before compile command)
+set_fix_multiple_port_nets -all -buffer_constants -feedthroughs
+#################################################################################### 
+#########################################################
+#### Section 1 : Clock Definition ####
+#########################################################
+#################################################################################### 
+# 1. Master Clock Definitions 
+# 2. Generated Clock Definitions
+# 3. Clock Latencies
+# 4. Clock Uncertainties
+# 4. Clock Transitions
+####################################################################################
+#################################### FUNC Clocks ###################################
+set CLK_NAME CLK
+set CLK_PER 100
+set CLK_SETUP_SKEW 0.2
+set CLK_HOLD_SKEW 0.1
+set CLK_LAT 0
+set CLK_RISE 0.05
+set CLK_FALL 0.05
+create_clock -name $CLK_NAME -period $CLK_PER -waveform "0 [expr $CLK_PER/2]" [get_ports CLK]
+set_clock_uncertainty -setup $CLK_SETUP_SKEW [get_clocks $CLK_NAME]
+set_clock_uncertainty -hold $CLK_HOLD_SKEW  [get_clocks $CLK_NAME]
+set_clock_transition -rise $CLK_RISE  [get_clocks $CLK_NAME]
+set_clock_transition -fall $CLK_FALL  [get_clocks $CLK_NAME]
+set_clock_latency $CLK_LAT [get_clocks $CLK_NAME]
+#################################### SCAN Clocks ###################################
+set DFT_CLK_NAME DFTCLK
+set DFT_CLK_PER 200
+set DFT_CLK_SETUP_SKEW 0.2
+set DFT_CLK_HOLD_SKEW 0.1
+set DFT_CLK_LAT 0
+set DFT_CLK_RISE 0.05
+set DFT_CLK_FALL 0.05
+create_clock -name $DFT_CLK_NAME -period $DFT_CLK_PER -waveform "0 [expr $DFT_CLK_PER/2]" [get_ports scan_clk]
+set_clock_uncertainty -setup $DFT_CLK_SETUP_SKEW [get_clocks $DFT_CLK_NAME]
+set_clock_uncertainty -hold $CLK_HOLD_SKEW  [get_clocks $DFT_CLK_NAME]
+set_clock_transition -rise $DFT_CLK_RISE  [get_clocks $DFT_CLK_NAME]
+set_clock_transition -fall $DFT_CLK_FALL  [get_clocks $DFT_CLK_NAME]
+set_clock_latency $DFT_CLK_LAT [get_clocks $DFT_CLK_NAME]
+set_dont_touch_network "$CLK_NAME $DFT_CLK_NAME"
+####################################################################################
+#########################################################
+#### Section 2 : Clocks Relationships ####
+#########################################################
+####################################################################################
+set_clock_groups -logically_exclusive -group [get_clocks "$CLK_NAME"]                                           -group [get_clocks "$DFT_CLK_NAME"] 
+####################################################################################
+#########################################################
+#### Section 3 : #set input/output delay on ports ####
+#########################################################
+####################################################################################
+set in_delay  [expr 0.2*$CLK_PER]
+set out_delay [expr 0.2*$CLK_PER]
+set in2_delay  [expr 0.2*$DFT_CLK_PER]
+set out2_delay [expr 0.2*$DFT_CLK_PER]
+#Constrain Input Paths
+set_input_delay $in_delay -clock $CLK_NAME [get_port A]
+set_input_delay $in_delay -clock $CLK_NAME [get_port B]
+set_input_delay $in_delay -clock $CLK_NAME [get_port ALU_FUNC]
+#Constrain Scan Input Paths
+set_input_delay $in2_delay -clock $DFT_CLK_NAME [get_port test_mode]
+set_input_delay $in2_delay -clock $DFT_CLK_NAME [get_port SI]
+set_input_delay $in2_delay -clock $DFT_CLK_NAME [get_port SE]
+#Constrain Output Paths
+set_output_delay $out_delay -clock $CLK_NAME [get_port CMP_Flag]
+set_output_delay $out_delay -clock $CLK_NAME [get_port Arith_OUT]
+set_output_delay $out_delay -clock $CLK_NAME [get_port Carry_OUT]
+set_output_delay $out_delay -clock $CLK_NAME [get_port Arith_Flag]
+set_output_delay $out_delay -clock $CLK_NAME [get_port Logic_OUT]
+set_output_delay $out_delay -clock $CLK_NAME [get_port Logic_Flag]
+set_output_delay $out_delay -clock $CLK_NAME [get_port Shift_OUT]
+set_output_delay $out_delay -clock $CLK_NAME [get_port Shift_Flag]
+set_output_delay $out_delay -clock $CLK_NAME [get_port CMP_OUT]
+#Constrain Scan Output Paths
+set_output_delay $out2_delay -clock $DFT_CLK_NAME [get_port SO]
+####################################################################################
+#########################################################
+#### Section 4 : Driving cells ####
+#########################################################
+####################################################################################
+#functional ports
+set_driving_cell -library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c -lib_cell BUFX2M -pin Y [get_port A]
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+set_driving_cell -library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c -lib_cell BUFX2M -pin Y [get_port B]
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+set_driving_cell -library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c -lib_cell BUFX2M -pin Y [get_port ALU_FUNC]
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+#scan ports
+set_driving_cell -library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c -lib_cell BUFX2M -pin Y [get_port test_mode]
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+set_driving_cell -library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c -lib_cell BUFX2M -pin Y [get_port SI]
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+set_driving_cell -library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c -lib_cell BUFX2M -pin Y [get_port SE]
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+####################################################################################
+#########################################################
+#### Section 5 : Output load ####
+#########################################################
+####################################################################################
+#functional ports
+set_load 0.5  [get_port CMP_Flag]
+set_load 0.5  [get_port Arith_OUT]
+set_load 0.5  [get_port Carry_OUT]
+set_load 0.5  [get_port Arith_Flag]
+set_load 0.5  [get_port Logic_OUT]
+set_load 0.5  [get_port Logic_Flag]
+set_load 0.5  [get_port Shift_OUT]
+set_load 0.5  [get_port Shift_Flag]
+set_load 0.5  [get_port CMP_OUT]
+#scan ports
+set_load 0.5  [get_port SO]
+####################################################################################
+#########################################################
+#### Section 6 : Operating Condition ####
+#########################################################
+####################################################################################
+# Define the Worst Library for Max(#setup) analysis
+# Define the Best Library for Min(hold) analysis
+set_operating_conditions -min_library "scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c" -min "scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c" -max_library "scmetro_tsmc_cl013g_rvt_ss_1p08v_125c" -max "scmetro_tsmc_cl013g_rvt_ss_1p08v_125c"
+Using operating conditions 'scmetro_tsmc_cl013g_rvt_ss_1p08v_125c' found in library 'scmetro_tsmc_cl013g_rvt_ss_1p08v_125c'.
+Using operating conditions 'scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c' found in library 'scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c'.
+####################################################################################
+#########################################################
+#### Section 7 : wireload Model ####
+#########################################################
+####################################################################################
+set_wire_load_model -name tsmc13_wl30 -library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+####################################################################################
+#########################################################
+#### Section 8 : Case Analysis ####
+#########################################################
+####################################################################################
+set_case_analysis 0 [get_port test_mode]
+####################################################################################
+#################### Archirecture Scan Chains #########################
+puts "###############################################"
+###############################################
+puts "############ Configure scan chains ############"
+############ Configure scan chains ############
+puts "###############################################"
+###############################################
+set_scan_configuration -clock_mixing no_mix  -style multiplexed_flip_flop -replace true -max_length 100  
+Accepted scan configuration for modes: all_dft
+1
+###################### Mapping and optimization ########################
+puts "###############################################"
+###############################################
+puts "########## Mapping & Optimization #############"
+########## Mapping & Optimization #############
+puts "###############################################"
+###############################################
+compile -scan
+Information: Choosing a test methodology will restrict the optimization of sequential cells. (UIO-12)
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | O-2018.06-DWBB_201806.1 |     *     |
+| Licensed DW Building Blocks        |                         |           |
+============================================================================
+
+
+Information: There are 10 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+Warning: Operating condition scmetro_tsmc_cl013g_rvt_ss_1p08v_125c set on design ALU_TOP has different process,
+voltage and temperatures parameters than the parameters at which target library 
+scmetro_tsmc_cl013g_rvt_tt_1p2v_25c is characterized. Delays may be inaccurate as a result. (OPT-998)
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'CMP_UNIT'
+Information: The register 'CMP_OUT_reg[2]' is a constant and will be removed. (OPT-1206)
+  Processing 'SHIFT_UNIT'
+  Processing 'LOGIC_UNIT'
+  Processing 'ARITHMETIC_UNIT'
+  Processing 'Decoder'
+  Processing 'mux2X1_0'
+  Processing 'mux2X1_1'
+  Processing 'ALU_TOP'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+
+  Beginning Implementation Selection
+  ----------------------------------
+  Processing 'CMP_UNIT_DW01_cmp6_0'
+  Processing 'ARITHMETIC_UNIT_DW_div_uns_0'
+  Processing 'ARITHMETIC_UNIT_DW01_sub_0'
+  Processing 'ARITHMETIC_UNIT_DW01_add_0'
+  Processing 'ARITHMETIC_UNIT_DW02_mult_0'
+  Processing 'ARITHMETIC_UNIT_DW01_add_1'
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+Loading db file '/home/ICer/Labs/Lab_DFT_1/std_cells/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db'
+Loading db file '/home/ICer/Labs/Lab_DFT_1/std_cells/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db'
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:06   46450.2      0.00       0.0      81.4                          
+    0:00:06   46450.2      0.00       0.0      81.4                          
+    0:00:06   46450.2      0.00       0.0      81.4                          
+    0:00:06   46450.2      0.00       0.0      81.4                          
+    0:00:06   46450.2      0.00       0.0      81.4                          
+    0:00:07   21473.6     24.06      46.9      37.9                          
+    0:00:07   22886.8      6.65       7.7      25.4                          
+    0:00:07   23311.6      4.70       4.7       4.8                          
+    0:00:08   23648.1      2.64       2.6       4.8                          
+    0:00:08   23814.1      1.31       1.3       4.8                          
+    0:00:08   23744.6      1.23       1.2       4.8                          
+    0:00:08   23762.3      1.14       1.1       4.8                          
+    0:00:08   23758.7      1.26       1.3       4.8                          
+    0:00:08   23744.6      1.23       1.2       4.8                          
+    0:00:08   23762.3      1.14       1.1       4.8                          
+    0:00:08   23762.3      1.14       1.1       4.8                          
+    0:00:08   23762.3      1.14       1.1       4.8                          
+    0:00:08   23762.3      1.14       1.1       4.8                          
+    0:00:08   23795.2      0.65       0.6       1.6                          
+    0:00:08   23801.1      0.65       0.6       0.1                          
+    0:00:08   23801.1      0.65       0.6       0.0                          
+    0:00:08   23801.1      0.65       0.6       0.0                          
+    0:00:08   23801.1      0.65       0.6       0.0                          
+    0:00:08   23801.1      0.65       0.6       0.0                          
+    0:00:08   23837.6      0.00       0.0       0.0                          
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:08   23837.6      0.00       0.0       0.0                          
+    0:00:08   23837.6      0.00       0.0       0.0                          
+    0:00:09   23225.7      0.00       0.0     250.1                          
+
+
+  Beginning Design Rule Fixing  (max_transition)  (max_capacitance)
+  ----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:09   23225.7      0.00       0.0     250.1                          
+    0:00:09   23892.9      0.00       0.0       7.8 U0_ARITHMETIC_UNIT/Arith_OUT[31]
+    0:00:09   23915.3      0.00       0.0       0.0                          
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:09   23915.3      0.00       0.0       0.0                          
+    0:00:09   23915.3      0.00       0.0       0.0                          
+    0:00:09   23777.6      0.00       0.0       0.0                          
+    0:00:09   23758.7      0.00       0.0       0.0                          
+    0:00:09   23758.7      0.00       0.0       0.0                          
+    0:00:09   23758.7      0.00       0.0       0.0                          
+    0:00:09   23758.7      0.00       0.0       0.0                          
+    0:00:09   23758.7      0.00       0.0       0.0                          
+    0:00:09   22138.4      9.79      12.3       0.0                          
+    0:00:09   22136.1      9.79      12.3       0.0                          
+    0:00:09   22136.1      9.79      12.3       0.0                          
+    0:00:09   22136.1      9.79      12.3       0.0                          
+    0:00:09   22136.1      9.79      12.3       0.0                          
+    0:00:09   22136.1      9.79      12.3       0.0                          
+    0:00:09   22136.1      9.79      12.3       0.0                          
+    0:00:10   23402.2      0.00       0.0       0.0                          
+Loading db file '/home/ICer/Labs/Lab_DFT_1/std_cells/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+1
+################################################################### 
+# Setting Test Timing Variables
+################################################################### 
+# Preclock Measure Protocol (default protocol)
+set test_default_period 100
+100
+set test_default_delay 0
+0
+set test_default_bidir_delay 0
+0
+set test_default_strobe 20
+20
+set test_default_strobe_width 0
+0
+########################## Define DFT Signals ##########################
+set_dft_signal -port [get_ports scan_clk]  -type ScanClock   -view existing_dft  -timing {30 60}
+Accepted dft signal specification for modes: all_dft
+1
+set_dft_signal -port [get_ports scan_rst]  -type Reset       -view existing_dft  -active_state 0
+Accepted dft signal specification for modes: all_dft
+1
+set_dft_signal -port [get_ports test_mode] -type Constant    -view existing_dft  -active_state 1 
+Accepted dft signal specification for modes: all_dft
+1
+set_dft_signal -port [get_ports test_mode] -type TestMode    -view spec          -active_state 1 
+Accepted dft signal specification for modes: all_dft
+1
+set_dft_signal -port [get_ports SE]        -type ScanEnable  -view spec          -active_state 1   -usage scan
+Accepted dft signal specification for modes: all_dft
+1
+set_dft_signal -port [get_ports SI]        -type ScanDataIn  -view spec 
+Accepted dft signal specification for modes: all_dft
+1
+set_dft_signal -port [get_ports SO]        -type ScanDataOut -view spec  
+Accepted dft signal specification for modes: all_dft
+1
+############################# Create Test Protocol #####################
+create_test_protocol
+In mode: all_dft...
+
+Information: Starting test protocol creation. (TEST-219)
+  ...reading user specified clock signals...
+Information: Identified system/test clock port scan_clk (30.0,60.0). (TEST-265)
+  ...reading user specified asynchronous signals...
+Information: Identified active low asynchronous control port scan_rst. (TEST-266)
+1
+###################### Pre-DFT Design Rule Checking ####################
+dft_drc -verbose
+In mode: all_dft...
+  Pre-DFT DRC enabled
+
+Information: Starting test design rule checking. (TEST-222)
+  Loading test protocol
+  ...basic checks...
+  ...basic sequential cell checks...
+  	...checking for scan equivalents...
+  ...checking vector rules...
+  ...checking pre-dft rules...
+
+-----------------------------------------------------------------
+  DRC Report
+
+  Total violations: 0
+
+-----------------------------------------------------------------
+
+
+Test Design rule checking did not find violations
+
+-----------------------------------------------------------------
+  Sequential Cell Report
+
+  0 out of 71 sequential cells have violations
+
+-----------------------------------------------------------------
+
+SEQUENTIAL CELLS WITHOUT VIOLATIONS
+      *  71 cells are valid scan cells
+         U0_ARITHMETIC_UNIT/Arith_OUT_reg[5]
+         U0_ARITHMETIC_UNIT/Arith_OUT_reg[4]
+         U0_ARITHMETIC_UNIT/Arith_OUT_reg[3]
+         U0_ARITHMETIC_UNIT/Arith_OUT_reg[2]
+         U0_ARITHMETIC_UNIT/Arith_OUT_reg[1]
+         U0_ARITHMETIC_UNIT/Arith_OUT_reg[0]
+         U0_ARITHMETIC_UNIT/Arith_OUT_reg[9]
+         U0_ARITHMETIC_UNIT/Arith_OUT_reg[8]
+         U0_ARITHMETIC_UNIT/Arith_OUT_reg[7]
+         U0_ARITHMETIC_UNIT/Arith_OUT_reg[6]
+         U0_ARITHMETIC_UNIT/Arith_Flag_reg
+         U0_ARITHMETIC_UNIT/Arith_OUT_reg[12]
+         U0_ARITHMETIC_UNIT/Arith_OUT_reg[11]
+         U0_ARITHMETIC_UNIT/Arith_OUT_reg[13]
+         U0_ARITHMETIC_UNIT/Arith_OUT_reg[14]
+         U0_ARITHMETIC_UNIT/Arith_OUT_reg[15]
+         U0_ARITHMETIC_UNIT/Carry_OUT_reg
+         U0_ARITHMETIC_UNIT/Arith_OUT_reg[16]
+         U0_ARITHMETIC_UNIT/Arith_OUT_reg[10]
+         U0_ARITHMETIC_UNIT/Arith_OUT_reg[17]
+         U0_ARITHMETIC_UNIT/Arith_OUT_reg[18]
+         U0_ARITHMETIC_UNIT/Arith_OUT_reg[19]
+         U0_ARITHMETIC_UNIT/Arith_OUT_reg[20]
+         U0_ARITHMETIC_UNIT/Arith_OUT_reg[21]
+         U0_ARITHMETIC_UNIT/Arith_OUT_reg[22]
+         U0_ARITHMETIC_UNIT/Arith_OUT_reg[23]
+         U0_ARITHMETIC_UNIT/Arith_OUT_reg[24]
+         U0_ARITHMETIC_UNIT/Arith_OUT_reg[25]
+         U0_ARITHMETIC_UNIT/Arith_OUT_reg[26]
+         U0_ARITHMETIC_UNIT/Arith_OUT_reg[27]
+         U0_ARITHMETIC_UNIT/Arith_OUT_reg[28]
+         U0_ARITHMETIC_UNIT/Arith_OUT_reg[29]
+         U0_ARITHMETIC_UNIT/Arith_OUT_reg[30]
+         U0_ARITHMETIC_UNIT/Arith_OUT_reg[31]
+         U0_LOGIC_UNIT/Logic_Flag_reg
+         U0_LOGIC_UNIT/Logic_OUT_reg[9]
+         U0_LOGIC_UNIT/Logic_OUT_reg[4]
+         U0_LOGIC_UNIT/Logic_OUT_reg[2]
+         U0_LOGIC_UNIT/Logic_OUT_reg[15]
+         U0_LOGIC_UNIT/Logic_OUT_reg[14]
+         U0_LOGIC_UNIT/Logic_OUT_reg[8]
+         U0_LOGIC_UNIT/Logic_OUT_reg[7]
+         U0_LOGIC_UNIT/Logic_OUT_reg[6]
+         U0_LOGIC_UNIT/Logic_OUT_reg[0]
+         U0_LOGIC_UNIT/Logic_OUT_reg[13]
+         U0_LOGIC_UNIT/Logic_OUT_reg[12]
+         U0_LOGIC_UNIT/Logic_OUT_reg[11]
+         U0_LOGIC_UNIT/Logic_OUT_reg[10]
+         U0_LOGIC_UNIT/Logic_OUT_reg[5]
+         U0_LOGIC_UNIT/Logic_OUT_reg[1]
+         U0_LOGIC_UNIT/Logic_OUT_reg[3]
+         U0_SHIFT_UNIT/Shift_Flag_reg
+         U0_SHIFT_UNIT/Shift_OUT_reg[0]
+         U0_SHIFT_UNIT/Shift_OUT_reg[15]
+         U0_SHIFT_UNIT/Shift_OUT_reg[1]
+         U0_SHIFT_UNIT/Shift_OUT_reg[14]
+         U0_SHIFT_UNIT/Shift_OUT_reg[6]
+         U0_SHIFT_UNIT/Shift_OUT_reg[10]
+         U0_SHIFT_UNIT/Shift_OUT_reg[8]
+         U0_SHIFT_UNIT/Shift_OUT_reg[4]
+         U0_SHIFT_UNIT/Shift_OUT_reg[13]
+         U0_SHIFT_UNIT/Shift_OUT_reg[9]
+         U0_SHIFT_UNIT/Shift_OUT_reg[3]
+         U0_SHIFT_UNIT/Shift_OUT_reg[2]
+         U0_SHIFT_UNIT/Shift_OUT_reg[12]
+         U0_SHIFT_UNIT/Shift_OUT_reg[11]
+         U0_SHIFT_UNIT/Shift_OUT_reg[5]
+         U0_SHIFT_UNIT/Shift_OUT_reg[7]
+         U0_CMP_UNIT/CMP_Flag_reg
+         U0_CMP_UNIT/CMP_OUT_reg[1]
+         U0_CMP_UNIT/CMP_OUT_reg[0]
+
+Information: Test design rule checking completed. (TEST-123)
+1
+############################# Preview DFT ##############################
+preview_dft -show scan_summary
+  Information: Using test design rule information from previous dft_drc run.
+  Architecting Scan Chains
+
+****************************************
+Preview_dft report
+For    : 'Insert_dft' command
+Design : ALU_TOP
+Version: O-2018.06-SP1
+Date   : Wed Aug 26 23:42:25 2026
+****************************************
+
+Number of chains: 1
+Scan methodology: full_scan
+Scan style: multiplexed_flip_flop
+Clock domain: no_mix
+
+Chain      Scan Ports (si --> so)        # of Cells   Inst/Chain               Clock (port, time, edge)
+-----      ----------------------        ----------   ----------               ------------------------
+S 1        SI -->  SO                            71   U0_ARITHMETIC_UNIT/Arith_Flag_reg
+                            (scan_clk, 30.0, rising) 
+1
+############################# Insert DFT ###############################
+insert_dft
+  Information: Using test design rule information from previous dft_drc run.
+  Architecting Scan Chains
+  Routing Scan Chains
+  Routing Global Signals
+  Mapping New Logic
+Resetting current test mode
+  Beginning Mapping Optimizations
+  -------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+
+
+  Beginning Phase 1 Design Rule Fixing  (max_transition)  (max_capacitance)
+  ------------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:13  583002.7      0.00       0.0      34.3 SE                       
+    0:00:13  583002.7      0.00       0.0      34.3 SE                       
+    0:00:13  583002.7      0.00       0.0      34.3 SE                       
+    0:00:13  582859.2      0.00       0.0      29.0 net5800                  
+    0:00:13  583008.6      0.00       0.0      29.1 net5802                  
+    0:00:13  583158.0      0.00       0.0      29.1 net5801                  
+    0:00:13  583307.4      0.00       0.0      28.8 net5803                  
+    0:00:13  583738.0      0.00       0.0      29.9 net5799                  
+    0:00:13  583738.0      0.00       0.0      29.9 net5799                  
+    0:00:13  583738.0      0.00       0.0      29.9 net5799                  
+    0:00:13  583887.4      0.00       0.0      29.9 net5816                  
+    0:00:13  584036.8      0.00       0.0      29.9 net5815                  
+    0:00:13  584186.2      0.00       0.0      28.6 SE                       
+    0:00:13  584335.7      0.00       0.0      28.6 net5809                  
+    0:00:13  584485.1      0.00       0.0      28.6 net5811                  
+    0:00:13  582285.0      0.00       0.0      24.2 SE                       
+    0:00:13  582434.4      0.00       0.0      23.7 U0_ARITHMETIC_UNIT/test_se
+    0:00:13  582583.9      0.00       0.0      23.2 U0_ARITHMETIC_UNIT/test_se
+    0:00:13  582733.3      0.00       0.0      22.6 U0_ARITHMETIC_UNIT/test_se
+    0:00:13  582882.7      0.00       0.0      22.1 U0_ARITHMETIC_UNIT/test_se
+    0:00:13  583032.1      0.00       0.0      21.6 U0_ARITHMETIC_UNIT/test_se
+    0:00:13  583181.5      0.00       0.0      21.0 U0_ARITHMETIC_UNIT/test_se
+    0:00:13  583330.9      0.00       0.0      20.5 U0_ARITHMETIC_UNIT/test_se
+    0:00:13  583928.6      0.00       0.0      20.1 U0_ARITHMETIC_UNIT/test_se
+    0:00:13  583928.6      0.00       0.0      20.1 U0_ARITHMETIC_UNIT/test_se
+    0:00:13  583928.6      0.00       0.0      20.1 U0_ARITHMETIC_UNIT/test_se
+    0:00:13  584526.2      0.00       0.0      19.2 U0_LOGIC_UNIT/test_se    
+    0:00:13  584526.2      0.00       0.0      19.2 U0_LOGIC_UNIT/test_se    
+    0:00:13  584526.2      0.00       0.0      19.2 U0_LOGIC_UNIT/test_se    
+    0:00:13  585123.9      0.00       0.0      18.3 U0_SHIFT_UNIT/test_se    
+    0:00:13  585123.9      0.00       0.0      18.3 U0_SHIFT_UNIT/test_se    
+    0:00:13  585123.9      0.00       0.0      18.3 U0_SHIFT_UNIT/test_se    
+    0:00:13  585422.7      0.00       0.0      17.7 U0_LOGIC_UNIT/test_se    
+    0:00:13  585422.7      0.00       0.0      17.7 U0_LOGIC_UNIT/test_se    
+    0:00:13  585422.7      0.00       0.0      17.7 U0_LOGIC_UNIT/test_se    
+    0:00:13  585721.6      0.00       0.0      17.1 U0_SHIFT_UNIT/test_se    
+    0:00:13  585721.6      0.00       0.0      17.1 U0_SHIFT_UNIT/test_se    
+    0:00:13  585721.6      0.00       0.0      17.1 U0_SHIFT_UNIT/test_se    
+    0:00:13  586020.4      0.00       0.0      16.5 U0_ARITHMETIC_UNIT/test_se
+    0:00:13  586020.4      0.00       0.0      16.5 U0_ARITHMETIC_UNIT/test_se
+    0:00:13  586020.4      0.00       0.0      16.5 U0_ARITHMETIC_UNIT/test_se
+    0:00:13  586169.8      0.00       0.0      16.0 U0_CMP_UNIT/test_se      
+    0:00:13  586468.6      0.00       0.0      14.3 U0_ARITHMETIC_UNIT/net5846
+    0:00:13  586468.6      0.00       0.0      14.3 U0_ARITHMETIC_UNIT/net5846
+    0:00:13  586468.6      0.00       0.0      14.3 U0_ARITHMETIC_UNIT/net5846
+    0:00:13  586767.5      0.00       0.0      12.7 U0_ARITHMETIC_UNIT/net5845
+    0:00:13  586767.5      0.00       0.0      12.7 U0_ARITHMETIC_UNIT/net5845
+    0:00:13  586767.5      0.00       0.0      12.7 U0_ARITHMETIC_UNIT/net5845
+    0:00:13  586916.9      0.00       0.0      11.2 U0_LOGIC_UNIT/net5853    
+    0:00:13  586916.9      0.00       0.0      11.2 U0_LOGIC_UNIT/net5853    
+    0:00:13  587066.3      0.00       0.0       9.8 U0_SHIFT_UNIT/net5861    
+    0:00:13  587066.3      0.00       0.0       9.8 U0_SHIFT_UNIT/net5861    
+    0:00:13  587215.7      0.00       0.0       8.7 U0_LOGIC_UNIT/net5856    
+    0:00:13  587215.7      0.00       0.0       8.7 U0_LOGIC_UNIT/net5856    
+    0:00:13  587365.1      0.00       0.0       7.7 U0_SHIFT_UNIT/net5864    
+    0:00:13  587365.1      0.00       0.0       7.7 U0_SHIFT_UNIT/net5864    
+    0:00:13  587514.5      0.00       0.0       7.3 U0_LOGIC_UNIT/test_se    
+    0:00:13  587813.4      0.00       0.0       6.7 U0_ARITHMETIC_UNIT/net5878
+    0:00:13  587813.4      0.00       0.0       6.7 U0_ARITHMETIC_UNIT/net5878
+    0:00:13  587813.4      0.00       0.0       6.7 U0_ARITHMETIC_UNIT/net5878
+    0:00:13  588112.2      0.00       0.0       6.0 U0_ARITHMETIC_UNIT/net5877
+    0:00:13  588112.2      0.00       0.0       6.0 U0_ARITHMETIC_UNIT/net5877
+    0:00:13  588112.2      0.00       0.0       6.0 U0_ARITHMETIC_UNIT/net5877
+    0:00:13  588261.6      0.00       0.0       5.8 U0_ARITHMETIC_UNIT/net5884
+    0:00:13  588411.0      0.00       0.0       5.6 U0_ARITHMETIC_UNIT/net5888
+    0:00:13  588560.4      0.00       0.0       5.5 U0_CMP_UNIT/net5881      
+    0:00:13  588709.8      0.00       0.0       5.3 U0_LOGIC_UNIT/net5856    
+    0:00:13  588859.3      0.00       0.0       5.1 U0_LOGIC_UNIT/net5855    
+    0:00:13  589008.7      0.00       0.0       5.0 U0_LOGIC_UNIT/net5854    
+    0:00:13  589158.1      0.00       0.0       4.8 U0_LOGIC_UNIT/net5853    
+    0:00:13  589307.5      0.00       0.0       4.6 U0_LOGIC_UNIT/net5891    
+    0:00:13  589456.9      0.00       0.0       4.5 U0_SHIFT_UNIT/net5864    
+    0:00:13  589606.3      0.00       0.0       4.3 U0_SHIFT_UNIT/net5863    
+    0:00:13  589755.7      0.00       0.0       4.1 U0_SHIFT_UNIT/net5862    
+    0:00:13  589905.2      0.00       0.0       3.9 U0_SHIFT_UNIT/net5861    
+    0:00:13  590054.6      0.00       0.0       3.8 U0_SHIFT_UNIT/net5893    
+    0:00:13  590204.0      0.00       0.0       3.6 U0_ARITHMETIC_UNIT/net5887
+    0:00:13  590353.4      0.00       0.0       3.4 U0_ARITHMETIC_UNIT/net5831
+    0:00:13  590502.8      0.00       0.0       3.3 U0_ARITHMETIC_UNIT/net5883
+    0:00:13  590652.2      0.00       0.0       3.1 U0_ARITHMETIC_UNIT/net5833
+    0:00:13  590801.6      0.00       0.0       3.0 U0_ARITHMETIC_UNIT/net5835
+    0:00:13  590951.1      0.00       0.0       2.8 U0_ARITHMETIC_UNIT/net5837
+    0:00:13  591100.5      0.00       0.0       2.7 U0_ARITHMETIC_UNIT/net5839
+    0:00:13  591249.9      0.00       0.0       2.5 U0_ARITHMETIC_UNIT/net5841
+    0:00:13  591399.3      0.00       0.0       2.4 U0_ARITHMETIC_UNIT/net5843
+    0:00:13  591548.7      0.00       0.0       2.1 U0_SHIFT_UNIT/test_se    
+    0:00:13  591698.1      0.00       0.0       2.0 U0_LOGIC_UNIT/net5870    
+    0:00:13  591698.1      0.00       0.0       2.0 U0_LOGIC_UNIT/net5870    
+    0:00:13  591847.6      0.00       0.0       1.9 U0_LOGIC_UNIT/net5899    
+    0:00:13  591997.0      0.00       0.0       1.7 U0_SHIFT_UNIT/net5874    
+    0:00:13  591997.0      0.00       0.0       1.7 U0_SHIFT_UNIT/net5874    
+    0:00:13  592146.4      0.00       0.0       1.6 U0_SHIFT_UNIT/net5953    
+    0:00:13  592295.8      0.00       0.0       1.6 U0_ARITHMETIC_UNIT/test_se
+
+
+  Beginning Phase 2 Design Rule Fixing  (max_transition)  (max_capacitance)
+  ------------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:13   24061.2      0.00       0.0       0.0                          
+
+1
+######################## Optimize Logic post DFT #######################
+compile -scan -incremental
+Information: Choosing a test methodology will restrict the optimization of sequential cells. (UIO-12)
+
+Information: There are 78 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+Warning: Operating condition scmetro_tsmc_cl013g_rvt_ss_1p08v_125c set on design ALU_TOP has different process,
+voltage and temperatures parameters than the parameters at which target library 
+scmetro_tsmc_cl013g_rvt_tt_1p2v_25c is characterized. Delays may be inaccurate as a result. (OPT-998)
+
+  Beginning Pass 1 Mapping  (Incremental)
+  ------------------------
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+
+  Beginning Mapping Optimizations  (Medium effort)  (Incremental)
+  -------------------------------
+
+  Beginning Incremental Implementation Selection
+  ----------------------------------------------
+  Selecting implementations
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:02   24050.6      0.00       0.0       0.0                          
+    0:00:02   24050.6      0.00       0.0       0.0                          
+    0:00:03   24050.6      0.00       0.0       0.0                          
+
+
+  Beginning Design Rule Fixing  (max_transition)
+  ----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:03   24050.6      0.00       0.0       0.0                          
+    0:00:03   24064.7      0.00       0.0       0.0                          
+Loading db file '/home/ICer/Labs/Lab_DFT_1/std_cells/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db'
+Loading db file '/home/ICer/Labs/Lab_DFT_1/std_cells/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db'
+Loading db file '/home/ICer/Labs/Lab_DFT_1/std_cells/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+1
+###################### Design Rule Checking post DFT ###################
+dft_drc -verbose -coverage_estimate
+In mode: Internal_scan...
+  Design has scan chains in this mode
+  Design is scan routed
+  Post-DFT DRC enabled
+
+Information: Starting test design rule checking. (TEST-222)
+  Loading test protocol
+  ...basic checks...
+  ...basic sequential cell checks...
+  ...checking vector rules...
+  ...checking clock rules...
+  ...checking scan chain rules...
+  ...checking scan compression rules...
+  ...checking X-state rules...
+  ...checking tristate rules...
+  ...extracting scan details...
+
+-----------------------------------------------------------------
+  DRC Report
+
+  Total violations: 0
+
+-----------------------------------------------------------------
+
+
+Test Design rule checking did not find violations
+
+-----------------------------------------------------------------
+  Sequential Cell Report
+
+  0 out of 71 sequential cells have violations
+
+-----------------------------------------------------------------
+
+SEQUENTIAL CELLS WITHOUT VIOLATIONS
+      *  71 cells are valid scan cells
+         U0_ARITHMETIC_UNIT/Arith_OUT_reg[4]
+         U0_ARITHMETIC_UNIT/Arith_OUT_reg[3]
+         U0_ARITHMETIC_UNIT/Arith_OUT_reg[2]
+         U0_ARITHMETIC_UNIT/Arith_OUT_reg[1]
+         U0_ARITHMETIC_UNIT/Arith_OUT_reg[0]
+         U0_ARITHMETIC_UNIT/Arith_OUT_reg[9]
+         U0_ARITHMETIC_UNIT/Arith_OUT_reg[8]
+         U0_ARITHMETIC_UNIT/Arith_OUT_reg[7]
+         U0_ARITHMETIC_UNIT/Arith_OUT_reg[6]
+         U0_ARITHMETIC_UNIT/Arith_Flag_reg
+         U0_ARITHMETIC_UNIT/Arith_OUT_reg[12]
+         U0_ARITHMETIC_UNIT/Arith_OUT_reg[11]
+         U0_ARITHMETIC_UNIT/Arith_OUT_reg[13]
+         U0_ARITHMETIC_UNIT/Arith_OUT_reg[14]
+         U0_ARITHMETIC_UNIT/Arith_OUT_reg[15]
+         U0_ARITHMETIC_UNIT/Carry_OUT_reg
+         U0_ARITHMETIC_UNIT/Arith_OUT_reg[16]
+         U0_ARITHMETIC_UNIT/Arith_OUT_reg[10]
+         U0_ARITHMETIC_UNIT/Arith_OUT_reg[17]
+         U0_ARITHMETIC_UNIT/Arith_OUT_reg[18]
+         U0_ARITHMETIC_UNIT/Arith_OUT_reg[19]
+         U0_ARITHMETIC_UNIT/Arith_OUT_reg[20]
+         U0_ARITHMETIC_UNIT/Arith_OUT_reg[21]
+         U0_ARITHMETIC_UNIT/Arith_OUT_reg[22]
+         U0_ARITHMETIC_UNIT/Arith_OUT_reg[23]
+         U0_ARITHMETIC_UNIT/Arith_OUT_reg[24]
+         U0_ARITHMETIC_UNIT/Arith_OUT_reg[25]
+         U0_ARITHMETIC_UNIT/Arith_OUT_reg[26]
+         U0_ARITHMETIC_UNIT/Arith_OUT_reg[27]
+         U0_ARITHMETIC_UNIT/Arith_OUT_reg[28]
+         U0_ARITHMETIC_UNIT/Arith_OUT_reg[29]
+         U0_ARITHMETIC_UNIT/Arith_OUT_reg[30]
+         U0_ARITHMETIC_UNIT/Arith_OUT_reg[31]
+         U0_ARITHMETIC_UNIT/Arith_OUT_reg[5]
+         U0_LOGIC_UNIT/Logic_Flag_reg
+         U0_LOGIC_UNIT/Logic_OUT_reg[9]
+         U0_LOGIC_UNIT/Logic_OUT_reg[4]
+         U0_LOGIC_UNIT/Logic_OUT_reg[2]
+         U0_LOGIC_UNIT/Logic_OUT_reg[15]
+         U0_LOGIC_UNIT/Logic_OUT_reg[14]
+         U0_LOGIC_UNIT/Logic_OUT_reg[8]
+         U0_LOGIC_UNIT/Logic_OUT_reg[7]
+         U0_LOGIC_UNIT/Logic_OUT_reg[6]
+         U0_LOGIC_UNIT/Logic_OUT_reg[0]
+         U0_LOGIC_UNIT/Logic_OUT_reg[13]
+         U0_LOGIC_UNIT/Logic_OUT_reg[12]
+         U0_LOGIC_UNIT/Logic_OUT_reg[11]
+         U0_LOGIC_UNIT/Logic_OUT_reg[10]
+         U0_LOGIC_UNIT/Logic_OUT_reg[5]
+         U0_LOGIC_UNIT/Logic_OUT_reg[1]
+         U0_LOGIC_UNIT/Logic_OUT_reg[3]
+         U0_SHIFT_UNIT/Shift_Flag_reg
+         U0_SHIFT_UNIT/Shift_OUT_reg[0]
+         U0_SHIFT_UNIT/Shift_OUT_reg[15]
+         U0_SHIFT_UNIT/Shift_OUT_reg[1]
+         U0_SHIFT_UNIT/Shift_OUT_reg[14]
+         U0_SHIFT_UNIT/Shift_OUT_reg[6]
+         U0_SHIFT_UNIT/Shift_OUT_reg[10]
+         U0_SHIFT_UNIT/Shift_OUT_reg[8]
+         U0_SHIFT_UNIT/Shift_OUT_reg[4]
+         U0_SHIFT_UNIT/Shift_OUT_reg[13]
+         U0_SHIFT_UNIT/Shift_OUT_reg[9]
+         U0_SHIFT_UNIT/Shift_OUT_reg[3]
+         U0_SHIFT_UNIT/Shift_OUT_reg[2]
+         U0_SHIFT_UNIT/Shift_OUT_reg[12]
+         U0_SHIFT_UNIT/Shift_OUT_reg[11]
+         U0_SHIFT_UNIT/Shift_OUT_reg[5]
+         U0_SHIFT_UNIT/Shift_OUT_reg[7]
+         U0_CMP_UNIT/CMP_Flag_reg
+         U0_CMP_UNIT/CMP_OUT_reg[1]
+         U0_CMP_UNIT/CMP_OUT_reg[0]
+
+....Inferring feed-through connections....
+Information: Test design rule checking completed. (TEST-123)
+  Running test coverage estimation...
+ 12334 faults were added to fault list.
+ ----------------------------------------------------------
+ #patterns     #faults     #ATPG faults  test      process
+ stored     detect/active  red/au/abort  coverage  CPU time
+ ---------  -------------  ------------  --------  --------
+ Begin deterministic ATPG: #uncollapsed_faults=11564, abort_limit=10...
+ 0            8506   3058         0/0/0    75.09%      0.01
+ 0            1397   1661         0/0/0    86.42%      0.02
+ 0             821    840         0/0/1    93.08%      0.02
+ 0             299    540         1/0/1    95.51%      0.03
+ 0             156    382         2/0/3    96.80%      0.03
+ 0             117    265         2/0/5    97.74%      0.04
+ 0             100    165         2/0/8    98.56%      0.05
+ 0              79     85        3/0/12    99.20%      0.06
+ 0              38     42        6/0/12    99.55%      0.06
+ 0              18     24        6/0/12    99.70%      0.06
+ 
+            Pattern Summary Report
+ -----------------------------------------------
+ #internal patterns                           0
+ -----------------------------------------------
+ 
+
+     Uncollapsed Stuck Fault Summary Report
+ -----------------------------------------------
+ fault class                     code   #faults
+ ------------------------------  ----  ---------
+ Detected                         DT      12284
+ Possibly detected                PT          0
+ Undetectable                     UD         13
+ ATPG untestable                  AU         13
+ Not detected                     ND         24
+ -----------------------------------------------
+ total faults                             12334
+ test coverage                            99.70%
+ -----------------------------------------------
+  Information: The test coverage above may be inferior
+               than the real test coverage with customized
+               protocol and test simulation library.
+1
+#############################################################################
+# Write out Design after initial compile
+#############################################################################
+#Avoid Writing assign statements in the netlist
+change_name -hier -rule verilog
+Warning: The specified replacement character (_) is conflicting with the specified allowed or restricted character.   (UCN-4)
+1
+write_file -format verilog -hierarchy -output ALU_dft.v
+Writing verilog file '/home/ICer/Labs/Lab_DFT_1/dft/ALU_dft.v'.
+1
+####################### reporting ##########################################
+report_area -hierarchy > area_dft.rpt
+report_power -hierarchy > power_dft.rpt
+report_timing -max_paths 100 -delay_type min > hold_dft.rpt
+report_timing -max_paths 100 -delay_type max > setup_dft.rpt
+report_clock -attributes > clocks_dft.rpt
+report_constraint -all_violators > constraints_dft.rpt
+################# starting graphical user interface #######################
+#gui_start
+#exit
+dc_shell> exit
+
+Memory usage for main task 300 Mbytes.
+Memory usage for this session 300 Mbytes.
+CPU usage for this session 20 seconds ( 0.01 hours ).
+
+Thank you...

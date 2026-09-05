@@ -1,0 +1,55 @@
+Loading db file '/home/ICer/Labs/Lab_DFT_2/std_cells/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db'
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+ 
+****************************************
+Report : power
+        -hier
+        -analysis_effort low
+Design : System_Top
+Version: O-2018.06-SP1
+Date   : Thu Aug 27 00:08:27 2026
+****************************************
+
+
+Library(s) Used:
+
+    scmetro_tsmc_cl013g_rvt_ss_1p08v_125c (File: /home/ICer/Labs/Lab_DFT_2/std_cells/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db)
+
+
+Operating Conditions: scmetro_tsmc_cl013g_rvt_ss_1p08v_125c   Library: scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+Wire Load Model Mode: top
+
+Design        Wire Load Model            Library
+------------------------------------------------
+System_Top             tsmc13_wl30       scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+
+Global Operating Voltage = 1.08 
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1pW
+
+
+--------------------------------------------------------------------------------
+                                       Switch   Int      Leak     Total
+Hierarchy                              Power    Power    Power    Power    %
+--------------------------------------------------------------------------------
+System_Top                                0.130 4.77e-02 9.32e+06    0.187 100.0
+  U0_ClkDiv (ClkDiv_test_1)            4.59e-03 7.49e-03 9.01e+05 1.30e-02   6.9
+    add_52 (ClkDiv_DW01_inc_0)         1.57e-04 4.11e-05 8.44e+04 2.82e-04   0.2
+  U0_CLK_GATE (CLK_GATE)               6.83e-03 2.19e-03 4.35e+04 9.07e-03   4.8
+  U0_RegFile (RegFile_test_1)          3.78e-02 2.93e-02 4.66e+06 7.18e-02  38.3
+  U0_ALU (ALU_test_1)                  1.40e-02 6.85e-03 3.59e+06 2.45e-02  13.0
+    mult_48 (ALU_DW02_mult_0)          3.51e-04 3.78e-05 7.47e+05 1.14e-03   0.6
+    add_42 (ALU_DW01_add_0)            5.38e-05 5.06e-05 2.02e+05 3.07e-04   0.2
+    sub_45 (ALU_DW01_sub_0)            7.36e-05 5.29e-05 2.31e+05 3.57e-04   0.2
+    div_51 (ALU_DW_div_uns_0)          5.53e-04 2.34e-04 1.29e+06 2.07e-03   1.1
+  U2_mux2X1 (mux2X1_0)                 3.81e-05 1.90e-05 1.37e+04 7.08e-05   0.0
+  U1_mux2X1 (mux2X1_2)                 5.09e-02 8.68e-04 2.11e+04 5.18e-02  27.6
+  U0_mux2X1 (mux2X1_1)                 1.43e-02 8.50e-04 2.11e+04 1.51e-02   8.1
+1
