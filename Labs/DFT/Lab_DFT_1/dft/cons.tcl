@@ -68,22 +68,22 @@ set DFT_CLK_LAT 0
 set DFT_CLK_RISE 0.05
 set DFT_CLK_FALL 0.05
 
-#create_clock -name $DFT_CLK_NAME -period $DFT_CLK_PER -waveform "0 [expr $DFT_CLK_PER/2]" [get_ports scan_clk]
-#set_clock_uncertainty -setup $DFT_CLK_SETUP_SKEW [get_clocks $DFT_CLK_NAME]
-#set_clock_uncertainty -hold $CLK_HOLD_SKEW  [get_clocks $DFT_CLK_NAME]
-#set_clock_transition -rise $DFT_CLK_RISE  [get_clocks $DFT_CLK_NAME]
-#set_clock_transition -fall $DFT_CLK_FALL  [get_clocks $DFT_CLK_NAME]
-#set_clock_latency $DFT_CLK_LAT [get_clocks $DFT_CLK_NAME]
+create_clock -name $DFT_CLK_NAME -period $DFT_CLK_PER -waveform "0 [expr $DFT_CLK_PER/2]" [get_ports scan_clk]
+set_clock_uncertainty -setup $DFT_CLK_SETUP_SKEW [get_clocks $DFT_CLK_NAME]
+set_clock_uncertainty -hold $CLK_HOLD_SKEW  [get_clocks $DFT_CLK_NAME]
+set_clock_transition -rise $DFT_CLK_RISE  [get_clocks $DFT_CLK_NAME]
+set_clock_transition -fall $DFT_CLK_FALL  [get_clocks $DFT_CLK_NAME]
+set_clock_latency $DFT_CLK_LAT [get_clocks $DFT_CLK_NAME]
 
-#set_dont_touch_network "$CLK_NAME $DFT_CLK_NAME"
+set_dont_touch_network "$CLK_NAME $DFT_CLK_NAME"
 ####################################################################################
            #########################################################
                   #### Section 2 : Clocks Relationships ####
            #########################################################
 ####################################################################################
 
-#set_clock_groups -logically_exclusive -group [get_clocks "$CLK_NAME"]     \
-#                                      -group [get_clocks "$DFT_CLK_NAME"] 
+set_clock_groups -logically_exclusive -group [get_clocks "$CLK_NAME"]     \
+                                      -group [get_clocks "$DFT_CLK_NAME"] 
 
 ####################################################################################
            #########################################################
@@ -103,9 +103,9 @@ set_input_delay $in_delay -clock $CLK_NAME [get_port B]
 set_input_delay $in_delay -clock $CLK_NAME [get_port ALU_FUNC]
 
 #Constrain Scan Input Paths
-#set_input_delay $in2_delay -clock $DFT_CLK_NAME [get_port test_mode]
-#set_input_delay $in2_delay -clock $DFT_CLK_NAME [get_port SI]
-#set_input_delay $in2_delay -clock $DFT_CLK_NAME [get_port SE]
+set_input_delay $in2_delay -clock $DFT_CLK_NAME [get_port test_mode]
+set_input_delay $in2_delay -clock $DFT_CLK_NAME [get_port SI]
+set_input_delay $in2_delay -clock $DFT_CLK_NAME [get_port SE]
 
 #Constrain Output Paths
 set_output_delay $out_delay -clock $CLK_NAME [get_port CMP_Flag]
@@ -119,7 +119,7 @@ set_output_delay $out_delay -clock $CLK_NAME [get_port Shift_Flag]
 set_output_delay $out_delay -clock $CLK_NAME [get_port CMP_OUT]
 
 #Constrain Scan Output Paths
-#set_output_delay $out2_delay -clock $DFT_CLK_NAME [get_port SO]
+set_output_delay $out2_delay -clock $DFT_CLK_NAME [get_port SO]
 
 ####################################################################################
            #########################################################
@@ -133,9 +133,9 @@ set_driving_cell -library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c -lib_cell BUFX2M
 set_driving_cell -library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c -lib_cell BUFX2M -pin Y [get_port ALU_FUNC]
 
 #scan ports
-#set_driving_cell -library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c -lib_cell BUFX2M -pin Y [get_port test_mode]
-#set_driving_cell -library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c -lib_cell BUFX2M -pin Y [get_port SI]
-#set_driving_cell -library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c -lib_cell BUFX2M -pin Y [get_port SE]
+set_driving_cell -library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c -lib_cell BUFX2M -pin Y [get_port test_mode]
+set_driving_cell -library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c -lib_cell BUFX2M -pin Y [get_port SI]
+set_driving_cell -library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c -lib_cell BUFX2M -pin Y [get_port SE]
 
 ####################################################################################
            #########################################################
@@ -155,7 +155,7 @@ set_load 0.5  [get_port Shift_Flag]
 set_load 0.5  [get_port CMP_OUT]
 
 #scan ports
-#set_load 0.5  [get_port SO]
+set_load 0.5  [get_port SO]
 
 ####################################################################################
            #########################################################
@@ -182,7 +182,7 @@ set_wire_load_model -name tsmc13_wl30 -library scmetro_tsmc_cl013g_rvt_ss_1p08v_
            #########################################################
 ####################################################################################
 
-#set_case_analysis 0 [get_port test_mode]
+set_case_analysis 0 [get_port test_mode]
 
 ####################################################################################
 

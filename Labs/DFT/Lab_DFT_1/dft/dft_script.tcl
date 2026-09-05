@@ -38,7 +38,7 @@ set file_format verilog
 read_file -format $file_format ARITHMETIC_UNIT.v
 read_file -format $file_format CMP_UNIT.v
 read_file -format $file_format Decoder.v
-#read_file -format $file_format mux2X1.v
+read_file -format $file_format mux2X1.v
 read_file -format $file_format LOGIC_UNIT.v
 read_file -format $file_format SHIFT_UNIT.v
 read_file -format $file_format ALU_TOP.v
@@ -97,31 +97,38 @@ set test_default_strobe_width 0
 
 ########################## Define DFT Signals ##########################
 
+set_dft_signal -port [get_ports scan_clk] -type ScanClock -view existing_dft -timing {30 60}
+set_dft_signal -port [get_ports scan_rst] -type Reset -view existing_dft -active_state 0
+set_dft_signal -port [get_ports test_mode] -type Constant -view existing_dft -active_state 1
+set_dft_signal -port [get_ports test_mode] -type TestMode -view spec -active_state 1
+set_dft_signal -port [get_ports SE] -type ScanEnable -view spec -active_state 1 -usage scan
+set_dft_signal -port [get_ports SI] -type ScanDataIn -view spec 
+set_dft_signal -port [get_ports SO] -type ScanDataOut -view spec 
 
 ############################# Create Test Protocol #####################
 
-
+create_test_protocol
                             
 ###################### Pre-DFT Design Rule Checking ####################
 
-
+dft_drc -verbose
 
 ############################# Preview DFT ##############################
 
-
+preview_dft -show scan_summary
 
 
 ############################# Insert DFT ###############################
 
-
+insert_dft
 
 ######################## Optimize Logic post DFT #######################
 
-
+compile -scan -incremental
 
 ###################### Design Rule Checking post DFT ###################
 
-
+dft_drc -verbose -coverage_estimate
 
 #############################################################################
 # Write out Design after initial compile

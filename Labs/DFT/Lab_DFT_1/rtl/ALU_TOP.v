@@ -9,6 +9,12 @@ module ALU_TOP
 )
 
 (
+input  wire                        SI,
+input  wire                        SE,
+input  wire                        test_mode,
+input  wire                        scan_clk,
+input  wire                        scan_rst,
+output  wire                       SO,
 input  wire [OP_DATA_WIDTH-1:0]    A   ,
 input  wire [OP_DATA_WIDTH-1:0]    B   ,
 input  wire [3:0]                  ALU_FUNC ,
@@ -30,7 +36,22 @@ wire                  CMP_enable ;
 wire                  Shift_enable ;
 wire                  Logic_enable ;
 wire                  Arith_enable ;
+wire                  CLK_M ;
+wire                  RST_M ;
 
+mux2X1 mux2X1_CLK_SCAN (
+    .IN_0(CLK),
+    .IN_1(scan_clk),
+    .SEL(test_mode),
+    .OUT(CLK_M)
+);
+
+mux2X1 mux2X1_RST_SCAN (
+    .IN_0(RST),
+    .IN_1(scan_rst),
+    .SEL(test_mode),
+    .OUT(RST_M)
+);
 
 Decoder U0 (
 .IN(ALU_FUNC[3:2]),
@@ -41,8 +62,8 @@ ARITHMETIC_UNIT # ( .IN_DATA_WIDTH(OP_DATA_WIDTH), .OUT_DATA_WIDTH(Arith_OUT_WID
 .A(A),
 .B(B),
 .ALU_FUNC(ALU_FUNC[1:0]),
-.CLK(CLK),
-.RST(RST),
+.CLK(CLK_M),
+.RST(RST_M),
 .Arith_enable(Arith_enable),
 .Arith_OUT(Arith_OUT),
 .Carry_OUT(Carry_OUT),
@@ -53,8 +74,8 @@ LOGIC_UNIT # ( .IN_DATA_WIDTH(OP_DATA_WIDTH), .OUT_DATA_WIDTH(Logic_OUT_WIDTH)) 
 .A(A),
 .B(B),
 .ALU_FUNC(ALU_FUNC[1:0]),
-.CLK(CLK),
-.RST(RST),
+.CLK(CLK_M),
+.RST(RST_M),
 .Logic_enable(Logic_enable),
 .Logic_OUT(Logic_OUT),
 .Logic_Flag(Logic_Flag)
@@ -64,8 +85,8 @@ SHIFT_UNIT # ( .IN_DATA_WIDTH(OP_DATA_WIDTH), .OUT_DATA_WIDTH(Shift_OUT_WIDTH)) 
 .A(A),
 .B(B),
 .ALU_FUNC(ALU_FUNC[1:0]),
-.CLK(CLK),
-.RST(RST),
+.CLK(CLK_M),
+.RST(RST_M),
 .Shift_enable(Shift_enable),
 .Shift_OUT(Shift_OUT),
 .Shift_Flag(Shift_Flag)
@@ -75,8 +96,8 @@ CMP_UNIT # ( .IN_DATA_WIDTH(OP_DATA_WIDTH), .OUT_DATA_WIDTH(CMP_OUT_WIDTH)) U0_C
 .A(A),
 .B(B),
 .ALU_FUNC(ALU_FUNC[1:0]),
-.CLK(CLK),
-.RST(RST),
+.CLK(CLK_M),
+.RST(RST_M),
 .CMP_enable(CMP_enable),
 .CMP_OUT(CMP_OUT),
 .CMP_Flag(CMP_Flag)
