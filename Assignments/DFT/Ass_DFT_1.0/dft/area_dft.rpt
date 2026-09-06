@@ -1,0 +1,53 @@
+ 
+****************************************
+Report : area
+Design : UART_TX_TOP
+Version: O-2018.06-SP1
+Date   : Sun Sep  6 08:40:30 2026
+****************************************
+
+Information: Updating design information... (UID-85)
+Warning: Clock port 'DFTCLK' is assigned input delay relative to clock 'CLK'. (TIM-111)
+Warning: Clock port 'DFTCLK' is assigned input delay relative to clock 'CLK'. (TIM-111)
+Information: There are 16 clock pins driven by multiple clocks, and some of them are driven by up-to 2 clocks. (TIM-099)
+Library(s) Used:
+
+    scmetro_tsmc_cl013g_rvt_ss_1p08v_125c (File: /home/ICer/Digital-ASIC-Design-Coursework/Assignments/DFT/Ass_DFT_1.0/std_cells/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db)
+
+Number of ports:                           81
+Number of nets:                           156
+Number of cells:                           84
+Number of combinational cells:             60
+Number of sequential cells:                18
+Number of macros/black boxes:               0
+Number of buf/inv:                         12
+Number of references:                       6
+
+Combinational area:                463.619805
+Buf/Inv area:                       42.361201
+Noncombinational area:             527.161621
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:                   990.781426
+Total area:                 undefined
+
+Hierarchical area distribution
+------------------------------
+
+                                  Global cell area          Local cell area
+                                  ------------------  --------------------------- 
+Hierarchical cell                 Absolute   Percent  Combi-    Noncombi-  Black-
+                                  Total      Total    national  national   boxes   Design
+--------------------------------  ---------  -------  --------  ---------  ------  ------------------
+UART_TX_TOP                        990.7814    100.0    0.0000     0.0000  0.0000  UART_TX_TOP
+FSM_Block                          185.9186     18.8   87.0758    98.8428  0.0000  UART_TX_FSM_test_1
+Mux_4X1_BLock                       34.1243      3.4   34.1243     0.0000  0.0000  Mux_4X1
+Parity_Calc_Block                  131.7904     13.3   98.8428    32.9476  0.0000  Parity_Calc_test_1
+Serializer_Block                   615.4141     62.1  220.0429   395.3712  0.0000  Serializer_test_1
+mux2X1_CLK_SCAN                     11.7670      1.2   11.7670     0.0000  0.0000  mux2X1_1
+mux2X1_RST_SCAN                     11.7670      1.2   11.7670     0.0000  0.0000  mux2X1_0
+--------------------------------  ---------  -------  --------  ---------  ------  ------------------
+Total                                                 463.6198   527.1616  0.0000
+
+1
