@@ -1,6 +1,6 @@
 #@ # 
 #@ # Running dc_shell Version O-2018.06-SP1 for linux64 -- Jul 19, 2018
-#@ # Date:   Sun Sep  6 08:40:18 2026
+#@ # Date:   Sun Sep  6 10:11:37 2026
 #@ # Run by: ICer@IC_EDA
 #@ 
 
@@ -6636,6 +6636,10 @@ source -echo -verbose /mnt/hgfs/Digital-ASIC-Design-Coursework/Assignments/DFT/A
 #@ 
 #@ define_design_lib work -path ./work
 #@ 
+#@ ########################### Formality Setup file ############################
+#@ 
+#@ set_svf UART_TX.svf
+#@ 
 #@ ################## Design Compiler Library Files #setup ######################
 #@ 
 #@ lappend search_path /home/ICer/Digital-ASIC-Design-Coursework/Assignments/DFT/Ass_DFT_1.0/std_cells
@@ -6856,6 +6860,10 @@ source -echo -verbose /mnt/hgfs/Digital-ASIC-Design-Coursework/Assignments/DFT/A
 #@ puts "###############################################"
 #@ 
 #@ compile -map_effort high
+#@ 
+#@ ##################### Close Formality Setup file ###########################
+#@ 
+#@ set_svf -off
 #@ 
 #@ ################################################################### 
 #@ # Setting Test Timing Variables

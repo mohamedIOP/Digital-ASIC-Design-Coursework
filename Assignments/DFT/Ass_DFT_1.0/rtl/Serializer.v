@@ -13,7 +13,7 @@ module Serializer (
     end
     always @(*) begin
         serDone = counterMax;
-        serData = pDataReg[counter];
+        serData = pDataReg[counter[2:0]];
     end
     always @(posedge CLK or negedge RST) begin
         if (!RST) begin

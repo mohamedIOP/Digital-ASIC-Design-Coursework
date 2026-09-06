@@ -26,6 +26,9 @@ UART_TX_TOP
 ##################### Define Working Library Directory ######################
 define_design_lib work -path ./work
 1
+########################### Formality Setup file ############################
+set_svf UART_TX.svf
+1
 ################## Design Compiler Library Files #setup ######################
 lappend search_path /home/ICer/Digital-ASIC-Design-Coursework/Assignments/DFT/Ass_DFT_1.0/std_cells
 . /home/synopsys/syn/O-2018.06-SP1/libraries/syn /home/synopsys/syn/O-2018.06-SP1/minpower/syn /home/synopsys/syn/O-2018.06-SP1/dw/syn_ver /home/synopsys/syn/O-2018.06-SP1/dw/sim_ver /home/ICer/Digital-ASIC-Design-Coursework/Assignments/DFT/Ass_DFT_1.0/std_cells
@@ -182,7 +185,7 @@ check_design
 ****************************************
 check_design summary:
 Version:     O-2018.06-SP1
-Date:        Sun Sep  6 08:40:20 2026
+Date:        Sun Sep  6 10:11:39 2026
 ****************************************
 
                    Name                                            Total
@@ -502,6 +505,9 @@ Note: Symbol # after min delay cost means estimated hold TNS across all active s
   Optimization Complete
   ---------------------
 1
+##################### Close Formality Setup file ###########################
+set_svf -off
+1
 ################################################################### 
 # Setting Test Timing Variables
 ################################################################### 
@@ -614,7 +620,7 @@ Preview_dft report
 For    : 'Insert_dft' command
 Design : UART_TX_TOP
 Version: O-2018.06-SP1
-Date   : Sun Sep  6 08:40:25 2026
+Date   : Sun Sep  6 10:11:44 2026
 ****************************************
 
 Number of chains: 1
@@ -763,6 +769,15 @@ SEQUENTIAL CELLS WITHOUT VIOLATIONS
 Information: Test design rule checking completed. (TEST-123)
   Running test coverage estimation...
  702 faults were added to fault list.
+ 0             458     92         0/0/0    85.33%      0.00
+ 0              81     10         1/0/0    97.00%      0.00
+ 0              10      0         1/0/0    98.43%      0.00
+ 
+            Pattern Summary Report
+ -----------------------------------------------
+ #internal patterns                           0
+ -----------------------------------------------
+ 
 
      Uncollapsed Stuck Fault Summary Report
  -----------------------------------------------

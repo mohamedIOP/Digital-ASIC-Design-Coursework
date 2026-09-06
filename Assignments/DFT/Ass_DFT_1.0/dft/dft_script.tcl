@@ -7,6 +7,10 @@ set top_module UART_TX_TOP
                                                    
 define_design_lib work -path ./work
 
+########################### Formality Setup file ############################
+
+set_svf UART_TX.svf
+
 ################## Design Compiler Library Files #setup ######################
 
 lappend search_path /home/ICer/Digital-ASIC-Design-Coursework/Assignments/DFT/Ass_DFT_1.0/std_cells
@@ -77,6 +81,10 @@ puts "########## Mapping & Optimization #############"
 puts "###############################################"
 
 compile -map_effort high
+
+##################### Close Formality Setup file ###########################
+
+set_svf -off
 
 ################################################################### 
 # Setting Test Timing Variables

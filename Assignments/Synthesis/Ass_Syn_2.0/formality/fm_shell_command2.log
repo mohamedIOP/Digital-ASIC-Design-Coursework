@@ -1,0 +1,59 @@
+#@ # 
+#@ # Running fm_shell Version L-2016.03-SP1 for linux64 -- Apr 13, 2016
+#@ # Date:   Sun Sep  6 10:06:25 2026
+#@ # Run by: ICer@IC_EDA
+#@ 
+
+source /home/synopsys/Formality2016/admin/setup/.synopsys_fm.setup
+#@ # -- Starting source /home/synopsys/Formality2016/admin/setup/.synopsys_fm.setup
+
+#@ #
+#@ # .synopsys_fm.setup: Initialization File for Formality
+#@ #
+#@ 
+#@ 
+#@ #
+#@ # Enable stack trace output on fatal.  Not available for all architectures.
+#@ #
+#@ if { $sh_arch == "sparc" || $sh_arch == "sparcOS5" ||      $sh_arch == "hp700" || $sh_arch == "hpux10" } {
+#@   set_unix_variable SYNOPSYS_TRACE ""
+#@ }
+#@ 
+#@ #
+#@ # Variable settings
+#@ #
+#@ set sh_new_variable_message true
+#@ 
+#@ #
+#@ # Synopsys strongly recommends that you uncomment the following command
+#@ # in order to set sh_command_abbrev_mode to the value "Command-Line-Only".
+#@ # Command abbreviation is intended as an interactive convenience.  Using
+#@ # abbreviations in scripts can cause commands to fail in subsequent releases.
+#@ # 
+#@ #set sh_command_abbrev_mode "Command-Line-Only"
+#@ 
+#@ #
+#@ # Some useful aliases
+#@ #
+#@ alias list_commands		help
+#@ 
+#@ #
+#@ # The alias of q to quit is commented out.  Remove the comment 
+#@ # character if you want this alias.  Some users find that having 
+#@ # this particular alias causes problems when mixed with page-mode
+#@ # for reports - an accidental repeated 'q' not only cancels the
+#@ # output but exits the tool.
+#@ #
+#@ #alias q quit
+#@ # -- End source /home/synopsys/Formality2016/admin/setup/.synopsys_fm.setup
+
+set_svf -append { /mnt/hgfs/Digital-ASIC-Design-Coursework/Assignments/Synthesis/Ass_Syn_2.0/syn/UART_TX.svf } 
+read_verilog -container r -libname WORK -05 { /mnt/hgfs/Digital-ASIC-Design-Coursework/Assignments/Synthesis/Ass_Syn_2.0/rtl/Mux_4X1.v /mnt/hgfs/Digital-ASIC-Design-Coursework/Assignments/Synthesis/Ass_Syn_2.0/rtl/parity_Calc.v /mnt/hgfs/Digital-ASIC-Design-Coursework/Assignments/Synthesis/Ass_Syn_2.0/rtl/Serializer.v /mnt/hgfs/Digital-ASIC-Design-Coursework/Assignments/Synthesis/Ass_Syn_2.0/rtl/UART_TX_TOP.v } 
+read_sverilog -container r -libname WORK -12 { /mnt/hgfs/Digital-ASIC-Design-Coursework/Assignments/Synthesis/Ass_Syn_2.0/rtl/UART_TX_FSM.sv } 
+read_db { /mnt/hgfs/Digital-ASIC-Design-Coursework/Assignments/Synthesis/Ass_Syn_2.0/std_cells/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db } 
+set_top r:/WORK/UART_TX_TOP 
+read_verilog -container i -libname WORK -05 { /mnt/hgfs/Digital-ASIC-Design-Coursework/Assignments/Synthesis/Ass_Syn_2.0/syn/UART_TX_TOP_Netlist.v } 
+read_db { /mnt/hgfs/Digital-ASIC-Design-Coursework/Assignments/Synthesis/Ass_Syn_2.0/std_cells/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db } 
+set_top i:/WORK/UART_TX_TOP 
+match 
+verify 
