@@ -11,7 +11,7 @@
 # 4. Clock Transitions
 ####################################################################################
 set CLK_NAME MASTER_CLK
-set CLK_PER 4.5
+set CLK_PER 5.75
 set CLK_SETUP_SKEW 0.2
 set CLK_HOLD_SKEW 0.1
 set CLK_LAT 0

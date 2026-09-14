@@ -15,8 +15,8 @@ set REPORTS_DIR reports
 
 ################## Design Compiler Library Files #setup ######################
 
-lappend search_path /home/ICer/Digital-ASIC-Design-Coursework/Assignments/Synthesis/Ass_Syn_3.0/std_cells
-lappend search_path /home/ICer/Digital-ASIC-Design-Coursework/Assignments/Synthesis/Ass_Syn_3.0/rtl
+lappend search_path /home/ICer/Digital-ASIC-Design-Coursework/Assignments/Synthesis/Ass_Syn_3.0_Before_Pipeline/Ass_Syn_3.0/std_cells
+lappend search_path /home/ICer/Digital-ASIC-Design-Coursework/Assignments/Synthesis/Ass_Syn_3.0_Before_Pipeline/Ass_Syn_3.0/rtl
 
 set SSLIB "scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db"
 set TTLIB "scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db"

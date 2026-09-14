@@ -1,0 +1,590 @@
+
+                           Design Compiler Graphical 
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+
+               Version O-2018.06-SP1 for linux64 - Jul 19, 2018 
+
+                    Copyright (c) 1988 - 2018 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+Initializing...
+Initializing gui preferences from file  /home/ICer/.synopsys_dv_prefs.tcl
+########################### Define Top Module ############################
+set top_module alu8_top
+alu8_top
+##################### Define Working Library Directory ######################
+define_design_lib work -path ./work
+1
+######################## Output Directories Setup ############################
+file mkdir results
+file mkdir reports
+set RESULTS_DIR results
+results
+set REPORTS_DIR reports
+reports
+################## Design Compiler Library Files #setup ######################
+lappend search_path /home/ICer/Digital-ASIC-Design-Coursework/Assignments/Synthesis/Ass_Syn_3.0/std_cells
+. /home/synopsys/syn/O-2018.06-SP1/libraries/syn /home/synopsys/syn/O-2018.06-SP1/minpower/syn /home/synopsys/syn/O-2018.06-SP1/dw/syn_ver /home/synopsys/syn/O-2018.06-SP1/dw/sim_ver /home/ICer/Digital-ASIC-Design-Coursework/Assignments/Synthesis/Ass_Syn_3.0/std_cells
+lappend search_path /home/ICer/Digital-ASIC-Design-Coursework/Assignments/Synthesis/Ass_Syn_3.0/rtl
+. /home/synopsys/syn/O-2018.06-SP1/libraries/syn /home/synopsys/syn/O-2018.06-SP1/minpower/syn /home/synopsys/syn/O-2018.06-SP1/dw/syn_ver /home/synopsys/syn/O-2018.06-SP1/dw/sim_ver /home/ICer/Digital-ASIC-Design-Coursework/Assignments/Synthesis/Ass_Syn_3.0/std_cells /home/ICer/Digital-ASIC-Design-Coursework/Assignments/Synthesis/Ass_Syn_3.0/rtl
+set SSLIB "scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db"
+scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db
+set TTLIB "scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db"
+scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db
+set FFLIB "scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db"
+scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db
+## Standard Cell libraries
+set target_library [list $SSLIB $TTLIB $FFLIB]
+scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db
+## Standard Cell & Hard Macros libraries
+set link_library [list * $SSLIB $TTLIB $FFLIB]
+* scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db
+#echo "###############################################"
+#echo "############# Reading RTL Files  ##############"
+#echo "###############################################"
+set file_format verilog
+verilog
+read_file -format $file_format alu8_top.v
+Loading db file '/home/ICer/Digital-ASIC-Design-Coursework/Assignments/Synthesis/Ass_Syn_3.0/std_cells/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db'
+Loading db file '/home/ICer/Digital-ASIC-Design-Coursework/Assignments/Synthesis/Ass_Syn_3.0/std_cells/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db'
+Loading db file '/home/ICer/Digital-ASIC-Design-Coursework/Assignments/Synthesis/Ass_Syn_3.0/std_cells/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db'
+Loading db file '/home/synopsys/syn/O-2018.06-SP1/libraries/syn/gtech.db'
+Loading db file '/home/synopsys/syn/O-2018.06-SP1/libraries/syn/standard.sldb'
+  Loading link library 'scmetro_tsmc_cl013g_rvt_ss_1p08v_125c'
+  Loading link library 'scmetro_tsmc_cl013g_rvt_tt_1p2v_25c'
+  Loading link library 'scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c'
+  Loading link library 'gtech'
+Loading verilog file '/home/ICer/Digital-ASIC-Design-Coursework/Assignments/Synthesis/Ass_Syn_3.0/rtl/alu8_top.v'
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /home/ICer/Digital-ASIC-Design-Coursework/Assignments/Synthesis/Ass_Syn_3.0/rtl/alu8_top.v
+Presto compilation completed successfully.
+Current design is now '/home/ICer/Digital-ASIC-Design-Coursework/Assignments/Synthesis/Ass_Syn_3.0/rtl/alu8_top.db:alu8_top'
+Loaded 1 design.
+Current design is 'alu8_top'.
+alu8_top
+read_file -format $file_format add_unit.v
+Loading verilog file '/home/ICer/Digital-ASIC-Design-Coursework/Assignments/Synthesis/Ass_Syn_3.0/rtl/add_unit.v'
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /home/ICer/Digital-ASIC-Design-Coursework/Assignments/Synthesis/Ass_Syn_3.0/rtl/add_unit.v
+
+Inferred memory devices in process
+	in routine add_unit line 19 in file
+		'/home/ICer/Digital-ASIC-Design-Coursework/Assignments/Synthesis/Ass_Syn_3.0/rtl/add_unit.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     en_reg_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine add_unit line 36 in file
+		'/home/ICer/Digital-ASIC-Design-Coursework/Assignments/Synthesis/Ass_Syn_3.0/rtl/add_unit.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      valid_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|      cout_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|       sum_reg       | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Current design is now '/home/ICer/Digital-ASIC-Design-Coursework/Assignments/Synthesis/Ass_Syn_3.0/rtl/add_unit.db:add_unit'
+Loaded 1 design.
+Current design is 'add_unit'.
+add_unit
+read_file -format $file_format mult_unit.v
+Loading verilog file '/home/ICer/Digital-ASIC-Design-Coursework/Assignments/Synthesis/Ass_Syn_3.0/rtl/mult_unit.v'
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /home/ICer/Digital-ASIC-Design-Coursework/Assignments/Synthesis/Ass_Syn_3.0/rtl/mult_unit.v
+
+Inferred memory devices in process
+	in routine mult_unit line 18 in file
+		'/home/ICer/Digital-ASIC-Design-Coursework/Assignments/Synthesis/Ass_Syn_3.0/rtl/mult_unit.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      b_reg_reg      | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     en_reg_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|      a_reg_reg      | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine mult_unit line 137 in file
+		'/home/ICer/Digital-ASIC-Design-Coursework/Assignments/Synthesis/Ass_Syn_3.0/rtl/mult_unit.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+| pipeline_level3_reg | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine mult_unit line 147 in file
+		'/home/ICer/Digital-ASIC-Design-Coursework/Assignments/Synthesis/Ass_Syn_3.0/rtl/mult_unit.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      valid_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     product_reg     | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Current design is now '/home/ICer/Digital-ASIC-Design-Coursework/Assignments/Synthesis/Ass_Syn_3.0/rtl/mult_unit.db:mult_unit'
+Loaded 1 design.
+Current design is 'mult_unit'.
+mult_unit
+###################### Defining toplevel ###################################
+current_design $top_module
+Current design is 'alu8_top'.
+{alu8_top}
+#################### Linking All The Design Parts #########################
+puts "###############################################"
+###############################################
+puts "######## Linking All The Design Parts #########"
+######## Linking All The Design Parts #########
+puts "###############################################"
+###############################################
+link
+
+  Linking design 'alu8_top'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  * (3 designs)               /home/ICer/Digital-ASIC-Design-Coursework/Assignments/Synthesis/Ass_Syn_3.0/rtl/alu8_top.db, etc
+  scmetro_tsmc_cl013g_rvt_ss_1p08v_125c (library) /home/ICer/Digital-ASIC-Design-Coursework/Assignments/Synthesis/Ass_Syn_3.0/std_cells/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db
+  scmetro_tsmc_cl013g_rvt_tt_1p2v_25c (library) /home/ICer/Digital-ASIC-Design-Coursework/Assignments/Synthesis/Ass_Syn_3.0/std_cells/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db
+  scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c (library) /home/ICer/Digital-ASIC-Design-Coursework/Assignments/Synthesis/Ass_Syn_3.0/std_cells/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db
+
+1
+#################### Checking Design Consistency ###########################
+puts "###############################################"
+###############################################
+puts "######## checking design consistency ##########"
+######## checking design consistency ##########
+puts "###############################################"
+###############################################
+check_design > $REPORTS_DIR/check_design.rpt
+############################### Path groups ################################
+puts "###############################################"
+###############################################
+puts "################ Path groups ##################"
+################ Path groups ##################
+puts "###############################################"
+###############################################
+group_path -name INREG  -from [all_inputs]
+1
+group_path -name REGOUT -to   [all_outputs]
+1
+group_path -name INOUT  -from [all_inputs] -to [all_outputs]
+1
+#################### Define Design Constraints #########################
+puts "###############################################"
+###############################################
+puts "############ Design Constraints #### ##########"
+############ Design Constraints #### ##########
+puts "###############################################"
+###############################################
+source -echo ./cons.tcl
+####################################################################################
+#########################################################
+#### Section 1 : Clock Definition ####
+#########################################################
+#################################################################################### 
+# 1. Master Clock Definitions 
+# 2. Generated Clock Definitions
+# 3. Clock Latencies
+# 4. Clock Uncertainties
+# 4. Clock Transitions
+####################################################################################
+set CLK_NAME MASTER_CLK
+set CLK_PER 4.5
+set CLK_SETUP_SKEW 0.2
+set CLK_HOLD_SKEW 0.1
+set CLK_LAT 0
+set CLK_RISE 0.05
+set CLK_FALL 0.05
+create_clock -name $CLK_NAME -period $CLK_PER -waveform "0 [expr $CLK_PER/2]" [get_ports clk]
+set_clock_uncertainty -setup $CLK_SETUP_SKEW [get_clocks $CLK_NAME]
+set_clock_uncertainty -hold $CLK_HOLD_SKEW  [get_clocks $CLK_NAME]
+set_clock_transition -rise $CLK_RISE  [get_clocks $CLK_NAME]
+set_clock_transition -fall $CLK_FALL  [get_clocks $CLK_NAME]
+set_clock_latency $CLK_LAT [get_clocks $CLK_NAME]
+set_dont_touch_network clk
+set_dont_touch_network rst_n
+####################################################################################
+#########################################################
+#### Section 3 : set input/output delay on ports ####
+set in_delay  [expr 0.2*$CLK_PER]
+set out_delay [expr 0.2*$CLK_PER]
+#Constrain Input Paths
+set_input_delay $in_delay -clock MASTER_CLK [get_port mode]
+set_input_delay $in_delay -clock MASTER_CLK [get_port add_en]
+set_input_delay $in_delay -clock MASTER_CLK [get_port mul_en]
+set_input_delay $in_delay -clock MASTER_CLK [get_port a]
+set_input_delay $in_delay -clock MASTER_CLK [get_port b]
+#Constrain Output Paths
+set_output_delay $out_delay -clock MASTER_CLK [get_port result]
+set_output_delay $out_delay -clock MASTER_CLK [get_port valid]
+####################################################################################
+#########################################################
+#### Section 4 : Driving cells ####
+#########################################################
+####################################################################################
+set_driving_cell -library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c -lib_cell BUFX2M -pin Y [get_port mode]
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+set_driving_cell -library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c -lib_cell BUFX2M -pin Y [get_port add_en]
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+set_driving_cell -library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c -lib_cell BUFX2M -pin Y [get_port mul_en]
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+set_driving_cell -library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c -lib_cell BUFX2M -pin Y [get_port a]
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+set_driving_cell -library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c -lib_cell BUFX2M -pin Y [get_port b]
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+####################################################################################
+#########################################################
+#### Section 5 : Output load ####
+#########################################################
+####################################################################################
+set_load 0.5 [get_port result]
+set_load 0.5 [get_port valid]
+####################################################################################
+#########################################################
+#### Section 6 : Operating Condition ####
+#########################################################
+####################################################################################
+# Define the Worst Library for Max(#setup) analysis
+# Define the Best Library for Min(hold) analysis
+set_operating_conditions -min_library "scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c"                          -min "scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c" 						 -max_library "scmetro_tsmc_cl013g_rvt_ss_1p08v_125c" 						 -max "scmetro_tsmc_cl013g_rvt_ss_1p08v_125c"
+Using operating conditions 'scmetro_tsmc_cl013g_rvt_ss_1p08v_125c' found in library 'scmetro_tsmc_cl013g_rvt_ss_1p08v_125c'.
+Using operating conditions 'scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c' found in library 'scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c'.
+####################################################################################
+#########################################################
+#### Section 7 : wireload Model ####
+#########################################################
+####################################################################################
+set_wire_load_model -name tsmc13_wl30 -library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+1
+###################### Mapping and optimization ########################
+puts "###############################################"
+###############################################
+puts "########## Mapping & Optimization #############"
+########## Mapping & Optimization #############
+puts "###############################################"
+###############################################
+compile -map_effort high
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | O-2018.06-DWBB_201806.1 |     *     |
+| Licensed DW Building Blocks        |                         |           |
+============================================================================
+
+
+Warning: Operating condition scmetro_tsmc_cl013g_rvt_ss_1p08v_125c set on design alu8_top has different process,
+voltage and temperatures parameters than the parameters at which target library 
+scmetro_tsmc_cl013g_rvt_tt_1p2v_25c is characterized. Delays may be inaccurate as a result. (OPT-998)
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'mult_unit'
+Information: The register 'pipeline_level3_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'pipeline_level3_reg[14]' is a constant and will be removed. (OPT-1206)
+Information: The register 'pipeline_level3_reg[13]' is a constant and will be removed. (OPT-1206)
+Information: The register 'pipeline_level3_reg[12]' is a constant and will be removed. (OPT-1206)
+  Processing 'add_unit'
+  Processing 'alu8_top'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+
+  Beginning Implementation Selection
+  ----------------------------------
+  Processing 'add_unit_DW01_add_0'
+  Processing 'mult_unit_DW01_add_0'
+  Processing 'mult_unit_DW01_add_1'
+  Processing 'mult_unit_DW01_add_2'
+  Processing 'mult_unit_DW01_add_3'
+  Processing 'mult_unit_DW01_add_4'
+  Processing 'mult_unit_DW01_add_5'
+  Processing 'mult_unit_DW01_add_6'
+
+  Beginning Mapping Optimizations  (High effort)
+  -------------------------------
+Loading db file '/home/ICer/Digital-ASIC-Design-Coursework/Assignments/Synthesis/Ass_Syn_3.0/std_cells/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db'
+Loading db file '/home/ICer/Digital-ASIC-Design-Coursework/Assignments/Synthesis/Ass_Syn_3.0/std_cells/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db'
+  Mapping Optimization (Phase 1)
+  Mapping Optimization (Phase 2)
+  Mapping Optimization (Phase 3)
+  Mapping Optimization (Phase 4)
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:06   12557.7      1.55      17.2       1.5                          
+    0:00:06   12509.5      1.60      23.8       1.7                          
+    0:00:06   12509.5      1.60      23.8       1.7                          
+    0:00:06   12502.4      1.60      23.8       1.7                          
+    0:00:06   12502.4      1.60      23.8       1.7                          
+    0:00:07    8424.0      5.30     102.0       0.7                          
+    0:00:07    8970.0      4.17      68.5       0.2                          
+    0:00:07    8887.6      3.37      56.6       0.2                          
+    0:00:07    9057.1      3.72      65.0       0.2                          
+    0:00:07    9208.9      3.27      49.3       0.2                          
+    0:00:07    9265.3      3.18      49.9       0.2                          
+    0:00:07    9281.8      3.15      49.3       0.2                          
+    0:00:07    9315.9      2.98      48.0       0.2                          
+    0:00:07    9366.5      2.94      47.2       0.2                          
+    0:00:07    9450.1      2.52      41.9       0.2                          
+    0:00:07    9576.0      2.44      37.9       0.2                          
+    0:00:07    9668.9      2.33      35.1       0.0                          
+    0:00:08    9830.2      2.17      34.2       0.0                          
+    0:00:08   10063.1      2.06      32.5       0.0                          
+    0:00:08   10209.0      1.91      30.1       0.0                          
+    0:00:08   10393.8      1.79      28.2       0.0                          
+    0:00:08   10473.8      1.75      27.8       0.0                          
+    0:00:08   10559.7      1.66      26.9       0.0                          
+    0:00:08   10580.9      1.65      24.0       0.0                          
+    0:00:08   10580.9      1.65      24.0       0.0                          
+    0:00:08   10580.9      1.65      24.0       0.0                          
+    0:00:08   10580.9      1.65      24.0       0.0                          
+    0:00:08   10580.9      1.65      24.0       0.0                          
+    0:00:08   10580.9      1.65      24.0       0.0                          
+    0:00:08   11070.4      1.21      18.5       0.5 u_mul/product_reg[15]/D  
+    0:00:08   11081.0      1.19      18.4       0.5                          
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:08   11081.0      1.19      18.4       0.5                          
+    0:00:08   11402.2      1.03      16.2       0.5 u_mul/product_reg[15]/D  
+    0:00:08   11476.4      0.98      15.0       0.3 u_mul/product_reg[14]/D  
+    0:00:08   11576.4      0.96      13.3       0.3 u_mul/product_reg[14]/D  
+    0:00:08   11647.0      0.95      13.2       0.3 u_mul/product_reg[14]/D  
+    0:00:09   11981.2      0.86      11.3       0.5 u_mul/product_reg[14]/D  
+    0:00:09   12087.1      0.81      10.7       0.5 u_mul/product_reg[15]/D  
+    0:00:09   12251.8      0.74      10.0       0.4 u_mul/product_reg[15]/D  
+    0:00:09   12302.4      0.72       9.7       0.4 u_mul/product_reg[15]/D  
+    0:00:09   12413.0      0.63       9.0       0.2 u_mul/product_reg[15]/D  
+    0:00:09   12491.8      0.60       8.3       0.2 u_mul/product_reg[14]/D  
+    0:00:09   12527.1      0.58       8.2       0.2 u_mul/product_reg[15]/D  
+    0:00:09   12516.6      0.57       7.8       0.5 u_mul/product_reg[14]/D  
+    0:00:09   12517.7      0.56       7.8       0.5 u_mul/product_reg[15]/D  
+    0:00:09   12510.7      0.56       7.8       0.5 u_mul/product_reg[15]/D  
+    0:00:09   12567.2      0.54       7.5       0.5 u_mul/product_reg[14]/D  
+    0:00:09   12649.5      0.52       7.3       0.5 u_mul/product_reg[14]/D  
+    0:00:09   12708.4      0.51       6.7       0.5 u_mul/product_reg[15]/D  
+    0:00:09   12729.5      0.51       6.2       0.5 u_mul/product_reg[15]/D  
+    0:00:09   12684.8      0.50       6.1       0.5 u_mul/product_reg[15]/D  
+    0:00:10   12711.9      0.49       6.0       0.5 u_mul/product_reg[14]/D  
+    0:00:10   12742.5      0.48       6.0       0.5 u_mul/product_reg[15]/D  
+    0:00:10   12737.8      0.47       6.3       0.5 u_mul/pipeline_level3_reg[10]/D
+    0:00:10   12730.7      0.46       6.1       0.5 u_mul/product_reg[15]/D  
+    0:00:10   12784.8      0.45       6.1       0.5 u_mul/product_reg[15]/D  
+    0:00:10   12877.8      0.43       5.7       0.5 u_mul/pipeline_level3_reg[7]/D
+    0:00:10   12901.3      0.42       5.7       0.5 u_mul/product_reg[15]/D  
+    0:00:10   12956.6      0.42       5.1       0.5 u_mul/product_reg[15]/D  
+    0:00:10   12946.1      0.41       4.9       0.5 u_mul/product_reg[15]/D  
+    0:00:10   12907.2      0.41       4.9       0.3 u_mul/product_reg[15]/D  
+    0:00:10   12930.8      0.40       4.9       0.3 u_mul/product_reg[14]/D  
+    0:00:11   13234.3      0.40       4.8       0.3                          
+    0:00:11   13310.8      0.35       4.6       0.3 u_mul/product_reg[14]/D  
+    0:00:11   13320.2      0.34       4.7       0.3 u_mul/product_reg[14]/D  
+    0:00:11   13310.8      0.33       4.5       0.3 u_mul/product_reg[14]/D  
+    0:00:11   13304.9      0.33       4.5       0.3 u_mul/product_reg[14]/D  
+    0:00:11   13308.5      0.33       4.5       0.3 u_mul/product_reg[14]/D  
+    0:00:11   13329.7      0.32       4.4       0.3                          
+    0:00:12   13347.3      0.31       3.3       0.3 u_mul/product_reg[14]/D  
+    0:00:12   13415.6      0.26       3.1       0.3 u_mul/product_reg[14]/D  
+    0:00:12   13377.9      0.22       2.8       0.3 u_mul/product_reg[14]/D  
+    0:00:12   13429.7      0.21       2.5       0.3 u_mul/product_reg[14]/D  
+    0:00:12   13428.5      0.21       2.2       0.3 u_mul/product_reg[13]/D  
+    0:00:12   13452.0      0.18       2.1       0.3 u_mul/product_reg[14]/D  
+    0:00:12   13497.9      0.15       1.6       0.5 u_mul/product_reg[14]/D  
+    0:00:12   13461.4      0.14       1.6       0.5 u_mul/product_reg[14]/D  
+    0:00:12   13505.0      0.14       1.4       0.5 u_mul/product_reg[14]/D  
+    0:00:12   13545.0      0.12       1.2       0.5 u_mul/product_reg[14]/D  
+    0:00:12   13561.5      0.11       1.0       0.5 u_mul/product_reg[14]/D  
+    0:00:12   13575.6      0.10       0.8       0.5 u_mul/product_reg[13]/D  
+    0:00:12   13599.1      0.08       0.7       0.5 u_mul/product_reg[14]/D  
+    0:00:12   13638.0      0.07       0.5       0.5 u_mul/product_reg[14]/D  
+    0:00:12   13669.7      0.06       0.4       0.5 u_mul/product_reg[14]/D  
+    0:00:13   13685.0      0.06       0.5       0.5 u_mul/product_reg[14]/D  
+    0:00:13   13702.7      0.06       0.4       0.5 u_mul/product_reg[14]/D  
+    0:00:13   13687.4      0.06       0.4       0.5 u_mul/product_reg[15]/D  
+    0:00:13   13720.3      0.05       0.3       0.5 u_mul/product_reg[14]/D  
+    0:00:13   13716.8      0.05       0.3       0.5 u_mul/product_reg[14]/D  
+    0:00:13   13692.1      0.04       0.3       0.5 u_mul/product_reg[14]/D  
+    0:00:13   13699.1      0.04       0.3       0.5 u_mul/product_reg[14]/D  
+    0:00:13   13725.0      0.04       0.3       0.5 u_mul/product_reg[14]/D  
+    0:00:13   13773.3      0.03       0.2       0.5 u_mul/product_reg[13]/D  
+    0:00:13   13767.4      0.03       0.2       0.5 u_mul/product_reg[14]/D  
+    0:00:13   13803.9      0.03       0.2       0.5 u_mul/product_reg[14]/D  
+    0:00:13   13753.3      0.02       0.2       0.5 u_mul/pipeline_level3_reg[10]/D
+    0:00:13   13769.7      0.02       0.1       0.5 u_mul/product_reg[15]/D  
+    0:00:13   13719.1      0.02       0.1       0.5 u_mul/product_reg[14]/D  
+    0:00:14   13576.8      0.02       0.1       0.5                          
+    0:00:14   13573.2      0.02       0.1       0.5 u_mul/product_reg[14]/D  
+    0:00:14   13561.5      0.02       0.1       0.5 u_mul/product_reg[14]/D  
+    0:00:15   13589.7      0.02       0.1       0.5                          
+    0:00:15   13608.5      0.01       0.1       0.5 u_mul/product_reg[14]/D  
+    0:00:15   13595.6      0.01       0.1       0.5 u_mul/product_reg[13]/D  
+    0:00:15   13569.7      0.00       0.0       0.5 u_mul/pipeline_level3_reg[9]/D
+    0:00:15   13537.9      0.00       0.0       0.5                          
+    0:00:15   13532.0      0.00       0.0       0.5                          
+
+
+  Beginning Design Rule Fixing  (max_transition)
+  ----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:15   13532.0      0.00       0.0       0.5                          
+    0:00:15   13509.7      0.00       0.0       0.0                          
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:15   13509.7      0.00       0.0       0.0                          
+    0:00:15   13509.7      0.00       0.0       0.0                          
+    0:00:15   12708.4      0.47       1.9       0.0                          
+    0:00:15   12549.5      0.28       1.4       0.0                          
+    0:00:15   12549.5      0.28       1.4       0.0                          
+    0:00:15   12549.5      0.28       1.4       0.0                          
+    0:00:15   12549.5      0.28       1.4       0.0                          
+    0:00:15   12591.9      0.03       0.1       0.0 u_mul/product_reg[14]/D  
+    0:00:16   12583.6      0.02       0.1       0.0                          
+    0:00:16   12569.5      0.02       0.1       0.0                          
+    0:00:16   12602.5      0.02       0.1       0.0                          
+    0:00:16   12627.2      0.01       0.0       0.0                          
+    0:00:16   12142.4      0.80       7.2       0.0                          
+    0:00:16   11985.9      0.80       7.2       0.0                          
+    0:00:16   11971.7      0.80       7.2       0.0                          
+    0:00:16   11971.7      0.80       7.2       0.0                          
+    0:00:16   11971.7      0.80       7.2       0.0                          
+    0:00:16   11971.7      0.80       7.2       0.0                          
+    0:00:16   11971.7      0.80       7.2       0.0                          
+    0:00:16   11971.7      0.80       7.2       0.0                          
+    0:00:16   12321.2      0.03       0.2       0.0 u_mul/pipeline_level3_reg[9]/D
+    0:00:16   12395.4      0.01       0.1       0.0 u_mul/product_reg[14]/D  
+    0:00:16   12461.3      0.00       0.0       0.0                          
+Loading db file '/home/ICer/Digital-ASIC-Design-Coursework/Assignments/Synthesis/Ass_Syn_3.0/std_cells/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+1
+#############################################################################
+# Write out Design after initial compile
+# All synthesized design outputs (netlist, ddc db, sdc, sdf) go into
+# $RESULTS_DIR so they're kept separate from the text reports below.
+#############################################################################
+puts "###############################################"
+###############################################
+puts "########## Writing Design to results/ ##########"
+########## Writing Design to results/ ##########
+puts "###############################################"
+###############################################
+write_file -format verilog -hierarchy -output $RESULTS_DIR/ALU_TOP.v
+Writing verilog file '/mnt/hgfs/Digital-ASIC-Design-Coursework/Assignments/Synthesis/Ass_Syn_3.0/syn/results/ALU_TOP.v'.
+Warning: Verilog 'assign' or 'tran' statements are written out. (VO-4)
+1
+write_file -format ddc     -hierarchy -output $RESULTS_DIR/ALU_TOP.ddc
+Writing ddc file 'results/ALU_TOP.ddc'.
+1
+write_sdc  -nosplit $RESULTS_DIR/ALU_TOP.sdc
+1
+write_sdf           $RESULTS_DIR/ALU_TOP.sdf
+Information: Annotated 'cell' delays are assumed to include load delay. (UID-282)
+Information: Writing timing information to file '/mnt/hgfs/Digital-ASIC-Design-Coursework/Assignments/Synthesis/Ass_Syn_3.0/syn/results/ALU_TOP.sdf'. (WT-3)
+Information: Updating design information... (UID-85)
+1
+################# reporting #######################
+# All analysis/QoR reports go into $REPORTS_DIR, grouped by category
+# (area, power, timing min/max, clocks, constraint violations).
+#####################################################
+puts "###############################################"
+###############################################
+puts "############## Writing Reports #################"
+############## Writing Reports #################
+puts "###############################################"
+###############################################
+report_area                                    -hierarchy   > $REPORTS_DIR/area.rpt
+report_power                                   -hierarchy   > $REPORTS_DIR/power.rpt
+report_timing -max_paths 100 -delay_type min                > $REPORTS_DIR/hold.rpt
+report_timing -max_paths 100 -delay_type max                > $REPORTS_DIR/setup.rpt
+report_clock  -attributes                                   > $REPORTS_DIR/clocks.rpt
+report_constraint -all_violators                            > $REPORTS_DIR/constraints.rpt
+################# starting graphical user interface #######################
+#gui_start
+exit
+
+Memory usage for main task 272 Mbytes.
+Memory usage for this session 272 Mbytes.
+CPU usage for this session 18 seconds ( 0.01 hours ).
+
+Thank you...

@@ -124,23 +124,16 @@ module mult_unit (
     wire [15:0] level5;
     wire [15:0] level6;
     wire [15:0] level7;
-    reg [15:0] pipeline_level3;
+
     assign level0 = {pp[0]};                   
     assign level1 = level0 + (pp[1] << 1);   
     assign level2 = level1 + (pp[2] << 2);    
     assign level3 = level2 + (pp[3] << 3);  
-    assign level4 = pipeline_level3 + (pp[4] << 4);  
+    assign level4 = level3 + (pp[4] << 4);  
     assign level5 = level4 + (pp[5] << 5); 
     assign level6 = level5 + (pp[6] << 6); 
-    assign level7 = level6 + (pp[7] << 7);
-    // Pipelining  
-    always @(posedge clk or negedge rst_n) begin
-        if (!rst_n) begin
-            pipeline_level3 <= 0;
-        end
-        else
-            pipeline_level3 <= level3;
-    end
+    assign level7 = level6 + (pp[7] << 7); 
+
     // ------------------------------------------------------------
     // Output register
     // ------------------------------------------------------------
