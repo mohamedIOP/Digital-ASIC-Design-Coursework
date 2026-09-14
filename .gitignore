@@ -1,0 +1,68 @@
+# ============================================================
+# Digital-ASIC-Design-Coursework — .gitignore
+# Excludes regenerable EDA tool artifacts and licensed vendor data.
+# ============================================================
+
+# --- Vendor / licensed process data (NEVER commit) ---
+# TSMC/Artisan standard-cell libraries are confidential and
+# license-restricted. Keep a local copy outside git, or store
+# a placeholder/README pointing to where to obtain them.
+std_cells/
+*.lib
+*.db
+
+# --- ModelSim / QuestaSim ---
+work/
+*.wlf
+*.cr.mti
+*.mpf
+transcript
+transcript*.txt
+*.vstf
+modelsim.ini
+
+# --- Synopsys Design Compiler ---
+*.svf
+command.log
+*_svf/
+default.svf
+
+# --- Synopsys Formality ---
+*.lck
+FM_WORK*/
+formality*.log
+formality*_svf/
+
+# --- Synopsys generic logs/scratch ---
+*.syn.log
+syn.log
+*.recent
+*.sns
+*.ss
+*.dep
+*.dmp
+*.pbd/
+
+# --- Cadence Encounter / Innovus ---
+*.enc.dat/
+.rikegr*
+.interactive.constr.sdc
+*.fp.spr
+encounter.cmd
+encounter.log
+
+# --- Simulation waveforms / dumps (keep PDFs of key waveforms, drop raw dumps) ---
+*.vcd
+
+# --- OS / editor cruft ---
+.DS_Store
+Thumbs.db
+*~
+.$*.bkp
+.fuse_hidden*
+
+# --- Redundant submission archives ---
+# If a folder is already unpacked in the repo, don't also keep
+# the zip alongside it — pick one.
+# (Not auto-ignored here since some zips ARE the actual deliverable;
+#  review case-by-case before adding a rule like *_Mohamed_Hossam_El-Sawy.zip)
