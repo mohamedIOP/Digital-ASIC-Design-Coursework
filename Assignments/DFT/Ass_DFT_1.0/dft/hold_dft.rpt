@@ -1,0 +1,2925 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay min
+        -max_paths 100
+Design : UART_TX_TOP
+Version: O-2018.06-SP1
+Date   : Sun Sep  6 10:11:50 2026
+****************************************
+
+Operating Conditions: scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c   Library: scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c
+Wire Load Model Mode: top
+
+  Startpoint: Parity_Calc_Block/parBit_reg
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: Serializer_Block/counter_reg_0_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  Parity_Calc_Block/parBit_reg/CK (SDFFRQX2M)             0.00       0.00 r
+  Parity_Calc_Block/parBit_reg/Q (SDFFRQX2M)              0.37       0.37 r
+  Parity_Calc_Block/parBit (Parity_Calc_test_1)           0.00       0.37 r
+  Serializer_Block/test_si (Serializer_test_1)            0.00       0.37 r
+  Serializer_Block/counter_reg_0_/SI (SDFFRQX2M)          0.00       0.37 r
+  data arrival time                                                  0.37
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.01       0.01
+  Serializer_Block/counter_reg_0_/CK (SDFFRQX2M)          0.00       0.01 r
+  library hold time                                      -0.18      -0.17
+  data required time                                                -0.17
+  --------------------------------------------------------------------------
+  data required time                                                -0.17
+  data arrival time                                                 -0.37
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.54
+
+
+  Startpoint: Serializer_Block/pDataReg_reg_5_
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: Serializer_Block/pDataReg_reg_6_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  Serializer_Block/pDataReg_reg_5_/CK (SDFFRQX2M)         0.00       0.00 r
+  Serializer_Block/pDataReg_reg_5_/Q (SDFFRQX2M)          0.37       0.37 r
+  Serializer_Block/pDataReg_reg_6_/SI (SDFFRQX2M)         0.00       0.37 r
+  data arrival time                                                  0.37
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.01       0.01
+  Serializer_Block/pDataReg_reg_6_/CK (SDFFRQX2M)         0.00       0.01 r
+  library hold time                                      -0.18      -0.17
+  data required time                                                -0.17
+  --------------------------------------------------------------------------
+  data required time                                                -0.17
+  data arrival time                                                 -0.37
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.54
+
+
+  Startpoint: Serializer_Block/pDataReg_reg_3_
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: Serializer_Block/pDataReg_reg_4_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  Serializer_Block/pDataReg_reg_3_/CK (SDFFRQX2M)         0.00       0.00 r
+  Serializer_Block/pDataReg_reg_3_/Q (SDFFRQX2M)          0.37       0.37 r
+  Serializer_Block/pDataReg_reg_4_/SI (SDFFRQX2M)         0.00       0.37 r
+  data arrival time                                                  0.37
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.01       0.01
+  Serializer_Block/pDataReg_reg_4_/CK (SDFFRQX2M)         0.00       0.01 r
+  library hold time                                      -0.18      -0.17
+  data required time                                                -0.17
+  --------------------------------------------------------------------------
+  data required time                                                -0.17
+  data arrival time                                                 -0.37
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.54
+
+
+  Startpoint: Serializer_Block/pDataReg_reg_1_
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: Serializer_Block/pDataReg_reg_2_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  Serializer_Block/pDataReg_reg_1_/CK (SDFFRQX2M)         0.00       0.00 r
+  Serializer_Block/pDataReg_reg_1_/Q (SDFFRQX2M)          0.37       0.37 r
+  Serializer_Block/pDataReg_reg_2_/SI (SDFFRQX2M)         0.00       0.37 r
+  data arrival time                                                  0.37
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.01       0.01
+  Serializer_Block/pDataReg_reg_2_/CK (SDFFRQX2M)         0.00       0.01 r
+  library hold time                                      -0.18      -0.17
+  data required time                                                -0.17
+  --------------------------------------------------------------------------
+  data required time                                                -0.17
+  data arrival time                                                 -0.37
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.54
+
+
+  Startpoint: Serializer_Block/pDataReg_reg_6_
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: Serializer_Block/pDataReg_reg_7_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  Serializer_Block/pDataReg_reg_6_/CK (SDFFRQX2M)         0.00       0.00 r
+  Serializer_Block/pDataReg_reg_6_/Q (SDFFRQX2M)          0.37       0.37 r
+  Serializer_Block/pDataReg_reg_7_/SI (SDFFRQX2M)         0.00       0.37 r
+  data arrival time                                                  0.37
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.01       0.01
+  Serializer_Block/pDataReg_reg_7_/CK (SDFFRQX2M)         0.00       0.01 r
+  library hold time                                      -0.18      -0.17
+  data required time                                                -0.17
+  --------------------------------------------------------------------------
+  data required time                                                -0.17
+  data arrival time                                                 -0.37
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.54
+
+
+  Startpoint: Serializer_Block/pDataReg_reg_4_
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: Serializer_Block/pDataReg_reg_5_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  Serializer_Block/pDataReg_reg_4_/CK (SDFFRQX2M)         0.00       0.00 r
+  Serializer_Block/pDataReg_reg_4_/Q (SDFFRQX2M)          0.37       0.37 r
+  Serializer_Block/pDataReg_reg_5_/SI (SDFFRQX2M)         0.00       0.37 r
+  data arrival time                                                  0.37
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.01       0.01
+  Serializer_Block/pDataReg_reg_5_/CK (SDFFRQX2M)         0.00       0.01 r
+  library hold time                                      -0.18      -0.17
+  data required time                                                -0.17
+  --------------------------------------------------------------------------
+  data required time                                                -0.17
+  data arrival time                                                 -0.37
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.54
+
+
+  Startpoint: Serializer_Block/pDataReg_reg_2_
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: Serializer_Block/pDataReg_reg_3_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  Serializer_Block/pDataReg_reg_2_/CK (SDFFRQX2M)         0.00       0.00 r
+  Serializer_Block/pDataReg_reg_2_/Q (SDFFRQX2M)          0.37       0.37 r
+  Serializer_Block/pDataReg_reg_3_/SI (SDFFRQX2M)         0.00       0.37 r
+  data arrival time                                                  0.37
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.01       0.01
+  Serializer_Block/pDataReg_reg_3_/CK (SDFFRQX2M)         0.00       0.01 r
+  library hold time                                      -0.18      -0.17
+  data required time                                                -0.17
+  --------------------------------------------------------------------------
+  data required time                                                -0.17
+  data arrival time                                                 -0.37
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.54
+
+
+  Startpoint: Serializer_Block/pDataReg_reg_0_
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: Serializer_Block/pDataReg_reg_1_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  Serializer_Block/pDataReg_reg_0_/CK (SDFFRQX2M)         0.00       0.00 r
+  Serializer_Block/pDataReg_reg_0_/Q (SDFFRQX2M)          0.37       0.37 r
+  Serializer_Block/pDataReg_reg_1_/SI (SDFFRQX2M)         0.00       0.37 r
+  data arrival time                                                  0.37
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.01       0.01
+  Serializer_Block/pDataReg_reg_1_/CK (SDFFRQX2M)         0.00       0.01 r
+  library hold time                                      -0.18      -0.17
+  data required time                                                -0.17
+  --------------------------------------------------------------------------
+  data required time                                                -0.17
+  data arrival time                                                 -0.37
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.54
+
+
+  Startpoint: Serializer_Block/counter_reg_3_
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: Serializer_Block/pDataReg_reg_0_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  Serializer_Block/counter_reg_3_/CK (SDFFRQX2M)          0.00       0.00 r
+  Serializer_Block/counter_reg_3_/Q (SDFFRQX2M)           0.37       0.37 r
+  Serializer_Block/pDataReg_reg_0_/SI (SDFFRQX2M)         0.00       0.37 r
+  data arrival time                                                  0.37
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.01       0.01
+  Serializer_Block/pDataReg_reg_0_/CK (SDFFRQX2M)         0.00       0.01 r
+  library hold time                                      -0.18      -0.17
+  data required time                                                -0.17
+  --------------------------------------------------------------------------
+  data required time                                                -0.17
+  data arrival time                                                 -0.37
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.54
+
+
+  Startpoint: FSM_Block/currentState_reg_0_
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: FSM_Block/currentState_reg_1_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  FSM_Block/currentState_reg_0_/CK (SDFFRQX2M)            0.00       0.00 r
+  FSM_Block/currentState_reg_0_/Q (SDFFRQX2M)             0.39       0.39 r
+  FSM_Block/currentState_reg_1_/SI (SDFFRQX2M)            0.00       0.39 r
+  data arrival time                                                  0.39
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.01       0.01
+  FSM_Block/currentState_reg_1_/CK (SDFFRQX2M)            0.00       0.01 r
+  library hold time                                      -0.18      -0.17
+  data required time                                                -0.17
+  --------------------------------------------------------------------------
+  data required time                                                -0.17
+  data arrival time                                                 -0.39
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.56
+
+
+  Startpoint: Serializer_Block/counter_reg_2_
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: Serializer_Block/counter_reg_3_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  Serializer_Block/counter_reg_2_/CK (SDFFRQX2M)          0.00       0.00 r
+  Serializer_Block/counter_reg_2_/Q (SDFFRQX2M)           0.39       0.39 r
+  Serializer_Block/counter_reg_3_/SI (SDFFRQX2M)          0.00       0.39 r
+  data arrival time                                                  0.39
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.01       0.01
+  Serializer_Block/counter_reg_3_/CK (SDFFRQX2M)          0.00       0.01 r
+  library hold time                                      -0.18      -0.17
+  data required time                                                -0.17
+  --------------------------------------------------------------------------
+  data required time                                                -0.17
+  data arrival time                                                 -0.39
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.56
+
+
+  Startpoint: FSM_Block/currentState_reg_2_
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: Parity_Calc_Block/parBit_reg
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  FSM_Block/currentState_reg_2_/CK (SDFFRQX2M)            0.00       0.00 r
+  FSM_Block/currentState_reg_2_/Q (SDFFRQX2M)             0.40       0.40 r
+  FSM_Block/test_so (UART_TX_FSM_test_1)                  0.00       0.40 r
+  Parity_Calc_Block/test_si (Parity_Calc_test_1)          0.00       0.40 r
+  Parity_Calc_Block/parBit_reg/SI (SDFFRQX2M)             0.00       0.40 r
+  data arrival time                                                  0.40
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.01       0.01
+  Parity_Calc_Block/parBit_reg/CK (SDFFRQX2M)             0.00       0.01 r
+  library hold time                                      -0.19      -0.18
+  data required time                                                -0.18
+  --------------------------------------------------------------------------
+  data required time                                                -0.18
+  data arrival time                                                 -0.40
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.58
+
+
+  Startpoint: FSM_Block/currentState_reg_1_
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: FSM_Block/currentState_reg_2_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  FSM_Block/currentState_reg_1_/CK (SDFFRQX2M)            0.00       0.00 r
+  FSM_Block/currentState_reg_1_/Q (SDFFRQX2M)             0.41       0.41 r
+  FSM_Block/currentState_reg_2_/SI (SDFFRQX2M)            0.00       0.41 r
+  data arrival time                                                  0.41
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.01       0.01
+  FSM_Block/currentState_reg_2_/CK (SDFFRQX2M)            0.00       0.01 r
+  library hold time                                      -0.19      -0.18
+  data required time                                                -0.18
+  --------------------------------------------------------------------------
+  data required time                                                -0.18
+  data arrival time                                                 -0.41
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.59
+
+
+  Startpoint: Serializer_Block/counter_reg_1_
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: Serializer_Block/counter_reg_2_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  Serializer_Block/counter_reg_1_/CK (SDFFRQX2M)          0.00       0.00 r
+  Serializer_Block/counter_reg_1_/Q (SDFFRQX2M)           0.42       0.42 r
+  Serializer_Block/counter_reg_2_/SI (SDFFRQX2M)          0.00       0.42 r
+  data arrival time                                                  0.42
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.01       0.01
+  Serializer_Block/counter_reg_2_/CK (SDFFRQX2M)          0.00       0.01 r
+  library hold time                                      -0.19      -0.18
+  data required time                                                -0.18
+  --------------------------------------------------------------------------
+  data required time                                                -0.18
+  data arrival time                                                 -0.42
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.61
+
+
+  Startpoint: Serializer_Block/counter_reg_0_
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: Serializer_Block/counter_reg_1_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  Serializer_Block/counter_reg_0_/CK (SDFFRQX2M)          0.00       0.00 r
+  Serializer_Block/counter_reg_0_/Q (SDFFRQX2M)           0.43       0.43 r
+  Serializer_Block/counter_reg_1_/SI (SDFFRQX2M)          0.00       0.43 r
+  data arrival time                                                  0.43
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.01       0.01
+  Serializer_Block/counter_reg_1_/CK (SDFFRQX2M)          0.00       0.01 r
+  library hold time                                      -0.19      -0.18
+  data required time                                                -0.18
+  --------------------------------------------------------------------------
+  data required time                                                -0.18
+  data arrival time                                                 -0.43
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.62
+
+
+  Startpoint: Parity_Calc_Block/parBit_reg
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: Parity_Calc_Block/parBit_reg
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  Parity_Calc_Block/parBit_reg/CK (SDFFRQX2M)             0.00       0.00 r
+  Parity_Calc_Block/parBit_reg/Q (SDFFRQX2M)              0.37       0.37 r
+  Parity_Calc_Block/U5/Y (OAI2BB2X1M)                     0.15       0.52 r
+  Parity_Calc_Block/parBit_reg/D (SDFFRQX2M)              0.00       0.52 r
+  data arrival time                                                  0.52
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.01       0.01
+  Parity_Calc_Block/parBit_reg/CK (SDFFRQX2M)             0.00       0.01 r
+  library hold time                                      -0.16      -0.15
+  data required time                                                -0.15
+  --------------------------------------------------------------------------
+  data required time                                                -0.15
+  data arrival time                                                 -0.52
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.67
+
+
+  Startpoint: Serializer_Block/pDataReg_reg_5_
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: Serializer_Block/pDataReg_reg_5_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  Serializer_Block/pDataReg_reg_5_/CK (SDFFRQX2M)         0.00       0.00 r
+  Serializer_Block/pDataReg_reg_5_/Q (SDFFRQX2M)          0.37       0.37 r
+  Serializer_Block/U21/Y (AO22X1M)                        0.15       0.53 r
+  Serializer_Block/pDataReg_reg_5_/D (SDFFRQX2M)          0.00       0.53 r
+  data arrival time                                                  0.53
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.01       0.01
+  Serializer_Block/pDataReg_reg_5_/CK (SDFFRQX2M)         0.00       0.01 r
+  library hold time                                      -0.16      -0.15
+  data required time                                                -0.15
+  --------------------------------------------------------------------------
+  data required time                                                -0.15
+  data arrival time                                                 -0.53
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.68
+
+
+  Startpoint: Serializer_Block/pDataReg_reg_1_
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: Serializer_Block/pDataReg_reg_1_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  Serializer_Block/pDataReg_reg_1_/CK (SDFFRQX2M)         0.00       0.00 r
+  Serializer_Block/pDataReg_reg_1_/Q (SDFFRQX2M)          0.37       0.37 r
+  Serializer_Block/U17/Y (AO22X1M)                        0.15       0.53 r
+  Serializer_Block/pDataReg_reg_1_/D (SDFFRQX2M)          0.00       0.53 r
+  data arrival time                                                  0.53
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.01       0.01
+  Serializer_Block/pDataReg_reg_1_/CK (SDFFRQX2M)         0.00       0.01 r
+  library hold time                                      -0.16      -0.15
+  data required time                                                -0.15
+  --------------------------------------------------------------------------
+  data required time                                                -0.15
+  data arrival time                                                 -0.53
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.68
+
+
+  Startpoint: Serializer_Block/pDataReg_reg_3_
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: Serializer_Block/pDataReg_reg_3_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  Serializer_Block/pDataReg_reg_3_/CK (SDFFRQX2M)         0.00       0.00 r
+  Serializer_Block/pDataReg_reg_3_/Q (SDFFRQX2M)          0.37       0.37 r
+  Serializer_Block/U19/Y (AO22X1M)                        0.15       0.53 r
+  Serializer_Block/pDataReg_reg_3_/D (SDFFRQX2M)          0.00       0.53 r
+  data arrival time                                                  0.53
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.01       0.01
+  Serializer_Block/pDataReg_reg_3_/CK (SDFFRQX2M)         0.00       0.01 r
+  library hold time                                      -0.16      -0.15
+  data required time                                                -0.15
+  --------------------------------------------------------------------------
+  data required time                                                -0.15
+  data arrival time                                                 -0.53
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.68
+
+
+  Startpoint: Serializer_Block/pDataReg_reg_6_
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: Serializer_Block/pDataReg_reg_6_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  Serializer_Block/pDataReg_reg_6_/CK (SDFFRQX2M)         0.00       0.00 r
+  Serializer_Block/pDataReg_reg_6_/Q (SDFFRQX2M)          0.37       0.37 r
+  Serializer_Block/U22/Y (AO22X1M)                        0.15       0.53 r
+  Serializer_Block/pDataReg_reg_6_/D (SDFFRQX2M)          0.00       0.53 r
+  data arrival time                                                  0.53
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.01       0.01
+  Serializer_Block/pDataReg_reg_6_/CK (SDFFRQX2M)         0.00       0.01 r
+  library hold time                                      -0.16      -0.15
+  data required time                                                -0.15
+  --------------------------------------------------------------------------
+  data required time                                                -0.15
+  data arrival time                                                 -0.53
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.68
+
+
+  Startpoint: Serializer_Block/pDataReg_reg_4_
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: Serializer_Block/pDataReg_reg_4_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  Serializer_Block/pDataReg_reg_4_/CK (SDFFRQX2M)         0.00       0.00 r
+  Serializer_Block/pDataReg_reg_4_/Q (SDFFRQX2M)          0.37       0.37 r
+  Serializer_Block/U20/Y (AO22X1M)                        0.15       0.53 r
+  Serializer_Block/pDataReg_reg_4_/D (SDFFRQX2M)          0.00       0.53 r
+  data arrival time                                                  0.53
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.01       0.01
+  Serializer_Block/pDataReg_reg_4_/CK (SDFFRQX2M)         0.00       0.01 r
+  library hold time                                      -0.16      -0.15
+  data required time                                                -0.15
+  --------------------------------------------------------------------------
+  data required time                                                -0.15
+  data arrival time                                                 -0.53
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.68
+
+
+  Startpoint: Serializer_Block/pDataReg_reg_2_
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: Serializer_Block/pDataReg_reg_2_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  Serializer_Block/pDataReg_reg_2_/CK (SDFFRQX2M)         0.00       0.00 r
+  Serializer_Block/pDataReg_reg_2_/Q (SDFFRQX2M)          0.37       0.37 r
+  Serializer_Block/U18/Y (AO22X1M)                        0.15       0.53 r
+  Serializer_Block/pDataReg_reg_2_/D (SDFFRQX2M)          0.00       0.53 r
+  data arrival time                                                  0.53
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.01       0.01
+  Serializer_Block/pDataReg_reg_2_/CK (SDFFRQX2M)         0.00       0.01 r
+  library hold time                                      -0.16      -0.15
+  data required time                                                -0.15
+  --------------------------------------------------------------------------
+  data required time                                                -0.15
+  data arrival time                                                 -0.53
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.68
+
+
+  Startpoint: Serializer_Block/pDataReg_reg_0_
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: Serializer_Block/pDataReg_reg_0_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  Serializer_Block/pDataReg_reg_0_/CK (SDFFRQX2M)         0.00       0.00 r
+  Serializer_Block/pDataReg_reg_0_/Q (SDFFRQX2M)          0.37       0.37 r
+  Serializer_Block/U16/Y (AO22X1M)                        0.15       0.53 r
+  Serializer_Block/pDataReg_reg_0_/D (SDFFRQX2M)          0.00       0.53 r
+  data arrival time                                                  0.53
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.01       0.01
+  Serializer_Block/pDataReg_reg_0_/CK (SDFFRQX2M)         0.00       0.01 r
+  library hold time                                      -0.16      -0.15
+  data required time                                                -0.15
+  --------------------------------------------------------------------------
+  data required time                                                -0.15
+  data arrival time                                                 -0.53
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.68
+
+
+  Startpoint: Serializer_Block/counter_reg_3_
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: Serializer_Block/counter_reg_3_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  Serializer_Block/counter_reg_3_/CK (SDFFRQX2M)          0.00       0.00 r
+  Serializer_Block/counter_reg_3_/Q (SDFFRQX2M)           0.37       0.37 r
+  Serializer_Block/U13/Y (AO22X1M)                        0.15       0.53 r
+  Serializer_Block/counter_reg_3_/D (SDFFRQX2M)           0.00       0.53 r
+  data arrival time                                                  0.53
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.01       0.01
+  Serializer_Block/counter_reg_3_/CK (SDFFRQX2M)          0.00       0.01 r
+  library hold time                                      -0.16      -0.15
+  data required time                                                -0.15
+  --------------------------------------------------------------------------
+  data required time                                                -0.15
+  data arrival time                                                 -0.53
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.68
+
+
+  Startpoint: Serializer_Block/counter_reg_0_
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: Serializer_Block/counter_reg_0_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  Serializer_Block/counter_reg_0_/CK (SDFFRQX2M)          0.00       0.00 r
+  Serializer_Block/counter_reg_0_/Q (SDFFRQX2M)           0.43       0.43 r
+  Serializer_Block/U11/Y (OAI32X1M)                       0.07       0.51 f
+  Serializer_Block/counter_reg_0_/D (SDFFRQX2M)           0.00       0.51 f
+  data arrival time                                                  0.51
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.01       0.01
+  Serializer_Block/counter_reg_0_/CK (SDFFRQX2M)          0.00       0.01 r
+  library hold time                                      -0.21      -0.20
+  data required time                                                -0.20
+  --------------------------------------------------------------------------
+  data required time                                                -0.20
+  data arrival time                                                 -0.51
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.71
+
+
+  Startpoint: Serializer_Block/counter_reg_1_
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: Serializer_Block/counter_reg_1_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  Serializer_Block/counter_reg_1_/CK (SDFFRQX2M)          0.00       0.00 r
+  Serializer_Block/counter_reg_1_/Q (SDFFRQX2M)           0.42       0.42 r
+  Serializer_Block/U10/Y (OAI32X1M)                       0.10       0.53 f
+  Serializer_Block/counter_reg_1_/D (SDFFRQX2M)           0.00       0.53 f
+  data arrival time                                                  0.53
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.01       0.01
+  Serializer_Block/counter_reg_1_/CK (SDFFRQX2M)          0.00       0.01 r
+  library hold time                                      -0.21      -0.20
+  data required time                                                -0.20
+  --------------------------------------------------------------------------
+  data required time                                                -0.20
+  data arrival time                                                 -0.53
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.73
+
+
+  Startpoint: FSM_Block/currentState_reg_0_
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: FSM_Block/currentState_reg_1_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  FSM_Block/currentState_reg_0_/CK (SDFFRQX2M)            0.00       0.00 r
+  FSM_Block/currentState_reg_0_/Q (SDFFRQX2M)             0.39       0.39 r
+  FSM_Block/U10/Y (NAND2X2M)                              0.12       0.51 f
+  FSM_Block/U6/Y (NAND2X2M)                               0.08       0.58 r
+  FSM_Block/currentState_reg_1_/D (SDFFRQX2M)             0.00       0.58 r
+  data arrival time                                                  0.58
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.01       0.01
+  FSM_Block/currentState_reg_1_/CK (SDFFRQX2M)            0.00       0.01 r
+  library hold time                                      -0.16      -0.15
+  data required time                                                -0.15
+  --------------------------------------------------------------------------
+  data required time                                                -0.15
+  data arrival time                                                 -0.58
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.73
+
+
+  Startpoint: Serializer_Block/counter_reg_2_
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: Serializer_Block/counter_reg_2_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  Serializer_Block/counter_reg_2_/CK (SDFFRQX2M)          0.00       0.00 r
+  Serializer_Block/counter_reg_2_/Q (SDFFRQX2M)           0.39       0.39 r
+  Serializer_Block/U25/Y (INVX2M)                         0.07       0.46 f
+  Serializer_Block/U4/Y (OAI32X1M)                        0.11       0.57 r
+  Serializer_Block/counter_reg_2_/D (SDFFRQX2M)           0.00       0.57 r
+  data arrival time                                                  0.57
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.01       0.01
+  Serializer_Block/counter_reg_2_/CK (SDFFRQX2M)          0.00       0.01 r
+  library hold time                                      -0.17      -0.16
+  data required time                                                -0.16
+  --------------------------------------------------------------------------
+  data required time                                                -0.16
+  data arrival time                                                 -0.57
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.74
+
+
+  Startpoint: FSM_Block/currentState_reg_1_
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: FSM_Block/currentState_reg_2_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  FSM_Block/currentState_reg_1_/CK (SDFFRQX2M)            0.00       0.00 r
+  FSM_Block/currentState_reg_1_/Q (SDFFRQX2M)             0.41       0.41 r
+  FSM_Block/U9/Y (NAND2X2M)                               0.12       0.54 f
+  FSM_Block/U15/Y (NOR2X2M)                               0.10       0.64 r
+  FSM_Block/currentState_reg_2_/D (SDFFRQX2M)             0.00       0.64 r
+  data arrival time                                                  0.64
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.01       0.01
+  FSM_Block/currentState_reg_2_/CK (SDFFRQX2M)            0.00       0.01 r
+  library hold time                                      -0.16      -0.15
+  data required time                                                -0.15
+  --------------------------------------------------------------------------
+  data required time                                                -0.15
+  data arrival time                                                 -0.64
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.80
+
+
+  Startpoint: FSM_Block/currentState_reg_2_
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: FSM_Block/currentState_reg_0_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  FSM_Block/currentState_reg_2_/CK (SDFFRQX2M)            0.00       0.00 r
+  FSM_Block/currentState_reg_2_/Q (SDFFRQX2M)             0.40       0.40 r
+  FSM_Block/U13/Y (AOI32X1M)                              0.14       0.54 f
+  FSM_Block/U12/Y (OAI2B2X1M)                             0.10       0.64 r
+  FSM_Block/currentState_reg_0_/D (SDFFRQX2M)             0.00       0.64 r
+  data arrival time                                                  0.64
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.01       0.01
+  FSM_Block/currentState_reg_0_/CK (SDFFRQX2M)            0.00       0.01 r
+  library hold time                                      -0.17      -0.16
+  data required time                                                -0.16
+  --------------------------------------------------------------------------
+  data required time                                                -0.16
+  data arrival time                                                 -0.64
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.80
+
+
+  Startpoint: FSM_Block/currentState_reg_0_
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: Serializer_Block/pDataReg_reg_7_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  FSM_Block/currentState_reg_0_/CK (SDFFRQX2M)            0.00       0.00 r
+  FSM_Block/currentState_reg_0_/Q (SDFFRQX2M)             0.46       0.46 f
+  FSM_Block/U17/Y (INVX2M)                                0.12       0.57 r
+  FSM_Block/U7/Y (AND3X2M)                                0.29       0.86 r
+  FSM_Block/regData (UART_TX_FSM_test_1)                  0.00       0.86 r
+  Serializer_Block/regData (Serializer_test_1)            0.00       0.86 r
+  Serializer_Block/U23/Y (AO22X1M)                        0.16       1.02 r
+  Serializer_Block/pDataReg_reg_7_/D (SDFFRQX2M)          0.00       1.02 r
+  data arrival time                                                  1.02
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.01       0.01
+  Serializer_Block/pDataReg_reg_7_/CK (SDFFRQX2M)         0.00       0.01 r
+  library hold time                                      -0.16      -0.15
+  data required time                                                -0.15
+  --------------------------------------------------------------------------
+  data required time                                                -0.15
+  data arrival time                                                 -1.02
+  --------------------------------------------------------------------------
+  slack (MET)                                                        1.17
+
+
+  Startpoint: Parity_Calc_Block/parBit_reg
+              (rising edge-triggered flip-flop clocked by DFTCLK)
+  Endpoint: Serializer_Block/counter_reg_0_
+            (rising edge-triggered flip-flop clocked by DFTCLK)
+  Path Group: DFTCLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock DFTCLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  Parity_Calc_Block/parBit_reg/CK (SDFFRQX2M)             0.00       0.00 r
+  Parity_Calc_Block/parBit_reg/Q (SDFFRQX2M)              0.37       0.37 r
+  Parity_Calc_Block/parBit (Parity_Calc_test_1)           0.00       0.37 r
+  Serializer_Block/test_si (Serializer_test_1)            0.00       0.37 r
+  Serializer_Block/counter_reg_0_/SI (SDFFRQX2M)          0.00       0.37 r
+  data arrival time                                                  0.37
+
+  clock DFTCLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.01       0.01
+  Serializer_Block/counter_reg_0_/CK (SDFFRQX2M)          0.00       0.01 r
+  library hold time                                      -0.18      -0.17
+  data required time                                                -0.17
+  --------------------------------------------------------------------------
+  data required time                                                -0.17
+  data arrival time                                                 -0.37
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.54
+
+
+  Startpoint: Serializer_Block/pDataReg_reg_5_
+              (rising edge-triggered flip-flop clocked by DFTCLK)
+  Endpoint: Serializer_Block/pDataReg_reg_6_
+            (rising edge-triggered flip-flop clocked by DFTCLK)
+  Path Group: DFTCLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock DFTCLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  Serializer_Block/pDataReg_reg_5_/CK (SDFFRQX2M)         0.00       0.00 r
+  Serializer_Block/pDataReg_reg_5_/Q (SDFFRQX2M)          0.37       0.37 r
+  Serializer_Block/pDataReg_reg_6_/SI (SDFFRQX2M)         0.00       0.37 r
+  data arrival time                                                  0.37
+
+  clock DFTCLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.01       0.01
+  Serializer_Block/pDataReg_reg_6_/CK (SDFFRQX2M)         0.00       0.01 r
+  library hold time                                      -0.18      -0.17
+  data required time                                                -0.17
+  --------------------------------------------------------------------------
+  data required time                                                -0.17
+  data arrival time                                                 -0.37
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.54
+
+
+  Startpoint: Serializer_Block/pDataReg_reg_3_
+              (rising edge-triggered flip-flop clocked by DFTCLK)
+  Endpoint: Serializer_Block/pDataReg_reg_4_
+            (rising edge-triggered flip-flop clocked by DFTCLK)
+  Path Group: DFTCLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock DFTCLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  Serializer_Block/pDataReg_reg_3_/CK (SDFFRQX2M)         0.00       0.00 r
+  Serializer_Block/pDataReg_reg_3_/Q (SDFFRQX2M)          0.37       0.37 r
+  Serializer_Block/pDataReg_reg_4_/SI (SDFFRQX2M)         0.00       0.37 r
+  data arrival time                                                  0.37
+
+  clock DFTCLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.01       0.01
+  Serializer_Block/pDataReg_reg_4_/CK (SDFFRQX2M)         0.00       0.01 r
+  library hold time                                      -0.18      -0.17
+  data required time                                                -0.17
+  --------------------------------------------------------------------------
+  data required time                                                -0.17
+  data arrival time                                                 -0.37
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.54
+
+
+  Startpoint: Serializer_Block/pDataReg_reg_1_
+              (rising edge-triggered flip-flop clocked by DFTCLK)
+  Endpoint: Serializer_Block/pDataReg_reg_2_
+            (rising edge-triggered flip-flop clocked by DFTCLK)
+  Path Group: DFTCLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock DFTCLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  Serializer_Block/pDataReg_reg_1_/CK (SDFFRQX2M)         0.00       0.00 r
+  Serializer_Block/pDataReg_reg_1_/Q (SDFFRQX2M)          0.37       0.37 r
+  Serializer_Block/pDataReg_reg_2_/SI (SDFFRQX2M)         0.00       0.37 r
+  data arrival time                                                  0.37
+
+  clock DFTCLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.01       0.01
+  Serializer_Block/pDataReg_reg_2_/CK (SDFFRQX2M)         0.00       0.01 r
+  library hold time                                      -0.18      -0.17
+  data required time                                                -0.17
+  --------------------------------------------------------------------------
+  data required time                                                -0.17
+  data arrival time                                                 -0.37
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.54
+
+
+  Startpoint: Serializer_Block/pDataReg_reg_6_
+              (rising edge-triggered flip-flop clocked by DFTCLK)
+  Endpoint: Serializer_Block/pDataReg_reg_7_
+            (rising edge-triggered flip-flop clocked by DFTCLK)
+  Path Group: DFTCLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock DFTCLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  Serializer_Block/pDataReg_reg_6_/CK (SDFFRQX2M)         0.00       0.00 r
+  Serializer_Block/pDataReg_reg_6_/Q (SDFFRQX2M)          0.37       0.37 r
+  Serializer_Block/pDataReg_reg_7_/SI (SDFFRQX2M)         0.00       0.37 r
+  data arrival time                                                  0.37
+
+  clock DFTCLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.01       0.01
+  Serializer_Block/pDataReg_reg_7_/CK (SDFFRQX2M)         0.00       0.01 r
+  library hold time                                      -0.18      -0.17
+  data required time                                                -0.17
+  --------------------------------------------------------------------------
+  data required time                                                -0.17
+  data arrival time                                                 -0.37
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.54
+
+
+  Startpoint: Serializer_Block/pDataReg_reg_4_
+              (rising edge-triggered flip-flop clocked by DFTCLK)
+  Endpoint: Serializer_Block/pDataReg_reg_5_
+            (rising edge-triggered flip-flop clocked by DFTCLK)
+  Path Group: DFTCLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock DFTCLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  Serializer_Block/pDataReg_reg_4_/CK (SDFFRQX2M)         0.00       0.00 r
+  Serializer_Block/pDataReg_reg_4_/Q (SDFFRQX2M)          0.37       0.37 r
+  Serializer_Block/pDataReg_reg_5_/SI (SDFFRQX2M)         0.00       0.37 r
+  data arrival time                                                  0.37
+
+  clock DFTCLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.01       0.01
+  Serializer_Block/pDataReg_reg_5_/CK (SDFFRQX2M)         0.00       0.01 r
+  library hold time                                      -0.18      -0.17
+  data required time                                                -0.17
+  --------------------------------------------------------------------------
+  data required time                                                -0.17
+  data arrival time                                                 -0.37
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.54
+
+
+  Startpoint: Serializer_Block/pDataReg_reg_2_
+              (rising edge-triggered flip-flop clocked by DFTCLK)
+  Endpoint: Serializer_Block/pDataReg_reg_3_
+            (rising edge-triggered flip-flop clocked by DFTCLK)
+  Path Group: DFTCLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock DFTCLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  Serializer_Block/pDataReg_reg_2_/CK (SDFFRQX2M)         0.00       0.00 r
+  Serializer_Block/pDataReg_reg_2_/Q (SDFFRQX2M)          0.37       0.37 r
+  Serializer_Block/pDataReg_reg_3_/SI (SDFFRQX2M)         0.00       0.37 r
+  data arrival time                                                  0.37
+
+  clock DFTCLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.01       0.01
+  Serializer_Block/pDataReg_reg_3_/CK (SDFFRQX2M)         0.00       0.01 r
+  library hold time                                      -0.18      -0.17
+  data required time                                                -0.17
+  --------------------------------------------------------------------------
+  data required time                                                -0.17
+  data arrival time                                                 -0.37
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.54
+
+
+  Startpoint: Serializer_Block/pDataReg_reg_0_
+              (rising edge-triggered flip-flop clocked by DFTCLK)
+  Endpoint: Serializer_Block/pDataReg_reg_1_
+            (rising edge-triggered flip-flop clocked by DFTCLK)
+  Path Group: DFTCLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock DFTCLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  Serializer_Block/pDataReg_reg_0_/CK (SDFFRQX2M)         0.00       0.00 r
+  Serializer_Block/pDataReg_reg_0_/Q (SDFFRQX2M)          0.37       0.37 r
+  Serializer_Block/pDataReg_reg_1_/SI (SDFFRQX2M)         0.00       0.37 r
+  data arrival time                                                  0.37
+
+  clock DFTCLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.01       0.01
+  Serializer_Block/pDataReg_reg_1_/CK (SDFFRQX2M)         0.00       0.01 r
+  library hold time                                      -0.18      -0.17
+  data required time                                                -0.17
+  --------------------------------------------------------------------------
+  data required time                                                -0.17
+  data arrival time                                                 -0.37
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.54
+
+
+  Startpoint: Serializer_Block/counter_reg_3_
+              (rising edge-triggered flip-flop clocked by DFTCLK)
+  Endpoint: Serializer_Block/pDataReg_reg_0_
+            (rising edge-triggered flip-flop clocked by DFTCLK)
+  Path Group: DFTCLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock DFTCLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  Serializer_Block/counter_reg_3_/CK (SDFFRQX2M)          0.00       0.00 r
+  Serializer_Block/counter_reg_3_/Q (SDFFRQX2M)           0.37       0.37 r
+  Serializer_Block/pDataReg_reg_0_/SI (SDFFRQX2M)         0.00       0.37 r
+  data arrival time                                                  0.37
+
+  clock DFTCLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.01       0.01
+  Serializer_Block/pDataReg_reg_0_/CK (SDFFRQX2M)         0.00       0.01 r
+  library hold time                                      -0.18      -0.17
+  data required time                                                -0.17
+  --------------------------------------------------------------------------
+  data required time                                                -0.17
+  data arrival time                                                 -0.37
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.54
+
+
+  Startpoint: FSM_Block/currentState_reg_0_
+              (rising edge-triggered flip-flop clocked by DFTCLK)
+  Endpoint: FSM_Block/currentState_reg_1_
+            (rising edge-triggered flip-flop clocked by DFTCLK)
+  Path Group: DFTCLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock DFTCLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  FSM_Block/currentState_reg_0_/CK (SDFFRQX2M)            0.00       0.00 r
+  FSM_Block/currentState_reg_0_/Q (SDFFRQX2M)             0.39       0.39 r
+  FSM_Block/currentState_reg_1_/SI (SDFFRQX2M)            0.00       0.39 r
+  data arrival time                                                  0.39
+
+  clock DFTCLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.01       0.01
+  FSM_Block/currentState_reg_1_/CK (SDFFRQX2M)            0.00       0.01 r
+  library hold time                                      -0.18      -0.17
+  data required time                                                -0.17
+  --------------------------------------------------------------------------
+  data required time                                                -0.17
+  data arrival time                                                 -0.39
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.56
+
+
+  Startpoint: Serializer_Block/counter_reg_2_
+              (rising edge-triggered flip-flop clocked by DFTCLK)
+  Endpoint: Serializer_Block/counter_reg_3_
+            (rising edge-triggered flip-flop clocked by DFTCLK)
+  Path Group: DFTCLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock DFTCLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  Serializer_Block/counter_reg_2_/CK (SDFFRQX2M)          0.00       0.00 r
+  Serializer_Block/counter_reg_2_/Q (SDFFRQX2M)           0.39       0.39 r
+  Serializer_Block/counter_reg_3_/SI (SDFFRQX2M)          0.00       0.39 r
+  data arrival time                                                  0.39
+
+  clock DFTCLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.01       0.01
+  Serializer_Block/counter_reg_3_/CK (SDFFRQX2M)          0.00       0.01 r
+  library hold time                                      -0.18      -0.17
+  data required time                                                -0.17
+  --------------------------------------------------------------------------
+  data required time                                                -0.17
+  data arrival time                                                 -0.39
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.56
+
+
+  Startpoint: FSM_Block/currentState_reg_2_
+              (rising edge-triggered flip-flop clocked by DFTCLK)
+  Endpoint: Parity_Calc_Block/parBit_reg
+            (rising edge-triggered flip-flop clocked by DFTCLK)
+  Path Group: DFTCLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock DFTCLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  FSM_Block/currentState_reg_2_/CK (SDFFRQX2M)            0.00       0.00 r
+  FSM_Block/currentState_reg_2_/Q (SDFFRQX2M)             0.40       0.40 r
+  FSM_Block/test_so (UART_TX_FSM_test_1)                  0.00       0.40 r
+  Parity_Calc_Block/test_si (Parity_Calc_test_1)          0.00       0.40 r
+  Parity_Calc_Block/parBit_reg/SI (SDFFRQX2M)             0.00       0.40 r
+  data arrival time                                                  0.40
+
+  clock DFTCLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.01       0.01
+  Parity_Calc_Block/parBit_reg/CK (SDFFRQX2M)             0.00       0.01 r
+  library hold time                                      -0.19      -0.18
+  data required time                                                -0.18
+  --------------------------------------------------------------------------
+  data required time                                                -0.18
+  data arrival time                                                 -0.40
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.58
+
+
+  Startpoint: FSM_Block/currentState_reg_1_
+              (rising edge-triggered flip-flop clocked by DFTCLK)
+  Endpoint: FSM_Block/currentState_reg_2_
+            (rising edge-triggered flip-flop clocked by DFTCLK)
+  Path Group: DFTCLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock DFTCLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  FSM_Block/currentState_reg_1_/CK (SDFFRQX2M)            0.00       0.00 r
+  FSM_Block/currentState_reg_1_/Q (SDFFRQX2M)             0.41       0.41 r
+  FSM_Block/currentState_reg_2_/SI (SDFFRQX2M)            0.00       0.41 r
+  data arrival time                                                  0.41
+
+  clock DFTCLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.01       0.01
+  FSM_Block/currentState_reg_2_/CK (SDFFRQX2M)            0.00       0.01 r
+  library hold time                                      -0.19      -0.18
+  data required time                                                -0.18
+  --------------------------------------------------------------------------
+  data required time                                                -0.18
+  data arrival time                                                 -0.41
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.59
+
+
+  Startpoint: Serializer_Block/counter_reg_1_
+              (rising edge-triggered flip-flop clocked by DFTCLK)
+  Endpoint: Serializer_Block/counter_reg_2_
+            (rising edge-triggered flip-flop clocked by DFTCLK)
+  Path Group: DFTCLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock DFTCLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  Serializer_Block/counter_reg_1_/CK (SDFFRQX2M)          0.00       0.00 r
+  Serializer_Block/counter_reg_1_/Q (SDFFRQX2M)           0.42       0.42 r
+  Serializer_Block/counter_reg_2_/SI (SDFFRQX2M)          0.00       0.42 r
+  data arrival time                                                  0.42
+
+  clock DFTCLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.01       0.01
+  Serializer_Block/counter_reg_2_/CK (SDFFRQX2M)          0.00       0.01 r
+  library hold time                                      -0.19      -0.18
+  data required time                                                -0.18
+  --------------------------------------------------------------------------
+  data required time                                                -0.18
+  data arrival time                                                 -0.42
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.61
+
+
+  Startpoint: Serializer_Block/counter_reg_0_
+              (rising edge-triggered flip-flop clocked by DFTCLK)
+  Endpoint: Serializer_Block/counter_reg_1_
+            (rising edge-triggered flip-flop clocked by DFTCLK)
+  Path Group: DFTCLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock DFTCLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  Serializer_Block/counter_reg_0_/CK (SDFFRQX2M)          0.00       0.00 r
+  Serializer_Block/counter_reg_0_/Q (SDFFRQX2M)           0.43       0.43 r
+  Serializer_Block/counter_reg_1_/SI (SDFFRQX2M)          0.00       0.43 r
+  data arrival time                                                  0.43
+
+  clock DFTCLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.01       0.01
+  Serializer_Block/counter_reg_1_/CK (SDFFRQX2M)          0.00       0.01 r
+  library hold time                                      -0.19      -0.18
+  data required time                                                -0.18
+  --------------------------------------------------------------------------
+  data required time                                                -0.18
+  data arrival time                                                 -0.43
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.62
+
+
+  Startpoint: Parity_Calc_Block/parBit_reg
+              (rising edge-triggered flip-flop clocked by DFTCLK)
+  Endpoint: Parity_Calc_Block/parBit_reg
+            (rising edge-triggered flip-flop clocked by DFTCLK)
+  Path Group: DFTCLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock DFTCLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  Parity_Calc_Block/parBit_reg/CK (SDFFRQX2M)             0.00       0.00 r
+  Parity_Calc_Block/parBit_reg/Q (SDFFRQX2M)              0.37       0.37 r
+  Parity_Calc_Block/U5/Y (OAI2BB2X1M)                     0.15       0.52 r
+  Parity_Calc_Block/parBit_reg/D (SDFFRQX2M)              0.00       0.52 r
+  data arrival time                                                  0.52
+
+  clock DFTCLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.01       0.01
+  Parity_Calc_Block/parBit_reg/CK (SDFFRQX2M)             0.00       0.01 r
+  library hold time                                      -0.16      -0.15
+  data required time                                                -0.15
+  --------------------------------------------------------------------------
+  data required time                                                -0.15
+  data arrival time                                                 -0.52
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.67
+
+
+  Startpoint: Serializer_Block/pDataReg_reg_5_
+              (rising edge-triggered flip-flop clocked by DFTCLK)
+  Endpoint: Serializer_Block/pDataReg_reg_5_
+            (rising edge-triggered flip-flop clocked by DFTCLK)
+  Path Group: DFTCLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock DFTCLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  Serializer_Block/pDataReg_reg_5_/CK (SDFFRQX2M)         0.00       0.00 r
+  Serializer_Block/pDataReg_reg_5_/Q (SDFFRQX2M)          0.37       0.37 r
+  Serializer_Block/U21/Y (AO22X1M)                        0.15       0.53 r
+  Serializer_Block/pDataReg_reg_5_/D (SDFFRQX2M)          0.00       0.53 r
+  data arrival time                                                  0.53
+
+  clock DFTCLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.01       0.01
+  Serializer_Block/pDataReg_reg_5_/CK (SDFFRQX2M)         0.00       0.01 r
+  library hold time                                      -0.16      -0.15
+  data required time                                                -0.15
+  --------------------------------------------------------------------------
+  data required time                                                -0.15
+  data arrival time                                                 -0.53
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.68
+
+
+  Startpoint: Serializer_Block/pDataReg_reg_1_
+              (rising edge-triggered flip-flop clocked by DFTCLK)
+  Endpoint: Serializer_Block/pDataReg_reg_1_
+            (rising edge-triggered flip-flop clocked by DFTCLK)
+  Path Group: DFTCLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock DFTCLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  Serializer_Block/pDataReg_reg_1_/CK (SDFFRQX2M)         0.00       0.00 r
+  Serializer_Block/pDataReg_reg_1_/Q (SDFFRQX2M)          0.37       0.37 r
+  Serializer_Block/U17/Y (AO22X1M)                        0.15       0.53 r
+  Serializer_Block/pDataReg_reg_1_/D (SDFFRQX2M)          0.00       0.53 r
+  data arrival time                                                  0.53
+
+  clock DFTCLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.01       0.01
+  Serializer_Block/pDataReg_reg_1_/CK (SDFFRQX2M)         0.00       0.01 r
+  library hold time                                      -0.16      -0.15
+  data required time                                                -0.15
+  --------------------------------------------------------------------------
+  data required time                                                -0.15
+  data arrival time                                                 -0.53
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.68
+
+
+  Startpoint: Serializer_Block/pDataReg_reg_3_
+              (rising edge-triggered flip-flop clocked by DFTCLK)
+  Endpoint: Serializer_Block/pDataReg_reg_3_
+            (rising edge-triggered flip-flop clocked by DFTCLK)
+  Path Group: DFTCLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock DFTCLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  Serializer_Block/pDataReg_reg_3_/CK (SDFFRQX2M)         0.00       0.00 r
+  Serializer_Block/pDataReg_reg_3_/Q (SDFFRQX2M)          0.37       0.37 r
+  Serializer_Block/U19/Y (AO22X1M)                        0.15       0.53 r
+  Serializer_Block/pDataReg_reg_3_/D (SDFFRQX2M)          0.00       0.53 r
+  data arrival time                                                  0.53
+
+  clock DFTCLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.01       0.01
+  Serializer_Block/pDataReg_reg_3_/CK (SDFFRQX2M)         0.00       0.01 r
+  library hold time                                      -0.16      -0.15
+  data required time                                                -0.15
+  --------------------------------------------------------------------------
+  data required time                                                -0.15
+  data arrival time                                                 -0.53
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.68
+
+
+  Startpoint: Serializer_Block/pDataReg_reg_6_
+              (rising edge-triggered flip-flop clocked by DFTCLK)
+  Endpoint: Serializer_Block/pDataReg_reg_6_
+            (rising edge-triggered flip-flop clocked by DFTCLK)
+  Path Group: DFTCLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock DFTCLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  Serializer_Block/pDataReg_reg_6_/CK (SDFFRQX2M)         0.00       0.00 r
+  Serializer_Block/pDataReg_reg_6_/Q (SDFFRQX2M)          0.37       0.37 r
+  Serializer_Block/U22/Y (AO22X1M)                        0.15       0.53 r
+  Serializer_Block/pDataReg_reg_6_/D (SDFFRQX2M)          0.00       0.53 r
+  data arrival time                                                  0.53
+
+  clock DFTCLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.01       0.01
+  Serializer_Block/pDataReg_reg_6_/CK (SDFFRQX2M)         0.00       0.01 r
+  library hold time                                      -0.16      -0.15
+  data required time                                                -0.15
+  --------------------------------------------------------------------------
+  data required time                                                -0.15
+  data arrival time                                                 -0.53
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.68
+
+
+  Startpoint: Serializer_Block/pDataReg_reg_4_
+              (rising edge-triggered flip-flop clocked by DFTCLK)
+  Endpoint: Serializer_Block/pDataReg_reg_4_
+            (rising edge-triggered flip-flop clocked by DFTCLK)
+  Path Group: DFTCLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock DFTCLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  Serializer_Block/pDataReg_reg_4_/CK (SDFFRQX2M)         0.00       0.00 r
+  Serializer_Block/pDataReg_reg_4_/Q (SDFFRQX2M)          0.37       0.37 r
+  Serializer_Block/U20/Y (AO22X1M)                        0.15       0.53 r
+  Serializer_Block/pDataReg_reg_4_/D (SDFFRQX2M)          0.00       0.53 r
+  data arrival time                                                  0.53
+
+  clock DFTCLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.01       0.01
+  Serializer_Block/pDataReg_reg_4_/CK (SDFFRQX2M)         0.00       0.01 r
+  library hold time                                      -0.16      -0.15
+  data required time                                                -0.15
+  --------------------------------------------------------------------------
+  data required time                                                -0.15
+  data arrival time                                                 -0.53
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.68
+
+
+  Startpoint: Serializer_Block/pDataReg_reg_2_
+              (rising edge-triggered flip-flop clocked by DFTCLK)
+  Endpoint: Serializer_Block/pDataReg_reg_2_
+            (rising edge-triggered flip-flop clocked by DFTCLK)
+  Path Group: DFTCLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock DFTCLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  Serializer_Block/pDataReg_reg_2_/CK (SDFFRQX2M)         0.00       0.00 r
+  Serializer_Block/pDataReg_reg_2_/Q (SDFFRQX2M)          0.37       0.37 r
+  Serializer_Block/U18/Y (AO22X1M)                        0.15       0.53 r
+  Serializer_Block/pDataReg_reg_2_/D (SDFFRQX2M)          0.00       0.53 r
+  data arrival time                                                  0.53
+
+  clock DFTCLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.01       0.01
+  Serializer_Block/pDataReg_reg_2_/CK (SDFFRQX2M)         0.00       0.01 r
+  library hold time                                      -0.16      -0.15
+  data required time                                                -0.15
+  --------------------------------------------------------------------------
+  data required time                                                -0.15
+  data arrival time                                                 -0.53
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.68
+
+
+  Startpoint: Serializer_Block/pDataReg_reg_0_
+              (rising edge-triggered flip-flop clocked by DFTCLK)
+  Endpoint: Serializer_Block/pDataReg_reg_0_
+            (rising edge-triggered flip-flop clocked by DFTCLK)
+  Path Group: DFTCLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock DFTCLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  Serializer_Block/pDataReg_reg_0_/CK (SDFFRQX2M)         0.00       0.00 r
+  Serializer_Block/pDataReg_reg_0_/Q (SDFFRQX2M)          0.37       0.37 r
+  Serializer_Block/U16/Y (AO22X1M)                        0.15       0.53 r
+  Serializer_Block/pDataReg_reg_0_/D (SDFFRQX2M)          0.00       0.53 r
+  data arrival time                                                  0.53
+
+  clock DFTCLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.01       0.01
+  Serializer_Block/pDataReg_reg_0_/CK (SDFFRQX2M)         0.00       0.01 r
+  library hold time                                      -0.16      -0.15
+  data required time                                                -0.15
+  --------------------------------------------------------------------------
+  data required time                                                -0.15
+  data arrival time                                                 -0.53
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.68
+
+
+  Startpoint: Serializer_Block/counter_reg_3_
+              (rising edge-triggered flip-flop clocked by DFTCLK)
+  Endpoint: Serializer_Block/counter_reg_3_
+            (rising edge-triggered flip-flop clocked by DFTCLK)
+  Path Group: DFTCLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock DFTCLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  Serializer_Block/counter_reg_3_/CK (SDFFRQX2M)          0.00       0.00 r
+  Serializer_Block/counter_reg_3_/Q (SDFFRQX2M)           0.37       0.37 r
+  Serializer_Block/U13/Y (AO22X1M)                        0.15       0.53 r
+  Serializer_Block/counter_reg_3_/D (SDFFRQX2M)           0.00       0.53 r
+  data arrival time                                                  0.53
+
+  clock DFTCLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.01       0.01
+  Serializer_Block/counter_reg_3_/CK (SDFFRQX2M)          0.00       0.01 r
+  library hold time                                      -0.16      -0.15
+  data required time                                                -0.15
+  --------------------------------------------------------------------------
+  data required time                                                -0.15
+  data arrival time                                                 -0.53
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.68
+
+
+  Startpoint: Serializer_Block/counter_reg_0_
+              (rising edge-triggered flip-flop clocked by DFTCLK)
+  Endpoint: Serializer_Block/counter_reg_0_
+            (rising edge-triggered flip-flop clocked by DFTCLK)
+  Path Group: DFTCLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock DFTCLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  Serializer_Block/counter_reg_0_/CK (SDFFRQX2M)          0.00       0.00 r
+  Serializer_Block/counter_reg_0_/Q (SDFFRQX2M)           0.43       0.43 r
+  Serializer_Block/U11/Y (OAI32X1M)                       0.07       0.51 f
+  Serializer_Block/counter_reg_0_/D (SDFFRQX2M)           0.00       0.51 f
+  data arrival time                                                  0.51
+
+  clock DFTCLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.01       0.01
+  Serializer_Block/counter_reg_0_/CK (SDFFRQX2M)          0.00       0.01 r
+  library hold time                                      -0.21      -0.20
+  data required time                                                -0.20
+  --------------------------------------------------------------------------
+  data required time                                                -0.20
+  data arrival time                                                 -0.51
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.71
+
+
+  Startpoint: Serializer_Block/counter_reg_1_
+              (rising edge-triggered flip-flop clocked by DFTCLK)
+  Endpoint: Serializer_Block/counter_reg_1_
+            (rising edge-triggered flip-flop clocked by DFTCLK)
+  Path Group: DFTCLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock DFTCLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  Serializer_Block/counter_reg_1_/CK (SDFFRQX2M)          0.00       0.00 r
+  Serializer_Block/counter_reg_1_/Q (SDFFRQX2M)           0.42       0.42 r
+  Serializer_Block/U10/Y (OAI32X1M)                       0.10       0.53 f
+  Serializer_Block/counter_reg_1_/D (SDFFRQX2M)           0.00       0.53 f
+  data arrival time                                                  0.53
+
+  clock DFTCLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.01       0.01
+  Serializer_Block/counter_reg_1_/CK (SDFFRQX2M)          0.00       0.01 r
+  library hold time                                      -0.21      -0.20
+  data required time                                                -0.20
+  --------------------------------------------------------------------------
+  data required time                                                -0.20
+  data arrival time                                                 -0.53
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.73
+
+
+  Startpoint: FSM_Block/currentState_reg_0_
+              (rising edge-triggered flip-flop clocked by DFTCLK)
+  Endpoint: FSM_Block/currentState_reg_1_
+            (rising edge-triggered flip-flop clocked by DFTCLK)
+  Path Group: DFTCLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock DFTCLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  FSM_Block/currentState_reg_0_/CK (SDFFRQX2M)            0.00       0.00 r
+  FSM_Block/currentState_reg_0_/Q (SDFFRQX2M)             0.39       0.39 r
+  FSM_Block/U10/Y (NAND2X2M)                              0.12       0.51 f
+  FSM_Block/U6/Y (NAND2X2M)                               0.08       0.58 r
+  FSM_Block/currentState_reg_1_/D (SDFFRQX2M)             0.00       0.58 r
+  data arrival time                                                  0.58
+
+  clock DFTCLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.01       0.01
+  FSM_Block/currentState_reg_1_/CK (SDFFRQX2M)            0.00       0.01 r
+  library hold time                                      -0.16      -0.15
+  data required time                                                -0.15
+  --------------------------------------------------------------------------
+  data required time                                                -0.15
+  data arrival time                                                 -0.58
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.73
+
+
+  Startpoint: Serializer_Block/counter_reg_2_
+              (rising edge-triggered flip-flop clocked by DFTCLK)
+  Endpoint: Serializer_Block/counter_reg_2_
+            (rising edge-triggered flip-flop clocked by DFTCLK)
+  Path Group: DFTCLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock DFTCLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  Serializer_Block/counter_reg_2_/CK (SDFFRQX2M)          0.00       0.00 r
+  Serializer_Block/counter_reg_2_/Q (SDFFRQX2M)           0.39       0.39 r
+  Serializer_Block/U25/Y (INVX2M)                         0.07       0.46 f
+  Serializer_Block/U4/Y (OAI32X1M)                        0.11       0.57 r
+  Serializer_Block/counter_reg_2_/D (SDFFRQX2M)           0.00       0.57 r
+  data arrival time                                                  0.57
+
+  clock DFTCLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.01       0.01
+  Serializer_Block/counter_reg_2_/CK (SDFFRQX2M)          0.00       0.01 r
+  library hold time                                      -0.17      -0.16
+  data required time                                                -0.16
+  --------------------------------------------------------------------------
+  data required time                                                -0.16
+  data arrival time                                                 -0.57
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.74
+
+
+  Startpoint: FSM_Block/currentState_reg_1_
+              (rising edge-triggered flip-flop clocked by DFTCLK)
+  Endpoint: FSM_Block/currentState_reg_2_
+            (rising edge-triggered flip-flop clocked by DFTCLK)
+  Path Group: DFTCLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock DFTCLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  FSM_Block/currentState_reg_1_/CK (SDFFRQX2M)            0.00       0.00 r
+  FSM_Block/currentState_reg_1_/Q (SDFFRQX2M)             0.41       0.41 r
+  FSM_Block/U9/Y (NAND2X2M)                               0.12       0.54 f
+  FSM_Block/U15/Y (NOR2X2M)                               0.10       0.64 r
+  FSM_Block/currentState_reg_2_/D (SDFFRQX2M)             0.00       0.64 r
+  data arrival time                                                  0.64
+
+  clock DFTCLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.01       0.01
+  FSM_Block/currentState_reg_2_/CK (SDFFRQX2M)            0.00       0.01 r
+  library hold time                                      -0.16      -0.15
+  data required time                                                -0.15
+  --------------------------------------------------------------------------
+  data required time                                                -0.15
+  data arrival time                                                 -0.64
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.80
+
+
+  Startpoint: FSM_Block/currentState_reg_2_
+              (rising edge-triggered flip-flop clocked by DFTCLK)
+  Endpoint: FSM_Block/currentState_reg_0_
+            (rising edge-triggered flip-flop clocked by DFTCLK)
+  Path Group: DFTCLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock DFTCLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  FSM_Block/currentState_reg_2_/CK (SDFFRQX2M)            0.00       0.00 r
+  FSM_Block/currentState_reg_2_/Q (SDFFRQX2M)             0.40       0.40 r
+  FSM_Block/U13/Y (AOI32X1M)                              0.14       0.54 f
+  FSM_Block/U12/Y (OAI2B2X1M)                             0.10       0.64 r
+  FSM_Block/currentState_reg_0_/D (SDFFRQX2M)             0.00       0.64 r
+  data arrival time                                                  0.64
+
+  clock DFTCLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.01       0.01
+  FSM_Block/currentState_reg_0_/CK (SDFFRQX2M)            0.00       0.01 r
+  library hold time                                      -0.17      -0.16
+  data required time                                                -0.16
+  --------------------------------------------------------------------------
+  data required time                                                -0.16
+  data arrival time                                                 -0.64
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.80
+
+
+  Startpoint: FSM_Block/currentState_reg_0_
+              (rising edge-triggered flip-flop clocked by DFTCLK)
+  Endpoint: Serializer_Block/pDataReg_reg_7_
+            (rising edge-triggered flip-flop clocked by DFTCLK)
+  Path Group: DFTCLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock DFTCLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  FSM_Block/currentState_reg_0_/CK (SDFFRQX2M)            0.00       0.00 r
+  FSM_Block/currentState_reg_0_/Q (SDFFRQX2M)             0.46       0.46 f
+  FSM_Block/U17/Y (INVX2M)                                0.12       0.57 r
+  FSM_Block/U7/Y (AND3X2M)                                0.29       0.86 r
+  FSM_Block/regData (UART_TX_FSM_test_1)                  0.00       0.86 r
+  Serializer_Block/regData (Serializer_test_1)            0.00       0.86 r
+  Serializer_Block/U23/Y (AO22X1M)                        0.16       1.02 r
+  Serializer_Block/pDataReg_reg_7_/D (SDFFRQX2M)          0.00       1.02 r
+  data arrival time                                                  1.02
+
+  clock DFTCLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.01       0.01
+  Serializer_Block/pDataReg_reg_7_/CK (SDFFRQX2M)         0.00       0.01 r
+  library hold time                                      -0.16      -0.15
+  data required time                                                -0.15
+  --------------------------------------------------------------------------
+  data required time                                                -0.15
+  data arrival time                                                 -1.02
+  --------------------------------------------------------------------------
+  slack (MET)                                                        1.17
+
+
+  Startpoint: SI (input port clocked by CLK)
+  Endpoint: FSM_Block/currentState_reg_0_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: INREG
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                  300.00     300.00 r
+  SI (in)                                                 0.01     300.01 r
+  FSM_Block/test_si (UART_TX_FSM_test_1)                  0.00     300.01 r
+  FSM_Block/currentState_reg_0_/SI (SDFFRQX2M)            0.00     300.01 r
+  data arrival time                                                300.01
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.01       0.01
+  FSM_Block/currentState_reg_0_/CK (SDFFRQX2M)            0.00       0.01 r
+  library hold time                                      -0.17      -0.16
+  data required time                                                -0.16
+  --------------------------------------------------------------------------
+  data required time                                                -0.16
+  data arrival time                                               -300.01
+  --------------------------------------------------------------------------
+  slack (MET)                                                      300.17
+
+
+  Startpoint: pData[6] (input port clocked by CLK)
+  Endpoint: Serializer_Block/pDataReg_reg_6_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: INREG
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                  300.00     300.00 r
+  pData[6] (in)                                           0.02     300.02 r
+  Serializer_Block/pData[6] (Serializer_test_1)           0.00     300.02 r
+  Serializer_Block/U22/Y (AO22X1M)                        0.13     300.15 r
+  Serializer_Block/pDataReg_reg_6_/D (SDFFRQX2M)          0.00     300.15 r
+  data arrival time                                                300.15
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.01       0.01
+  Serializer_Block/pDataReg_reg_6_/CK (SDFFRQX2M)         0.00       0.01 r
+  library hold time                                      -0.16      -0.15
+  data required time                                                -0.15
+  --------------------------------------------------------------------------
+  data required time                                                -0.15
+  data arrival time                                               -300.15
+  --------------------------------------------------------------------------
+  slack (MET)                                                      300.30
+
+
+  Startpoint: pData[5] (input port clocked by CLK)
+  Endpoint: Serializer_Block/pDataReg_reg_5_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: INREG
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                  300.00     300.00 r
+  pData[5] (in)                                           0.02     300.02 r
+  Serializer_Block/pData[5] (Serializer_test_1)           0.00     300.02 r
+  Serializer_Block/U21/Y (AO22X1M)                        0.13     300.15 r
+  Serializer_Block/pDataReg_reg_5_/D (SDFFRQX2M)          0.00     300.15 r
+  data arrival time                                                300.15
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.01       0.01
+  Serializer_Block/pDataReg_reg_5_/CK (SDFFRQX2M)         0.00       0.01 r
+  library hold time                                      -0.16      -0.15
+  data required time                                                -0.15
+  --------------------------------------------------------------------------
+  data required time                                                -0.15
+  data arrival time                                               -300.15
+  --------------------------------------------------------------------------
+  slack (MET)                                                      300.30
+
+
+  Startpoint: pData[1] (input port clocked by CLK)
+  Endpoint: Serializer_Block/pDataReg_reg_1_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: INREG
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                  300.00     300.00 r
+  pData[1] (in)                                           0.02     300.02 r
+  Serializer_Block/pData[1] (Serializer_test_1)           0.00     300.02 r
+  Serializer_Block/U17/Y (AO22X1M)                        0.13     300.15 r
+  Serializer_Block/pDataReg_reg_1_/D (SDFFRQX2M)          0.00     300.15 r
+  data arrival time                                                300.15
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.01       0.01
+  Serializer_Block/pDataReg_reg_1_/CK (SDFFRQX2M)         0.00       0.01 r
+  library hold time                                      -0.16      -0.15
+  data required time                                                -0.15
+  --------------------------------------------------------------------------
+  data required time                                                -0.15
+  data arrival time                                               -300.15
+  --------------------------------------------------------------------------
+  slack (MET)                                                      300.30
+
+
+  Startpoint: pData[4] (input port clocked by CLK)
+  Endpoint: Serializer_Block/pDataReg_reg_4_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: INREG
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                  300.00     300.00 r
+  pData[4] (in)                                           0.02     300.02 r
+  Serializer_Block/pData[4] (Serializer_test_1)           0.00     300.02 r
+  Serializer_Block/U20/Y (AO22X1M)                        0.13     300.16 r
+  Serializer_Block/pDataReg_reg_4_/D (SDFFRQX2M)          0.00     300.16 r
+  data arrival time                                                300.16
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.01       0.01
+  Serializer_Block/pDataReg_reg_4_/CK (SDFFRQX2M)         0.00       0.01 r
+  library hold time                                      -0.16      -0.15
+  data required time                                                -0.15
+  --------------------------------------------------------------------------
+  data required time                                                -0.15
+  data arrival time                                               -300.16
+  --------------------------------------------------------------------------
+  slack (MET)                                                      300.31
+
+
+  Startpoint: pData[3] (input port clocked by CLK)
+  Endpoint: Serializer_Block/pDataReg_reg_3_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: INREG
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                  300.00     300.00 r
+  pData[3] (in)                                           0.03     300.03 r
+  Serializer_Block/pData[3] (Serializer_test_1)           0.00     300.03 r
+  Serializer_Block/U19/Y (AO22X1M)                        0.13     300.16 r
+  Serializer_Block/pDataReg_reg_3_/D (SDFFRQX2M)          0.00     300.16 r
+  data arrival time                                                300.16
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.01       0.01
+  Serializer_Block/pDataReg_reg_3_/CK (SDFFRQX2M)         0.00       0.01 r
+  library hold time                                      -0.16      -0.15
+  data required time                                                -0.15
+  --------------------------------------------------------------------------
+  data required time                                                -0.15
+  data arrival time                                               -300.16
+  --------------------------------------------------------------------------
+  slack (MET)                                                      300.31
+
+
+  Startpoint: pData[0] (input port clocked by CLK)
+  Endpoint: Serializer_Block/pDataReg_reg_0_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: INREG
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                  300.00     300.00 r
+  pData[0] (in)                                           0.02     300.02 r
+  Serializer_Block/pData[0] (Serializer_test_1)           0.00     300.02 r
+  Serializer_Block/U16/Y (AO22X1M)                        0.14     300.16 r
+  Serializer_Block/pDataReg_reg_0_/D (SDFFRQX2M)          0.00     300.16 r
+  data arrival time                                                300.16
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.01       0.01
+  Serializer_Block/pDataReg_reg_0_/CK (SDFFRQX2M)         0.00       0.01 r
+  library hold time                                      -0.16      -0.15
+  data required time                                                -0.15
+  --------------------------------------------------------------------------
+  data required time                                                -0.15
+  data arrival time                                               -300.16
+  --------------------------------------------------------------------------
+  slack (MET)                                                      300.31
+
+
+  Startpoint: pData[2] (input port clocked by CLK)
+  Endpoint: Serializer_Block/pDataReg_reg_2_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: INREG
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                  300.00     300.00 r
+  pData[2] (in)                                           0.03     300.03 r
+  Serializer_Block/pData[2] (Serializer_test_1)           0.00     300.03 r
+  Serializer_Block/U18/Y (AO22X1M)                        0.13     300.16 r
+  Serializer_Block/pDataReg_reg_2_/D (SDFFRQX2M)          0.00     300.16 r
+  data arrival time                                                300.16
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.01       0.01
+  Serializer_Block/pDataReg_reg_2_/CK (SDFFRQX2M)         0.00       0.01 r
+  library hold time                                      -0.16      -0.15
+  data required time                                                -0.15
+  --------------------------------------------------------------------------
+  data required time                                                -0.15
+  data arrival time                                               -300.16
+  --------------------------------------------------------------------------
+  slack (MET)                                                      300.31
+
+
+  Startpoint: pData[7] (input port clocked by CLK)
+  Endpoint: Serializer_Block/pDataReg_reg_7_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: INREG
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                  300.00     300.00 r
+  pData[7] (in)                                           0.03     300.03 r
+  Serializer_Block/pData[7] (Serializer_test_1)           0.00     300.03 r
+  Serializer_Block/U23/Y (AO22X1M)                        0.14     300.17 r
+  Serializer_Block/pDataReg_reg_7_/D (SDFFRQX2M)          0.00     300.17 r
+  data arrival time                                                300.17
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.01       0.01
+  Serializer_Block/pDataReg_reg_7_/CK (SDFFRQX2M)         0.00       0.01 r
+  library hold time                                      -0.16      -0.15
+  data required time                                                -0.15
+  --------------------------------------------------------------------------
+  data required time                                                -0.15
+  data arrival time                                               -300.17
+  --------------------------------------------------------------------------
+  slack (MET)                                                      300.32
+
+
+  Startpoint: SE (input port clocked by CLK)
+  Endpoint: FSM_Block/currentState_reg_2_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: INREG
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                  300.00     300.00 f
+  SE (in)                                                 0.13     300.13 f
+  FSM_Block/test_se (UART_TX_FSM_test_1)                  0.00     300.13 f
+  FSM_Block/currentState_reg_2_/SE (SDFFRQX2M)            0.00     300.13 f
+  data arrival time                                                300.13
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.01       0.01
+  FSM_Block/currentState_reg_2_/CK (SDFFRQX2M)            0.00       0.01 r
+  library hold time                                      -0.20      -0.19
+  data required time                                                -0.19
+  --------------------------------------------------------------------------
+  data required time                                                -0.19
+  data arrival time                                               -300.13
+  --------------------------------------------------------------------------
+  slack (MET)                                                      300.32
+
+
+  Startpoint: SE (input port clocked by CLK)
+  Endpoint: FSM_Block/currentState_reg_0_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: INREG
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                  300.00     300.00 f
+  SE (in)                                                 0.13     300.13 f
+  FSM_Block/test_se (UART_TX_FSM_test_1)                  0.00     300.13 f
+  FSM_Block/currentState_reg_0_/SE (SDFFRQX2M)            0.00     300.13 f
+  data arrival time                                                300.13
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.01       0.01
+  FSM_Block/currentState_reg_0_/CK (SDFFRQX2M)            0.00       0.01 r
+  library hold time                                      -0.20      -0.19
+  data required time                                                -0.19
+  --------------------------------------------------------------------------
+  data required time                                                -0.19
+  data arrival time                                               -300.13
+  --------------------------------------------------------------------------
+  slack (MET)                                                      300.32
+
+
+  Startpoint: SE (input port clocked by CLK)
+  Endpoint: FSM_Block/currentState_reg_1_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: INREG
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                  300.00     300.00 f
+  SE (in)                                                 0.13     300.13 f
+  FSM_Block/test_se (UART_TX_FSM_test_1)                  0.00     300.13 f
+  FSM_Block/currentState_reg_1_/SE (SDFFRQX2M)            0.00     300.13 f
+  data arrival time                                                300.13
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.01       0.01
+  FSM_Block/currentState_reg_1_/CK (SDFFRQX2M)            0.00       0.01 r
+  library hold time                                      -0.20      -0.19
+  data required time                                                -0.19
+  --------------------------------------------------------------------------
+  data required time                                                -0.19
+  data arrival time                                               -300.13
+  --------------------------------------------------------------------------
+  slack (MET)                                                      300.32
+
+
+  Startpoint: SE (input port clocked by CLK)
+  Endpoint: Parity_Calc_Block/parBit_reg
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: INREG
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                  300.00     300.00 f
+  SE (in)                                                 0.13     300.13 f
+  Parity_Calc_Block/test_se (Parity_Calc_test_1)          0.00     300.13 f
+  Parity_Calc_Block/parBit_reg/SE (SDFFRQX2M)             0.00     300.13 f
+  data arrival time                                                300.13
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.01       0.01
+  Parity_Calc_Block/parBit_reg/CK (SDFFRQX2M)             0.00       0.01 r
+  library hold time                                      -0.20      -0.19
+  data required time                                                -0.19
+  --------------------------------------------------------------------------
+  data required time                                                -0.19
+  data arrival time                                               -300.13
+  --------------------------------------------------------------------------
+  slack (MET)                                                      300.32
+
+
+  Startpoint: SE (input port clocked by CLK)
+  Endpoint: Serializer_Block/counter_reg_3_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: INREG
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                  300.00     300.00 f
+  SE (in)                                                 0.13     300.13 f
+  Serializer_Block/test_se (Serializer_test_1)            0.00     300.13 f
+  Serializer_Block/counter_reg_3_/SE (SDFFRQX2M)          0.00     300.13 f
+  data arrival time                                                300.13
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.01       0.01
+  Serializer_Block/counter_reg_3_/CK (SDFFRQX2M)          0.00       0.01 r
+  library hold time                                      -0.20      -0.19
+  data required time                                                -0.19
+  --------------------------------------------------------------------------
+  data required time                                                -0.19
+  data arrival time                                               -300.13
+  --------------------------------------------------------------------------
+  slack (MET)                                                      300.32
+
+
+  Startpoint: SE (input port clocked by CLK)
+  Endpoint: Serializer_Block/pDataReg_reg_7_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: INREG
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                  300.00     300.00 f
+  SE (in)                                                 0.13     300.13 f
+  Serializer_Block/test_se (Serializer_test_1)            0.00     300.13 f
+  Serializer_Block/pDataReg_reg_7_/SE (SDFFRQX2M)         0.00     300.13 f
+  data arrival time                                                300.13
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.01       0.01
+  Serializer_Block/pDataReg_reg_7_/CK (SDFFRQX2M)         0.00       0.01 r
+  library hold time                                      -0.20      -0.19
+  data required time                                                -0.19
+  --------------------------------------------------------------------------
+  data required time                                                -0.19
+  data arrival time                                               -300.13
+  --------------------------------------------------------------------------
+  slack (MET)                                                      300.32
+
+
+  Startpoint: SE (input port clocked by CLK)
+  Endpoint: Serializer_Block/pDataReg_reg_5_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: INREG
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                  300.00     300.00 f
+  SE (in)                                                 0.13     300.13 f
+  Serializer_Block/test_se (Serializer_test_1)            0.00     300.13 f
+  Serializer_Block/pDataReg_reg_5_/SE (SDFFRQX2M)         0.00     300.13 f
+  data arrival time                                                300.13
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.01       0.01
+  Serializer_Block/pDataReg_reg_5_/CK (SDFFRQX2M)         0.00       0.01 r
+  library hold time                                      -0.20      -0.19
+  data required time                                                -0.19
+  --------------------------------------------------------------------------
+  data required time                                                -0.19
+  data arrival time                                               -300.13
+  --------------------------------------------------------------------------
+  slack (MET)                                                      300.32
+
+
+  Startpoint: SE (input port clocked by CLK)
+  Endpoint: Serializer_Block/pDataReg_reg_3_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: INREG
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                  300.00     300.00 f
+  SE (in)                                                 0.13     300.13 f
+  Serializer_Block/test_se (Serializer_test_1)            0.00     300.13 f
+  Serializer_Block/pDataReg_reg_3_/SE (SDFFRQX2M)         0.00     300.13 f
+  data arrival time                                                300.13
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.01       0.01
+  Serializer_Block/pDataReg_reg_3_/CK (SDFFRQX2M)         0.00       0.01 r
+  library hold time                                      -0.20      -0.19
+  data required time                                                -0.19
+  --------------------------------------------------------------------------
+  data required time                                                -0.19
+  data arrival time                                               -300.13
+  --------------------------------------------------------------------------
+  slack (MET)                                                      300.32
+
+
+  Startpoint: SE (input port clocked by CLK)
+  Endpoint: Serializer_Block/pDataReg_reg_1_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: INREG
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                  300.00     300.00 f
+  SE (in)                                                 0.13     300.13 f
+  Serializer_Block/test_se (Serializer_test_1)            0.00     300.13 f
+  Serializer_Block/pDataReg_reg_1_/SE (SDFFRQX2M)         0.00     300.13 f
+  data arrival time                                                300.13
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.01       0.01
+  Serializer_Block/pDataReg_reg_1_/CK (SDFFRQX2M)         0.00       0.01 r
+  library hold time                                      -0.20      -0.19
+  data required time                                                -0.19
+  --------------------------------------------------------------------------
+  data required time                                                -0.19
+  data arrival time                                               -300.13
+  --------------------------------------------------------------------------
+  slack (MET)                                                      300.32
+
+
+  Startpoint: SE (input port clocked by CLK)
+  Endpoint: Serializer_Block/pDataReg_reg_6_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: INREG
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                  300.00     300.00 f
+  SE (in)                                                 0.13     300.13 f
+  Serializer_Block/test_se (Serializer_test_1)            0.00     300.13 f
+  Serializer_Block/pDataReg_reg_6_/SE (SDFFRQX2M)         0.00     300.13 f
+  data arrival time                                                300.13
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.01       0.01
+  Serializer_Block/pDataReg_reg_6_/CK (SDFFRQX2M)         0.00       0.01 r
+  library hold time                                      -0.20      -0.19
+  data required time                                                -0.19
+  --------------------------------------------------------------------------
+  data required time                                                -0.19
+  data arrival time                                               -300.13
+  --------------------------------------------------------------------------
+  slack (MET)                                                      300.32
+
+
+  Startpoint: SE (input port clocked by CLK)
+  Endpoint: Serializer_Block/pDataReg_reg_4_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: INREG
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                  300.00     300.00 f
+  SE (in)                                                 0.13     300.13 f
+  Serializer_Block/test_se (Serializer_test_1)            0.00     300.13 f
+  Serializer_Block/pDataReg_reg_4_/SE (SDFFRQX2M)         0.00     300.13 f
+  data arrival time                                                300.13
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.01       0.01
+  Serializer_Block/pDataReg_reg_4_/CK (SDFFRQX2M)         0.00       0.01 r
+  library hold time                                      -0.20      -0.19
+  data required time                                                -0.19
+  --------------------------------------------------------------------------
+  data required time                                                -0.19
+  data arrival time                                               -300.13
+  --------------------------------------------------------------------------
+  slack (MET)                                                      300.32
+
+
+  Startpoint: SE (input port clocked by CLK)
+  Endpoint: Serializer_Block/pDataReg_reg_2_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: INREG
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                  300.00     300.00 f
+  SE (in)                                                 0.13     300.13 f
+  Serializer_Block/test_se (Serializer_test_1)            0.00     300.13 f
+  Serializer_Block/pDataReg_reg_2_/SE (SDFFRQX2M)         0.00     300.13 f
+  data arrival time                                                300.13
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.01       0.01
+  Serializer_Block/pDataReg_reg_2_/CK (SDFFRQX2M)         0.00       0.01 r
+  library hold time                                      -0.20      -0.19
+  data required time                                                -0.19
+  --------------------------------------------------------------------------
+  data required time                                                -0.19
+  data arrival time                                               -300.13
+  --------------------------------------------------------------------------
+  slack (MET)                                                      300.32
+
+
+  Startpoint: SE (input port clocked by CLK)
+  Endpoint: Serializer_Block/pDataReg_reg_0_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: INREG
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                  300.00     300.00 f
+  SE (in)                                                 0.13     300.13 f
+  Serializer_Block/test_se (Serializer_test_1)            0.00     300.13 f
+  Serializer_Block/pDataReg_reg_0_/SE (SDFFRQX2M)         0.00     300.13 f
+  data arrival time                                                300.13
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.01       0.01
+  Serializer_Block/pDataReg_reg_0_/CK (SDFFRQX2M)         0.00       0.01 r
+  library hold time                                      -0.20      -0.19
+  data required time                                                -0.19
+  --------------------------------------------------------------------------
+  data required time                                                -0.19
+  data arrival time                                               -300.13
+  --------------------------------------------------------------------------
+  slack (MET)                                                      300.32
+
+
+  Startpoint: SE (input port clocked by CLK)
+  Endpoint: Serializer_Block/counter_reg_2_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: INREG
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                  300.00     300.00 f
+  SE (in)                                                 0.13     300.13 f
+  Serializer_Block/test_se (Serializer_test_1)            0.00     300.13 f
+  Serializer_Block/counter_reg_2_/SE (SDFFRQX2M)          0.00     300.13 f
+  data arrival time                                                300.13
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.01       0.01
+  Serializer_Block/counter_reg_2_/CK (SDFFRQX2M)          0.00       0.01 r
+  library hold time                                      -0.20      -0.19
+  data required time                                                -0.19
+  --------------------------------------------------------------------------
+  data required time                                                -0.19
+  data arrival time                                               -300.13
+  --------------------------------------------------------------------------
+  slack (MET)                                                      300.32
+
+
+  Startpoint: SE (input port clocked by CLK)
+  Endpoint: Serializer_Block/counter_reg_0_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: INREG
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                  300.00     300.00 f
+  SE (in)                                                 0.13     300.13 f
+  Serializer_Block/test_se (Serializer_test_1)            0.00     300.13 f
+  Serializer_Block/counter_reg_0_/SE (SDFFRQX2M)          0.00     300.13 f
+  data arrival time                                                300.13
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.01       0.01
+  Serializer_Block/counter_reg_0_/CK (SDFFRQX2M)          0.00       0.01 r
+  library hold time                                      -0.20      -0.19
+  data required time                                                -0.19
+  --------------------------------------------------------------------------
+  data required time                                                -0.19
+  data arrival time                                               -300.13
+  --------------------------------------------------------------------------
+  slack (MET)                                                      300.32
+
+
+  Startpoint: SE (input port clocked by CLK)
+  Endpoint: Serializer_Block/counter_reg_1_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: INREG
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                  300.00     300.00 f
+  SE (in)                                                 0.13     300.13 f
+  Serializer_Block/test_se (Serializer_test_1)            0.00     300.13 f
+  Serializer_Block/counter_reg_1_/SE (SDFFRQX2M)          0.00     300.13 f
+  data arrival time                                                300.13
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.01       0.01
+  Serializer_Block/counter_reg_1_/CK (SDFFRQX2M)          0.00       0.01 r
+  library hold time                                      -0.20      -0.19
+  data required time                                                -0.19
+  --------------------------------------------------------------------------
+  data required time                                                -0.19
+  data arrival time                                               -300.13
+  --------------------------------------------------------------------------
+  slack (MET)                                                      300.32
+
+
+  Startpoint: dataValid (input port clocked by CLK)
+  Endpoint: FSM_Block/currentState_reg_0_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: INREG
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                  300.00     300.00 r
+  dataValid (in)                                          0.02     300.02 r
+  FSM_Block/dataValid (UART_TX_FSM_test_1)                0.00     300.02 r
+  FSM_Block/U12/Y (OAI2B2X1M)                             0.16     300.18 r
+  FSM_Block/currentState_reg_0_/D (SDFFRQX2M)             0.00     300.18 r
+  data arrival time                                                300.18
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.01       0.01
+  FSM_Block/currentState_reg_0_/CK (SDFFRQX2M)            0.00       0.01 r
+  library hold time                                      -0.17      -0.16
+  data required time                                                -0.16
+  --------------------------------------------------------------------------
+  data required time                                                -0.16
+  data arrival time                                               -300.18
+  --------------------------------------------------------------------------
+  slack (MET)                                                      300.34
+
+
+  Startpoint: parEn (input port clocked by CLK)
+  Endpoint: FSM_Block/currentState_reg_2_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: INREG
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                  300.00     300.00 f
+  parEn (in)                                              0.01     300.01 f
+  FSM_Block/parEn (UART_TX_FSM_test_1)                    0.00     300.01 f
+  FSM_Block/U16/Y (AOI2B1X1M)                             0.21     300.21 f
+  FSM_Block/U15/Y (NOR2X2M)                               0.08     300.29 r
+  FSM_Block/currentState_reg_2_/D (SDFFRQX2M)             0.00     300.29 r
+  data arrival time                                                300.29
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.01       0.01
+  FSM_Block/currentState_reg_2_/CK (SDFFRQX2M)            0.00       0.01 r
+  library hold time                                      -0.16      -0.15
+  data required time                                                -0.15
+  --------------------------------------------------------------------------
+  data required time                                                -0.15
+  data arrival time                                               -300.29
+  --------------------------------------------------------------------------
+  slack (MET)                                                      300.44
+
+
+  Startpoint: parTyp (input port clocked by CLK)
+  Endpoint: Parity_Calc_Block/parBit_reg
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: INREG
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                  300.00     300.00 r
+  parTyp (in)                                             0.02     300.02 r
+  Parity_Calc_Block/parTyp (Parity_Calc_test_1)           0.00     300.02 r
+  Parity_Calc_Block/U7/Y (XOR3XLM)                        0.21     300.22 r
+  Parity_Calc_Block/U5/Y (OAI2BB2X1M)                     0.08     300.30 f
+  Parity_Calc_Block/parBit_reg/D (SDFFRQX2M)              0.00     300.30 f
+  data arrival time                                                300.30
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.01       0.01
+  Parity_Calc_Block/parBit_reg/CK (SDFFRQX2M)             0.00       0.01 r
+  library hold time                                      -0.21      -0.20
+  data required time                                                -0.20
+  --------------------------------------------------------------------------
+  data required time                                                -0.20
+  data arrival time                                               -300.30
+  --------------------------------------------------------------------------
+  slack (MET)                                                      300.50
+
+
+  Startpoint: dataValid (input port clocked by CLK)
+  Endpoint: Serializer_Block/counter_reg_0_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: INREG
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                  300.00     300.00 r
+  dataValid (in)                                          0.02     300.02 r
+  FSM_Block/dataValid (UART_TX_FSM_test_1)                0.00     300.02 r
+  FSM_Block/U7/Y (AND3X2M)                                0.26     300.28 r
+  FSM_Block/regData (UART_TX_FSM_test_1)                  0.00     300.28 r
+  Serializer_Block/regData (Serializer_test_1)            0.00     300.28 r
+  Serializer_Block/U11/Y (OAI32X1M)                       0.11     300.39 f
+  Serializer_Block/counter_reg_0_/D (SDFFRQX2M)           0.00     300.39 f
+  data arrival time                                                300.39
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.01       0.01
+  Serializer_Block/counter_reg_0_/CK (SDFFRQX2M)          0.00       0.01 r
+  library hold time                                      -0.21      -0.20
+  data required time                                                -0.20
+  --------------------------------------------------------------------------
+  data required time                                                -0.20
+  data arrival time                                               -300.39
+  --------------------------------------------------------------------------
+  slack (MET)                                                      300.60
+
+
+  Startpoint: dataValid (input port clocked by CLK)
+  Endpoint: Serializer_Block/counter_reg_1_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: INREG
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                  300.00     300.00 f
+  dataValid (in)                                          0.02     300.02 f
+  FSM_Block/dataValid (UART_TX_FSM_test_1)                0.00     300.02 f
+  FSM_Block/U7/Y (AND3X2M)                                0.23     300.25 f
+  FSM_Block/regData (UART_TX_FSM_test_1)                  0.00     300.25 f
+  Serializer_Block/regData (Serializer_test_1)            0.00     300.25 f
+  Serializer_Block/U9/Y (INVX2M)                          0.14     300.39 r
+  Serializer_Block/U7/Y (AOI22X1M)                        0.13     300.52 f
+  Serializer_Block/U10/Y (OAI32X1M)                       0.11     300.63 r
+  Serializer_Block/counter_reg_1_/D (SDFFRQX2M)           0.00     300.63 r
+  data arrival time                                                300.63
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.01       0.01
+  Serializer_Block/counter_reg_1_/CK (SDFFRQX2M)          0.00       0.01 r
+  library hold time                                      -0.17      -0.16
+  data required time                                                -0.16
+  --------------------------------------------------------------------------
+  data required time                                                -0.16
+  data arrival time                                               -300.63
+  --------------------------------------------------------------------------
+  slack (MET)                                                      300.79
+
+
+  Startpoint: dataValid (input port clocked by CLK)
+  Endpoint: Serializer_Block/counter_reg_2_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: INREG
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                  300.00     300.00 f
+  dataValid (in)                                          0.02     300.02 f
+  FSM_Block/dataValid (UART_TX_FSM_test_1)                0.00     300.02 f
+  FSM_Block/U7/Y (AND3X2M)                                0.23     300.25 f
+  FSM_Block/regData (UART_TX_FSM_test_1)                  0.00     300.25 f
+  Serializer_Block/regData (Serializer_test_1)            0.00     300.25 f
+  Serializer_Block/U9/Y (INVX2M)                          0.14     300.39 r
+  Serializer_Block/U7/Y (AOI22X1M)                        0.13     300.52 f
+  Serializer_Block/U12/Y (OAI21X2M)                       0.09     300.61 r
+  Serializer_Block/U6/Y (INVX2M)                          0.04     300.65 f
+  Serializer_Block/U4/Y (OAI32X1M)                        0.09     300.74 r
+  Serializer_Block/counter_reg_2_/D (SDFFRQX2M)           0.00     300.74 r
+  data arrival time                                                300.74
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.01       0.01
+  Serializer_Block/counter_reg_2_/CK (SDFFRQX2M)          0.00       0.01 r
+  library hold time                                      -0.17      -0.16
+  data required time                                                -0.16
+  --------------------------------------------------------------------------
+  data required time                                                -0.16
+  data arrival time                                               -300.74
+  --------------------------------------------------------------------------
+  slack (MET)                                                      300.90
+
+
+  Startpoint: dataValid (input port clocked by CLK)
+  Endpoint: Serializer_Block/counter_reg_3_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: INREG
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                  300.00     300.00 f
+  dataValid (in)                                          0.02     300.02 f
+  FSM_Block/dataValid (UART_TX_FSM_test_1)                0.00     300.02 f
+  FSM_Block/U7/Y (AND3X2M)                                0.23     300.25 f
+  FSM_Block/regData (UART_TX_FSM_test_1)                  0.00     300.25 f
+  Serializer_Block/regData (Serializer_test_1)            0.00     300.25 f
+  Serializer_Block/U9/Y (INVX2M)                          0.14     300.39 r
+  Serializer_Block/U8/Y (NAND2X2M)                        0.13     300.52 f
+  Serializer_Block/U3/Y (INVX2M)                          0.11     300.63 r
+  Serializer_Block/U13/Y (AO22X1M)                        0.14     300.78 r
+  Serializer_Block/counter_reg_3_/D (SDFFRQX2M)           0.00     300.78 r
+  data arrival time                                                300.78
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.01       0.01
+  Serializer_Block/counter_reg_3_/CK (SDFFRQX2M)          0.00       0.01 r
+  library hold time                                      -0.16      -0.15
+  data required time                                                -0.15
+  --------------------------------------------------------------------------
+  data required time                                                -0.15
+  data arrival time                                               -300.78
+  --------------------------------------------------------------------------
+  slack (MET)                                                      300.93
+
+
+  Startpoint: Serializer_Block/pDataReg_reg_7_
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: SO (output port clocked by CLK)
+  Path Group: REGOUT
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  Serializer_Block/pDataReg_reg_7_/CK (SDFFRQX2M)         0.00       0.00 r
+  Serializer_Block/pDataReg_reg_7_/Q (SDFFRQX2M)          0.74       0.74 f
+  Serializer_Block/test_so (Serializer_test_1)            0.00       0.74 f
+  SO (out)                                                0.00       0.74 f
+  data arrival time                                                  0.74
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.01       0.01
+  output external delay                                -300.00    -299.99
+  data required time                                              -299.99
+  --------------------------------------------------------------------------
+  data required time                                              -299.99
+  data arrival time                                                 -0.74
+  --------------------------------------------------------------------------
+  slack (MET)                                                      300.73
+
+
+  Startpoint: Parity_Calc_Block/parBit_reg
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: txOut (output port clocked by CLK)
+  Path Group: REGOUT
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  Parity_Calc_Block/parBit_reg/CK (SDFFRQX2M)             0.00       0.00 r
+  Parity_Calc_Block/parBit_reg/Q (SDFFRQX2M)              0.44       0.44 f
+  Parity_Calc_Block/parBit (Parity_Calc_test_1)           0.00       0.44 f
+  Mux_4X1_BLock/A[3] (Mux_4X1)                            0.00       0.44 f
+  Mux_4X1_BLock/U3/Y (AOI22X1M)                           0.19       0.63 r
+  Mux_4X1_BLock/U1/Y (OAI2B2X4M)                          0.25       0.88 f
+  Mux_4X1_BLock/Y (Mux_4X1)                               0.00       0.88 f
+  txOut (out)                                             0.00       0.88 f
+  data arrival time                                                  0.88
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.01       0.01
+  output external delay                                -300.00    -299.99
+  data required time                                              -299.99
+  --------------------------------------------------------------------------
+  data required time                                              -299.99
+  data arrival time                                                 -0.88
+  --------------------------------------------------------------------------
+  slack (MET)                                                      300.87
+
+
+  Startpoint: FSM_Block/currentState_reg_0_
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: busy (output port clocked by CLK)
+  Path Group: REGOUT
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  FSM_Block/currentState_reg_0_/CK (SDFFRQX2M)            0.00       0.00 r
+  FSM_Block/currentState_reg_0_/Q (SDFFRQX2M)             0.39       0.39 r
+  FSM_Block/U17/Y (INVX2M)                                0.08       0.47 f
+  FSM_Block/U3/Y (NAND3X2M)                               0.59       1.07 r
+  FSM_Block/busy (UART_TX_FSM_test_1)                     0.00       1.07 r
+  busy (out)                                              0.00       1.07 r
+  data arrival time                                                  1.07
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.01       0.01
+  output external delay                                -300.00    -299.99
+  data required time                                              -299.99
+  --------------------------------------------------------------------------
+  data required time                                              -299.99
+  data arrival time                                                 -1.07
+  --------------------------------------------------------------------------
+  slack (MET)                                                      301.06
+
+
+1

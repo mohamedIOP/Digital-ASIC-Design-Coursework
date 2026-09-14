@@ -1,0 +1,21 @@
+ 
+****************************************
+Report : clocks
+Design : ALU_TOP
+Version: O-2018.06-SP1
+Date   : Wed Aug 26 23:42:34 2026
+****************************************
+
+Attributes:
+    d - dont_touch_network
+    f - fix_hold
+    p - propagated_clock
+    G - generated_clock
+    g - lib_generated_clock
+
+Clock          Period   Waveform            Attrs     Sources
+--------------------------------------------------------------------------------
+CLK            100.00   {0 50}              d         {CLK}
+DFTCLK         200.00   {0 100}             d         {scan_clk}
+--------------------------------------------------------------------------------
+1

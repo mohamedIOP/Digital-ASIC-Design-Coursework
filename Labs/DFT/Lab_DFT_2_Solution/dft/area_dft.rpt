@@ -1,0 +1,56 @@
+ 
+****************************************
+Report : area
+Design : System_Top
+Version: O-2018.06-SP1
+Date   : Thu Aug 27 00:08:26 2026
+****************************************
+
+Information: Updating design information... (UID-85)
+Library(s) Used:
+
+    scmetro_tsmc_cl013g_rvt_ss_1p08v_125c (File: /home/ICer/Labs/Lab_DFT_2/std_cells/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db)
+
+Number of ports:                          300
+Number of nets:                          1495
+Number of cells:                         1195
+Number of combinational cells:           1017
+Number of sequential cells:               166
+Number of macros/black boxes:               0
+Number of buf/inv:                        407
+Number of references:                      11
+
+Combinational area:               9026.465804
+Buf/Inv area:                     2787.602317
+Noncombinational area:            5364.575485
+Macro/Black Box area:                0.000000
+Net Interconnect area:          452622.286896
+
+Total cell area:                 14391.041289
+Total area:                     467013.328185
+
+Hierarchical area distribution
+------------------------------
+
+                                  Global cell area           Local cell area
+                                  -------------------  ---------------------------- 
+Hierarchical cell                 Absolute    Percent  Combi-     Noncombi-  Black-
+                                  Total       Total    national   national   boxes   Design
+--------------------------------  ----------  -------  ---------  ---------  ------  -----------------
+System_Top                        14391.0413    100.0    57.6583     0.0000  0.0000  System_Top
+U0_ALU                             4473.8134     31.1  1312.0205   328.2993  0.0000  ALU_test_1
+U0_ALU/add_42                       222.3963      1.5   222.3963     0.0000  0.0000  ALU_DW01_add_0
+U0_ALU/div_51                      1423.8070      9.9  1423.8070     0.0000  0.0000  ALU_DW_div_uns_0
+U0_ALU/mult_48                      936.6532      6.5   936.6532     0.0000  0.0000  ALU_DW02_mult_0
+U0_ALU/sub_45                       250.6371      1.7   250.6371     0.0000  0.0000  ALU_DW01_sub_0
+U0_CLK_GATE                          45.8913      0.3     5.8835    40.0078  0.0000  CLK_GATE
+U0_ClkDiv                          1320.2574      9.2   715.4336   513.0412  0.0000  ClkDiv_test_1
+U0_ClkDiv/add_52                     91.7826      0.6    91.7826     0.0000  0.0000  ClkDiv_DW01_inc_0
+U0_RegFile                         8451.0596     58.7  3967.8325  4483.2272  0.0000  RegFile_test_1
+U0_mux2X1                            15.2971      0.1    15.2971     0.0000  0.0000  mux2X1_1
+U1_mux2X1                            15.2971      0.1    15.2971     0.0000  0.0000  mux2X1_2
+U2_mux2X1                            11.7670      0.1    11.7670     0.0000  0.0000  mux2X1_0
+--------------------------------  ----------  -------  ---------  ---------  ------  -----------------
+Total                                                  9026.4658  5364.5755  0.0000
+
+1
