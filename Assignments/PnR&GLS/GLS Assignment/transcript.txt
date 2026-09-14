@@ -1,0 +1,66 @@
+# QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 19:49:45 on Sep 13,2026
+# vlog -reportprogress 300 -sv /home/ICer/Labs/Lab_GLS_1.0/syn/results_mul/alu8_top_netlist.v 
+# -- Compiling module add_unit_DW01_add_0
+# -- Compiling module add_unit
+# -- Compiling module alu8_top
+# 
+# Top level modules:
+# 	alu8_top
+# End time: 19:49:45 on Sep 13,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 19:49:45 on Sep 13,2026
+# vlog -reportprogress 300 -sv tb.v 
+# -- Compiling module tb
+# 
+# Top level modules:
+# 	tb
+# End time: 19:49:45 on Sep 13,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -sdfmax "/tb/dut=/home/ICer/Labs/Lab_GLS_1.0/syn/results_mul/alu8_top.sdf" -sdfnoerror work.tb 
+# Start time: 19:49:45 on Sep 13,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: /home/ICer/Labs/Lab_GLS_1.0/syn/results_mul/alu8_top_netlist.v(43): (vopt-2685) [TFMPC] - Too few port connections for 'add_34'.  Expected 5, found 4.
+# ** Warning: /home/ICer/Labs/Lab_GLS_1.0/syn/results_mul/alu8_top_netlist.v(43): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# Loading sv_std.std
+# Loading work.tb(fast)
+# Loading work.alu8_top(fast)
+# Loading work.ADDFX2M(fast)
+# Loading work.AND2X2M(fast)
+# Loading work.CLKXOR2X2M(fast)
+# Loading work.DFFRQX2M(fast)
+# Loading work.DFFRHQX8M(fast)
+# Loading work.CLKBUFX6M(fast)
+# Loading work.INVX4M(fast)
+# Loading work.AO22X1M(fast)
+# Loading instances from /home/ICer/Labs/Lab_GLS_1.0/syn/results_mul/alu8_top.sdf
+# Loading timing data from /home/ICer/Labs/Lab_GLS_1.0/syn/results_mul/alu8_top.sdf
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Instance: /tb File: tb.v
+# 
+# ==================================================
+#   ALU8_TOP TESTBENCH
+# ==================================================
+# 
+# ---------------- ADD TESTS ----------------------
+#   [539000] PASS | ADD  | a=255 b=255 | result=510   
+#   [559000] PASS | ADD  | a=254 b=253 | result=507   
+#   [579000] PASS | ADD  | a=250 b=249 | result=499   
+#   [599000] PASS | ADD  | a=240 b=230 | result=470   
+#   [619000] PASS | ADD  | a=200 b=199 | result=399   
+#   [639000] PASS | ADD  | a=180 b=175 | result=355   
+#   [659000] PASS | ADD  | a=220 b=150 | result=370   
+#   [679000] PASS | ADD  | a=128 b=127 | result=255   
+#   [699000] PASS | ADD  | a=201 b=211 | result=412   
+#   [719000] PASS | ADD  | a=245 b=190 | result=435   
+# 
+# ==================================================
+#   SUMMARY
+# --------------------------------------------------
+#   Total tests : 10
+#   Passed      : 10
+#   Failed      : 0
+#   RESULT: ALL TESTS PASSED
+# 
+# ==================================================

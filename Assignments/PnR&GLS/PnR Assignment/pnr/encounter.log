@@ -1,0 +1,1294 @@
+Checking out Encounter license ...
+SOC_Encounter_GXL 8.1 license checkout succeeded.
+This Encounter release has been compiled with OA version 22.04-p032.
+sourcing /usr/Cadence/SOC/etc/fe/rdaDSL.tcl
+*******************************************************************
+*   Copyright (c)  Cadence Design Systems, Inc.  1996 - 2008.     *
+*                     All rights reserved.                        *
+*                                                                 *
+*                                                                 *
+*                                                                 *
+* This program contains confidential and trade secret information *
+* of Cadence Design Systems, Inc. and is protected by copyright   *
+* law and international treaties.  Any reproduction, use,         *
+* distribution or disclosure of this program or any portion of it,*
+* or any attempt to obtain a human-readable version of this       *
+* program, without the express, prior written consent of          *
+* Cadence Design Systems, Inc., is strictly prohibited.           *
+*                                                                 *
+*                 Cadence Design Systems, Inc.                    *
+*                    2655 Seely Avenue                            *
+*                   San Jose, CA 95134,  USA                      *
+*                                                                 *
+*                                                                 *
+*******************************************************************
+
+@(#)CDS: First Encounter v08.10-p004_1 (32bit) 11/04/2008 14:34 (Linux 2.6)
+@(#)CDS: NanoRoute v08.10-p008 NR081027-0018/USR58-UB (database version 2.30, 67.1.1) {superthreading v1.11}
+@(#)CDS: CeltIC v08.10-p002_1 (32bit) 10/23/2008 22:04:14 (Linux 2.6.9-67.0.10.ELsmp)
+@(#)CDS: CTE v08.10-p016_1 (32bit) Oct 26 2008 15:11:51 (Linux 2.6.9-67.0.10.ELsmp)
+@(#)CDS: CPE v08.10-p009
+--- Starting "First Encounter v08.10-p004_1" on Sun Sep 13 11:29:31 2026 (mem=62.2M) ---
+--- Running on localhost.localdomain (x86_64 w/Linux 2.6.32-431.29.2.el6.x86_64) ---
+This version was compiled on Tue Nov 4 14:34:21 PST 2008.
+Set DBUPerIGU to 1000.
+Set Default Mode Total Cap Scale Factor to 1.00
+Set Detail Mode Total Cap Scale Factor to 1.00
+Set Coupling Total Cap Scale Factor to 1.00
+Set Total Res Scale Factor to 1.00
+Set net toggle Scale Factor to 1.00
+Set Shrink Factor to 1.00000
+<CMD_INTERNAL> setUIVar rda_Input ui_topcell ALU_TOP
+<CMD_INTERNAL> setUIVar rda_Input ui_netlist /home/ahesham/Labs/Lab_PNR_1/dft/ALU_TOP.v
+<CMD_INTERNAL> setUIVar rda_Input ui_timelib,min /home/ahesham/Labs/Lab_PNR_1/std_cells/libs/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.lib
+<CMD_INTERNAL> setUIVar rda_Input ui_timelib,max /home/ahesham/Labs/Lab_PNR_1/std_cells/libs/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.lib
+<CMD_INTERNAL> setUIVar rda_Input ui_timelib /home/ahesham/Labs/Lab_PNR_1/std_cells/libs/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.lib
+<CMD_INTERNAL> setUIVar rda_Input ui_leffile {/home/ahesham/Labs/Lab_PNR_1/std_cells/lef/tsmc13fsg_7lm_tech.lef /home/ahesham/Labs/Lab_PNR_1/std_cells/lef/tsmc13_m_macros.lef /home/ahesham/Labs/Lab_PNR_1/pnr/import/ALU.lef}
+<CMD_INTERNAL> setUIVar rda_Input ui_captbl_file /home/ahesham/Labs/Lab_PNR_1/std_cells/captables/tsmc13fsg.capTbl
+<CMD_INTERNAL> setUIVar rda_Input ui_timingcon_file /home/ahesham/Labs/Lab_PNR_1/dft/ALU_TOP_func.sdc
+<CMD_INTERNAL> setUIVar rda_Input ui_pwrnet VDD
+<CMD_INTERNAL> setUIVar rda_Input ui_gndnet VSS
+<CMD> commitConfig
+
+Loading Lef file /home/ahesham/Labs/Lab_PNR_1/std_cells/lef/tsmc13fsg_7lm_tech.lef...
+
+Loading Lef file /home/ahesham/Labs/Lab_PNR_1/std_cells/lef/tsmc13_m_macros.lef...
+Set DBUPerIGU to M2 pitch 820.
+Initializing default via types and wire widths ...
+
+Loading Lef file /home/ahesham/Labs/Lab_PNR_1/pnr/import/ALU.lef...
+**WARN: (SOCLF-246):	The 'UNITS' attribute should be set
+in the first lef file (technology lef). There is an attempt to set it
+in subsequent lef files which will be ignored.
+**WARN: (SOCLF-46):	Class CORE macro 'ALU_TOP' has no SITE statement defined.
+Class CORE macros require a SITE statement. The SITE FE_CORE_0 was
+created and will be used for this macro, using height 120.1300 that
+matches the macro SIZE height, and width 0.4100 that matches the
+m2 routing pitch. Define the site explicitly in the LEF file, to
+this message in the future.
+
+Power Planner/ViaGen version 8.1.45 promoted on 09/01/2008.
+viaInitial starts at Sun Sep 13 11:29:45 2026
+viaInitial ends at Sun Sep 13 11:29:45 2026
+Reading netlist ...
+Backslashed names will retain backslash and a trailing blank character.
+Reading verilog netlist '/home/ahesham/Labs/Lab_PNR_1/dft/ALU_TOP.v'
+Inserting temporary buffers to remove assignment statements.
+Non-leaf cell ALU_TOP will be treated as a leaf cell.
+
+*** Memory Usage v0.144 (Current mem = 188.395M, initial mem = 62.238M) ***
+*** End netlist parsing (cpu=0:00:00.0, real=0:00:00.0, mem=188.4M) ***
+Set top cell to ALU_TOP.
+Reading max timing library '/home/ahesham/Labs/Lab_PNR_1/std_cells/libs/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.lib' ...
+No function defined for cell 'HOLDX1M'. The cell will only be used for analysis.
+ read 618 cells in library 'scmetro_tsmc_cl013g_rvt_ss_1p08v_125c' 
+Reading min timing library '/home/ahesham/Labs/Lab_PNR_1/std_cells/libs/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.lib' ...
+No function defined for cell 'HOLDX1M'. The cell will only be used for analysis.
+ read 618 cells in library 'scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c' 
+Reading max timing library '/home/ahesham/Labs/Lab_PNR_1/std_cells/libs/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.lib' ...
+No function defined for cell 'HOLDX1M'. The cell will only be used for analysis.
+ read 618 cells in library 'scmetro_tsmc_cl013g_rvt_tt_1p2v_25c' 
+Reading min timing library '/home/ahesham/Labs/Lab_PNR_1/std_cells/libs/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.lib' ...
+No function defined for cell 'HOLDX1M'. The cell will only be used for analysis.
+ read 618 cells in library 'scmetro_tsmc_cl013g_rvt_tt_1p2v_25c' 
+**WARN: (SOCSYC-2):	Timing is not defined for cell ALU_TOP.
+*** End library_loading (cpu=0.12min, mem=91.1M, fe_cpu=0.19min, fe_mem=279.5M) ***
+Starting recursive module instantiation check.
+No recursion found.
+*****NEW dbFlattenCell is used.
+Flattening Cell ALU_TOP ...
+*** Netlist is unique.
+** info: there are 2499 modules.
+** info: there are 630 stdCell insts.
+
+*** Memory Usage v0.144 (Current mem = 279.770M, initial mem = 62.238M) ***
+CTE reading timing constraint file '/home/ahesham/Labs/Lab_PNR_1/dft/ALU_TOP_func.sdc' ...
+**WARN: (TCLCMD-1013):	The SDC set_operating_conditions assertion is not supported. Please use the Encounter setOpCond command to specify library and operating condition information. Use the setAnalysisMode command to control single vs. bestCase/worstCase vs. on-chip variation timing analysis. (File /home/ahesham/Labs/Lab_PNR_1/dft/ALU_TOP_func.sdc, Line 9).
+
+**WARN: (SOCCTE-286):	Library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c is not in the min library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-286):	Library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c is not in the min library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-286):	Library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c is not in the min library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-286):	Library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c is not in the min library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-286):	Library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c is not in the min library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-286):	Library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c is not in the min library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-286):	Library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c is not in the min library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-286):	Library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c is not in the min library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-286):	Library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c is not in the min library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-286):	Library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c is not in the min library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-286):	Library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c is not in the min library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-286):	Library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c is not in the min library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-286):	Library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c is not in the min library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-286):	Library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c is not in the min library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-286):	Library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c is not in the min library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-286):	Library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c is not in the min library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-286):	Library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c is not in the min library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-286):	Library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c is not in the min library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-286):	Library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c is not in the min library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-286):	Library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c is not in the min library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (EMS-27):	Message (SOCCTE-286) has exceeded the current message display limit of 20.
+To increase the message display limit, refer to the product command reference manual.
+**WARN: (EMS-27):	Message (SOCCTE-289) has exceeded the current message display limit of 20.
+To increase the message display limit, refer to the product command reference manual.
+INFO (CTE): read_dc_script finished with  1 WARNING
+WARNING (CTE-25): Line: 8 of File /home/ahesham/Labs/Lab_PNR_1/dft/ALU_TOP_func.sdc : Skipped unsupported command: set_units
+
+
+*** Read timing constraints (cpu=0:00:00.0 mem=282.2M) ***
+*info - Done with setDoAssign with 3 assigns removed and 0 assigns could not be removed.
+Total number of combinational cells: 433
+Total number of sequential cells: 174
+Total number of tristate cells: 10
+Total number of level shifter cells: 0
+Total number of power gating cells: 0
+Total number of isolation cells: 0
+Total number of power switch cells: 0
+Total number of pulse generator cells: 0
+Total number of always on buffers: 0
+Total number of retention cells: 0
+List of usable buffers: BUFX2M BUFX10M BUFX12M BUFX14M BUFX16M BUFX18M BUFX20M BUFX24M BUFX32M BUFX3M CLKBUFX1M BUFX4M BUFX5M BUFX6M BUFX8M CLKBUFX12M CLKBUFX16M CLKBUFX20M CLKBUFX24M CLKBUFX2M CLKBUFX3M CLKBUFX32M CLKBUFX40M CLKBUFX4M CLKBUFX6M CLKBUFX8M
+Total number of usable buffers: 26
+List of unusable buffers:
+Total number of unusable buffers: 0
+List of usable inverters: CLKINVX1M CLKINVX12M CLKINVX16M CLKINVX20M CLKINVX24M CLKINVX2M CLKINVX3M CLKINVX32M CLKINVX40M CLKINVX4M CLKINVX6M CLKINVX8M INVX10M INVX12M INVX14M INVX16M INVX18M INVX2M INVX1M INVX20M INVX24M INVX32M INVX4M INVX3M INVX6M INVX5M INVX8M INVXLM
+Total number of usable inverters: 28
+List of unusable inverters:
+Total number of unusable inverters: 0
+List of identified usable delay cells: DLY1X1M DLY1X4M DLY2X1M DLY2X4M DLY3X1M DLY3X4M DLY4X1M DLY4X4M
+Total number of identified usable delay cells: 8
+List of identified unusable delay cells:
+Total number of identified unusable delay cells: 0
+*info: set bottom ioPad orient R0
+Set Using Default Delay Limit as 1000.
+Set Default Net Delay as 1000 ps.
+Set Default Net Load as 0.5 pF.
+**WARN: (SOCDC-1159):	Invalid input transition time. The default 0.1ps input transition time will be used.
+Set Input Pin Transition Delay as 0.1 ps.
+Reading Capacitance Table File /home/ahesham/Labs/Lab_PNR_1/std_cells/captables/tsmc13fsg.capTbl ...
+Cap Table was created using First Encounter 08.10-p004_1.
+Process name: tsmc13fsg.
+#WARNING (NRDB-21) The number of routing layer 7 in the database does not match with the value of 10 in the Extended Cap Table file.
+<CMD> create_library_set -name min_library -timing "../std_cells/libs/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.lib"
+<CMD> create_library_set -name max_library -timing "../std_cells/libs/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.lib"
+<CMD> create_library_set -name typ_library -timing "../std_cells/libs/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.lib"
+<CMD> create_constraint_mode -name func_mode -sdc_files {../dft/ALU_TOP_func.sdc}
+<CMD> create_constraint_mode -name scan_mode -sdc_files {../dft/ALU_TOP_scan.sdc}
+<CMD> create_constraint_mode -name capture_mode -sdc_files {../dft/ALU_TOP_capture.sdc}
+<CMD> create_rc_corner -name RCcorner -cap_table "../std_cells/captables/tsmc13fsg.capTbl"
+<CMD> create_delay_corner -name min_corner -library_set min_library -rc_corner RCcorner
+<CMD> create_delay_corner -name max_corner -library_set max_library -rc_corner RCcorner
+<CMD> create_analysis_view -name setup1_analysis_view -delay_corner max_corner -constraint_mode func_mode
+<CMD> create_analysis_view -name hold1_analysis_view  -delay_corner min_corner -constraint_mode func_mode
+<CMD> create_analysis_view -name setup2_analysis_view -delay_corner max_corner -constraint_mode scan_mode
+<CMD> create_analysis_view -name hold2_analysis_view  -delay_corner min_corner -constraint_mode scan_mode
+<CMD> create_analysis_view -name setup3_analysis_view -delay_corner max_corner -constraint_mode capture_mode
+<CMD> create_analysis_view -name hold3_analysis_view  -delay_corner min_corner -constraint_mode capture_mode
+<CMD> set_analysis_view -setup {setup1_analysis_view setup2_analysis_view setup3_analysis_view} -hold {hold1_analysis_view hold2_analysis_view hold3_analysis_view}
+Initializing multi-corner RC extraction with 1 active RC Corners ...
+Reading Capacitance Table File ../std_cells/captables/tsmc13fsg.capTbl ...
+Cap Table was created using First Encounter 08.10-p004_1.
+Process name: tsmc13fsg.
+#WARNING (NRDB-21) The number of routing layer 7 in the database does not match with the value of 10 in the Extended Cap Table file.
+Importing multi-corner RC tables ... 
+Summary of Active RC-Corners : 
+ Analysis View: setup1_analysis_view
+    RC-Corner Name        : RCcorner
+    RC-Corner Index       : 0
+    RC-Corner Temperature : 25 Celsius
+    RC-Corner Cap Table   : '../std_cells/captables/tsmc13fsg.capTbl'
+    RC-Corner Default Res. Factor      : 1
+    RC-Corner Detail Res. Factor       : 1
+    RC-Corner Default Cap. Factor      : 1
+    RC-Corner Detail Cap. Factor       : 1
+    RC-Corner Cross Cap. Factor        : 1
+ Analysis View: setup2_analysis_view
+    RC-Corner Name        : RCcorner
+    RC-Corner Index       : 0
+    RC-Corner Temperature : 25 Celsius
+    RC-Corner Cap Table   : '../std_cells/captables/tsmc13fsg.capTbl'
+    RC-Corner Default Res. Factor      : 1
+    RC-Corner Detail Res. Factor       : 1
+    RC-Corner Default Cap. Factor      : 1
+    RC-Corner Detail Cap. Factor       : 1
+    RC-Corner Cross Cap. Factor        : 1
+ Analysis View: setup3_analysis_view
+    RC-Corner Name        : RCcorner
+    RC-Corner Index       : 0
+    RC-Corner Temperature : 25 Celsius
+    RC-Corner Cap Table   : '../std_cells/captables/tsmc13fsg.capTbl'
+    RC-Corner Default Res. Factor      : 1
+    RC-Corner Detail Res. Factor       : 1
+    RC-Corner Default Cap. Factor      : 1
+    RC-Corner Detail Cap. Factor       : 1
+    RC-Corner Cross Cap. Factor        : 1
+ Analysis View: hold1_analysis_view
+    RC-Corner Name        : RCcorner
+    RC-Corner Index       : 0
+    RC-Corner Temperature : 25 Celsius
+    RC-Corner Cap Table   : '../std_cells/captables/tsmc13fsg.capTbl'
+    RC-Corner Default Res. Factor      : 1
+    RC-Corner Detail Res. Factor       : 1
+    RC-Corner Default Cap. Factor      : 1
+    RC-Corner Detail Cap. Factor       : 1
+    RC-Corner Cross Cap. Factor        : 1
+ Analysis View: hold2_analysis_view
+    RC-Corner Name        : RCcorner
+    RC-Corner Index       : 0
+    RC-Corner Temperature : 25 Celsius
+    RC-Corner Cap Table   : '../std_cells/captables/tsmc13fsg.capTbl'
+    RC-Corner Default Res. Factor      : 1
+    RC-Corner Detail Res. Factor       : 1
+    RC-Corner Default Cap. Factor      : 1
+    RC-Corner Detail Cap. Factor       : 1
+    RC-Corner Cross Cap. Factor        : 1
+ Analysis View: hold3_analysis_view
+    RC-Corner Name        : RCcorner
+    RC-Corner Index       : 0
+    RC-Corner Temperature : 25 Celsius
+    RC-Corner Cap Table   : '../std_cells/captables/tsmc13fsg.capTbl'
+    RC-Corner Default Res. Factor      : 1
+    RC-Corner Detail Res. Factor       : 1
+    RC-Corner Default Cap. Factor      : 1
+    RC-Corner Detail Cap. Factor       : 1
+    RC-Corner Cross Cap. Factor        : 1
+*Info: initialize multi-corner CTS.
+CTE reading timing constraint file '../dft/ALU_TOP_func.sdc' ...
+**WARN: (TCLCMD-1014):	The SDC set_operating_conditions assertion is not supported. Please use the create_delay_corner command to specify the desired operating enviroment. Use the setAnalysisMode command to control single vs. bestCase/worstCase vs. on-chip variation timing analysis. (File ../dft/ALU_TOP_func.sdc, Line 9).
+
+**WARN: (SOCCTE-286):	Library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c is not in the min library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-286):	Library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c is not in the min library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-286):	Library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c is not in the min library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-286):	Library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c is not in the min library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-286):	Library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c is not in the min library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-286):	Library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c is not in the min library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-286):	Library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c is not in the min library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-286):	Library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c is not in the min library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-286):	Library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c is not in the min library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-286):	Library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c is not in the min library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-286):	Library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c is not in the min library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-286):	Library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c is not in the min library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-286):	Library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c is not in the min library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-286):	Library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c is not in the min library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-286):	Library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c is not in the min library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-286):	Library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c is not in the min library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-286):	Library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c is not in the min library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-286):	Library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c is not in the min library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-286):	Library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c is not in the min library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-286):	Library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c is not in the min library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+INFO (CTE): read_dc_script finished with  1 WARNING
+WARNING (CTE-25): Line: 8 of File ../dft/ALU_TOP_func.sdc : Skipped unsupported command: set_units
+
+
+CTE reading timing constraint file '../dft/ALU_TOP_scan.sdc' ...
+**WARN: (TCLCMD-1014):	The SDC set_operating_conditions assertion is not supported. Please use the create_delay_corner command to specify the desired operating enviroment. Use the setAnalysisMode command to control single vs. bestCase/worstCase vs. on-chip variation timing analysis. (File ../dft/ALU_TOP_scan.sdc, Line 9).
+
+INFO (CTE): read_dc_script finished with  1 WARNING
+WARNING (CTE-25): Line: 8 of File ../dft/ALU_TOP_scan.sdc : Skipped unsupported command: set_units
+
+
+CTE reading timing constraint file '../dft/ALU_TOP_capture.sdc' ...
+**WARN: (TCLCMD-1014):	The SDC set_operating_conditions assertion is not supported. Please use the create_delay_corner command to specify the desired operating enviroment. Use the setAnalysisMode command to control single vs. bestCase/worstCase vs. on-chip variation timing analysis. (File ../dft/ALU_TOP_capture.sdc, Line 9).
+
+INFO (CTE): read_dc_script finished with  1 WARNING
+WARNING (CTE-25): Line: 8 of File ../dft/ALU_TOP_capture.sdc : Skipped unsupported command: set_units
+
+
+CTE reading timing constraint file '../dft/ALU_TOP_func.sdc' ...
+**WARN: (TCLCMD-1014):	The SDC set_operating_conditions assertion is not supported. Please use the create_delay_corner command to specify the desired operating enviroment. Use the setAnalysisMode command to control single vs. bestCase/worstCase vs. on-chip variation timing analysis. (File ../dft/ALU_TOP_func.sdc, Line 9).
+
+INFO (CTE): read_dc_script finished with  1 WARNING
+WARNING (CTE-25): Line: 8 of File ../dft/ALU_TOP_func.sdc : Skipped unsupported command: set_units
+
+
+CTE reading timing constraint file '../dft/ALU_TOP_scan.sdc' ...
+**WARN: (TCLCMD-1014):	The SDC set_operating_conditions assertion is not supported. Please use the create_delay_corner command to specify the desired operating enviroment. Use the setAnalysisMode command to control single vs. bestCase/worstCase vs. on-chip variation timing analysis. (File ../dft/ALU_TOP_scan.sdc, Line 9).
+
+INFO (CTE): read_dc_script finished with  1 WARNING
+WARNING (CTE-25): Line: 8 of File ../dft/ALU_TOP_scan.sdc : Skipped unsupported command: set_units
+
+
+CTE reading timing constraint file '../dft/ALU_TOP_capture.sdc' ...
+**WARN: (TCLCMD-1014):	The SDC set_operating_conditions assertion is not supported. Please use the create_delay_corner command to specify the desired operating enviroment. Use the setAnalysisMode command to control single vs. bestCase/worstCase vs. on-chip variation timing analysis. (File ../dft/ALU_TOP_capture.sdc, Line 9).
+
+INFO (CTE): read_dc_script finished with  1 WARNING
+WARNING (CTE-25): Line: 8 of File ../dft/ALU_TOP_capture.sdc : Skipped unsupported command: set_units
+
+
+Total number of combinational cells: 433
+Total number of sequential cells: 174
+Total number of tristate cells: 10
+Total number of level shifter cells: 0
+Total number of power gating cells: 0
+Total number of isolation cells: 0
+Total number of power switch cells: 0
+Total number of pulse generator cells: 0
+Total number of always on buffers: 0
+Total number of retention cells: 0
+List of usable buffers: BUFX10M BUFX12M BUFX14M BUFX16M BUFX18M BUFX20M BUFX24M BUFX2M BUFX32M BUFX3M BUFX4M BUFX5M BUFX6M BUFX8M CLKBUFX12M CLKBUFX16M CLKBUFX1M CLKBUFX20M CLKBUFX24M CLKBUFX2M CLKBUFX32M CLKBUFX3M CLKBUFX40M CLKBUFX4M CLKBUFX6M CLKBUFX8M
+Total number of usable buffers: 26
+List of unusable buffers:
+Total number of unusable buffers: 0
+List of usable inverters: CLKINVX12M CLKINVX16M CLKINVX1M CLKINVX20M CLKINVX24M CLKINVX2M CLKINVX32M CLKINVX3M CLKINVX40M CLKINVX4M CLKINVX6M CLKINVX8M INVX10M INVX12M INVX14M INVX16M INVX18M INVX1M INVX20M INVX24M INVX2M INVX32M INVX3M INVX4M INVX5M INVX6M INVX8M INVXLM
+Total number of usable inverters: 28
+List of unusable inverters:
+Total number of unusable inverters: 0
+List of identified usable delay cells: DLY1X1M DLY1X4M DLY2X1M DLY2X4M DLY3X1M DLY3X4M DLY4X1M DLY4X4M
+Total number of identified usable delay cells: 8
+List of identified unusable delay cells:
+Total number of identified unusable delay cells: 0
+<CMD> floorPlan -d 120.13 120.13 3.0 3.0 3.0 3.0
+Adjusting Core to Left to: 3.2800. Core to Bottom to: 3.2800.
+<CMD> addRing -spacing_bottom 0.5 -width_left 1 -width_bottom 1 -width_top 1 -spacing_top 0.5 -layer_bottom METAL5 -center 1 -stacked_via_top_layer METAL7 -width_right 1 -around core -jog_distance 0.205 -offset_bottom 0.205 -layer_top METAL5 -threshold 0.205 -offset_left 0.205 -spacing_right 0.5 -spacing_left 0.5 -offset_right 0.205 -offset_top 0.205 -layer_right METAL6 -nets {VSS VDD } -stacked_via_bottom_layer METAL1 -layer_left METAL6
+
+**WARN: (SOCPP-573):	The power planner detects a potential spacing violation. Run verifyGeometry to ensure DRC clean.
+ 	layer METAL5, area (60.00, 0.20) (60.20, 0.39)
+**WARN: (SOCPP-573):	The power planner detects a potential spacing violation. Run verifyGeometry to ensure DRC clean.
+ 	layer METAL5, area (55.00, 0.20) (55.20, 0.39)
+**WARN: (SOCPP-573):	The power planner detects a potential spacing violation. Run verifyGeometry to ensure DRC clean.
+ 	layer METAL5, area (50.00, 0.20) (50.20, 0.39)
+**WARN: (SOCPP-573):	The power planner detects a potential spacing violation. Run verifyGeometry to ensure DRC clean.
+ 	layer METAL5, area (45.00, 0.20) (45.20, 0.39)
+**WARN: (SOCPP-573):	The power planner detects a potential spacing violation. Run verifyGeometry to ensure DRC clean.
+ 	layer METAL5, area (40.00, 0.20) (40.20, 0.39)
+**WARN: (SOCPP-573):	The power planner detects a potential spacing violation. Run verifyGeometry to ensure DRC clean.
+ 	layer METAL5, area (35.00, 0.20) (35.20, 0.39)
+**WARN: (SOCPP-573):	The power planner detects a potential spacing violation. Run verifyGeometry to ensure DRC clean.
+ 	layer METAL5, area (30.00, 0.20) (30.20, 0.39)
+**WARN: (SOCPP-573):	The power planner detects a potential spacing violation. Run verifyGeometry to ensure DRC clean.
+ 	layer METAL5, area (25.00, 0.20) (25.20, 0.39)
+**WARN: (SOCPP-573):	The power planner detects a potential spacing violation. Run verifyGeometry to ensure DRC clean.
+ 	layer METAL5, area (65.00, 0.20) (65.20, 0.39)
+
+The power planner created 8 wires.
+**WARN: (SOCPP-582):	9 wires violate design rules.
+
+<CMD> addRing -spacing_bottom 0.5 -width_left 1 -width_bottom 1 -width_top 1 -spacing_top 0.5 -layer_bottom METAL5 -center 1 -stacked_via_top_layer METAL7 -width_right 1 -around core -jog_distance 0.205 -offset_bottom 0.205 -layer_top METAL5 -threshold 0.205 -offset_left 0.205 -spacing_right 0.5 -spacing_left 0.5 -offset_right 0.205 -offset_top 0.205 -layer_right METAL6 -nets {VSS VDD } -stacked_via_bottom_layer METAL1 -layer_left METAL6
+
+
+
+**ERROR: (SOCSYT-6000):	No Object Selected.
+<CMD_INTERNAL> uiSetTool select
+<CMD> zoomBox -5.543 124.547 143.548 73.968
+<CMD> panPage 0 -1
+<CMD> panPage 0 -1
+<CMD> panPage 0 1
+<CMD> panPage 0 -1
+<CMD> panPage 0 1
+<CMD> zoomBox 127.615 22.841 101.038 -2.313
+<CMD> zoomBox 122.984 7.441 113.608 -1.582
+<CMD_INTERNAL> uiSetTool ruler
+<CMD> addStripe -block_ring_top_layer_limit METAL3 -max_same_layer_jog_length 0.8 -padcore_ring_bottom_layer_limit METAL1 -set_to_set_distance 40 -stacked_via_top_layer METAL7 -padcore_ring_top_layer_limit METAL3 -spacing 0.42 -merge_stripes_value 0.205 -layer METAL2 -block_ring_bottom_layer_limit METAL1 -width 0.4 -nets {VSS VDD } -stacked_via_bottom_layer METAL1
+**WARN: (SOCPP-2008):	AddStripe option -remove_floating_stripe_over_block is ON so all fragmented stripes within a block will be removed.
+  To turn OFF, setAddStripeOption -remove_floating_stripe_over_block 0.
+
+Starting stripe generation ...
+Stripe generation is complete.
+
+The power planner created 6 wires.
+
+<CMD> addStripe -block_ring_top_layer_limit METAL3 -max_same_layer_jog_length 0.8 -padcore_ring_bottom_layer_limit METAL1 -set_to_set_distance 40 -stacked_via_top_layer METAL7 -padcore_ring_top_layer_limit METAL3 -spacing 0.42 -merge_stripes_value 0.205 -layer METAL2 -block_ring_bottom_layer_limit METAL1 -width 0.4 -nets {VSS VDD } -stacked_via_bottom_layer METAL1
+**WARN: (SOCPP-2008):	AddStripe option -remove_floating_stripe_over_block is ON so all fragmented stripes within a block will be removed.
+  To turn OFF, setAddStripeOption -remove_floating_stripe_over_block 0.
+
+Starting stripe generation ...
+Stripe generation is complete.
+**WARN: (SOCPP-170):	The power planner failed to create a wire at (3.48, 1.89) (3.48, 117.42).
+**WARN: (SOCPP-170):	The power planner failed to create a wire at (43.48, 1.89) (43.48, 117.42).
+**WARN: (SOCPP-170):	The power planner failed to create a wire at (83.48, 1.89) (83.48, 117.42).
+**WARN: (SOCPP-170):	The power planner failed to create a wire at (4.30, 0.39) (4.30, 118.92).
+**WARN: (SOCPP-170):	The power planner failed to create a wire at (44.30, 0.39) (44.30, 118.92).
+**WARN: (SOCPP-170):	The power planner failed to create a wire at (84.30, 0.39) (84.30, 118.92).
+
+
+<CMD> undo
+<CMD_INTERNAL> uiSetTool select
+<CMD> setLayerPreference allM6 -isVisible 0
+<CMD> setLayerPreference allM6 -isVisible 1
+<CMD> setLayerPreference allM5 -isVisible 0
+<CMD> setLayerPreference allM5 -isVisible 1
+<CMD> zoomBox 63.713 94.819 125.130 35.525
+<CMD> zoomBox 72.112 70.460 109.364 42.952
+<CMD> selectWire 83.2800 1.8900 83.6800 117.4200 2 VSS
+<CMD> selectWire 84.1000 0.3900 84.5000 118.9200 2 VDD
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage -1 0
+<CMD> selectWire 43.2800 1.8900 43.6800 117.4200 2 VSS
+<CMD> selectWire 44.1000 0.3900 44.5000 118.9200 2 VDD
+<CMD> selectWire 4.1000 0.3900 4.5000 118.9200 2 VDD
+<CMD> selectWire 3.2800 1.8900 3.6800 117.4200 2 VSS
+<CMD> setSelectedStripBoxState 0 ROUTED
+<CMD> setSelectedStripBoxState 0 ROUTED
+<CMD> deselectAll
+<CMD> setLayerPreference allM6 -isVisible 0
+<CMD> setLayerPreference allM6 -isVisible 1
+<CMD> zoomBox 59.867 80.986 128.586 29.479
+<CMD> zoomBox 76.034 57.504 99.000 47.181
+<CMD> selectWire 84.1000 0.3900 84.5000 118.9200 2 VDD
+<CMD> setSelectedStripBoxState 0 ROUTED
+<CMD> deselectAll
+<CMD> selectWire 83.2800 1.8900 83.6800 117.4200 2 VSS
+<CMD> panCenter 83.588 50.595
+<CMD> zoomBox 83.573 48.314 83.510 48.325
+<CMD> zoomBox 20.144 71.585 129.513 40.601
+<CMD> zoomBox 28.265 61.076 105.746 48.968
+<CMD> selectWire 44.1000 0.3900 44.5000 118.9200 2 VDD
+<CMD> selectWire 43.2800 1.8900 43.6800 117.4200 2 VSS
+<CMD> setSelectedStripBoxState 0 ROUTED
+<CMD> windowSelect 47.680 48.633 48.986 47.821
+<CMD> selectWire 44.1000 0.3900 44.5000 118.9200 2 VDD
+<CMD> setSelectedStripBoxState 0 ROUTED
+<CMD> deselectAll
+<CMD> selectWire 83.2800 1.8900 83.6800 117.4200 2 VSS
+<CMD> setSelectedStripBoxState 0 ROUTED
+<CMD> deselectAll
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage -1 0
+<CMD> selectWire 3.2800 1.8900 3.6800 117.4200 6 VSS
+<CMD> deleteSelectedFromFPlan
+<CMD> selectWire 4.1000 0.3900 4.5000 118.9200 2 VDD
+<CMD> deleteSelectedFromFPlan
+<CMD> zoomBox -15.871 123.489 136.001 -4.021
+<CMD> verifyConnectivity -type all -noAntenna -error 1000 -warning 50
+
+******** Start: VERIFY CONNECTIVITY ********
+Start Time: Sun Sep 13 11:47:28 2026
+
+Design Name: ALU_TOP
+Database Units: 2000
+Design Boundary: (0.0000, 0.0000) (120.1300, 120.1300)
+Error Limit = 1000; Warning Limit = 50
+Check all nets
+Net VDD: special open.
+Net VSS: special open.
+
+Begin Summary 
+    6 Problem(s) [200]: Special Wires: Pieces of the net are not connected together.
+    6 total info(s) created.
+End Summary
+
+End Time: Sun Sep 13 11:47:28 2026
+******** End: VERIFY CONNECTIVITY ********
+  Verification Complete : 6 Viols.  0 Wrngs.
+  (CPU Time: 0:00:00.0  MEM: 0.000M)
+
+<CMD> zoomBox 13.494 72.127 143.048 49.641
+<CMD> zoomBox 35.450 62.773 97.719 50.732
+<CMD> selectMarker 1.8900 1.8900 118.2400 117.4200 -1 3 7
+<CMD_INTERNAL> uiSetTool moveWire
+<CMD_INTERNAL> uiSetTool moveWire
+<CMD> clearDrc
+<CMD> clearDrc
+<CMD> verifyConnectivity -type all -noAntenna -error 1000 -warning 50
+
+******** Start: VERIFY CONNECTIVITY ********
+Start Time: Sun Sep 13 11:47:59 2026
+
+Design Name: ALU_TOP
+Database Units: 2000
+Design Boundary: (0.0000, 0.0000) (120.1300, 120.1300)
+Error Limit = 1000; Warning Limit = 50
+Check all nets
+Net VDD: special open.
+Net VSS: special open.
+
+Begin Summary 
+    6 Problem(s) [200]: Special Wires: Pieces of the net are not connected together.
+    6 total info(s) created.
+End Summary
+
+End Time: Sun Sep 13 11:47:59 2026
+******** End: VERIFY CONNECTIVITY ********
+  Verification Complete : 6 Viols.  0 Wrngs.
+  (CPU Time: 0:00:00.0  MEM: 0.000M)
+
+<CMD> zoomBox 27.824 74.630 109.122 39.939
+<CMD> zoomBox 34.084 65.173 55.825 56.691
+<CMD> selectMarker 1.8900 1.8900 118.2400 117.4200 -1 3 7
+<CMD> deselectAll
+<CMD> selectMarker 1.8900 1.8900 118.2400 117.4200 -1 3 7
+<CMD> panCenter 43.493 59.595
+<CMD> zoomBox -4.351 121.767 136.001 106.938
+<CMD> zoomBox 71.036 131.233 94.247 109.109
+<CMD> deselectAll
+<CMD> selectMarker 0.3900 0.3900 119.7400 118.9200 -1 3 7
+<CMD> deselectAll
+<CMD> selectMarker 0.3900 0.3900 119.7400 118.9200 -1 3 7
+<CMD> deselectAll
+<CMD> selectMarker 1.8900 1.8900 118.2400 117.4200 -1 3 7
+<CMD> zoomBox 81.278 119.506 87.485 113.898
+<CMD> deselectAll
+<CMD> selectMarker 1.8900 1.8900 118.2400 117.4200 -1 3 7
+<CMD> deselectAll
+<CMD> selectMarker 0.3900 0.3900 119.7400 118.9200 -1 3 7
+<CMD> panCenter 84.249 118.404
+<CMD> zoomBox 83.791 119.163 84.814 117.674
+<CMD> deselectAll
+<CMD> selectMarker 0.3900 0.3900 119.7400 118.9200 -1 3 7
+<CMD> deselectAll
+<CMD> selectMarker 0.3900 0.3900 119.7400 118.9200 -1 3 7
+<CMD> deselectAll
+<CMD> selectMarker 0.3900 0.3900 119.7400 118.9200 -1 3 7
+<CMD> editDuplicate
+<CMD> clearDrc
+<CMD> selectWire 84.1000 0.3900 84.5000 118.9200 6 VDD
+<CMD> deselectAll
+<CMD_INTERNAL> uiSetTool select
+<CMD> selectWire 84.1000 0.3900 84.5000 118.9200 6 VDD
+<CMD_INTERNAL> uiSetTool select
+<CMD> zoomBox 84.177 118.332 84.425 118.052
+<CMD> deselectAll
+<CMD> selectWire 84.1000 0.3900 84.5000 118.9200 6 VDD
+<CMD> windowSelect 84.205 118.282 84.401 118.078
+<CMD> windowSelect 84.173 118.285 84.416 118.072
+<CMD> setLayerPreference allM4 -isVisible 0
+<CMD> selectWire 84.1000 0.3900 84.5000 118.9200 6 VDD
+<CMD> windowSelect 84.194 118.280 84.401 118.081
+<CMD> selectWire 84.1000 0.3900 84.5000 118.9200 6 VDD
+<CMD> deselectAll
+<CMD> selectWire 84.1000 0.3900 84.5000 118.9200 6 VDD
+<CMD> setLayerPreference allM6Cont -isVisible 0
+<CMD> setLayerPreference allM6Cont -isVisible 1
+<CMD> setLayerPreference allM7Cont -isVisible 0
+<CMD> setLayerPreference allM7Cont -isVisible 1
+<CMD> setLayerPreference allM4 -isVisible 1
+<CMD> setLayerPreference allM4 -isVisible 0
+<CMD> setLayerPreference allM5Cont -isVisible 0
+<CMD> setLayerPreference allM5Cont -isVisible 1
+<CMD> setLayerPreference allM4 -isVisible 1
+<CMD> setLayerPreference allM5Cont -isVisible 0
+<CMD> setLayerPreference allM5Cont -isVisible 1
+<CMD> zoomBox 145.931 13.590 100.781 -1.637
+<CMD> zoomBox 115.488 4.454 123.201 -1.182
+<CMD> windowSelect 117.094 3.059 118.478 1.794
+<CMD> zoomBox 73.770 123.886 116.140 87.076
+<CMD> zoomBox 77.048 120.714 90.843 108.136
+<CMD> deselectAll
+<CMD> selectWire 83.2800 1.8900 83.6800 117.4200 6 VSS
+<CMD> deselectAll
+<CMD> selectWire 84.1000 0.3900 84.5000 118.9200 6 VDD
+<CMD> deselectAll
+<CMD> selectWire 83.2800 1.8900 83.6800 117.4200 6 VSS
+<CMD> deselectAll
+<CMD> selectWire 84.1000 0.3900 84.5000 118.9200 6 VDD
+<CMD> deselectAll
+<CMD> selectWire 83.2800 1.8900 83.6800 117.4200 6 VSS
+<CMD> deselectAll
+<CMD> selectWire 84.1000 0.3900 84.5000 118.9200 6 VDD
+<CMD> deselectAll
+<CMD> selectWire 84.1000 0.3900 84.5000 118.9200 6 VDD
+<CMD> deselectAll
+<CMD> selectWire 84.1000 0.3900 84.5000 118.9200 6 VDD
+<CMD> windowSelect 82.981 119.681 86.032 116.580
+<CMD> windowSelect 81.986 119.416 85.427 115.043
+<CMD> zoomBox 80.839 119.479 85.754 115.219
+<CMD> deselectAll
+<CMD> selectWire 84.1000 0.3900 84.5000 118.9200 6 VDD
+<CMD> deleteSelectedFromFPlan
+<CMD> selectWire 83.2800 1.8900 83.6800 117.4200 6 VSS
+<CMD> deleteSelectedFromFPlan
+<CMD> selectWire 0.3900 117.9200 119.7400 118.9200 5 VDD
+<CMD> deselectAll
+<CMD> selectWire 0.3900 117.9200 119.7400 118.9200 5 VDD
+<CMD> panCenter 83.866 118.838
+<CMD> windowSelect 84.047 119.073 84.624 117.800
+<CMD> deleteSelectedFromFPlan
+<CMD> panPage 0 -1
+<CMD> panPage 0 1
+<CMD> panPage 0 -1
+<CMD> zoomBox 83.151 115.807 83.813 116.004
+<CMD> group
+<CMD> zoomBox 76.947 120.178 101.442 95.948
+<CMD> zoomBox 81.462 118.454 89.182 108.986
+<CMD> windowSelect 83.050 117.581 84.245 116.064
+<CMD> deleteSelectedFromFPlan
+<CMD> windowSelect 24.911 123.356 51.922 -2.299
+<CMD> zoomBox 30.869 87.341 83.965 51.988
+<CMD> deselectAll
+<CMD> selectWire 44.1000 0.3900 44.5000 118.9200 6 VDD
+<CMD> deleteSelectedFromFPlan
+<CMD> selectWire 43.2800 1.8900 43.6800 117.4200 6 VSS
+<CMD> deleteSelectedFromFPlan
+<CMD> zoomBox 75.226 6.308 93.498 -9.184
+<CMD> selectWire 1.8900 1.8900 118.2400 2.8900 5 VSS
+<CMD> deselectAll
+<CMD> windowSelect 82.787 3.498 84.137 1.434
+<CMD> deselectAll
+<CMD> windowSelect 83.174 1.667 83.981 3.421
+<CMD> deleteSelectedFromFPlan
+<CMD> windowSelect 83.951 0.161 84.835 1.760
+<CMD> deleteSelectedFromFPlan
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage 1 0
+<CMD> windowSelect 43.121 1.651 43.913 3.157
+<CMD> deleteSelectedFromFPlan
+<CMD> windowSelect 43.991 0.099 44.891 1.527
+<CMD> deleteSelectedFromFPlan
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage 1 0
+<CMD> windowSelect 3.208 1.620 3.875 3.048
+<CMD> deleteSelectedFromFPlan
+<CMD> panPage -1 0
+<CMD> zoomBox -6.338 123.621 178.107 87.341
+<CMD> zoomBox -0.288 122.875 16.854 106.993
+<CMD> windowSelect 3.151 117.512 4.074 115.953
+<CMD> deleteSelectedFromFPlan
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage -1 0
+<CMD> windowSelect 42.892 117.496 44.913 115.523
+<CMD> deleteSelectedFromFPlan
+<CMD> windowSelect 43.783 117.687 45.008 119.708
+<CMD> deleteSelectedFromFPlan
+<CMD> addStripe -block_ring_top_layer_limit METAL7 -max_same_layer_jog_length 0.8 -padcore_ring_bottom_layer_limit METAL5 -set_to_set_distance 40 -stacked_via_top_layer METAL7 -padcore_ring_top_layer_limit METAL7 -spacing 0.42 -merge_stripes_value 0.205 -layer METAL6 -block_ring_bottom_layer_limit METAL5 -width 0.4 -nets {VSS VDD } -stacked_via_bottom_layer METAL1
+**WARN: (SOCPP-2008):	AddStripe option -remove_floating_stripe_over_block is ON so all fragmented stripes within a block will be removed.
+  To turn OFF, setAddStripeOption -remove_floating_stripe_over_block 0.
+
+Starting stripe generation ...
+**WARN: (SOCPP-1):	IntraSet spacing 0.420 is less than required 0.600 to create M67 via.
+  Therefore, there will be missing vias if switching to layer 7.
+
+**WARN: (SOCPP-1):	IntraSet spacing 0.420 is less than required 0.600 to create M67 via.
+  Therefore, there will be missing vias if switching to layer 7.
+
+Stripe generation is complete.
+
+The power planner created 6 wires.
+
+<CMD> zoomBox 67.944 124.151 96.941 88.003
+<CMD> zoomBox 79.817 120.674 88.183 109.627
+<CMD> zoomBox 30.472 124.151 71.651 93.697
+<CMD> zoomBox 37.437 120.825 49.734 111.975
+<CMD> zoomBox 40.140 120.267 46.871 115.371
+<CMD> verifyConnectivity -type all -noAntenna -error 1000 -warning 50
+
+******** Start: VERIFY CONNECTIVITY ********
+Start Time: Sun Sep 13 12:17:45 2026
+
+Design Name: ALU_TOP
+Database Units: 2000
+Design Boundary: (0.0000, 0.0000) (120.1300, 120.1300)
+Error Limit = 1000; Warning Limit = 50
+Check all nets
+
+Begin Summary 
+  Found no problems or warnings.
+End Summary
+
+End Time: Sun Sep 13 12:17:45 2026
+******** End: VERIFY CONNECTIVITY ********
+  Verification Complete : 0 Viols.  0 Wrngs.
+  (CPU Time: 0:00:00.0  MEM: 0.000M)
+
+<CMD> verifyGeometry -noMinArea
+ *** Starting Verify Geometry (MEM: 294.4) ***
+
+  VERIFY GEOMETRY ...... Starting Verification
+  VERIFY GEOMETRY ...... Initializing
+  VERIFY GEOMETRY ...... Deleting Existing Violations
+  VERIFY GEOMETRY ...... Creating Sub-Areas
+                  ...... bin size: 8000
+  VERIFY GEOMETRY ...... SubArea : 1 of 1
+  VERIFY GEOMETRY ...... Cells          :  0 Viols.
+  VERIFY GEOMETRY ...... SameNet        :  0 Viols.
+  VERIFY GEOMETRY ...... Wiring         :  9 Viols.
+  VERIFY GEOMETRY ...... Antenna        :  0 Viols.
+  VERIFY GEOMETRY ...... Sub-Area : 1 complete 9 Viols. 0 Wrngs.
+VG: elapsed time: 0.00
+Begin Summary ...
+  Cells       : 0
+  SameNet     : 0
+  Wiring      : 9
+  Antenna     : 0
+  Short       : 0
+  Overlap     : 0
+End Summary
+
+  Verification Complete : 9 Viols.  0 Wrngs.
+
+**********End: VERIFY GEOMETRY**********
+ *** verify geometry (CPU: 0:00:00.1  MEM: 1.0M)
+
+<CMD> zoomBox -16.003 27.890 88.864 -4.815
+<CMD> zoomBox 12.232 7.142 84.803 -5.136
+<CMD> saveDesign /home/ahesham/Labs/Lab_PNR_1/pnr/ALU_TOP_Spacing_Violations.enc
+Writing Netlist "/home/ahesham/Labs/Lab_PNR_1/pnr/ALU_TOP_Spacing_Violations.enc.dat/ALU_TOP.v" ...
+Saving configuration ...
+Saving preference file /home/ahesham/Labs/Lab_PNR_1/pnr/ALU_TOP_Spacing_Violations.enc.dat/enc.pref.tcl ...
+Saving SI fix option to '/home/ahesham/Labs/Lab_PNR_1/pnr/ALU_TOP_Spacing_Violations.enc.dat/siFix.option'...
+Saving floorplan ...
+Saving Drc markers ...
+... 9 Drc markers are saved ...
+Saving placement ...
+*** Completed savePlace (cpu=0:00:00.0 real=0:00:00.0 mem=294.4M) ***
+Saving route ...
+*** Completed saveRoute (cpu=0:00:00.0 real=0:00:00.0 mem=294.4M) ***
+*** Completed saveYieldMap (cpu=: 0:00:00.0 real=0:00:00.0 mem=: 0.000M) ***
+Creating constraint file...
+<CMD> selectWire 0.3900 0.3900 119.7400 1.3900 5 VDD
+<CMD> deselectAll
+<CMD> selectWire 0.3900 0.3900 119.7400 1.3900 5 VDD
+<CMD_INTERNAL> uiSetTool cutWire
+<CMD_INTERNAL> uiSetTool select
+<CMD> deselectAll
+<CMD_INTERNAL> uiSetTool cutWire
+<CMD> zoomBox 21.688 -2.601 23.837 3.913
+<CMD> editCutWire -x1 22.361 -y1 0.121 -x2 22.361 -y2 1.596
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> editCutWire -x1 67.455 -y1 0.1405 -x2 67.455 -y2 1.55
+<CMD_INTERNAL> uiSetTool select
+<CMD> selectWire 22.3600 0.3900 67.4550 1.3900 5 VDD
+<CMD> zoomBox -6.470 24.712 83.567 -7.330
+<CMD> zoomBox 18.552 5.532 70.564 -4.928
+<CMD> panCenter 24.855 0.823
+<CMD> panPage 1 0
+<CMD> zoomBox 0.283 32.392 86.877 -6.801
+<CMD> zoomBox 18.509 5.655 73.701 -4.918
+<CMD> panCenter 23.714 0.746
+<CMD> setSelectedStripBoxState 0 ROUTED
+<CMD> deselectAll
+<CMD> zoomBox 16.569 23.388 75.755 -4.683
+<CMD> selectWire 0.3900 0.3900 22.3600 1.3900 5 VDD
+<CMD> zoomBox 19.174 4.064 26.543 -2.095
+<CMD_INTERNAL> uiSetTool stretchWire
+<CMD> editStretch x 1.185 high
+<CMD> deselectAll
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> zoomBox 8.360 18.224 83.435 -9.979
+<CMD> selectWire 22.3600 0.3900 67.4550 1.3900 3 VDD
+<CMD> deselectAll
+<CMD> selectWire 67.4550 0.3900 119.7400 1.3900 5 VDD
+<CMD_INTERNAL> uiSetTool stretchWire
+<CMD> editStretch x -1.085 low
+<CMD> zoomBox 14.072 6.243 26.419 -2.958
+<CMD> deselectAll
+<CMD> selectWire 0.3900 0.3900 23.5450 1.3900 5 VDD
+<CMD> deselectAll
+<CMD> selectWire 0.3900 0.3900 23.5450 1.3900 5 VDD
+<CMD> deselectAll
+<CMD> selectWire 22.3600 0.3900 67.4550 1.3900 3 VDD
+<CMD_INTERNAL> uiSetTool stretchWire
+<CMD> editStretch x -0.8 low
+<CMD> zoomBox 21.716 1.643 23.210 0.140
+<CMD> deselectAll
+<CMD_INTERNAL> uiSetTool defineArea pwrEpv:set_area_bbox
+<CMD_INTERNAL> uiSetTool stretchWire
+<CMD> editPowerVia -bottom_layer METAL1 -area {21.9125 1.5015 23.253 0.253} -modify_vias 1 -top_layer METAL7
+
+The editPowervia process started at Sun Sep 13 14:26:18 2026.
+**WARN: (SOCPP-510):	The power planner is using the default size parameters for the editPowerVia command.
+The editPowervia process ended at Sun Sep 13 14:26:18 2026.
+<CMD> editPowerVia -bottom_layer METAL1 -area {21.9125 1.5015 23.253 0.253} -add_vias 1 -top_layer METAL7
+
+The editPowervia process started at Sun Sep 13 14:26:23 2026.
+
+
+The editPowervia process ended at Sun Sep 13 14:26:23 2026.
+<CMD> editPowerVia -bottom_layer METAL1 -area {21.9125 1.5015 23.253 0.253} -add_vias 1 -top_layer METAL7
+
+The editPowervia process started at Sun Sep 13 14:26:33 2026.
+
+
+The editPowervia process ended at Sun Sep 13 14:26:33 2026.
+<CMD> zoomBox 59.072 18.091 90.055 -7.860
+<CMD> zoomBox 62.511 4.596 70.468 -1.333
+<CMD> zoomBox 65.661 2.784 68.721 -0.591
+<CMD_INTERNAL> uiSetTool stretchWire
+<CMD> selectWire 66.3700 0.3900 119.7400 1.3900 5 VDD
+<CMD_INTERNAL> uiSetTool stretchWire
+<CMD> deselectAll
+<CMD> selectWire 66.3700 0.3900 119.7400 1.3900 5 VDD
+<CMD_INTERNAL> uiSetTool select
+<CMD_INTERNAL> uiSetTool stretchWire
+<CMD> deselectAll
+<CMD> selectWire 21.5600 0.3900 67.4550 1.3900 3 VDD
+<CMD> editStretch x 0.89 high
+<CMD> deselectAll
+<CMD_INTERNAL> uiSetTool defineArea pwrEpv:set_area_bbox
+<CMD> zoomBox 66.847 1.587 68.041 0.204
+<CMD_INTERNAL> uiSetTool stretchWire
+<CMD> editPowerVia -bottom_layer METAL1 -area {66.817 1.476 67.902 0.3135} -add_vias 1 -top_layer METAL7
+
+The editPowervia process started at Sun Sep 13 14:27:14 2026.
+
+
+The editPowervia process ended at Sun Sep 13 14:27:14 2026.
+<CMD> editPowerVia -bottom_layer METAL1 -area {66.817 1.476 67.902 0.3135} -add_vias 1 -top_layer METAL7
+
+The editPowervia process started at Sun Sep 13 14:27:15 2026.
+
+
+The editPowervia process ended at Sun Sep 13 14:27:15 2026.
+<CMD> selectWire 66.3700 0.3900 119.7400 1.3900 5 VDD
+<CMD_INTERNAL> uiSetTool stretchWire
+<CMD> editStretch x 0.495 low
+<CMD> deselectAll
+<CMD> selectWire 66.8650 0.3900 119.7400 1.3900 5 VDD
+<CMD> deselectAll
+<CMD> selectWire 21.5600 0.3900 68.3450 1.3900 3 VDD
+<CMD> deselectAll
+<CMD> selectWire 66.8650 0.3900 119.7400 1.3900 5 VDD
+<CMD_INTERNAL> uiSetTool stretchWire
+<CMD> editStretch x -0.07 low
+<CMD_INTERNAL> uiSetTool stretchWire
+<CMD> deselectAll
+<CMD> zoomBox 13.921 26.831 34.047 3.394
+<CMD> panPage 0 -1
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage -1 0
+<CMD> zoomBox 65.052 2.241 72.825 -3.677
+<CMD_INTERNAL> uiSetTool defineArea pwrEpv:set_area_bbox
+<CMD_INTERNAL> uiSetTool stretchWire
+<CMD> editPowerVia -bottom_layer METAL1 -area {66.9015 1.565 68.1945 0.124} -add_vias 1 -top_layer METAL7
+
+The editPowervia process started at Sun Sep 13 14:28:09 2026.
+
+
+The editPowervia process ended at Sun Sep 13 14:28:09 2026.
+<CMD> editPowerVia -bottom_layer METAL1 -area {66.9015 1.565 68.1945 0.124} -add_vias 1 -top_layer METAL7
+
+The editPowervia process started at Sun Sep 13 14:28:10 2026.
+
+
+The editPowervia process ended at Sun Sep 13 14:28:10 2026.
+<CMD> selectWire 66.7950 0.3900 119.7400 1.3900 5 VDD
+<CMD_INTERNAL> uiSetTool select
+<CMD> zoomBox 66.463 1.601 68.591 -0.291
+<CMD_INTERNAL> uiSetTool stretchWire
+<CMD> editStretch x 0.275 low
+<CMD> undo
+<CMD> deselectAll
+<CMD> selectWire 21.5600 0.3900 68.3450 1.3900 3 VDD
+<CMD> editStretch x -0.27 high
+<CMD_INTERNAL> uiSetTool select
+<CMD> deselectAll
+<CMD> selectWire 66.7950 0.3900 119.7400 1.3900 5 VDD
+<CMD> deselectAll
+<CMD> selectWire 66.7950 0.3900 119.7400 1.3900 5 VDD
+<CMD> deselectAll
+<CMD> selectWire 66.7950 0.3900 119.7400 1.3900 5 VDD
+<CMD_INTERNAL> uiSetTool stretchWire
+<CMD> editStretch x 0.175 low
+<CMD> deselectAll
+<CMD> selectWire 66.9700 0.3900 119.7400 1.3900 5 VDD
+<CMD_INTERNAL> uiSetTool stretchWire
+<CMD> editStretch x 0.095 low
+<CMD> deselectAll
+<CMD> selectWire 67.0650 0.3900 119.7400 1.3900 5 VDD
+<CMD> deselectAll
+<CMD> selectWire 67.0650 0.3900 119.7400 1.3900 5 VDD
+<CMD> deselectAll
+<CMD> verifyConnectivity -type all -noAntenna -error 1000 -warning 50
+
+******** Start: VERIFY CONNECTIVITY ********
+Start Time: Sun Sep 13 14:28:56 2026
+
+Design Name: ALU_TOP
+Database Units: 2000
+Design Boundary: (0.0000, 0.0000) (120.1300, 120.1300)
+Error Limit = 1000; Warning Limit = 50
+Check all nets
+
+Begin Summary 
+  Found no problems or warnings.
+End Summary
+
+End Time: Sun Sep 13 14:28:56 2026
+******** End: VERIFY CONNECTIVITY ********
+  Verification Complete : 0 Viols.  0 Wrngs.
+  (CPU Time: 0:00:00.0  MEM: 0.000M)
+
+<CMD> verifyGeometry -noMinArea
+ *** Starting Verify Geometry (MEM: 294.4) ***
+
+  VERIFY GEOMETRY ...... Starting Verification
+  VERIFY GEOMETRY ...... Initializing
+  VERIFY GEOMETRY ...... Deleting Existing Violations
+  VERIFY GEOMETRY ...... Creating Sub-Areas
+                  ...... bin size: 8000
+  VERIFY GEOMETRY ...... SubArea : 1 of 1
+  VERIFY GEOMETRY ...... Cells          :  0 Viols.
+  VERIFY GEOMETRY ...... SameNet        :  0 Viols.
+  VERIFY GEOMETRY ...... Wiring         :  0 Viols.
+  VERIFY GEOMETRY ...... Antenna        :  0 Viols.
+  VERIFY GEOMETRY ...... Sub-Area : 1 complete 0 Viols. 0 Wrngs.
+VG: elapsed time: 0.00
+Begin Summary ...
+  Cells       : 0
+  SameNet     : 0
+  Wiring      : 0
+  Antenna     : 0
+  Short       : 0
+  Overlap     : 0
+End Summary
+
+  Verification Complete : 0 Viols.  0 Wrngs.
+
+**********End: VERIFY GEOMETRY**********
+ *** verify geometry (CPU: 0:00:00.1  MEM: 1.0M)
+
+<CMD> zoomBox 0.018 16.370 101.310 -8.390
+<CMD> zoomBox 18.477 7.681 76.853 -3.532
+<CMD> zoomBox 70.098 5.160 65.497 -2.872
+<CMD> zoomBox 69.169 2.818 66.305 -0.603
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> selectWire 0.3900 0.3900 23.5450 1.3900 5 VDD
+<CMD_INTERNAL> uiSetTool stretchWire
+<CMD_INTERNAL> uiSetTool select
+<CMD_INTERNAL> uiSetTool stretchWire
+<CMD> zoomBox 21.210 1.642 24.738 0.075
+<CMD> editStretch x -0.49 high
+<CMD> deselectAll
+<CMD> selectWire 0.3900 0.3900 23.0550 1.3900 5 VDD
+<CMD> deselectAll
+<CMD> selectWire 21.5600 0.3900 68.0750 1.3900 3 VDD
+<CMD_INTERNAL> uiSetTool stretchWire
+<CMD> editStretch x 0.49 low
+<CMD> deselectAll
+<CMD> setDrawView ameba
+<CMD> setDrawView fplan
+<CMD> saveDesign /home/ahesham/Labs/Lab_PNR_1/pnr/ALU_TOP_power_ring_&_strips.enc
+Writing Netlist "/home/ahesham/Labs/Lab_PNR_1/pnr/ALU_TOP_power_ring_&_strips.enc.dat/ALU_TOP.v" ...
+**ERROR: (TCLCMD-113):	Could not open file '/home/ahesham/Labs/Lab_PNR_1/pnr/ALU_TOP_power_ring_&_strips.enc.dat/mmmc/pathgroup.sdc' to write
+**ERROR: (TCLCMD-113):	Could not open file '/home/ahesham/Labs/Lab_PNR_1/pnr/ALU_TOP_power_ring_&_strips.enc.dat/mmmc/timingderate.sdc' to write
+Saving configuration ...
+Saving preference file /home/ahesham/Labs/Lab_PNR_1/pnr/ALU_TOP_power_ring_&_strips.enc.dat/enc.pref.tcl ...
+Saving SI fix option to '/home/ahesham/Labs/Lab_PNR_1/pnr/ALU_TOP_power_ring_&_strips.enc.dat/siFix.option'...
+Saving floorplan ...
+Saving Drc markers ...
+... No Drc file written since there is no markers found.
+Saving placement ...
+*** Completed savePlace (cpu=0:00:00.0 real=0:00:00.0 mem=294.4M) ***
+Saving route ...
+*** Completed saveRoute (cpu=0:00:00.0 real=0:00:00.0 mem=294.4M) ***
+*** Completed saveYieldMap (cpu=: 0:00:00.0 real=0:00:00.0 mem=: 0.000M) ***
+Creating constraint file...
+<CMD> sroute -connect { blockPin padPin padRing corePin floatingStripe } -layerChangeRange { 1 6 } -blockPinTarget { nearestRingStripe nearestTarget } -padPinPortConnect { allPort oneGeom } -checkAlignedSecondaryPin 1 -blockPin useLef -allowJogging 1 -crossoverViaBottomLayer 1 -allowLayerChange 1 -targetViaTopLayer 7 -crossoverViaTopLayer 7 -targetViaBottomLayer 1 -nets { VSS VDD }
+No routing obstructions were found in the design.
+*** Begin SPECIAL ROUTE on Sun Sep 13 14:33:34 2026 ***
+Sroute/fcroute version 8.1.45 promoted on 09/01/2008.
+SPECIAL ROUTE ran on directory: /home/ahesham/Labs/Lab_PNR_1/pnr
+SPECIAL ROUTE ran on machine: localhost.localdomain (Linux 2.6.32-431.29.2.el6.x86_64 x86_64 2.69Ghz)
+
+Begin option processing ...
+(from .sroute_6856.conf) srouteConnectPowerBump set to false
+(from .sroute_6856.conf) routeSelectNet set to "VSS VDD"
+(from .sroute_6856.conf) routeSpecial set to true
+(from .sroute_6856.conf) srouteCrossoverViaTopLayer set to 7
+(from .sroute_6856.conf) srouteFollowCorePinEnd set to 3
+(from .sroute_6856.conf) srouteFollowPadPin set to true
+(from .sroute_6856.conf) srouteJogControl set to "preferWithChanges differentLayer"
+(from .sroute_6856.conf) sroutePadPinAllPorts set to true
+(from .sroute_6856.conf) sroutePreserveExistingRoutes set to true
+(from .sroute_6856.conf) srouteTopLayerLimit set to 6
+(from .sroute_6856.conf) srouteTopTargetLayerLimit set to 7
+End option processing: cpu: 0:00:00, real: 0:00:00, peak: 471.00 megs.
+
+Reading LEF technology information...
+Reading floorplan and netlist information...
+Finished reading floorplan and netlist information.
+   **WARN: CORE MACRO ALU_TOP has no site specification
+   A total of 1 warning.
+Read in 15 layers, 7 routing layers, 1 overlap layer
+Read in 633 macros, 69 used
+Read in 68 components
+  68 core components: 68 unplaced, 0 placed, 0 fixed
+Read in 68 physical pins
+  68 physical pins: 0 unplaced, 0 placed, 68 fixed
+Read in 68 nets
+Read in 2 special nets, 2 routed
+Read in 68 terminals
+2 nets selected.
+
+Begin power routing ...
+**WARN: (SOCSR-554):	Top target layer is beyond top routing layer. Set top target layer to 6.
+**WARN: (SOCSR-1253):	Net VDD does not have standard cells to be routed. Please check net list.
+**WARN: (SOCSR-1254):	Net VDD does not have block pins to be routed. Please check net list.
+**WARN: (SOCSR-1255):	Net VDD does not have pad pins to create pad ring. Please check net list or port class. (must NOT be CORE class and must not be AREAIO subclass). 
+**WARN: (SOCSR-1256):	Net VDD does not have CORE class pad pins to be routed.
+	Please check net list or port class.
+Net VDD does not have AREAIO class pad pins to be routed.
+	Please check net list or port class.
+**WARN: (SOCSR-1253):	Net VSS does not have standard cells to be routed. Please check net list.
+**WARN: (SOCSR-1254):	Net VSS does not have block pins to be routed. Please check net list.
+**WARN: (SOCSR-1255):	Net VSS does not have pad pins to create pad ring. Please check net list or port class. (must NOT be CORE class and must not be AREAIO subclass). 
+**WARN: (SOCSR-1256):	Net VSS does not have CORE class pad pins to be routed.
+	Please check net list or port class.
+Net VSS does not have AREAIO class pad pins to be routed.
+	Please check net list or port class.
+**WARN: (SOCSR-468):	No core cells defined in COMPONENTS section
+ and/or   No core cells defined in SPECIALNETS VDD
+**WARN: (SOCSR-468):	No core cells defined in COMPONENTS section
+ and/or   No core cells defined in SPECIALNETS VDD
+CPU time for FollowPin 0 seconds
+**WARN: (SOCSR-468):	No core cells defined in COMPONENTS section
+ and/or   No core cells defined in SPECIALNETS VSS
+**WARN: (SOCSR-468):	No core cells defined in COMPONENTS section
+ and/or   No core cells defined in SPECIALNETS VSS
+CPU time for FollowPin 0 seconds
+  Number of IO ports routed: 0
+  Number of Block ports routed: 0
+  Number of Stripe ports routed: 1
+  Number of Core ports routed: 80
+  Number of Pad ports routed: 0
+  Number of Power Bump ports routed: 0
+  Number of Followpin connections: 40
+End power routing: cpu: 0:00:00, real: 0:00:00, peak: 481.00 megs.
+
+
+
+ Begin updating DB with routing results ...
+ Updating DB with 68 io pins ...
+ Updating DB with 75 via definition ...Extracting standard cell pins and blockage ...... 
+Pin and blockage extraction finished
+
+
+sroute post-processing starts at Sun Sep 13 14:33:34 2026
+The viaGen is rebuilding shadow vias for net VSS.
+sroute post-processing ends at Sun Sep 13 14:33:34 2026
+
+sroute post-processing starts at Sun Sep 13 14:33:34 2026
+The viaGen is rebuilding shadow vias for net VDD.
+sroute post-processing ends at Sun Sep 13 14:33:34 2026
+
+
+sroute: Total CPU time used = 0:0:0
+sroute: Total Real time used = 0:0:0
+sroute: Total Memory used = 8.95 megs
+sroute: Total Peak Memory used = 304.13 megs
+<CMD> verifyConnectivity -type all -noAntenna -error 1000 -warning 50
+
+******** Start: VERIFY CONNECTIVITY ********
+Start Time: Sun Sep 13 14:33:44 2026
+
+Design Name: ALU_TOP
+Database Units: 2000
+Design Boundary: (0.0000, 0.0000) (120.1300, 120.1300)
+Error Limit = 1000; Warning Limit = 50
+Check all nets
+Net A[7]: Found a geometry with bounding box (-0.10,73.10) (0.10,73.30) outside design boundary.
+Violations for such geometries will be reported.
+
+Begin Summary 
+  Found no problems or warnings.
+End Summary
+
+End Time: Sun Sep 13 14:33:45 2026
+******** End: VERIFY CONNECTIVITY ********
+  Verification Complete : 0 Viols.  0 Wrngs.
+  (CPU Time: 0:00:00.0  MEM: 0.000M)
+
+<CMD> verifyGeometry -noMinArea
+ *** Starting Verify Geometry (MEM: 304.1) ***
+
+  VERIFY GEOMETRY ...... Starting Verification
+  VERIFY GEOMETRY ...... Initializing
+  VERIFY GEOMETRY ...... Deleting Existing Violations
+  VERIFY GEOMETRY ...... Creating Sub-Areas
+                  ...... bin size: 8000
+  VERIFY GEOMETRY ...... SubArea : 1 of 1
+  VERIFY GEOMETRY ...... Cells          :  0 Viols.
+  VERIFY GEOMETRY ...... SameNet        :  0 Viols.
+  VERIFY GEOMETRY ...... Wiring         :  0 Viols.
+  VERIFY GEOMETRY ...... Antenna        :  0 Viols.
+  VERIFY GEOMETRY ...... Sub-Area : 1 complete 0 Viols. 0 Wrngs.
+VG: elapsed time: 0.00
+Begin Summary ...
+  Cells       : 0
+  SameNet     : 0
+  Wiring      : 0
+  Antenna     : 0
+  Short       : 0
+  Overlap     : 0
+End Summary
+
+  Verification Complete : 0 Viols.  0 Wrngs.
+
+**********End: VERIFY GEOMETRY**********
+ *** verify geometry (CPU: 0:00:00.0  MEM: 0.0M)
+
+<CMD> setDrawView place
+<CMD> zoomBox -0.379 122.562 18.158 -9.184
+<CMD> zoomBox -28.140 79.130 137.534 6.789
+<CMD> zoomBox -19.989 49.526 141.459 14.731
+<CMD> zoomBox -15.428 19.919 14.728 -0.824
+<CMD> selectWire 3.2800 1.8900 3.6800 117.4200 6 VSS
+<CMD> deleteSelectedFromFPlan
+<CMD> selectWire 4.1000 0.3900 4.5000 118.9200 6 VDD
+<CMD> deleteSelectedFromFPlan
+<CMD> zoomBox 9.155 21.137 64.633 -4.285
+<CMD> zoomBox 25.852 5.828 38.410 -3.062
+<CMD> selectWire 29.3150 0.5900 30.9550 0.9900 6 VDD
+<CMD> panPage -1 0
+<CMD> deselectAll
+<CMD> selectWire 0.3900 0.3900 23.0550 1.3900 5 VDD
+<CMD> deselectAll
+<CMD> selectWire 0.3900 0.3900 23.0550 1.3900 5 VDD
+<CMD> windowSelect 18.976 0.911 19.047 0.911
+<CMD> panPage -1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage -1 0
+<CMD> selectWire 30.9550 0.5900 34.2350 0.9900 5 VDD
+<CMD> deleteSelectedFromFPlan
+<CMD> selectWire 34.2350 0.5900 35.8750 0.9900 6 VDD
+<CMD> deleteSelectedFromFPlan
+<CMD> selectWire 34.0350 0.5900 34.4350 0.9900 5 VDD
+<CMD> deleteSelectedFromFPlan
+<CMD> selectWire 35.8750 0.5900 44.3000 0.9900 5 VDD
+<CMD> deleteSelectedFromFPlan
+<CMD> selectWire 35.6750 0.5900 36.0750 0.9900 5 VDD
+<CMD> deleteSelectedFromFPlan
+<CMD> windowSelect 31.325 1.009 27.735 0.377
+<CMD> deleteSelectedFromFPlan
+<CMD> selectWire 0.3900 0.5900 29.3150 0.9900 5 VDD
+<CMD> deleteSelectedFromFPlan
+<CMD> panPage -1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage -1 0
+<CMD> zoomBox 17.496 18.489 83.302 -3.756
+<CMD> selectWire 44.1000 0.3900 44.5000 118.9200 6 VDD
+<CMD> panPage -1 0
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage -1 0
+<CMD> panPage 0 -1
+<CMD> panPage 0 1
+<CMD> panPage 0 -1
+<CMD> panPage 0 -1
+<CMD> panPage 0 -1
+<CMD> panPage 0 -1
+<CMD> verifyConnectivity -type all -noAntenna -error 1000 -warning 50
+
+******** Start: VERIFY CONNECTIVITY ********
+Start Time: Sun Sep 13 14:36:12 2026
+
+Design Name: ALU_TOP
+Database Units: 2000
+Design Boundary: (0.0000, 0.0000) (120.1300, 120.1300)
+Error Limit = 1000; Warning Limit = 50
+Check all nets
+Net A[7]: Found a geometry with bounding box (-0.10,73.10) (0.10,73.30) outside design boundary.
+Violations for such geometries will be reported.
+
+Begin Summary 
+  Found no problems or warnings.
+End Summary
+
+End Time: Sun Sep 13 14:36:12 2026
+******** End: VERIFY CONNECTIVITY ********
+  Verification Complete : 0 Viols.  0 Wrngs.
+  (CPU Time: 0:00:00.0  MEM: 0.000M)
+
+<CMD> verifyGeometry -noMinArea
+ *** Starting Verify Geometry (MEM: 304.1) ***
+
+  VERIFY GEOMETRY ...... Starting Verification
+  VERIFY GEOMETRY ...... Initializing
+  VERIFY GEOMETRY ...... Deleting Existing Violations
+  VERIFY GEOMETRY ...... Creating Sub-Areas
+                  ...... bin size: 8000
+  VERIFY GEOMETRY ...... SubArea : 1 of 1
+  VERIFY GEOMETRY ...... Cells          :  0 Viols.
+  VERIFY GEOMETRY ...... SameNet        :  0 Viols.
+  VERIFY GEOMETRY ...... Wiring         :  0 Viols.
+  VERIFY GEOMETRY ...... Antenna        :  0 Viols.
+  VERIFY GEOMETRY ...... Sub-Area : 1 complete 0 Viols. 0 Wrngs.
+VG: elapsed time: 0.00
+Begin Summary ...
+  Cells       : 0
+  SameNet     : 0
+  Wiring      : 0
+  Antenna     : 0
+  Short       : 0
+  Overlap     : 0
+End Summary
+
+  Verification Complete : 0 Viols.  0 Wrngs.
+
+**********End: VERIFY GEOMETRY**********
+ *** verify geometry (CPU: 0:00:00.1  MEM: 0.0M)
+
+<CMD> deselectAll
+<CMD> saveDesign /home/ahesham/Labs/Lab_PNR_1/pnr/ALU_TOP_special_route.enc
+Writing Netlist "/home/ahesham/Labs/Lab_PNR_1/pnr/ALU_TOP_special_route.enc.dat/ALU_TOP.v" ...
+Saving configuration ...
+Saving preference file /home/ahesham/Labs/Lab_PNR_1/pnr/ALU_TOP_special_route.enc.dat/enc.pref.tcl ...
+Saving SI fix option to '/home/ahesham/Labs/Lab_PNR_1/pnr/ALU_TOP_special_route.enc.dat/siFix.option'...
+Saving floorplan ...
+Saving Drc markers ...
+... No Drc file written since there is no markers found.
+Saving placement ...
+*** Completed savePlace (cpu=0:00:00.0 real=0:00:00.0 mem=304.1M) ***
+Saving route ...
+*** Completed saveRoute (cpu=0:00:00.0 real=0:00:00.0 mem=304.1M) ***
+*** Completed saveYieldMap (cpu=: 0:00:00.0 real=0:00:00.0 mem=: 0.000M) ***
+Creating constraint file...

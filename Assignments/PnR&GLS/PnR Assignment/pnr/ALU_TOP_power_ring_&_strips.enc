@@ -1,0 +1,8 @@
+################################################
+#                                              #
+# Silicon Perspective, A Cadence Company       #
+# FirstEncounter Design Restore script         #
+#    for design session: /home/ahesham/Labs/Lab_PNR_1/pnr/ALU_TOP_power_ring_&_strips.enc                     
+#                                              #
+################################################
+restoreDesign /home/ahesham/Labs/Lab_PNR_1/pnr/ALU_TOP_power_ring_&_strips.enc.dat ALU_TOP
